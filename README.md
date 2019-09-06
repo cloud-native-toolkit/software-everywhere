@@ -36,7 +36,7 @@ module "CLUSTER_NAME" {
 where:
 - `CLUSTER_NAME` is any name you want for your terraform script
 - `source` points to the module folder in this repo
-- `${var.xxx}` refers to a variable in your terraform script
+- `${var.xxx}` refers to a variable in your terraform script. All of the variables defined within the module's `variables.tf` file need to be provided a value, either through the terraform script or through a default value in the variables.tf file itself
 
 **Note:** If you want to refer to a specific version of a module identified by a branch or tag within the repo, you can add `ref` to the end of the repo url. E.g. github.com/ibm-garage-cloud/garage-terraform-modules/cluster/ibmcloud_cluster?ref=v1.0.0
 
