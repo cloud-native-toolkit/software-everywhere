@@ -16,3 +16,8 @@ variable "cluster_ingress_hostname" {
 variable "cluster_type" {
   description = "The cluster type (openshift or kubernetes)"
 }
+
+variable "tls_secret_name" {
+  description = "The secret containing the tls certificates"
+  default = ""
+}

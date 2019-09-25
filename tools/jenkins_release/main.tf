@@ -17,7 +17,7 @@ resource "null_resource" "jenkins_release_iks" {
   count = "${var.cluster_type != "openshift" ? "1" : "0"}"
 
   provisioner "local-exec" {
-    command = "${path.module}/scripts/deploy-jenkins.sh ${local.jenkins_config_chart} ${var.releases_namespace} ${local.ingress_host} ${local.values_file} ${local.kustomize_template}"
+    command = "${path.module}/scripts/deploy-jenkins.sh ${local.jenkins_config_chart} ${var.releases_namespace} ${local.ingress_host} ${local.values_file} ${local.kustomize_template} ${var.tls_secret_name}"
 
     environment = {
       KUBECONFIG = "${var.cluster_config_file}"
