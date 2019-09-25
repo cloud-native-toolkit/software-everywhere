@@ -40,6 +40,7 @@ master:
     - greenballs
     - blueocean
     - job-dsl
+    - oic-auth
   # Used to approve a list of groovy functions in pipelines used the script-security plugin. Can be viewed under /scriptApproval
   scriptApproval:
     - "method groovy.json.JsonSlurperClassic parseText java.lang.String"
