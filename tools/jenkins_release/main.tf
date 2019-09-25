@@ -6,9 +6,6 @@ locals {
   secret_name           = "jenkins-access"
   ingress_host          = "jenkins.${var.cluster_ingress_hostname}"
   ingress_url           = "${var.cluster_type == "openshift" ? "https" : "http"}://${local.ingress_host}"
-  values_file           = "${path.module}/jenkins-values.yaml"
-  kustomize_template    = "${path.module}/kustomize/jenkins"
-  jenkins_config_chart  = "${path.module}/charts/jenkins-config"
   storage_class         = "ibmc-file-gold"
   volume_capacity       = "20Gi"
 }
@@ -17,7 +14,7 @@ resource "null_resource" "jenkins_release_iks" {
   count = "${var.cluster_type != "openshift" ? "1" : "0"}"
 
   provisioner "local-exec" {
-    command = "${path.module}/scripts/deploy-jenkins.sh ${local.jenkins_config_chart} ${var.releases_namespace} ${local.ingress_host} ${local.values_file} ${local.kustomize_template} ${var.tls_secret_name}"
+    command = "${path.module}/scripts/deploy-jenkins.sh ${var.releases_namespace} ${local.ingress_host} ${var.tls_secret_name}"
 
     environment = {
       KUBECONFIG = "${var.cluster_config_file}"

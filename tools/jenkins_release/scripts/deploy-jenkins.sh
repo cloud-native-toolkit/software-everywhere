@@ -1,13 +1,11 @@
 #!/usr/bin/env bash
 
-SCRIPT_DIR=$(cd $(dirname $0); pwd -P);
+SCRIPT_DIR=$(cd $(dirname $0); pwd -P)
+MODULE_DIR=$(cd ${SCRIPT_DIR}/..; pwd -P)
 
-JENKINS_CONFIG_CHART="$1"
-NAMESPACE="$2"
-JENKINS_HOST="$3"
-VALUES_FILE="$4"
-KUSTOMIZE_TEMPLATE="$5"
-TLS_SECRET_NAME="$6"
+NAMESPACE="$1"
+JENKINS_HOST="$2"
+TLS_SECRET_NAME="$3"
 
 if [[ -z "${TMP_DIR}" ]]; then
     TMP_DIR=".tmp"
@@ -17,6 +15,10 @@ if [[ -z "${CHART_REPO}" ]]; then
 fi
 
 NAME="jenkins"
+
+VALUES_FILE="${MODULE_DIR}/jenkins-values.yaml"
+JENKINS_CONFIG_CHART="${MODULE_DIR}/charts/jenkins-config"
+KUSTOMIZE_TEMPLATE="${MODULE_DIR}/kustomize/jenkins"
 
 CHART_DIR="${TMP_DIR}/charts"
 KUSTOMIZE_DIR="${TMP_DIR}/kustomize"
@@ -40,7 +42,7 @@ cp -R "${KUSTOMIZE_TEMPLATE}" "${KUSTOMIZE_DIR}"
 echo "*** Cleaning up helm chart tests"
 rm -rf "${JENKINS_CHART}/templates/tests"
 
-if [[ -z "${TLS_SECRET_NAME}" ]]; then
+if [[ -n "${TLS_SECRET_NAME}" ]]; then
     echo "master:" > ${TMP_DIR}/tls-values.yaml
     echo "  ingress:" >> ${TMP_DIR}/tls-values.yaml
     echo "    tls:" >> ${TMP_DIR}/tls-values.yaml
@@ -48,7 +50,12 @@ if [[ -z "${TLS_SECRET_NAME}" ]]; then
     echo "      hosts:" >> ${TMP_DIR}/tls-values.yaml
     echo "      - ${JENKINS_HOST}" >> ${TMP_DIR}/tls-values.yaml
 else
-    touch ${TMP_DIR}/tls-values.yaml
+    echo "" > ${TMP_DIR}/tls-values.yaml
+fi
+
+HELM_VALUES="master.ingress.hostName=${JENKINS_HOST}"
+if [[ -n "${TLS_SECRET_NAME}" ]]; then
+    HELM_VALUES="${HELM_VALUES},master.ingress.tls[0].secretName=${TLS_SECRET_NAME},master.ingress.tls[0].hosts[0]=${JENKINS_HOST}"
 fi
 
 echo "*** Generating jenkins yaml from helm template"
@@ -56,9 +63,8 @@ helm init --client-only
 helm template "${JENKINS_CHART}" \
     --namespace "${NAMESPACE}" \
     --name "${NAME}" \
-    --set master.ingress.hostName="${JENKINS_HOST}" \
-    --values "${VALUES_FILE}"
-    --values "${TMP_DIR}/tls-values.yaml" > "${JENKINS_BASE_KUSTOMIZE}"
+    --set ${HELM_VALUES} \
+    --values "${VALUES_FILE}" > "${JENKINS_BASE_KUSTOMIZE}"
 
 echo "*** Generating jenkins-config yaml from helm template"
 helm template "${JENKINS_CONFIG_CHART}" \
