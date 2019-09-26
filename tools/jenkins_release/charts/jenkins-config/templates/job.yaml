@@ -18,7 +18,7 @@ spec:
                       name: ibmcloud-config
                 env:
                 - name: JENKINS_URL
-                  value: {{ printf "http://%s/login" .Values.jenkins.host | quote }}
+                  value: {{ printf "%s/login" (include "jenkins-config.url" .) }}
             containers:
                 - name: jenkins-config
                   image: garagecatalyst/node11:latest
@@ -33,7 +33,7 @@ spec:
                       - name: JENKINS_HOST
                         value: {{ .Values.jenkins.host | quote }}
                       - name: JENKINS_URL
-                        value: {{ printf "http://%s" .Values.jenkins.host | quote }}
+                        value: {{ include "jenkins-config.url" . }}
                       - name: JENKINS_USERNAME
                         valueFrom:
                             secretKeyRef:

@@ -30,3 +30,7 @@ Create chart name and version as used by the chart label.
 {{- define "jenkins-config.chart" -}}
 {{- printf "%s-%s" .Chart.Name .Chart.Version | replace "+" "_" | trunc 63 | trimSuffix "-" -}}
 {{- end -}}
+
+{{- define "jenkins-config.url" -}}
+{{- default (printf "http://%s" .Values.jenkins.host) .Values.jenkins.url -}}
+{{- end -}}

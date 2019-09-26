@@ -53,8 +53,10 @@ else
     echo "" > ${TMP_DIR}/tls-values.yaml
 fi
 
+JENKINS_URL="http://${JENKINS_HOST}"
 HELM_VALUES="master.ingress.hostName=${JENKINS_HOST}"
 if [[ -n "${TLS_SECRET_NAME}" ]]; then
+    JENKINS_URL="https://${JENKINS_HOST}"
     HELM_VALUES="${HELM_VALUES},master.ingress.tls[0].secretName=${TLS_SECRET_NAME},master.ingress.tls[0].hosts[0]=${JENKINS_HOST}"
 fi
 
@@ -69,6 +71,7 @@ helm template "${JENKINS_CHART}" \
 echo "*** Generating jenkins-config yaml from helm template"
 helm template "${JENKINS_CONFIG_CHART}" \
     --namespace "${NAMESPACE}" \
+    --set jenkins.url="${JENKINS_URL}" \
     --set jenkins.host="${JENKINS_HOST}" > "${JENKINS_CONFIG_KUSTOMIZE}"
 
 echo "*** Building final kube yaml from kustomize into ${JENKINS_YAML}"
