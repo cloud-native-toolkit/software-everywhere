@@ -50,6 +50,10 @@ master:
   customConfigMap: false
   ingress:
     enabled: true
+  csrf:
+    defaultCrumbIssuer:
+      enabled: false
+      proxyCompatability: true
 
 agent:
   enabled: true
