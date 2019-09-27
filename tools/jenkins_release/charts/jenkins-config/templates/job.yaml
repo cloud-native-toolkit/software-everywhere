@@ -10,7 +10,7 @@ spec:
               - name: wait-for-jenkins
                 image: garagecatalyst/ibm-garage-cli-tools:latest
                 imagePullPolicy: Always
-                command: ["sh", "-c", "until checkPodRunning.sh jenkins && curl -Isf ${JENKINS_URL}; do echo '>>> waiting for Jenkins'; sleep 300; done; echo '>>> Jenkins has started'"]
+                command: ["sh", "-c", "echo $MY_POD_NAME; until checkPodRunning.sh jenkins && curl -Isf ${JENKINS_URL}; do echo '>>> waiting for Jenkins'; sleep 300; done; echo '>>> Jenkins has started'"]
                 envFrom:
                   - secretRef:
                       name: ibmcloud-apikey
