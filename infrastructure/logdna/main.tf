@@ -39,7 +39,7 @@ locals {
 resource "null_resource" "logdna_bind" {
 
   provisioner "local-exec" {
-    command = "${path.module}/scripts/bind-logdna.sh ${local.namespace} ${ibm_resource_key.logdna_instance_key.credentials.ingestion_key} ${var.service_account_name}"
+    command = "${path.module}/scripts/bind-logdna.sh ${local.namespace} ${ibm_resource_key.logdna_instance_key.credentials.ingestion_key} ${var.cluster_type}"
 
     environment = {
       KUBECONFIG_IKS = "${var.cluster_config_file_path}"

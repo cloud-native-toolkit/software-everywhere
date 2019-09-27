@@ -2,7 +2,7 @@
 
 NAMESPACE="$1"
 LOGDNA_AGENT_KEY="$2"
-SERVICE_ACCOUNT_NAME="$3"
+CLUSTER_TYPE="$3"
 
 if [[ -n "${KUBECONFIG_IKS}" ]]; then
    export KUBECONFIG="${KUBECONFIG_IKS}"
@@ -28,8 +28,8 @@ echo "  logdna-agent-key: ${LOGDNA_AGENT_KEY}" >> ${YAML_FILE}
 echo "*** Creating logdna-agent-key secret in ${NAMESPACE}"
 kubectl apply -n ${NAMESPACE} -f ${YAML_FILE}
 
-if [[ "${SERVICE_ACCOUNT_NAME}" != "default" ]]; then
-    LOGDNA_AGENT_DS_YAML="https://raw.githubusercontent.com/logdna/logdna-agent/master/logdna-agent-ds-os.yml"
+if [[ "${CLUSTER_TYPE}" == "openshift" ]]; then
+    LOGDNA_AGENT_DS_YAML="https://raw.githubusercontent.com/logdna/logdna-agent/master/logdna-agent-ds-os.yaml"
 else
     LOGDNA_AGENT_DS_YAML="https://assets.us-south.logging.cloud.ibm.com/clients/logdna-agent-ds.yaml"
 fi
