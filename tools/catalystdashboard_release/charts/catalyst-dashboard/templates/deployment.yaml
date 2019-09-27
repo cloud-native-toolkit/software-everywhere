@@ -39,18 +39,11 @@ spec:
             - configMapRef:
                 name: "ibmcloud-config"
                 optional: true
+            {{- range .Values.configMaps }}
             - configMapRef:
-                name: {{ default "sonarqube-config" .Values.configMaps.sonarqube }}
+                name: {{ . | quote }}
                 optional: true
-            - configMapRef:
-                name: {{ default "jenkins-config" .Values.configMaps.jenkins }}
-                optional: true
-            - configMapRef:
-                name: {{ default "pactbroker-config" .Values.configMaps.pactbroker }}
-                optional: true
-            - configMapRef:
-                name: {{ default "artifactory-config" .Values.configMaps.artifactory }}
-                optional: true
+            {{- end }}
           resources:
 {{ toYaml .Values.resources | indent 12 }}
     {{- with .Values.nodeSelector }}

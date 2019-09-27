@@ -1,11 +1,11 @@
 #!/usr/bin/env bash
 
-CHART="$1"
-NAMESPACE="$2"
-INGRESS_HOST="$3"
-JENKINS_SECRET="$4"
-SONARQUBE_SECRET="$5"
-PACTBROKER_SECRET="$6"
+SCRIPT_DIR=$(cd $(dirname $0); pwd -P)
+MODULE_DIR=$(cd ${SCRIPT_DIR}/..; pwd -P)
+
+NAMESPACE="$1"
+INGRESS_HOST="$2"
+CONFIG_MAPS="$3"
 
 if [[ -n "${KUBECONFIG_IKS}" ]]; then
     export KUBECONFIG="${KUBECONFIG_IKS}"
@@ -15,8 +15,12 @@ if [[ -z "${TMP_DIR}" ]]; then
     TMP_DIR=".tmp"
 fi
 
+CHART="${MODULE_DIR}/charts/catalyst-dashboard"
+
 NAME="catalyst-dashboard"
 OUTPUT_YAML="${TMP_DIR}/catalystdashboard.yaml"
+
+CONFIG_MAP_YAML=$(echo "${CONFIG_MAPS}" | sed -E "s/[[](.*)[]]/{\1}/g")
 
 mkdir -p ${TMP_DIR}
 
@@ -26,9 +30,7 @@ helm template ${CHART} \
     --namespace ${NAMESPACE} \
     --name ${NAME} \
     --set ingress.hosts.0=${INGRESS_HOST} \
-    --set secrets.jenkins=${JENKINS_SECRET} \
-    --set secrets.sonarqube=${SONARQUBE_SECRET} \
-    --set secrets.pactbroker=${PACTBROKER_SECRET} > ${OUTPUT_YAML}
+    --set configMaps="${CONFIG_MAP_YAML}" > ${OUTPUT_YAML}
 
 echo "*** Applying kube yaml ${OUTPUT_YAML}"
 kubectl apply -n ${NAMESPACE} -f ${OUTPUT_YAML}

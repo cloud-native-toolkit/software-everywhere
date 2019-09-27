@@ -1,12 +1,11 @@
 locals {
   tmp_dir      = "${path.cwd}/.tmp"
-  chart        = "${path.module}/charts/catalyst-dashboard"
   ingress_host = "dashboard.${var.cluster_ingress_hostname}"
 }
 
 resource "null_resource" "catalystdashboard_release" {
   provisioner "local-exec" {
-    command = "${path.module}/scripts/deploy-catalystdashboard.sh ${local.chart} ${var.releases_namespace} ${local.ingress_host} ${var.jenkins_secret_name} ${var.sonarqube_secret_name} ${var.pactbroker_secret_name}"
+    command = "${path.module}/scripts/deploy-catalystdashboard.sh ${var.releases_namespace} ${local.ingress_host} \"${jsonencode(var.tool_config_maps)}\""
 
     environment = {
       KUBECONFIG_IKS = "${var.cluster_config_file}"
