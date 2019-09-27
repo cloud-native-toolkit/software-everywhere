@@ -10,8 +10,14 @@ output "ingress_url" {
   depends_on  = ["null_resource.jenkins_release_openshift", "null_resource.jenkins_release_iks"]
 }
 
+output "config_name" {
+  description = "The name of the secret created to store the url"
+  value       = "${local.config_name}"
+  depends_on  = ["null_resource.jenkins_release_openshift", "null_resource.jenkins_release_iks"]
+}
+
 output "secret_name" {
-  description = "The name of the secret created to store the credentials and url"
+  description = "The name of the secret created to store the credentials"
   value       = "${local.secret_name}"
   depends_on  = ["null_resource.jenkins_release_openshift", "null_resource.jenkins_release_iks"]
 }

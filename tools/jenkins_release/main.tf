@@ -4,6 +4,7 @@ provider "null" {
 locals {
   tmp_dir               = "${path.cwd}/.tmp"
   secret_name           = "jenkins-access"
+  config_name           = "jenkins-config"
   ingress_host          = "jenkins.${var.cluster_ingress_hostname}"
   ingress_url           = "${var.cluster_type == "openshift" ? "https" : "http"}://${local.ingress_host}"
   storage_class         = "ibmc-file-gold"

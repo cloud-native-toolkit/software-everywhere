@@ -7,6 +7,7 @@ locals {
   ingress_host           = "sonarqube.${var.cluster_ingress_hostname}"
   ingress_url            = "http://${local.ingress_host}"
   secret_name            = "sonarqube-access"
+  config_name            = "sonarqube-config"
   values_file            = "${path.module}/sonarqube-values.yaml"
   kustomize_template     = "${path.module}/kustomize/sonarqube"
 }

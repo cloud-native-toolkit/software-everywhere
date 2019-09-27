@@ -6,7 +6,7 @@ replicaCount: 1
 
 image:
   repository: garagecatalyst/catalyst-dashboard
-  tag: latest
+  tag: 1.0.7
   pullPolicy: Always
   port: 3000
 

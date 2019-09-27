@@ -2,3 +2,4 @@ commonLabels:
  app: "argocd"
 resources:
  - base.yaml
+ - access.yaml
