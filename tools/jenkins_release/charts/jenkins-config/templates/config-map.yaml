@@ -6,4 +6,4 @@ metadata:
         group: {{ .Values.group }}
 data:
     JENKINS_HOST: {{ .Values.jenkins.host }}
-    JENKINS_URL: {{ printf "http://%s" .Values.jenkins.host }}
+    JENKINS_URL: {{ include "jenkins-config.url" . }}

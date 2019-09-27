@@ -17,6 +17,10 @@ spec:
                   - configMapRef:
                       name: ibmcloud-config
                 env:
+                - name: MY_POD_NAME
+                  valueFrom:
+                    fieldRef:
+                        fieldPath: metadata.name
                 - name: JENKINS_URL
                   value: {{ printf "%s/login" (include "jenkins-config.url" .) }}
             containers:
