@@ -39,10 +39,12 @@ spec:
             - configMapRef:
                 name: "ibmcloud-config"
                 optional: true
+            {{- if .Values.configMaps }}
             {{- range .Values.configMaps }}
             - configMapRef:
                 name: {{ . | quote }}
                 optional: true
+            {{- end }}
             {{- end }}
           resources:
 {{ toYaml .Values.resources | indent 12 }}
