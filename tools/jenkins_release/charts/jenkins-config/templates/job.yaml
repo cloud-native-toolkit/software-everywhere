@@ -5,7 +5,6 @@ metadata:
 spec:
     template:
         spec:
-            serviceAccountName: jenkins
             initContainers:
               - name: wait-for-jenkins
                 image: garagecatalyst/ibm-garage-cli-tools:latest
