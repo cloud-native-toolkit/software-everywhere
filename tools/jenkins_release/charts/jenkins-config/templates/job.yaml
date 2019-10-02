@@ -5,6 +5,7 @@ metadata:
 spec:
     template:
         spec:
+            serviceAccountName: jenkins
             initContainers:
               - name: wait-for-jenkins
                 image: garagecatalyst/ibm-garage-cli-tools:latest
@@ -24,7 +25,7 @@ spec:
                   value: {{ printf "%s/login" (include "jenkins-config.url" .) }}
             containers:
                 - name: jenkins-config
-                  image: garagecatalyst/ibm-garage-cli-tools:latest
+                  image: garagecatalyst/node11:latest
                   imagePullPolicy: Always
                   command: ["bash", "-c", "npm i -g @garage-catalyst/ibm-garage-cloud-cli && ~/.npm-packages/bin/igc jenkins-auth"]
                   envFrom:
