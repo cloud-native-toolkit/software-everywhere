@@ -40,8 +40,7 @@ mkdir -p "${KUSTOMIZE_DIR}"
 cp -R "${KUSTOMIZE_TEMPLATE}" "${KUSTOMIZE_DIR}"
 
 echo "*** Updating namespace in kustomization.yaml"
-cat "${KUSTOMIZE_DIR}/jenkins/kustomization.yaml" | sed -E "s/(.*namespace:).*/\1 ${NAMESPACE}/g" > ${TMP_DIR}/jenkins-kustomization.yaml
-cp ${TMP_DIR}/jenkins-kustomization.yaml ${KUSTOMIZE_DIR}/jenkins/kustomization.yaml
+sed -i -e "s/tools/${NAMESPACE}/g"  ${KUSTOMIZE_DIR}/jenkins/kustomization.yaml
 
 echo "*** Cleaning up helm chart tests"
 rm -rf "${JENKINS_CHART}/templates/tests"
@@ -87,7 +86,7 @@ kubectl apply -n "${NAMESPACE}" -f "${JENKINS_YAML}"
 export EXCLUDE_POD_NAME="jenkins-config"
 
 echo "*** Waiting for Jenkins"
-until ${SCRIPT_DIR}/checkPodRunning.sh jenkins; do
+until ${SCRIPT_DIR}/checkPodRunning.sh jenkins ${NAMESPACE}; do
     echo '>>> waiting for Jenkins'
     sleep 300
 done

@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
 NAME="$1"
+NAMESPACE="$2"
 
 if [[ -z "${NAME}" ]]; then
     echo "NAME not provided"
