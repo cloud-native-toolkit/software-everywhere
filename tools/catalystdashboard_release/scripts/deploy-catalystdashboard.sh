@@ -20,7 +20,7 @@ CHART="${MODULE_DIR}/charts/catalyst-dashboard"
 NAME="catalyst-dashboard"
 OUTPUT_YAML="${TMP_DIR}/catalystdashboard.yaml"
 
-CONFIG_MAP_YAML=$(echo "${CONFIG_MAPS}" | sed -E "s/[[](.+)[]]/{\1}/g" | sed "s/[]//g")
+CONFIG_MAP_YAML=$(echo "${CONFIG_MAPS}" | sed -E "s/[[](.+)[]]/{\1}/g" | sed "s/[[][]]//g")
 
 mkdir -p ${TMP_DIR}
 
