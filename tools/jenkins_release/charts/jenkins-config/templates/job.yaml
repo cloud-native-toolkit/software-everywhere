@@ -24,7 +24,7 @@ spec:
                   value: {{ printf "%s/login" (include "jenkins-config.url" .) }}
             containers:
                 - name: jenkins-config
-                  image: garagecatalyst/node11:latest
+                  image: garagecatalyst/ibm-garage-cli-tools:latest
                   imagePullPolicy: Always
                   command: ["bash", "-c", "npm i -g @garage-catalyst/ibm-garage-cloud-cli && ~/.npm-packages/bin/igc jenkins-auth"]
                   envFrom:
