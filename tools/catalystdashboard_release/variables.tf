@@ -27,3 +27,8 @@ variable "tls_secret_name" {
   description = "The name of the secret containing the tls certificate values"
   default     = ""
 }
+
+variable "image_tag" {
+  description = "The image version tag to use"
+  default     = "1.0.9"
+}

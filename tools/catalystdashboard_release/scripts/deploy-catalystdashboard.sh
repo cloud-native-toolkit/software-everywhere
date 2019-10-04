@@ -7,6 +7,7 @@ NAMESPACE="$1"
 INGRESS_HOST="$2"
 CONFIG_MAPS="$3"
 TLS_SECRET_NAME="$4"
+IMAGE_TAG="$5"
 
 if [[ -n "${KUBECONFIG_IKS}" ]]; then
     export KUBECONFIG="${KUBECONFIG_IKS}"
@@ -14,6 +15,10 @@ fi
 
 if [[ -z "${TMP_DIR}" ]]; then
     TMP_DIR=".tmp"
+fi
+
+if [[ -z "${IMAGE_TAG}" ]]; then
+    IMAGE_TAG="latest"
 fi
 
 CHART="${MODULE_DIR}/charts/catalyst-dashboard"
@@ -35,6 +40,7 @@ helm init --client-only
 helm template ${CHART} \
     --namespace ${NAMESPACE} \
     --name ${NAME} \
+    --set "image.tag=${IMAGE_TAG}" \
     --set "${VALUES}" \
     --set configMaps="${CONFIG_MAP_YAML}" > ${OUTPUT_YAML}
 
