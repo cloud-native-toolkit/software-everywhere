@@ -34,3 +34,12 @@ Create chart name and version as used by the chart label.
 {{- define "pact-broker.database-secret" -}}
 {{ include "pact-broker.fullname" . }}-db
 {{- end -}}
+
+{{- define "pact-broker.url" -}}
+{{- $host := (index .Values.ingress.hosts "0").host -}}
+{{- if .Values.ingress.tls -}}
+{{ printf "https://%s" $host }}
+{{- else -}}
+{{ printf "http://%s" $host }}
+{{- end -}}
+{{- end -}}
