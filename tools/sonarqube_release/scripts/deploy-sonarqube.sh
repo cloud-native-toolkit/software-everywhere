@@ -12,6 +12,7 @@ KUSTOMIZE_TEMPLATE="$5"
 VERSION="$6"
 SERVICE_ACCOUNT="$7"
 PLUGINS="$8"
+TLS_SECRET_NAME="$9"
 
 if [[ -n "${KUBECONFIG_IKS}" ]]; then
     export KUBECONFIG="${KUBECONFIG_IKS}"
@@ -57,12 +58,17 @@ rm "${SONARQUBE_CHART}/templates/test-config.yaml"
 
 PLUGIN_YAML=$(echo $PLUGINS | sed -E "s/[[](.*)[]]/{\1}/g")
 
+VALUES=ingress.hosts.0.name="${SONARQUBE_HOST}"
+if [[ -n "${TLS_SECRET_NAME}" ]]; then
+    VALUES="${VALUES},ingress.tls[0].secretName=${TLS_SECRET_NAME},ingress.tls[0].hosts[0]=${SONARQUBE_HOST}"
+fi
+
 echo "*** Generating sonarqube yaml from helm template with plugins ${PLUGIN_YAML}"
 helm init --client-only
 helm template "${SONARQUBE_CHART}" \
     --namespace "${NAMESPACE}" \
     --name "${NAME}" \
-    --set ingress.hosts.0.name="${SONARQUBE_HOST}" \
+    --set ${VALUES} \
     --set postgresql.postgresServer="${DATABASE_HOST}" \
     --set postgresql.service.port="${DATABASE_PORT}" \
     --set postgresql.postgresDatabase="${DATABASE_NAME}" \
@@ -71,10 +77,16 @@ helm template "${SONARQUBE_CHART}" \
     --set plugins.install=${PLUGIN_YAML} \
     --values "${VALUES_FILE}" > "${SONARQUBE_BASE_KUSTOMIZE}"
 
+if [[ -n "${TLS_SECRET_NAME}" ]]; then
+    SONARQUBE_URL="https://${SONARQUBE_HOST}"
+else
+    SONARQUBE_URL="http://${SONARQUBE_HOST}"
+fi
+
 echo "*** Generating sonarqube-secret yaml from helm template"
 helm template "${SONARQUBE_SECRET_CHART}" \
     --namespace "${NAMESPACE}" \
-    --set url="${SONARQUBE_HOST}" > "${SONARQUBE_SECRET_KUSTOMIZE}"
+    --set url="${SONARQUBE_URL}" > "${SONARQUBE_SECRET_KUSTOMIZE}"
 
 echo "*** Building final kube yaml from kustomize into ${SONARQUBE_YAML}"
 kustomize build "${SONARQUBE_KUSTOMIZE}" > "${SONARQUBE_YAML}"

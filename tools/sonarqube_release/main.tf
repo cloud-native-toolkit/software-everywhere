@@ -14,7 +14,7 @@ locals {
 
 resource "null_resource" "sonarqube_release" {
   provisioner "local-exec" {
-    command = "${path.module}/scripts/deploy-sonarqube.sh ${local.sonarqube_secret_chart} ${var.releases_namespace} ${local.ingress_host} ${local.values_file} ${local.kustomize_template} ${var.helm_version} ${var.service_account_name} \"${jsonencode(var.plugins)}\""
+    command = "${path.module}/scripts/deploy-sonarqube.sh ${local.sonarqube_secret_chart} ${var.releases_namespace} ${local.ingress_host} ${local.values_file} ${local.kustomize_template} ${var.helm_version} ${var.service_account_name} \"${jsonencode(var.plugins)}\" ${var.tls_secret_name}"
 
     environment = {
       KUBECONFIG_IKS    = "${var.cluster_config_file}"

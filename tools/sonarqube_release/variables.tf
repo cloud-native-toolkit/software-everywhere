@@ -67,3 +67,8 @@ variable "plugins" {
     "https://binaries.sonarsource.com/Distribution/sonar-go-plugin/sonar-go-plugin-1.6.0.719.jar"
   ]
 }
+
+variable "tls_secret_name" {
+  description = "The secret containing the tls certificates"
+  default = ""
+}

@@ -7,4 +7,4 @@ metadata:
     "app.kubernetes.io/instance": "sonarqube"
     group: {{ .Values.group }}
 data:
-  SONARQUBE_URL: {{ printf "http://%s" .Values.url }}
+  SONARQUBE_URL: {{ .Values.url | quote }}
