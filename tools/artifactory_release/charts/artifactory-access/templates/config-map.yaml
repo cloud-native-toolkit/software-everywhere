@@ -7,4 +7,4 @@ metadata:
     "app.kubernetes.io/instance": "artifactory"
     group: {{ .Values.group }}
 data:
-  ARTIFACTORY_URL: {{ .Values.url }}
+  ARTIFACTORY_URL: {{ .Values.url | quote }}
