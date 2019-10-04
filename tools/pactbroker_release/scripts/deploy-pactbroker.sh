@@ -5,6 +5,7 @@ NAMESPACE="$2"
 INGRESS_HOST="$3"
 DATABASE_TYPE="$4"
 DATABASE_NAME="$5"
+TLS_SECRET_NAME="$6"
 
 if [[ -n "${KUBECONFIG_IKS}" ]]; then
     export KUBECONFIG="${KUBECONFIG_IKS}"
@@ -19,12 +20,17 @@ OUTPUT_YAML="${TMP_DIR}/pactbroker.yaml"
 
 mkdir -p ${TMP_DIR}
 
+VALUES=ingress.hosts.0.host=${INGRESS_HOST}
+if [[ -n "${TLS_SECRET_NAME}" ]]; then
+    VALUES="${VALUES},ingress.tls[0].secretName=${TLS_SECRET_NAME},ingress.tls[0].hosts[0]=${INGRESS_HOST}"
+fi
+
 echo "*** Generating kube yaml from helm template into ${OUTPUT_YAML}"
 helm init --client-only
 helm template ${CHART} \
     --namespace ${NAMESPACE} \
     --name ${NAME} \
-    --set ingress.hosts.0.host=${INGRESS_HOST} \
+    --set "${VALUES}" \
     --set database.type=${DATABASE_TYPE} \
     --set database.name=${DATABASE_NAME} > ${OUTPUT_YAML}
 

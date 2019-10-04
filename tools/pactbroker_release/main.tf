@@ -11,7 +11,7 @@ locals {
 
 resource "null_resource" "pactbroker_release" {
   provisioner "local-exec" {
-    command = "${path.module}/scripts/deploy-pactbroker.sh ${local.chart} ${var.releases_namespace} ${local.ingress_host} ${local.database_type} ${local.database_name}"
+    command = "${path.module}/scripts/deploy-pactbroker.sh ${local.chart} ${var.releases_namespace} ${local.ingress_host} ${local.database_type} ${local.database_name} ${var.tls_secret_name}"
 
     environment = {
       KUBECONFIG_IKS = "${var.cluster_config_file}"
