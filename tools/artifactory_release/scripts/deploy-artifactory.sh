@@ -8,6 +8,7 @@ NAMESPACE="$1"
 INGRESS_HOST="$2"
 VALUES_FILE="$3"
 SERVICE_ACCOUNT_NAME="$4"
+TLS_SECRET_NAME="$5"
 
 if [[ -n "${KUBECONFIG_IKS}" ]]; then
     export KUBECONFIG="${KUBECONFIG_IKS}"
@@ -47,11 +48,16 @@ mkdir -p ${CHART_DIR}
 helm init --client-only
 helm fetch --repo "${CHART_REPO}" --untar --untardir "${CHART_DIR}" artifactory
 
+VALUES="ingress.hosts.0=${INGRESS_HOST}"
+if [[ -n "${TLS_SECRET_NAME}" ]]; then
+    VALUES="${VALUES},ingress.tls[0].secretName=${TLS_SECRET_NAME},ingress.tls[0].hosts[0]=${INGRESS_HOST}"
+fi
+
 echo "*** Generating kube yaml from helm template into ${ARTIFACTORY_OUTPUT_YAML}"
 helm template "${ARTIFACTORY_CHART}" \
     --namespace "${NAMESPACE}" \
     --name "artifactory" \
-    --set "ingress.hosts.0=${INGRESS_HOST}" \
+    --set "${VALUES}" \
     --values "${VALUES_FILE}" > "${ARTIFACTORY_OUTPUT_YAML}"
 
 echo "*** Generating artifactory-access yaml from helm template into ${SECRET_OUTPUT_YAML}"

@@ -20,3 +20,8 @@ variable "cluster_type" {
 variable "service_account" {
   description = "The service account under which the artifactory pods should run"
 }
+
+variable "tls_secret_name" {
+  description = "The name of the secret containing the tls certificate values"
+  default     = ""
+}
