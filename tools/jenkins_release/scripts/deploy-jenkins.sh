@@ -45,22 +45,13 @@ sed -i -e "s/tools/${NAMESPACE}/g"  ${KUSTOMIZE_DIR}/jenkins/kustomization.yaml
 echo "*** Cleaning up helm chart tests"
 rm -rf "${JENKINS_CHART}/templates/tests"
 
-if [[ -n "${TLS_SECRET_NAME}" ]]; then
-    echo "master:" > ${TMP_DIR}/tls-values.yaml
-    echo "  ingress:" >> ${TMP_DIR}/tls-values.yaml
-    echo "    tls:" >> ${TMP_DIR}/tls-values.yaml
-    echo "    - secretName: ${TLS_SECRET_NAME}" >> ${TMP_DIR}/tls-values.yaml
-    echo "      hosts:" >> ${TMP_DIR}/tls-values.yaml
-    echo "      - ${JENKINS_HOST}" >> ${TMP_DIR}/tls-values.yaml
-else
-    echo "" > ${TMP_DIR}/tls-values.yaml
-fi
-
 JENKINS_URL="http://${JENKINS_HOST}"
 HELM_VALUES="master.ingress.hostName=${JENKINS_HOST}"
 if [[ -n "${TLS_SECRET_NAME}" ]]; then
     JENKINS_URL="https://${JENKINS_HOST}"
-    HELM_VALUES="${HELM_VALUES},master.ingress.tls[0].secretName=${TLS_SECRET_NAME},master.ingress.tls[0].hosts[0]=${JENKINS_HOST}"
+    HELM_VALUES="${HELM_VALUES},master.ingress.tls[0].secretName=${TLS_SECRET_NAME}"
+    HELM_VALUES="${HELM_VALUES},master.ingress.tls[0].hosts[0]=${JENKINS_HOST}"
+    HELM_VALUES="${HELM_VALUES},master.ingress.annotations.ingress\.bluemix\.net/redirect-to-https=true"
 fi
 
 echo "*** Generating jenkins yaml from helm template"
