@@ -62,7 +62,7 @@ VALUES=ingress.hosts.0.name="${SONARQUBE_HOST}"
 if [[ -n "${TLS_SECRET_NAME}" ]]; then
     VALUES="${VALUES},ingress.tls[0].secretName=${TLS_SECRET_NAME}"
     VALUES="${VALUES},ingress.tls[0].hosts[0]=${SONARQUBE_HOST}"
-    VALUES="${VALUES},ingress.annotations.ingress\.bluemix\.net/redirect-to-https=true"
+    VALUES="${VALUES},ingress.annotations.ingress\.bluemix\.net/redirect-to-https=\"true\""
 fi
 
 echo "*** Generating sonarqube yaml from helm template with plugins ${PLUGIN_YAML}"
