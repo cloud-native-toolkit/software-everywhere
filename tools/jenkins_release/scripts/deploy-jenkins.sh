@@ -51,7 +51,7 @@ if [[ -n "${TLS_SECRET_NAME}" ]]; then
     JENKINS_URL="https://${JENKINS_HOST}"
     HELM_VALUES="${HELM_VALUES},master.ingress.tls[0].secretName=${TLS_SECRET_NAME}"
     HELM_VALUES="${HELM_VALUES},master.ingress.tls[0].hosts[0]=${JENKINS_HOST}"
-    HELM_VALUES="${HELM_VALUES},master.ingress.annotations.ingress\.bluemix\.net/redirect-to-https=\"true\""
+    HELM_VALUES="${HELM_VALUES},master.ingress.annotations.ingress\.bluemix\.net/redirect-to-https=True"
 fi
 
 echo "*** Generating jenkins yaml from helm template"
