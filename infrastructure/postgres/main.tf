@@ -51,7 +51,7 @@ resource "ibm_container_bind_service" "postgresql_service_binding" {
   count      = "${local.namespace_count}"
 
   cluster_name_id             = "${var.cluster_id}"
-  service_instance_name       = "${data.ibm_resource_instance.postgresql_instance.name}"
+  service_instance_id         = "${data.ibm_resource_instance.postgresql_instance.id}"
   namespace_id                = "${local.namespaces[count.index]}"
   resource_group_id           = "${data.ibm_resource_group.tools_resource_group.id}"
 
