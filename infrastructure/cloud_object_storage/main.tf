@@ -38,7 +38,7 @@ resource "ibm_container_bind_service" "cos_binding" {
   count      = "${local.namespace_count}"
 
   cluster_name_id             = "${var.cluster_id}"
-  service_instance_id         = "${ibm_resource_instance.cos_instance.id}"
+  service_instance_name       = "${ibm_resource_instance.cos_instance.name}"
   namespace_id                = "${local.namespaces[count.index]}"
   resource_group_id           = "${data.ibm_resource_group.tools_resource_group.id}"
   role                        = "${local.role}"
