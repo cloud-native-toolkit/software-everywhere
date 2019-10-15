@@ -39,16 +39,6 @@ resource "null_resource" "create_namespaces" {
   }
 }
 
-resource "null_resource" "create_cluster_pull_secret_iks" {
-  provisioner "local-exec" {
-    command = "${path.module}/scripts/cluster-pull-secret-apply.sh ${var.cluster_name}"
-
-    environment = {
-      KUBECONFIG_IKS = "${var.cluster_config_file_path}"
-    }
-  }
-}
-
 resource "null_resource" "copy_tls_secrets" {
   depends_on = ["null_resource.create_namespaces"]
   count      = "${length(local.namespaces)}"
@@ -76,7 +66,7 @@ resource "null_resource" "copy_apikey_secret" {
 }
 
 resource "null_resource" "create_pull_secrets" {
-  depends_on = ["null_resource.create_cluster_pull_secret_iks", "null_resource.create_namespaces"]
+  depends_on = ["null_resource.create_namespaces"]
   count      = "${length(local.namespaces)}"
 
   provisioner "local-exec" {
