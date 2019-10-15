@@ -12,7 +12,8 @@ KUSTOMIZE_TEMPLATE="$5"
 VERSION="$6"
 SERVICE_ACCOUNT="$7"
 PLUGINS="$8"
-TLS_SECRET_NAME="$9"
+VOLUME_CAPACITY="$9"
+TLS_SECRET_NAME="$10"
 
 if [[ -n "${KUBECONFIG_IKS}" ]]; then
     export KUBECONFIG="${KUBECONFIG_IKS}"
@@ -71,6 +72,7 @@ helm template "${SONARQUBE_CHART}" \
     --namespace "${NAMESPACE}" \
     --name "${NAME}" \
     --set ${VALUES} \
+    --set persistence.size="${VOLUME_CAPACITY}" \
     --set postgresql.postgresServer="${DATABASE_HOST}" \
     --set postgresql.service.port="${DATABASE_PORT}" \
     --set postgresql.postgresDatabase="${DATABASE_NAME}" \

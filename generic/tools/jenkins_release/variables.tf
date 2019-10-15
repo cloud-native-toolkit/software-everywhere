@@ -21,3 +21,8 @@ variable "tls_secret_name" {
   description = "The secret containing the tls certificates"
   default = ""
 }
+
+variable "volume_capacity" {
+  description = "The volume capacity for the persistent volume claim"
+  default     = "20Gi"
+}

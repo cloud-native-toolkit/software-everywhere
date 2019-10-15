@@ -77,3 +77,9 @@ variable "login_user" {
   description = "The username to log in to openshift"
   default     = "apikey"
 }
+
+variable "default_storage_class" {
+  type        = "string"
+  description = "The default storage class that should be applied"
+  default     = "ibmc-file-gold"
+}

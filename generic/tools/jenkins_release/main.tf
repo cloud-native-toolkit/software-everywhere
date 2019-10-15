@@ -7,8 +7,7 @@ locals {
   config_name           = "jenkins-config"
   ingress_host          = "jenkins.${var.cluster_ingress_hostname}"
   ingress_url           = "${var.cluster_type == "openshift" ? "https" : "http"}://${local.ingress_host}"
-  storage_class         = "ibmc-file-gold"
-  volume_capacity       = "20Gi"
+  volume_capacity       = "${var.volume_capacity}"
 }
 
 resource "null_resource" "jenkins_release_iks" {
@@ -37,7 +36,7 @@ resource "null_resource" "jenkins_release_openshift" {
   count = "${var.cluster_type == "openshift" ? "1" : "0"}"
 
   provisioner "local-exec" {
-    command = "${path.module}/scripts/deploy-jenkins-openshift.sh ${var.releases_namespace} ${local.storage_class} ${local.volume_capacity}"
+    command = "${path.module}/scripts/deploy-jenkins-openshift.sh ${var.releases_namespace} ${local.volume_capacity}"
   }
 
   provisioner "local-exec" {

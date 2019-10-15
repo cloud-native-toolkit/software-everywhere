@@ -15,6 +15,3 @@
     volumeMounts:
       - mountPath: /mount
         name: artifactory-volume
-- op: add
-  path: /spec/volumeClaimTemplates/0/spec/storageClassName
-  value: ibmc-file-gold
