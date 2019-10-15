@@ -5,6 +5,9 @@ artifactory:
     repository: docker.bintray.io/jfrog/artifactory-oss
   accessAdmin:
     password: admin
+  persistence:
+    enabled: true
+    size: 5Gi
 
 ingress:
   enabled: true

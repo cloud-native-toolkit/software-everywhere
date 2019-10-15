@@ -1,10 +1,10 @@
 locals {
-  tmp_dir       = "${path.cwd}/.tmp"
-  ingress_host  = "artifactory.${var.cluster_ingress_hostname}"
-  ingress_url   = "http://${local.ingress_host}"
-  values_file   = "${path.module}/artifactory-values.yaml"
-  config_name   = "artifactory-config"
-  secret_name   = "artifactory-access"
+  tmp_dir                = "${path.cwd}/.tmp"
+  ingress_host           = "artifactory.${var.cluster_ingress_hostname}"
+  ingress_url            = "http://${local.ingress_host}"
+  values_file            = "${path.module}/artifactory-values.yaml"
+  config_name            = "artifactory-config"
+  secret_name            = "artifactory-access"
 }
 
 resource "null_resource" "artifactory_release" {
