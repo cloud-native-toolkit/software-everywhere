@@ -37,11 +37,11 @@ resource "ibm_resource_key" "cloudant_key" {
 resource "ibm_container_bind_service" "cloudant_binding" {
   count = "${local.namespace_count}"
 
-  cluster_name_id     = "${var.cluster_id}"
-  service_instance_id = "${ibm_resource_instance.cloudant_instance.id}"
-  namespace_id        = "${local.namespaces[count.index]}"
-  resource_group_id   = "${data.ibm_resource_group.tools_resource_group.id}"
-  key                 = "${ibm_resource_key.cloudant_key.name}"
+  cluster_name_id       = "${var.cluster_id}"
+  service_instance_name = "${ibm_resource_instance.cloudant_instance.name}"
+  namespace_id          = "${local.namespaces[count.index]}"
+  resource_group_id     = "${data.ibm_resource_group.tools_resource_group.id}"
+  key                   = "${ibm_resource_key.cloudant_key.name}"
 
   // The provider (v16.1) is incorrectly registering that these values change each time,
   // this may be removed in the future if this is fixed.

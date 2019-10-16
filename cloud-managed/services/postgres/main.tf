@@ -41,7 +41,6 @@ locals {
 }
 
 resource "ibm_resource_key" "postgresql_credentials" {
-  depends_on           = ["ibm_resource_instance.create_postgresql_instance"]
   name                 = "${data.ibm_resource_group.tools_resource_group.name}-postgresql-key"
   role                 = "${local.role}"
   resource_instance_id = "${data.ibm_resource_instance.postgresql_instance.id}"
@@ -54,14 +53,13 @@ resource "ibm_resource_key" "postgresql_credentials" {
 }
 
 resource "ibm_container_bind_service" "postgresql_service_binding" {
-  depends_on = ["ibm_resource_key.postgresql_credentials"]
   count      = "${local.namespace_count}"
 
-  cluster_name_id     = "${var.cluster_id}"
-  service_instance_id = "${data.ibm_resource_instance.postgresql_instance.id}"
-  namespace_id        = "${local.namespaces[count.index]}"
-  resource_group_id   = "${data.ibm_resource_group.tools_resource_group.id}"
-  key                 = "${ibm_resource_key.postgresql_credentials.name}"
+  cluster_name_id       = "${var.cluster_id}"
+  service_instance_name = "${data.ibm_resource_instance.postgresql_instance.name}"
+  namespace_id          = "${local.namespaces[count.index]}"
+  resource_group_id     = "${data.ibm_resource_group.tools_resource_group.id}"
+  key                   = "${ibm_resource_key.postgresql_credentials.name}"
 
   // The provider (v16.1) is incorrectly registering that these values change each time,
   // this may be removed in the future if this is fixed.
