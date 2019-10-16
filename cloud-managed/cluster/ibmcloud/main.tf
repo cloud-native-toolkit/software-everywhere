@@ -28,7 +28,7 @@ locals {
   kube_version_file     = "${path.cwd}/.tmp/kube_version.val"
   tls_secret_file       = "${path.cwd}/.tmp/tls_secret.val"
   cluster_config_dir    = "${var.kubeconfig_download_dir}/.kube"
-  cluster_name          = "${var.cluster_name}"
+  cluster_name          = "${var.cluster_name != "" ? var.cluster_name : join("-", [var.resource_group_name, "cluster"])}"
   tmp_dir               = "${path.cwd}/.tmp"
   config_namespace      = "default"
   ibmcloud_apikey_chart = "${path.module}/charts/ibmcloud"
@@ -90,7 +90,7 @@ data "ibm_container_cluster_config" "cluster" {
 
 resource "null_resource" "create_cluster_pull_secret_iks" {
   provisioner "local-exec" {
-    command = "${path.module}/scripts/cluster-pull-secret-apply.sh ${var.cluster_name}"
+    command = "${path.module}/scripts/cluster-pull-secret-apply.sh ${local.cluster_name}"
 
     environment = {
       KUBECONFIG_IKS = "${local.config_file_path}"
@@ -188,7 +188,7 @@ resource "null_resource" "ibmcloud_apikey_release" {
   depends_on = ["null_resource.oc_login"]
 
   provisioner "local-exec" {
-    command = "${path.module}/scripts/deploy-ibmcloud-config.sh ${local.ibmcloud_apikey_chart} ${local.config_namespace} ${var.ibmcloud_api_key} ${var.resource_group_name} ${data.local_file.server_url.content} ${var.cluster_type} ${var.cluster_name} ${data.local_file.ingress_subdomain.content} ${local.tls_secret_file}"
+    command = "${path.module}/scripts/deploy-ibmcloud-config.sh ${local.ibmcloud_apikey_chart} ${local.config_namespace} ${var.ibmcloud_api_key} ${var.resource_group_name} ${data.local_file.server_url.content} ${var.cluster_type} ${local.cluster_name} ${data.local_file.ingress_subdomain.content} ${local.tls_secret_file}"
 
     environment = {
       KUBECONFIG_IKS = "${local.config_file_path}"
