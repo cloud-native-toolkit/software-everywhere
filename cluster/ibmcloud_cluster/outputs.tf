@@ -15,7 +15,7 @@ output "resource_group_name" {
 }
 
 output "region" {
-  value       = "${data.ibm_container_cluster_config.cluster.region}"
+  value       = "${var.cluster_region}"
   description = "Region containing the cluster."
 }
 
