@@ -27,16 +27,9 @@ data "ibm_resource_instance" "postgresql_instance" {
   resource_group_id = "${data.ibm_resource_group.tools_resource_group.id}"
 }
 
-resource "ibm_resource_key" "postgresql_credentials" {
-  depends_on           = ["ibm_resource_instance.create_postgresql_instance"]
-  name                 = "${data.ibm_resource_group.tools_resource_group.name}-postgresql-key"
-  role                 = "Administrator"
-  resource_instance_id = "${data.ibm_resource_instance.postgresql_instance.id}"
-}
-
 locals {
-  namespaces      = ["${var.tools_namespace}", "${var.dev_namespace}", "${var.test_namespace}", "${var.staging_namespace}"]
-  namespace_count = 0
+  namespaces       = ["${var.tools_namespace}", "${var.dev_namespace}", "${var.test_namespace}", "${var.staging_namespace}"]
+  namespace_count  = 4
   tmp_dir          = "${path.cwd}/.tmp"
   credentials_file = "${path.cwd}/.tmp/postgres_credentials.json"
   hostname_file    = "${path.cwd}/.tmp/postgres_hostname.val"
@@ -44,16 +37,37 @@ locals {
   username_file    = "${path.cwd}/.tmp/postgres_username.val"
   password_file    = "${path.cwd}/.tmp/postgres_password.val"
   dbname_file      = "${path.cwd}/.tmp/postgres_dbname.val"
+  role             = "Administrator"
+}
+
+resource "ibm_resource_key" "postgresql_credentials" {
+  depends_on           = ["ibm_resource_instance.create_postgresql_instance"]
+  name                 = "${data.ibm_resource_group.tools_resource_group.name}-postgresql-key"
+  role                 = "${local.role}"
+  resource_instance_id = "${data.ibm_resource_instance.postgresql_instance.id}"
+
+  //User can increase timeouts
+  timeouts {
+    create = "15m"
+    delete = "15m"
+  }
 }
 
 resource "ibm_container_bind_service" "postgresql_service_binding" {
   depends_on = ["ibm_resource_key.postgresql_credentials"]
   count      = "${local.namespace_count}"
 
-  cluster_name_id             = "${var.cluster_id}"
-  service_instance_id         = "${data.ibm_resource_instance.postgresql_instance.id}"
-  namespace_id                = "${local.namespaces[count.index]}"
-  resource_group_id           = "${data.ibm_resource_group.tools_resource_group.id}"
+  cluster_name_id     = "${var.cluster_id}"
+  service_instance_id = "${data.ibm_resource_instance.postgresql_instance.id}"
+  namespace_id        = "${local.namespaces[count.index]}"
+  resource_group_id   = "${data.ibm_resource_group.tools_resource_group.id}"
+  key                 = "${ibm_resource_key.postgresql_credentials.name}"
+
+  //User can increase timeouts
+  timeouts {
+    create = "15m"
+    delete = "15m"
+  }
 
   // The provider (v16.1) is incorrectly registering that these values change each time,
   // this may be removed in the future if this is fixed.

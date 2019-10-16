@@ -18,6 +18,8 @@ resource "ibm_resource_instance" "cos_instance" {
 }
 
 locals {
+  namespaces = ["${var.dev_namespace}", "${var.test_namespace}", "${var.staging_namespace}"]
+  namespace_count = 3
   role = "Manager"
 }
 
@@ -26,11 +28,12 @@ resource "ibm_resource_key" "cos_credentials" {
   name                 = "${data.ibm_resource_group.tools_resource_group.name}-cos-key"
   role                 = "${local.role}"
   resource_instance_id = "${ibm_resource_instance.cos_instance.id}"
-}
 
-locals {
-  namespaces = ["${var.dev_namespace}", "${var.test_namespace}", "${var.staging_namespace}"]
-  namespace_count = 3
+  //User can increase timeouts
+  timeouts {
+    create = "15m"
+    delete = "15m"
+  }
 }
 
 resource "ibm_container_bind_service" "cos_binding" {
@@ -41,7 +44,13 @@ resource "ibm_container_bind_service" "cos_binding" {
   service_instance_id         = "${ibm_resource_instance.cos_instance.id}"
   namespace_id                = "${local.namespaces[count.index]}"
   resource_group_id           = "${data.ibm_resource_group.tools_resource_group.id}"
-  role                        = "${local.role}"
+  key                         = "${ibm_resource_key.cos_credentials.name}"
+
+  //User can increase timeouts
+  timeouts {
+    create = "15m"
+    delete = "15m"
+  }
 
   // The provider (v16.1) is incorrectly registering that these values change each time,
   // this may be removed in the future if this is fixed.

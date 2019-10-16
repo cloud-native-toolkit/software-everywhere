@@ -19,17 +19,35 @@ resource "ibm_resource_instance" "cloudant_instance" {
 locals {
   namespaces      = ["${var.dev_namespace}", "${var.test_namespace}", "${var.staging_namespace}"]
   namespace_count = 3
+  role            = "Manager"
+}
+
+resource "ibm_resource_key" "cloudant_key" {
+  name                 = "${data.ibm_resource_group.tools_resource_group.name}-cos-key"
+  role                 = "${local.role}"
+  resource_instance_id = "${ibm_resource_instance.cloudant_instance.id}"
+
+  //User can increase timeouts
+  timeouts {
+    create = "15m"
+    delete = "15m"
+  }
 }
 
 resource "ibm_container_bind_service" "cloudant_binding" {
-  depends_on = ["ibm_resource_instance.cloudant_instance"]
   count = "${local.namespace_count}"
 
-  cluster_name_id             = "${var.cluster_id}"
-  service_instance_id         = "${ibm_resource_instance.cloudant_instance.id}"
-  namespace_id                = "${local.namespaces[count.index]}"
-  resource_group_id           = "${data.ibm_resource_group.tools_resource_group.id}"
-  role                        = "Manager"
+  cluster_name_id     = "${var.cluster_id}"
+  service_instance_id = "${ibm_resource_instance.cloudant_instance.id}"
+  namespace_id        = "${local.namespaces[count.index]}"
+  resource_group_id   = "${data.ibm_resource_group.tools_resource_group.id}"
+  key                 = "${ibm_resource_key.cloudant_key.name}"
+
+  //User can increase timeouts
+  timeouts {
+    create = "15m"
+    delete = "15m"
+  }
 
   // The provider (v16.1) is incorrectly registering that these values change each time,
   // this may be removed in the future if this is fixed.
