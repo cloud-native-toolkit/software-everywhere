@@ -1,8 +1,3 @@
-variable "cluster_name" {
-  type        = "string"
-  description = "The name of the cluster."
-}
-
 variable "cluster_config_file_path" {
   type        = "string"
   description = "The path to the config file for the cluster"

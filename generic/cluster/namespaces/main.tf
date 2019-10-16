@@ -70,7 +70,7 @@ resource "null_resource" "create_pull_secrets" {
   count      = "${length(local.namespaces)}"
 
   provisioner "local-exec" {
-    command = "${path.module}/scripts/setup-namespace-pull-secrets.sh ${var.cluster_name} ${local.namespaces[count.index]}"
+    command = "${path.module}/scripts/setup-namespace-pull-secrets.sh ${local.namespaces[count.index]}"
 
     environment = {
       KUBECONFIG_IKS = "${var.cluster_config_file_path}"

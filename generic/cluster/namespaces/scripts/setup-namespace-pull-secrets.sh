@@ -1,14 +1,8 @@
 #!/usr/bin/env bash
 
-CLUSTER_NAME="$1"
-if [[ -z "${CLUSTER_NAME}" ]]; then
-   echo "CLUSTER_NAME should be provided as first argument"
-   exit 1
-fi
-
-CLUSTER_NAMESPACE="$2"
+CLUSTER_NAMESPACE="$1"
 if [[ -z "${CLUSTER_NAMESPACE}" ]]; then
-   echo "CLUSTER_NAMESPACE should be provided as second argument"
+   echo "CLUSTER_NAMESPACE should be provided as first argument"
    exit 1
 fi
 
