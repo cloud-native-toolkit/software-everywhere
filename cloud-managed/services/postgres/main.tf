@@ -63,12 +63,6 @@ resource "ibm_container_bind_service" "postgresql_service_binding" {
   resource_group_id   = "${data.ibm_resource_group.tools_resource_group.id}"
   key                 = "${ibm_resource_key.postgresql_credentials.name}"
 
-  //User can increase timeouts
-  timeouts {
-    create = "15m"
-    delete = "15m"
-  }
-
   // The provider (v16.1) is incorrectly registering that these values change each time,
   // this may be removed in the future if this is fixed.
   lifecycle {
