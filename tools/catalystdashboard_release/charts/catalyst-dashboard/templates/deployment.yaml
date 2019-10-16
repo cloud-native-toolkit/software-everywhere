@@ -7,6 +7,10 @@ metadata:
     chart: {{ template "catalyst-dashboard.chart" . }}
     release: {{ .Release.Name }}
     heritage: {{ .Release.Service }}
+    "app.kubernetes.io/name": {{ template "catalyst-dashboard.fullname" . }}
+    "helm.sh/chart": {{ template "catalyst-dashboard.chart" . }}
+    "app.kubernetes.io/instance": {{ .Release.Name }}
+    "app.kubernetes.io/component": {{ template "catalyst-dashboard.fullname" . }}-deployment
 spec:
   replicas: {{ .Values.replicaCount }}
   selector:
@@ -18,7 +22,12 @@ spec:
       labels:
         app: {{ template "catalyst-dashboard.name" . }}
         release: {{ .Release.Name }}
+        "app.kubernetes.io/name": {{ template "catalyst-dashboard.name" . }}
+        "helm.sh/chart": {{ printf "%s-%s" .Chart.Name .Chart.Version }}
+        "app.kubernetes.io/instance": {{ template "catalyst-dashboard.name" . }}
+        "app.kubernetes.io/component": {{ template "catalyst-dashboard.name" . }}-pod
     spec:
+      serviceAccountName: {{ template "catalyst-dashboard.name" . }}
       containers:
         - name: {{ .Chart.Name }}
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
