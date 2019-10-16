@@ -28,7 +28,7 @@ locals {
   kube_version_file     = "${path.cwd}/.tmp/kube_version.val"
   tls_secret_file       = "${path.cwd}/.tmp/tls_secret.val"
   cluster_config_dir    = "${var.kubeconfig_download_dir}/.kube"
-  name_list             = [var.resource_group_name, "cluster"]
+  name_list             = ["${var.resource_group_name}", "cluster"]
   cluster_name          = "${var.cluster_name != "" ? var.cluster_name : join("-", local.name_list)}"
   tmp_dir               = "${path.cwd}/.tmp"
   config_namespace      = "default"
