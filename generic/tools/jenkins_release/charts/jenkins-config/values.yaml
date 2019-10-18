@@ -4,5 +4,8 @@
 
 group: catalyst-tools
 
+createJob: true
+
 jenkins:
+  tls: false
   host: jenkins

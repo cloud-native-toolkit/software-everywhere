@@ -32,5 +32,9 @@ Create chart name and version as used by the chart label.
 {{- end -}}
 
 {{- define "jenkins-config.url" -}}
+{{- if .Values.jenkins.tls -}}
+{{- default (printf "https://%s" .Values.jenkins.host) .Values.jenkins.url -}}
+{{- else -}}
 {{- default (printf "http://%s" .Values.jenkins.host) .Values.jenkins.url -}}
+{{- end -}}
 {{- end -}}

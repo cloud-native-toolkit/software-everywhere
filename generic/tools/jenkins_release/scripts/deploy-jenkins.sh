@@ -45,9 +45,12 @@ sed -i -e "s/tools/${NAMESPACE}/g"  ${KUSTOMIZE_DIR}/jenkins/kustomization.yaml
 echo "*** Cleaning up helm chart tests"
 rm -rf "${JENKINS_CHART}/templates/tests"
 
+JENKINS_TLS="false"
 JENKINS_URL="http://${JENKINS_HOST}"
 HELM_VALUES="master.ingress.hostName=${JENKINS_HOST}"
+
 if [[ -n "${TLS_SECRET_NAME}" ]]; then
+    JENKINS_TLS="true"
     JENKINS_URL="https://${JENKINS_HOST}"
     HELM_VALUES="${HELM_VALUES},master.ingress.tls[0].secretName=${TLS_SECRET_NAME}"
     HELM_VALUES="${HELM_VALUES},master.ingress.tls[0].hosts[0]=${JENKINS_HOST}"
@@ -65,7 +68,7 @@ helm template "${JENKINS_CHART}" \
 echo "*** Generating jenkins-config yaml from helm template"
 helm template "${JENKINS_CONFIG_CHART}" \
     --namespace "${NAMESPACE}" \
-    --set jenkins.url="${JENKINS_URL}" \
+    --set jenkins.tls="${JENKINS_TLS}" \
     --set jenkins.host="${JENKINS_HOST}" > "${JENKINS_CONFIG_KUSTOMIZE}"
 
 echo "*** Building final kube yaml from kustomize into ${JENKINS_YAML}"
