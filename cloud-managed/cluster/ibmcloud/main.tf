@@ -100,6 +100,8 @@ resource "null_resource" "create_cluster_pull_secret_iks" {
 }
 
 resource "null_resource" "set_default_storage_class" {
+  count      = "${var.cluster_type != "openshift" ? "1": "0"}"
+
   provisioner "local-exec" {
     command = "${path.module}/scripts/set-default-storage-class.sh ${var.default_storage_class}"
 
