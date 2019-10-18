@@ -100,16 +100,6 @@ resource "null_resource" "create_cluster_pull_secret_iks" {
   }
 }
 
-resource "null_resource" "set_default_storage_class" {
-  provisioner "local-exec" {
-    command = "${path.module}/scripts/set-default-storage-class.sh ${local.storage_class}"
-
-    environment = {
-      KUBECONFIG_IKS = "${local.config_file_path}"
-    }
-  }
-}
-
 resource "null_resource" "get_server_url" {
   depends_on = ["data.ibm_container_cluster_config.cluster", "null_resource.ibmcloud_login"]
 
@@ -183,6 +173,18 @@ resource "null_resource" "oc_login" {
 
   provisioner "local-exec" {
     command = "oc login -u ${var.login_user} -p ${var.ibmcloud_api_key} --server=${data.local_file.server_url.content} > /dev/null"
+  }
+}
+
+resource "null_resource" "set_default_storage_class" {
+  depends_on = ["null_resource.oc_login"]
+
+  provisioner "local-exec" {
+    command = "${path.module}/scripts/set-default-storage-class.sh ${local.storage_class}"
+
+    environment = {
+      KUBECONFIG_IKS = "${local.config_file_path}"
+    }
   }
 }
 
