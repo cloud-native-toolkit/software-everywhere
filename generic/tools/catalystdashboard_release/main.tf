@@ -5,11 +5,12 @@ locals {
 
 resource "null_resource" "catalystdashboard_release" {
   provisioner "local-exec" {
-    command = "${path.module}/scripts/deploy-catalystdashboard.sh ${var.releases_namespace} ${local.ingress_host} \"${jsonencode(var.tool_config_maps)}\" ${var.tls_secret_name} ${var.image_tag}"
+    command = "${path.module}/scripts/deploy-catalystdashboard.sh ${var.releases_namespace} ${local.ingress_host} ${var.image_tag} \"${jsonencode(var.tool_config_maps)}\""
 
     environment = {
-      KUBECONFIG_IKS = "${var.cluster_config_file}"
-      TMP_DIR        = "${local.tmp_dir}"
+      KUBECONFIG_IKS  = "${var.cluster_config_file}"
+      TLS_SECRET_NAME = "${var.tls_secret_name}"
+      TMP_DIR         = "${local.tmp_dir}"
     }
   }
 
