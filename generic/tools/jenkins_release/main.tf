@@ -37,6 +37,10 @@ resource "null_resource" "jenkins_release_openshift" {
 
   provisioner "local-exec" {
     command = "${path.module}/scripts/deploy-jenkins-openshift.sh ${var.releases_namespace} ${local.volume_capacity}"
+
+    environment = {
+      TMP_DIR    = "${local.tmp_dir}"
+    }
   }
 
   provisioner "local-exec" {

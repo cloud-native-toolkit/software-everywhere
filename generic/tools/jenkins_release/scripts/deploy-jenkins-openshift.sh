@@ -7,6 +7,14 @@ NAMESPACE="$1"
 STORAGE_CLASS="$2"
 VOLUME_CAPACITY="$3"
 
+if [[ -z "${TMP_DIR}" ]]; then
+  TMP_DIR=./tmp
+fi
+
+mkdir -p ${TMP_DIR}
+
+YAML_OUTPUT=${TMP_DIR}/jenkins-config.yaml
+
 oc new-app jenkins-persistent -n "${NAMESPACE}" \
     -e STORAGE_CLASS="${STORAGE_CLASS}" \
     -e VOLUME_CAPACITY="${VOLUME_CAPACITY}"
@@ -25,5 +33,5 @@ helm template ${CHART_DIR}/jenkins-config \
     --namespace "${NAMESPACE}" \
     --set createJob=false \
     --set jenkins.host=${JENKINS_HOST} \
-    --set jenkins.tls=true | \
-    kubectl apply --namespace ${NAMESPACE} -f -
+    --set jenkins.tls=true > ${YAML_OUTPUT}
+kubectl apply --namespace ${NAMESPACE} -f ${YAML_OUTPUT}
