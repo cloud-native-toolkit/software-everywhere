@@ -4,8 +4,8 @@ SCRIPT_DIR=$(cd $(dirname $0); pwd -P)
 CHART_DIR=$(cd "${SCRIPT_DIR}/../charts"; pwd -P)
 
 NAMESPACE="$1"
-STORAGE_CLASS="$2"
-VOLUME_CAPACITY="$3"
+VOLUME_CAPACITY="$2"
+STORAGE_CLASS="$3"
 
 if [[ -z "${TMP_DIR}" ]]; then
   TMP_DIR=./tmp
@@ -15,10 +15,12 @@ mkdir -p ${TMP_DIR}
 
 YAML_OUTPUT=${TMP_DIR}/jenkins-config.yaml
 
+echo "Creating jenkins-persistent instance"
 oc new-app jenkins-persistent -n "${NAMESPACE}" \
     -e STORAGE_CLASS="${STORAGE_CLASS}" \
     -e VOLUME_CAPACITY="${VOLUME_CAPACITY}"
-# Patch the Jenkins deployment config to increase the timeout
+
+echo "Patching Jenkins deploymentconfig to increase timeout"
 kubectl patch deploymentconfig/jenkins -n "${NAMESPACE}" --type=json -p='[{"op": "replace", "path": "/spec/strategy/recreateParams/timeoutSeconds", "value": 1200}]'
 
 JENKINS_HOST=$(oc get route jenkins -n ${NAMESPACE} -o jsonpath='{ .spec.host }')
