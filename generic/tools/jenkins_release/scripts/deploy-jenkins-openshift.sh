@@ -18,11 +18,13 @@ YAML_OUTPUT=${TMP_DIR}/jenkins-config.yaml
 oc new-app jenkins-persistent -n "${NAMESPACE}" \
     -e STORAGE_CLASS="${STORAGE_CLASS}" \
     -e VOLUME_CAPACITY="${VOLUME_CAPACITY}"
+# Patch the Jenkins deployment config to increase the timeout
+kubectl patch deploymentconfig/jenkins -n "${NAMESPACE}" --type=json -p='[{"op": "replace", "path": "/spec/strategy/recreateParams/timeoutSeconds", "value": 1200}]'
 
 JENKINS_HOST=$(oc get route jenkins -n ${NAMESPACE} -o jsonpath='{ .spec.host }')
 JENKINS_URL="https://${JENKINS_HOST}"
 
-echo "*** Waiting for Jenkins"
+echo "*** Waiting for Jenkins on ${JENKINS_URL}"
 until curl -Isf "${JENKINS_URL}/login"; do
     echo '>>> waiting for Jenkins'
     sleep 300
