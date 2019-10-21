@@ -3,23 +3,20 @@ provider "null" {
 
 locals {
   tmp_dir                = "${path.cwd}/.tmp"
-  sonarqube_secret_chart = "${path.module}/charts/sonarqube-access"
   ingress_host           = "sonarqube.${var.cluster_ingress_hostname}"
   ingress_url            = "http://${local.ingress_host}"
   secret_name            = "sonarqube-access"
   config_name            = "sonarqube-config"
-  values_file            = "${path.module}/sonarqube-values.yaml"
-  kustomize_template     = "${path.module}/kustomize/sonarqube"
-  volume_capacity        = "${var.volume_capacity}"
 }
 
 resource "null_resource" "sonarqube_release" {
   provisioner "local-exec" {
-    command = "${path.module}/scripts/deploy-sonarqube.sh ${local.sonarqube_secret_chart} ${var.releases_namespace} ${local.ingress_host} ${local.values_file} ${local.kustomize_template} ${var.helm_version} ${var.service_account_name} \"${jsonencode(var.plugins)}\" ${local.volume_capacity} ${var.tls_secret_name}"
+    command = "${path.module}/scripts/deploy-sonarqube.sh ${var.releases_namespace} ${local.ingress_host} ${var.helm_version} ${var.service_account_name} ${var.volume_capacity} \"${jsonencode(var.plugins)}\""
 
     environment = {
       KUBECONFIG_IKS    = "${var.cluster_config_file}"
       TMP_DIR           = "${local.tmp_dir}"
+      TLS_SECRET_NAME   = "${var.tls_secret_name}"
       DATABASE_HOST     = "${var.postgresql_hostname}"
       DATABASE_PORT     = "${var.postgresql_port}"
       DATABASE_NAME     = "${var.postgresql_database_name}"
