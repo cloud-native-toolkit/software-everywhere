@@ -7,8 +7,9 @@ LOCAL_KUSTOMIZE_DIR=$(cd "${SCRIPT_DIR}/../kustomize"; pwd -P)
 NAMESPACE="$1"
 INGRESS_HOST="$2"
 VALUES_FILE="$3"
-SERVICE_ACCOUNT_NAME="$4"
-TLS_SECRET_NAME="$5"
+CHART_VERSION="$4"
+SERVICE_ACCOUNT_NAME="$5"
+TLS_SECRET_NAME="$6"
 
 if [[ -n "${KUBECONFIG_IKS}" ]]; then
     export KUBECONFIG="${KUBECONFIG_IKS}"
@@ -43,10 +44,10 @@ echo "*** Setting up kustomize directory"
 mkdir -p "${KUSTOMIZE_DIR}"
 cp -R "${KUSTOMIZE_TEMPLATE}" "${KUSTOMIZE_DIR}"
 
-echo "*** Fetching helm chart from ${CHART_REPO}"
+echo "*** Fetching helm chart artifactory:${CHART_VERSION} from ${CHART_REPO}"
 mkdir -p ${CHART_DIR}
 helm init --client-only
-helm fetch --repo "${CHART_REPO}" --untar --untardir "${CHART_DIR}" artifactory
+helm fetch --repo "${CHART_REPO}" --untar --untardir "${CHART_DIR}" --version ${CHART_VERSION} artifactory
 
 VALUES="ingress.hosts.0=${INGRESS_HOST}"
 if [[ -n "${TLS_SECRET_NAME}" ]]; then

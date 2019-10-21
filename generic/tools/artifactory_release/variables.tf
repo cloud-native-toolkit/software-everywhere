@@ -25,3 +25,8 @@ variable "tls_secret_name" {
   description = "The name of the secret containing the tls certificate values"
   default     = ""
 }
+
+variable "chart_version" {
+  description = "The chart version that will be used for artifactory release"
+  default     = "7.18.1"
+}
