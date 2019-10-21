@@ -19,14 +19,17 @@ oc new-app jenkins-persistent -n "${NAMESPACE}" \
     -e STORAGE_CLASS="${STORAGE_CLASS}" \
     -e VOLUME_CAPACITY="${VOLUME_CAPACITY}"
 
-until ${SCRIPT_DIR}/checkPodRunning.sh jenkins; do
+JENKINS_HOST=$(oc get route jenkins -n ${NAMESPACE} -o jsonpath='{ .spec.host }')
+JENKINS_URL="https://${JENKINS_HOST}"
+
+echo "*** Waiting for Jenkins"
+until curl -Isf "${JENKINS_URL}/login"; do
     echo '>>> waiting for Jenkins'
     sleep 300
 done
 echo '>>> Jenkins has started'
 
-JENKINS_HOST=$(oc get route jenkins -n ${NAMESPACE} -o jsonpath='{ .spec.host }')
-oc create secret generic jenkins-access -n ${NAMESPACE} --from-literal url=https://${JENKINS_HOST}
+oc create secret generic jenkins-access -n ${NAMESPACE} --from-literal url=${JENKINS_URL}
 
 helm template ${CHART_DIR}/jenkins-config \
     --name "jenkins-config" \
