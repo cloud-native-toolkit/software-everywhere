@@ -68,6 +68,10 @@ if [[ -n "${TLS_SECRET_NAME}" ]]; then
     VALUES="${VALUES},ingress.annotations.ingress\.bluemix\.net/redirect-to-https='True'"
 fi
 
+if [[ -n "${STORAGE_CLASS}" ]]; then
+  VALUES="${VALUES},persistence.storageClass=${STORAGE_CLASS}"
+fi
+
 echo "*** Generating sonarqube yaml from helm template with plugins ${PLUGIN_YAML}"
 helm init --client-only
 helm template "${SONARQUBE_CHART}" \
