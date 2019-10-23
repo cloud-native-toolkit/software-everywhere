@@ -5,9 +5,15 @@ data "ibm_resource_group" "tools_resource_group" {
   name = "${var.resource_group_name}"
 }
 
+locals {
+  namespace   = "default"
+  name_prefix = "${var.name_prefix != "" ? var.name_prefix : var.resource_group_name}"
+  role        = "Manager"
+}
+
 // LogDNA - Logging
 resource "ibm_resource_instance" "logdna_instance" {
-  name              = "${replace(data.ibm_resource_group.tools_resource_group.name, "/[^a-zA-Z0-9_\\-\\.]/", "")}-logdna"
+  name              = "${replace(local.name_prefix, "/[^a-zA-Z0-9_\\-\\.]/", "")}-logdna"
   service           = "logdna"
   plan              = "7-day"
   location          = "us-south"
@@ -21,19 +27,15 @@ resource "ibm_resource_instance" "logdna_instance" {
 }
 
 resource "ibm_resource_key" "logdna_instance_key" {
-  name                 = "${replace(data.ibm_resource_group.tools_resource_group.name, "/[^a-zA-Z0-9_\\-\\.]/", "")}-logdna-key"
+  name                 = "${ibm_resource_instance.logdna_instance.name}-key"
   resource_instance_id = "${ibm_resource_instance.logdna_instance.id}"
-  role                 = "Manager"
+  role                 = "${local.role}"
 
   //User can increase timeouts 
   timeouts {
     create = "15m"
     delete = "15m"
   }
-}
-
-locals {
-  namespace = "default"
 }
 
 resource "null_resource" "logdna_bind" {

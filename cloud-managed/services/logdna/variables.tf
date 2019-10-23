@@ -23,3 +23,9 @@ variable "service_account_name" {
   description = "The service account that the logdna agent should run under"
   default     = "default"
 }
+
+variable "name_prefix" {
+  type        = "string"
+  description = "The prefix name for the service. If not provided it will default to the resource group name"
+  default     = ""
+}

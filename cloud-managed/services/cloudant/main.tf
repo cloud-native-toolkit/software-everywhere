@@ -2,8 +2,15 @@ data "ibm_resource_group" "tools_resource_group" {
   name = "${var.resource_group_name}"
 }
 
+locals {
+  namespaces      = ["${var.dev_namespace}", "${var.test_namespace}", "${var.staging_namespace}"]
+  namespace_count = 3
+  role            = "Manager"
+  name_prefix     = "${var.name_prefix != "" ? var.name_prefix : var.resource_group_name}"
+}
+
 resource "ibm_resource_instance" "cloudant_instance" {
-  name              = "${replace(data.ibm_resource_group.tools_resource_group.name, "/[^a-zA-Z0-9_\\-\\.]/", "")}-cloudant"
+  name              = "${replace(local.name_prefix, "/[^a-zA-Z0-9_\\-\\.]/", "")}-cloudant"
   service           = "cloudantnosqldb"
   plan              = "lite"
   location          = "${var.resource_location}"
@@ -16,14 +23,8 @@ resource "ibm_resource_instance" "cloudant_instance" {
   }
 }
 
-locals {
-  namespaces      = ["${var.dev_namespace}", "${var.test_namespace}", "${var.staging_namespace}"]
-  namespace_count = 3
-  role            = "Manager"
-}
-
 resource "ibm_resource_key" "cloudant_key" {
-  name                 = "${data.ibm_resource_group.tools_resource_group.name}-cos-key"
+  name                 = "${ibm_resource_instance.cloudant_instance.name}-key"
   role                 = "${local.role}"
   resource_instance_id = "${ibm_resource_instance.cloudant_instance.id}"
 

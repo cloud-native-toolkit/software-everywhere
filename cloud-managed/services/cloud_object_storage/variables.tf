@@ -27,3 +27,9 @@ variable "staging_namespace" {
   type        = "string"
   description = "Staging namespace"
 }
+
+variable "name_prefix" {
+  type        = "string"
+  description = "The prefix name for the service. If not provided it will default to the resource group name"
+  default     = ""
+}
