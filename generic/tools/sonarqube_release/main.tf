@@ -2,11 +2,11 @@ provider "null" {
 }
 
 locals {
-  tmp_dir                = "${path.cwd}/.tmp"
-  ingress_host           = "sonarqube.${var.cluster_ingress_hostname}"
-  ingress_url            = "http://${local.ingress_host}"
-  secret_name            = "sonarqube-access"
-  config_name            = "sonarqube-config"
+  tmp_dir         = "${path.cwd}/.tmp"
+  ingress_host    = "sonarqube.${var.cluster_ingress_hostname}"
+  ingress_url     = "http://${local.ingress_host}"
+  secret_name     = "sonarqube-access"
+  config_name     = "sonarqube-config"
 }
 
 resource "null_resource" "sonarqube_release" {
