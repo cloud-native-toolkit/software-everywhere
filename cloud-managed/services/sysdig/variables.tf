@@ -32,3 +32,9 @@ variable "cluster_type" {
   type        = "string"
   description = "The type of cluster that should be created (openshift or kubernetes)"
 }
+
+variable "name_prefix" {
+  type        = "string"
+  description = "The prefix name for the service. If not provided it will default to the resource group name"
+  default     = ""
+}
