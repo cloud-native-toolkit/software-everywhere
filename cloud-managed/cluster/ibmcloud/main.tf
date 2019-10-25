@@ -34,7 +34,6 @@ locals {
   config_namespace      = "default"
   ibmcloud_apikey_chart = "${path.module}/charts/ibmcloud"
   config_file_path      = "${var.cluster_type != "openshift" ? data.ibm_container_cluster_config.cluster.config_file_path : ""}"
-  storage_class         = "${var.cluster_type == "openshift" ? "ibmc-block-gold" : var.default_storage_class}"
 }
 
 resource "null_resource" "get_openshift_version" {
@@ -173,18 +172,6 @@ resource "null_resource" "oc_login" {
 
   provisioner "local-exec" {
     command = "oc login -u ${var.login_user} -p ${var.ibmcloud_api_key} --server=${data.local_file.server_url.content} > /dev/null"
-  }
-}
-
-resource "null_resource" "set_default_storage_class" {
-  depends_on = ["null_resource.oc_login"]
-
-  provisioner "local-exec" {
-    command = "${path.module}/scripts/set-default-storage-class.sh ${local.storage_class}"
-
-    environment = {
-      KUBECONFIG_IKS = "${local.config_file_path}"
-    }
   }
 }
 

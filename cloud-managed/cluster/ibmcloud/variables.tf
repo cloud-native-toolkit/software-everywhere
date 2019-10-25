@@ -78,12 +78,6 @@ variable "login_user" {
   default     = "apikey"
 }
 
-variable "default_storage_class" {
-  type        = "string"
-  description = "The default storage class that should be applied"
-  default     = "ibmc-file-gold"
-}
-
 variable "name_prefix" {
   type        = "string"
   description = "The prefix name for the service. If not provided it will default to the resource group name"
