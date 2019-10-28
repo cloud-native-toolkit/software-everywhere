@@ -104,11 +104,3 @@ rbac:
   create: true
   resources:
     - name: "secrets"
-
-#master:
-#  numExecutors: 5
-#  ingress:
-#    enabled: true
-#
-#persistence:
-#  storageClass: "ibmc-file-gold"

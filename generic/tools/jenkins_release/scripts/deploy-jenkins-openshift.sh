@@ -17,7 +17,6 @@ YAML_OUTPUT=${TMP_DIR}/jenkins-config.yaml
 
 echo "Creating jenkins-persistent instance"
 oc new-app jenkins-persistent -n "${NAMESPACE}" \
-    -e STORAGE_CLASS="${STORAGE_CLASS}" \
     -e VOLUME_CAPACITY="${VOLUME_CAPACITY}"
 
 echo "Patching Jenkins deploymentconfig to increase timeout"

@@ -19,6 +19,7 @@ resource "null_resource" "jenkins_release_iks" {
       KUBECONFIG    = "${var.cluster_config_file}"
       STORAGE_CLASS = "${var.storage_class}"
       TMP_DIR       = "${local.tmp_dir}"
+      EXCLUDE_POD_NAME = "deploy"
     }
   }
 
