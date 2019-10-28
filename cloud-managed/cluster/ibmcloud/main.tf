@@ -69,7 +69,6 @@ resource "ibm_container_cluster" "create_cluster" {
   machine_type      = "${var.cluster_machine_type}"
   hardware          = "${var.cluster_hardware}"
   default_pool_size = "${var.cluster_worker_count}"
-  region            = "${var.cluster_region}"
   resource_group_id = "${data.ibm_resource_group.resource_group.id}"
   private_vlan_id   = "${var.private_vlan_id}"
   public_vlan_id    = "${var.public_vlan_id}"
