@@ -27,7 +27,7 @@ JENKINS_HOST=$(oc get route jenkins -n ${NAMESPACE} -o jsonpath='{ .spec.host }'
 JENKINS_URL="https://${JENKINS_HOST}"
 
 echo "*** Waiting for Jenkins on ${JENKINS_URL}"
-until curl -Isf "${JENKINS_URL}/login"; do
+until curl --insecure -Isf "${JENKINS_URL}/login"; do
     echo '>>> waiting for Jenkins'
     sleep 300
 done

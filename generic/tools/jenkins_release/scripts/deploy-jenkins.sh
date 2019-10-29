@@ -80,7 +80,7 @@ kubectl apply -n "${NAMESPACE}" -f "${JENKINS_YAML}"
 export EXCLUDE_POD_NAME="jenkins-config"
 
 echo "*** Waiting for Jenkins"
-until ${SCRIPT_DIR}/checkPodRunning.sh jenkins ${NAMESPACE} && curl -Isf "${JENKINS_URL}/login"; do
+until ${SCRIPT_DIR}/checkPodRunning.sh jenkins ${NAMESPACE} && curl -Isf --insecure "${JENKINS_URL}/login"; do
     echo '>>> waiting for Jenkins'
     sleep 300
 done
