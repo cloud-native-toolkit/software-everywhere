@@ -21,3 +21,13 @@ variable "tls_secret_name" {
   description = "The secret containing the tls certificates"
   default = ""
 }
+
+variable "volume_capacity" {
+  description = "The volume capacity of the persistence volume claim"
+  default     = "2Gi"
+}
+
+variable "storage_class" {
+  description = "The storage class of the persistence volume claim"
+  default     = "ibmc-file-gold"
+}
