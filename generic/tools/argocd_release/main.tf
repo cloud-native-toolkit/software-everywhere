@@ -10,7 +10,7 @@ locals {
 
 resource "null_resource" "argocd_release" {
   provisioner "local-exec" {
-    command = "${path.module}/scripts/deploy-argocd.sh ${local.chart_name} ${var.releases_namespace} ${local.version} ${local.ingress_host}"
+    command = "${path.module}/scripts/deploy-argocd.sh ${local.chart_name} ${var.releases_namespace} ${local.version} ${local.ingress_host} ${var.tls_secret_name}"
 
     environment = {
       KUBECONFIG_IKS = "${var.cluster_config_file}"

@@ -1,0 +1,3 @@
+- op: replace
+  path: /spec/tls/0/secretName
+  value: argocd-secret

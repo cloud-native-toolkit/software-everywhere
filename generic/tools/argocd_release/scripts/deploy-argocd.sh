@@ -7,6 +7,7 @@ CHART_NAME="$1"
 NAMESPACE="$2"
 VERSION="$3"
 INGRESS_HOST="$4"
+TLS_SECRET_NAME="$5"
 
 if [[ -n "${KUBECONFIG_IKS}" ]]; then
     export KUBECONFIG="${KUBECONFIG_IKS}"
@@ -17,9 +18,11 @@ if [[ -z "${TMP_DIR}" ]]; then
 fi
 
 KUSTOMIZE_TEMPLATE="${MODULE_DIR}/kustomize/argocd"
+KUSTOMIZE_PATCH_TEMPLATE="${MODULE_DIR}/kustomize/argocd/patch-ingress.yaml"
 
 CHART_DIR="${TMP_DIR}/charts"
 KUSTOMIZE_DIR="${TMP_DIR}/kustomize"
+KUSTOMIZE_PATCH="${KUSTOMIZE_DIR}/argocd/patch-ingress.yaml"
 
 ARGOCD_CHART="${CHART_DIR}/${CHART_NAME}"
 ACCESS_CHART="${MODULE_DIR}/charts/argocd-access"
@@ -44,6 +47,10 @@ helm fetch --repo ${HELM_REPO} \
 echo "*** Setting up kustomize directory"
 mkdir -p "${KUSTOMIZE_DIR}"
 cp -R "${KUSTOMIZE_TEMPLATE}" "${KUSTOMIZE_DIR}"
+
+if [[ -n "${TLS_SECRET_NAME}" ]]; then
+  cat ${KUSTOMIZE_PATCH_TEMPLATE} | sed "s/argocd-secret/${TLS_SECRET_NAME}/g" > ${KUSTOMIZE_PATCH}
+fi
 
 echo "*** Generating kube yaml from helm template into ${ARGOCD_BASE_KUSTOMIZE}"
 helm template ${ARGOCD_CHART} \
