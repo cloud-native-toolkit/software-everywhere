@@ -61,6 +61,7 @@ helm template "${ARTIFACTORY_CHART}" \
     --namespace "${NAMESPACE}" \
     --name "artifactory" \
     --set "${VALUES}" \
+    --set artifactory.persistence.storageClass="${STORAGE_CLASS}" \
     --values "${VALUES_FILE}" > "${ARTIFACTORY_OUTPUT_YAML}"
 
 if [[ -n "${TLS_SECRET_NAME}" ]]; then

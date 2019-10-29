@@ -13,6 +13,7 @@ resource "null_resource" "artifactory_release" {
 
     environment = {
       KUBECONFIG_IKS = "${var.cluster_config_file}"
+      STORAGE_CLASS  = "${var.storage_class}"
       TMP_DIR        = "${local.tmp_dir}"
     }
   }

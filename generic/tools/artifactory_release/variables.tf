@@ -30,3 +30,8 @@ variable "chart_version" {
   description = "The chart version that will be used for artifactory release"
   default     = "7.18.1"
 }
+
+variable "storage_class" {
+  description = "The storage class of the persistence volume claim"
+  default     = "ibmc-file-gold"
+}
