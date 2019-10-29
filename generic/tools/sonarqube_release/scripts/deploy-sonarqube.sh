@@ -78,6 +78,7 @@ helm template "${SONARQUBE_CHART}" \
     --namespace "${NAMESPACE}" \
     --name "${NAME}" \
     --set ${VALUES} \
+    --set persistence.size="${VOLUME_CAPACITY}" \
     --set postgresql.postgresServer="${DATABASE_HOST}" \
     --set postgresql.service.port="${DATABASE_PORT}" \
     --set postgresql.postgresDatabase="${DATABASE_NAME}" \
