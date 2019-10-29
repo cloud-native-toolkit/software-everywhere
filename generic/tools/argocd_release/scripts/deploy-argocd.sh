@@ -18,7 +18,7 @@ if [[ -z "${TMP_DIR}" ]]; then
 fi
 
 KUSTOMIZE_TEMPLATE="${MODULE_DIR}/kustomize/argocd"
-KUSTOMIZE_PATCH_TEMPLATE="${MODULE_DIR}/kustomize/argocd/patch-ingress.yaml"
+KUSTOMIZE_PATCH_TEMPLATE="${KUSTOMIZE_TEMPLATE}/patch-ingress.yaml"
 
 CHART_DIR="${TMP_DIR}/charts"
 KUSTOMIZE_DIR="${TMP_DIR}/kustomize"
@@ -49,7 +49,7 @@ mkdir -p "${KUSTOMIZE_DIR}"
 cp -R "${KUSTOMIZE_TEMPLATE}" "${KUSTOMIZE_DIR}"
 
 if [[ -n "${TLS_SECRET_NAME}" ]]; then
-  cat ${KUSTOMIZE_PATCH_TEMPLATE} | sed "s/argocd-secret/${TLS_SECRET_NAME}/g" > ${KUSTOMIZE_PATCH}
+  cat "${KUSTOMIZE_PATCH_TEMPLATE}" | sed "s/argocd-secret/${TLS_SECRET_NAME}/g" > ${KUSTOMIZE_PATCH}
 fi
 
 echo "*** Generating kube yaml from helm template into ${ARGOCD_BASE_KUSTOMIZE}"
