@@ -20,7 +20,7 @@ resource "ibm_resource_instance" "create_postgresql_instance" {
 
   name              = "${replace(local.name_prefix, "/[^a-zA-Z0-9_\\-\\.]/", "")}-postgresql"
   service           = "databases-for-postgresql"
-  plan              = "standard"
+  plan              = "${var.plan}"
   location          = "${var.resource_location}"
   resource_group_id = "${data.ibm_resource_group.tools_resource_group.id}"
 

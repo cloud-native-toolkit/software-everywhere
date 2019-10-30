@@ -6,17 +6,18 @@ data "ibm_resource_group" "tools_resource_group" {
 }
 
 locals {
-  namespace   = "default"
-  name_prefix = "${var.name_prefix != "" ? var.name_prefix : var.resource_group_name}"
-  role        = "Manager"
+  namespace         = "default"
+  name_prefix       = "${var.name_prefix != "" ? var.name_prefix : var.resource_group_name}"
+  role              = "Manager"
+  resource_location = "${var.resource_location == "us-east" ? "us-south" : var.resource_location}"
 }
 
 // LogDNA - Logging
 resource "ibm_resource_instance" "logdna_instance" {
   name              = "${replace(local.name_prefix, "/[^a-zA-Z0-9_\\-\\.]/", "")}-logdna"
   service           = "logdna"
-  plan              = "7-day"
-  location          = "us-south"
+  plan              = "${var.plan}"
+  location          = "${local.resource_location}"
   resource_group_id = "${data.ibm_resource_group.tools_resource_group.id}"
 
   timeouts {

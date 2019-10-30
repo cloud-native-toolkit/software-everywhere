@@ -3,18 +3,19 @@ data "ibm_resource_group" "tools_resource_group" {
 }
 
 locals {
-  namespaces      = ["${var.dev_namespace}", "${var.test_namespace}", "${var.staging_namespace}"]
-  namespace_count = 3
-  role            = "Writer"
-  name_prefix     = "${var.name_prefix != "" ? var.name_prefix : var.resource_group_name}"
+  namespaces        = ["${var.dev_namespace}", "${var.test_namespace}", "${var.staging_namespace}"]
+  namespace_count   = 3
+  role              = "Writer"
+  name_prefix       = "${var.name_prefix != "" ? var.name_prefix : var.resource_group_name}"
+  resource_location = "${var.resource_location == "us-east" ? "us-south" : var.resource_location}"
 }
 
 // AppID - App Authentication
 resource "ibm_resource_instance" "appid_instance" {
   name              = "${replace(local.name_prefix, "/[^a-zA-Z0-9_\\-\\.]/", "")}-appid"
   service           = "appid"
-  plan              = "graduated-tier"
-  location          = "us-south"
+  plan              = "${var.plan}"
+  location          = "${local.resource_location}"
   resource_group_id = "${data.ibm_resource_group.tools_resource_group.id}"
 
   timeouts {

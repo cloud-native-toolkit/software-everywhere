@@ -6,6 +6,7 @@ variable "resource_group_name" {
 variable "resource_location" {
   type        = "string"
   description = "Geographic location of the resource (e.g. us-south, us-east)"
+  default     = "global"
 }
 
 variable "cluster_id" {
@@ -32,4 +33,10 @@ variable "name_prefix" {
   type        = "string"
   description = "The prefix name for the service. If not provided it will default to the resource group name"
   default     = ""
+}
+
+variable "plan" {
+  type        = "string"
+  description = "The type of plan the service instance should run under (lite or standard)"
+  default     = "standard"
 }

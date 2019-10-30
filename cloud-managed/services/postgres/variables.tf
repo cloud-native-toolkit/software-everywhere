@@ -43,3 +43,9 @@ variable "name_prefix" {
   description = "The prefix name for the service. If not provided it will default to the resource group name"
   default     = ""
 }
+
+variable "plan" {
+  type        = "string"
+  description = "The type of plan the service instance should run under (standard)"
+  default     = "standard"
+}

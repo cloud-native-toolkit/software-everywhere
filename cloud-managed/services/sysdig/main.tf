@@ -12,8 +12,8 @@ locals {
 resource "ibm_resource_instance" "sysdig_instance" {
   name              = "${replace(local.name_prefix, "/[^a-zA-Z0-9_\\-\\.]/", "")}-sysdig"
   service           = "sysdig-monitor"
-  plan              = "graduated-tier"
-  location          = "us-south"
+  plan              = "${var.plan}"
+  location          = "${var.resource_location}"
   resource_group_id = "${data.ibm_resource_group.tools_resource_group.id}"
 
   timeouts {

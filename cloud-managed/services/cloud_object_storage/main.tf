@@ -13,7 +13,7 @@ locals {
 resource "ibm_resource_instance" "cos_instance" {
   name              = "${replace(local.name_prefix, "/[^a-zA-Z0-9_\\-\\.]/", "")}-cos"
   service           = "cloud-object-storage"
-  plan              = "standard"
+  plan              = "${var.plan}"
   location          = "global"
   resource_group_id = "${data.ibm_resource_group.tools_resource_group.id}"
 
