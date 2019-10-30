@@ -16,8 +16,9 @@ resource "null_resource" "jenkins_release_iks" {
     command = "${path.module}/scripts/deploy-jenkins.sh ${var.releases_namespace} ${local.ingress_host} ${var.tls_secret_name}"
 
     environment = {
-      KUBECONFIG = "${var.cluster_config_file}"
-      TMP_DIR    = "${local.tmp_dir}"
+      KUBECONFIG    = "${var.cluster_config_file}"
+      STORAGE_CLASS = "${var.storage_class}"
+      TMP_DIR       = "${local.tmp_dir}"
     }
   }
 

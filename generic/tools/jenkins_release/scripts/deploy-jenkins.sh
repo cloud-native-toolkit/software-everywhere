@@ -57,6 +57,10 @@ if [[ -n "${TLS_SECRET_NAME}" ]]; then
     HELM_VALUES="${HELM_VALUES},master.ingress.annotations.ingress\.bluemix\.net/redirect-to-https='True'"
 fi
 
+if [[ -n "${STORAGE_CLASS}" ]]; then
+    HELM_VALUES="${HELM_VALUES},persistence.storageClass=${STORAGE_CLASS}"
+fi
+
 echo "*** Generating jenkins yaml from helm template"
 helm init --client-only
 helm template "${JENKINS_CHART}" \
