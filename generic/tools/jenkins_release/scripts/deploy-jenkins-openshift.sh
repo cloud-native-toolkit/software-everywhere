@@ -26,13 +26,6 @@ kubectl patch deploymentconfig/jenkins -n "${NAMESPACE}" --type=json -p='[{"op":
 JENKINS_HOST=$(oc get route jenkins -n ${NAMESPACE} -o jsonpath='{ .spec.host }')
 JENKINS_URL="https://${JENKINS_HOST}"
 
-echo "*** Waiting for Jenkins on ${JENKINS_URL}"
-until curl --insecure -Isf "${JENKINS_URL}/login"; do
-    echo '>>> waiting for Jenkins'
-    sleep 300
-done
-echo '>>> Jenkins has started'
-
 oc create secret generic jenkins-access -n ${NAMESPACE} --from-literal url=${JENKINS_URL}
 
 helm template ${CHART_DIR}/jenkins-config \
@@ -42,3 +35,10 @@ helm template ${CHART_DIR}/jenkins-config \
     --set jenkins.host=${JENKINS_HOST} \
     --set jenkins.tls=true > ${YAML_OUTPUT}
 kubectl apply --namespace ${NAMESPACE} -f ${YAML_OUTPUT}
+
+echo "*** Waiting for Jenkins on ${JENKINS_URL}"
+until curl --insecure -Isf "${JENKINS_URL}/login"; do
+    echo '>>> waiting for Jenkins'
+    sleep 300
+done
+echo '>>> Jenkins has started'
