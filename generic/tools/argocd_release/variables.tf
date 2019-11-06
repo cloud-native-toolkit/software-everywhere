@@ -24,5 +24,5 @@ variable "tls_secret_name" {
 
 variable "helm_version" {
   description = "The version of helm chart that should be deployed"
-  default     = "0.2.3"
+  default     = "1.0.0"
 }
