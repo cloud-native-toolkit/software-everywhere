@@ -81,10 +81,8 @@ kustomize build "${JENKINS_KUSTOMIZE}" > "${JENKINS_YAML}"
 echo "*** Applying Jenkins yaml to kube"
 kubectl apply -n "${NAMESPACE}" -f "${JENKINS_YAML}"
 
-export EXCLUDE_POD_NAME="jenkins-config"
-
 echo "*** Waiting for Jenkins"
-until ${SCRIPT_DIR}/checkPodRunning.sh jenkins ${NAMESPACE} && curl -Isf --insecure "${JENKINS_URL}/login"; do
+until curl -Isf --insecure "${JENKINS_URL}/login"; do
     echo '>>> waiting for Jenkins'
     sleep 300
 done
