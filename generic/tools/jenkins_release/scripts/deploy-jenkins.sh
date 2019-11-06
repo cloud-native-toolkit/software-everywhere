@@ -69,6 +69,9 @@ helm template "${JENKINS_CHART}" \
     --name "${NAME}" \
     --set ${HELM_VALUES} \
     --values "${VALUES_FILE}" > "${JENKINS_BASE_KUSTOMIZE}"
+if [[ $? -ne - ]]; then
+  exit 1
+fi
 
 echo "*** Generating jenkins-config yaml from helm template"
 helm template "${JENKINS_CONFIG_CHART}" \
@@ -78,6 +81,9 @@ helm template "${JENKINS_CONFIG_CHART}" \
 
 echo "*** Building final kube yaml from kustomize into ${JENKINS_YAML}"
 kustomize build "${JENKINS_KUSTOMIZE}" > "${JENKINS_YAML}"
+if [[ $? -ne 0 ]]; then
+  exit 1
+fi
 
 echo "*** Applying Jenkins yaml to kube"
 kubectl apply -n "${NAMESPACE}" -f "${JENKINS_YAML}"

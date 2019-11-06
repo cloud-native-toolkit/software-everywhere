@@ -34,5 +34,5 @@ variable "storage_class" {
 
 variable "helm_version" {
   description = "The version of helm chart that should be deployed"
-  default     = "1.7.10"
+  default     = "1.7.9"
 }
