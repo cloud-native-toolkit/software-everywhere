@@ -31,3 +31,8 @@ variable "storage_class" {
   description = "The storage class of the persistence volume claim"
   default     = "ibmc-file-gold"
 }
+
+variable "helm_version" {
+  description = "The version of helm chart that should be deployed"
+  default     = "1.7.10"
+}

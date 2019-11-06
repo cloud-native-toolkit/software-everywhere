@@ -5,7 +5,8 @@ MODULE_DIR=$(cd ${SCRIPT_DIR}/..; pwd -P)
 
 NAMESPACE="$1"
 JENKINS_HOST="$2"
-TLS_SECRET_NAME="$3"
+HELM_VERSION="$3"
+TLS_SECRET_NAME="$4"
 
 if [[ -z "${TMP_DIR}" ]]; then
     TMP_DIR=".tmp"
@@ -33,7 +34,7 @@ JENKINS_YAML="${TMP_DIR}/jenkins.yaml"
 
 echo "*** Fetching Jenkins helm chart from ${CHART_REPO} into ${CHART_DIR}"
 mkdir -p "${CHART_DIR}"
-helm fetch --repo "${CHART_REPO}" --untar --untardir "${CHART_DIR}" jenkins
+helm fetch --repo "${CHART_REPO}" --untar --untardir "${CHART_DIR}" --version ${HELM_VERSION} jenkins
 
 echo "*** Setting up kustomize directory"
 mkdir -p "${KUSTOMIZE_DIR}"
@@ -54,7 +55,7 @@ if [[ -n "${TLS_SECRET_NAME}" ]]; then
     JENKINS_URL="https://${JENKINS_HOST}"
     HELM_VALUES="${HELM_VALUES},master.ingress.tls[0].secretName=${TLS_SECRET_NAME}"
     HELM_VALUES="${HELM_VALUES},master.ingress.tls[0].hosts[0]=${JENKINS_HOST}"
-    HELM_VALUES="${HELM_VALUES},master.ingress.annotations.ingress\.bluemix\.net/redirect-to-https='True'"
+    HELM_VALUES="${HELM_VALUES},master.ingress.annotations.ingress\.bluemix\.net/redirect-to-https=True"
 fi
 
 if [[ -n "${STORAGE_CLASS}" ]]; then
