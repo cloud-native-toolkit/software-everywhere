@@ -3,16 +3,3 @@ commonLabels:
 resources:
  - base.yaml
  - access.yaml
-patchesJson6902:
- - path: patch-ingress.yaml
-   target:
-    group: extensions
-    version: v1beta1
-    kind: Ingress
-    name: argocd-server-http
- - path: patch-ingress.yaml
-   target:
-    group: extensions
-    version: v1beta1
-    kind: Ingress
-    name: argocd-server-grpc

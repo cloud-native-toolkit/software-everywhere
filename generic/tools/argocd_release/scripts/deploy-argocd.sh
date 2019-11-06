@@ -47,17 +47,16 @@ echo "*** Setting up kustomize directory"
 mkdir -p "${KUSTOMIZE_DIR}"
 cp -R "${KUSTOMIZE_TEMPLATE}" "${KUSTOMIZE_DIR}"
 
+HELM_VALUES="server.ingress.enabled=true,server.ingress.hosts.0=${INGRESS_HOST}"
 if [[ -n "${TLS_SECRET_NAME}" ]]; then
-  cat "${KUSTOMIZE_PATCH_TEMPLATE}" | sed "s/argocd-secret/${TLS_SECRET_NAME}/g" > ${KUSTOMIZE_PATCH}
+  HELM_VALUES="${HELM_VALUES},server.ingress.tls.0.secretName=${TLS_SECRET_NAME},server.ingress.tls.0.hosts.0=${INGRESS_HOST}"
 fi
 
 echo "*** Generating kube yaml from helm template into ${ARGOCD_BASE_KUSTOMIZE}"
 helm template ${ARGOCD_CHART} \
     --namespace ${NAMESPACE} \
     --name ${CHART_NAME} \
-    --set ingress.enabled=true \
-    --set ingress.ssl_passthrough=false \
-    --set ingress.hosts.0=${INGRESS_HOST} > ${ARGOCD_BASE_KUSTOMIZE}
+    --set ${HELM_VALUES} > ${ARGOCD_BASE_KUSTOMIZE}
 
 echo "*** Generating access yaml from helm template into ${ARGOCD_ACCESS_KUSTOMIZE}"
 helm template ${ACCESS_CHART} \

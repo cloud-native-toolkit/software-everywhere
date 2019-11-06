@@ -21,3 +21,8 @@ variable "tls_secret_name" {
   description = "The name of the secret containing the tls certificate values"
   default     = ""
 }
+
+variable "helm_version" {
+  description = "The version of helm chart that should be deployed"
+  default     = "0.2.3"
+}
