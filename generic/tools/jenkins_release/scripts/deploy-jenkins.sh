@@ -75,6 +75,7 @@ fi
 
 echo "*** Generating jenkins-config yaml from helm template"
 helm template "${JENKINS_CONFIG_CHART}" \
+    --name jenkins-config \
     --namespace "${NAMESPACE}" \
     --set jenkins.tls="${JENKINS_TLS}" \
     --set jenkins.host="${JENKINS_HOST}" > "${JENKINS_CONFIG_KUSTOMIZE}"

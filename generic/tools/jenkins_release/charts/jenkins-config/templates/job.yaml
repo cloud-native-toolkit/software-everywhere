@@ -2,7 +2,7 @@
 apiVersion: batch/v1
 kind: Job
 metadata:
-    name: jenkins-config
+    name: {{ include "jenkins-config.fullname" . }}
 spec:
     template:
         spec:
@@ -19,7 +19,7 @@ spec:
                 - name: jenkins-config
                   image: garagecatalyst/node11:latest
                   imagePullPolicy: Always
-                  command: ["bash", "-c", "npm i -g @garage-catalyst/ibm-garage-cloud-cli && ~/.npm-packages/bin/igc jenkins-auth"]
+                  command: ["bash", "-c", "npm i -g @garage-catalyst/ibm-garage-cloud-cli && ~/.npm-packages/bin/igc jenkins-auth --inCluster"]
                   env:
                       - name: JENKINS_HOST
                         value: {{ .Values.jenkins.host | quote }}
