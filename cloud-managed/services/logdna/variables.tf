@@ -35,3 +35,9 @@ variable "plan" {
   description = "The type of plan the service instance should run under (lite, 7-day, 14-day, or 30-day)"
   default     = "7-day"
 }
+
+variable "namespace" {
+  type        = "string"
+  description = "The namespace where the agent should be deployed"
+  default     = "tools"
+}

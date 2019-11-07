@@ -6,7 +6,6 @@ data "ibm_resource_group" "tools_resource_group" {
 }
 
 locals {
-  namespace         = "default"
   name_prefix       = "${var.name_prefix != "" ? var.name_prefix : var.resource_group_name}"
   role              = "Manager"
   resource_location = "${var.resource_location == "us-east" ? "us-south" : var.resource_location}"
@@ -42,7 +41,7 @@ resource "ibm_resource_key" "logdna_instance_key" {
 resource "null_resource" "logdna_bind" {
 
   provisioner "local-exec" {
-    command = "${path.module}/scripts/bind-logdna.sh ${local.namespace} ${ibm_resource_key.logdna_instance_key.credentials.ingestion_key} ${var.cluster_type}"
+    command = "${path.module}/scripts/bind-logdna.sh ${var.namespace} ${ibm_resource_key.logdna_instance_key.credentials.ingestion_key} ${var.cluster_type}"
 
     environment = {
       KUBECONFIG_IKS = "${var.cluster_config_file_path}"
@@ -52,7 +51,7 @@ resource "null_resource" "logdna_bind" {
 
   provisioner "local-exec" {
     when    = "destroy"
-    command = "${path.module}/scripts/unbind-logdna.sh ${local.namespace}"
+    command = "${path.module}/scripts/unbind-logdna.sh ${var.namespace}"
 
     environment = {
       KUBECONFIG_IKS = "${var.cluster_config_file_path}"
