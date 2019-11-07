@@ -55,7 +55,7 @@ fi
 echo "*** Generating kube yaml from helm template into ${ARGOCD_BASE_KUSTOMIZE}"
 helm template ${ARGOCD_CHART} \
     --namespace ${NAMESPACE} \
-    --name ${CHART_NAME} \
+    --name "argocd" \
     --set ${HELM_VALUES} > ${ARGOCD_BASE_KUSTOMIZE}
 
 echo "*** Generating access yaml from helm template into ${ARGOCD_ACCESS_KUSTOMIZE}"
