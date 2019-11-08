@@ -19,6 +19,7 @@ NAME="jenkins"
 
 VALUES_FILE="${MODULE_DIR}/jenkins-values.yaml"
 JENKINS_CONFIG_CHART="${MODULE_DIR}/charts/jenkins-config"
+CLUSTER_ROLE_CHART="${MODULE_DIR}/charts/jenkins-cluster-role"
 KUSTOMIZE_TEMPLATE="${MODULE_DIR}/kustomize/jenkins"
 
 CHART_DIR="${TMP_DIR}/charts"
@@ -29,6 +30,7 @@ JENKINS_CHART="${CHART_DIR}/jenkins"
 JENKINS_KUSTOMIZE="${KUSTOMIZE_DIR}/jenkins"
 JENKINS_BASE_KUSTOMIZE="${JENKINS_KUSTOMIZE}/base.yaml"
 JENKINS_CONFIG_KUSTOMIZE="${JENKINS_KUSTOMIZE}/jenkins-config.yaml"
+CLUSTER_ROLE_KUSTOMIZE="${JENKINS_KUSTOMIZE}/cluster-role.yaml"
 
 JENKINS_YAML="${TMP_DIR}/jenkins.yaml"
 
@@ -79,6 +81,11 @@ helm template "${JENKINS_CONFIG_CHART}" \
     --namespace "${NAMESPACE}" \
     --set jenkins.tls="${JENKINS_TLS}" \
     --set jenkins.host="${JENKINS_HOST}" > "${JENKINS_CONFIG_KUSTOMIZE}"
+
+echo "*** Generating jenkins-config yaml from helm template"
+helm template "${CLUSTER_ROLE_CHART}" \
+    --name jenkins-cluster-role \
+    --namespace "${NAMESPACE}" > "${CLUSTER_ROLE_KUSTOMIZE}"
 
 echo "*** Building final kube yaml from kustomize into ${JENKINS_YAML}"
 kustomize build "${JENKINS_KUSTOMIZE}" > "${JENKINS_YAML}"
