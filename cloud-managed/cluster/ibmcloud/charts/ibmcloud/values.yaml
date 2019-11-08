@@ -9,6 +9,7 @@ apiurl: "https://cloud.ibm.com"
 apikey: "ibmcloud-apikey"
 resource_group: "resource-group"
 registry_url: "us.icr.io"
+registry_user: "iamapikey"
 region: "us-south"
 server_url: "server-url"
 # cluster_type should be kubernetes or openshift
