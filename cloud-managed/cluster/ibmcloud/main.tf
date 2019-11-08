@@ -192,3 +192,13 @@ data "local_file" "tls_secret_name" {
 
   filename = "${local.tls_secret_file}"
 }
+
+resource "null_resource" "create_registry_namespace" {
+  provisioner "local-exec" {
+    command = "${path.module}/scripts/create-registry-namespace.sh ${var.resource_group_name} ${var.cluster_region}"
+
+    environment = {
+      APIKEY = "${var.ibmcloud_api_key}"
+    }
+  }
+}
