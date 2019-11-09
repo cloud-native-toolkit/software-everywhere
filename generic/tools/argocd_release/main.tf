@@ -2,6 +2,8 @@ locals {
   tmp_dir      = "${path.cwd}/.tmp"
   chart_name   = "argo-cd"
   ingress_host = "argocd.${var.cluster_ingress_hostname}"
+  ingress_subdomain = "${var.cluster_ingress_hostname}"
+  ingress_tlssecret = "${var.tls_secret_name}"
   ingress_url  = "http://${local.ingress_host}"
   config_name  = "argocd-config"
   secret_name  = "argocd-access"
@@ -9,7 +11,7 @@ locals {
 
 resource "null_resource" "argocd_release" {
   provisioner "local-exec" {
-    command = "${path.module}/scripts/deploy-argocd.sh ${local.chart_name} ${var.releases_namespace} ${var.helm_version} ${local.ingress_host}"
+    command = "${path.module}/scripts/deploy-argocd.sh ${local.chart_name} ${var.releases_namespace} ${var.helm_version} ${local.ingress_host} ${local.ingress_subdomain} ${local.ingress_tlssecret}"
 
     environment = {
       KUBECONFIG_IKS  = "${var.cluster_config_file}"

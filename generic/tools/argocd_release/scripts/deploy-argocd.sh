@@ -7,6 +7,8 @@ CHART_NAME="$1"
 NAMESPACE="$2"
 VERSION="$3"
 INGRESS_HOST="$4"
+INGRESS_SUBDOMAIN="$5"
+INGRESS_TLSSECRET="$6"
 
 if [[ -n "${KUBECONFIG_IKS}" ]]; then
     export KUBECONFIG="${KUBECONFIG_IKS}"
@@ -25,10 +27,12 @@ KUSTOMIZE_PATCH="${KUSTOMIZE_DIR}/argocd/patch-ingress.yaml"
 
 ARGOCD_CHART="${CHART_DIR}/${CHART_NAME}"
 ACCESS_CHART="${MODULE_DIR}/charts/argocd-access"
+SOLSACM_CHART="${MODULE_DIR}/charts/solsa-cm"
 
 ARGOCD_KUSTOMIZE="${KUSTOMIZE_DIR}/argocd"
 ARGOCD_BASE_KUSTOMIZE="${ARGOCD_KUSTOMIZE}/base.yaml"
 ARGOCD_ACCESS_KUSTOMIZE="${ARGOCD_KUSTOMIZE}/access.yaml"
+ARGOCD_SOLSACM_KUSTOMIZE="${ARGOCD_KUSTOMIZE}/solsa/solsa-cm.yaml"
 
 ARGOCD_YAML="${TMP_DIR}/argocd.yaml"
 
@@ -62,6 +66,12 @@ echo "*** Generating access yaml from helm template into ${ARGOCD_ACCESS_KUSTOMI
 helm template ${ACCESS_CHART} \
     --namespace ${NAMESPACE} \
     --set url="http://${INGRESS_HOST}" > ${ARGOCD_ACCESS_KUSTOMIZE}
+
+echo "*** Generating solsa-cm yaml from helm template into ${ARGOCD_SOLSACM_KUSTOMIZE}"
+helm template ${SOLSACM_CHART} \
+    --namespace ${NAMESPACE} \
+    --set ingress.subdomain="${INGRESS_SUBDOMAIN}" \
+    --set ingress.tlssecret="${INGRESS_TLSSECRET}" > ${ARGOCD_SOLSACM_KUSTOMIZE}
 
 echo "*** Building final kube yaml from kustomize into ${ARGOCD_YAML}"
 kustomize build "${ARGOCD_KUSTOMIZE}" > "${ARGOCD_YAML}"
