@@ -13,6 +13,7 @@ if [[ $? -ne 0 ]]; then
   exit 1
 fi
 
+ibmcloud cr region-set "${REGION}"
 echo "Checking registry namespace: ${REGISTRY_NAMESPACE}"
 NS=$(ibmcloud cr namespaces | grep "${REGISTRY_NAMESPACE}" ||: )
 if [[ -z "${NS}" ]]; then

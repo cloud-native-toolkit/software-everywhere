@@ -8,7 +8,8 @@ SERVER_URL="$5"
 CLUSTER_TYPE="$6"
 CLUSTER_NAME="$7"
 INGRESS_SUBDOMAIN="$8"
-TLS_SECRET_FILE="$9"
+REGION="$9"
+TLS_SECRET_FILE="${10}"
 
 if [[ -n "${KUBECONFIG_IKS}" ]]; then
     export KUBECONFIG="${KUBECONFIG_IKS}"
@@ -31,6 +32,15 @@ if [[ -n "${TLS_SECRET_FILE}" ]]; then
     echo -n "${TLS_SECRET_NAME}" > ${TLS_SECRET_FILE}
 fi
 
+ibmcloud login --apikey "${APIKEY}" -g "${RESOURCE_GROUP}" -r "${REGION}" 1> /dev/null 2> /dev/null
+if [[ $? -ne 0 ]]; then
+  echo "Error logging into ibmcloud"
+  exit 1
+fi
+
+ibmcloud cr region-set "${REGION}"
+REGISTRY_URL=$(ibmcloud cr region | grep "icr.io" | sed -E "s/.*'(.*icr.io)'.*/\1/")
+
 echo "*** Generating kube yaml from helm template into ${OUTPUT_YAML}"
 helm init --client-only
 mkdir -p "${TMP_DIR}"
@@ -43,7 +53,9 @@ helm template "${CHART}" \
     --set cluster_type="${CLUSTER_TYPE}" \
     --set cluster_name="${CLUSTER_NAME}" \
     --set tls_secret_name="${TLS_SECRET_NAME}" \
-    --set ingress_subdomain="${INGRESS_SUBDOMAIN}" > "${OUTPUT_YAML}"
+    --set ingress_subdomain="${INGRESS_SUBDOMAIN}" \
+    --set region="${REGION}" \
+    --set registry_url="${REGISTRY_URL}" > "${OUTPUT_YAML}"
 
 echo "*** Applying kube yaml ${OUTPUT_YAML}"
 kubectl create -n "${NAMESPACE}" -f "${OUTPUT_YAML}"
