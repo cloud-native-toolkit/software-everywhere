@@ -28,12 +28,14 @@ locals {
   kube_version_file     = "${path.cwd}/.tmp/kube_version.val"
   tls_secret_file       = "${path.cwd}/.tmp/tls_secret.val"
   cluster_config_dir    = "${var.kubeconfig_download_dir}/.kube"
-  name_list             = ["${var.name_prefix != "" ? var.name_prefix : var.resource_group_name}", "cluster"]
+  name_prefix           = "${var.name_prefix != "" ? var.name_prefix : var.resource_group_name}"
+  name_list             = ["${local.name_prefix}", "cluster"]
   cluster_name          = "${var.cluster_name != "" ? var.cluster_name : join("-", local.name_list)}"
   tmp_dir               = "${path.cwd}/.tmp"
   config_namespace      = "default"
   ibmcloud_apikey_chart = "${path.module}/charts/ibmcloud"
   config_file_path      = "${var.cluster_type != "openshift" ? data.ibm_container_cluster_config.cluster.config_file_path : ""}"
+  cluster_type_tag      = "${var.cluster_type != "openshift" ? "iks" : "ocp"}"
 }
 
 resource "null_resource" "get_openshift_version" {
@@ -72,6 +74,7 @@ resource "ibm_container_cluster" "create_cluster" {
   resource_group_id = "${data.ibm_resource_group.resource_group.id}"
   private_vlan_id   = "${var.private_vlan_id}"
   public_vlan_id    = "${var.public_vlan_id}"
+  tags              = ["${local.cluster_type_tag}", "${local.name_prefix}"]
 }
 
 resource "null_resource" "create_cluster_config_dir" {
