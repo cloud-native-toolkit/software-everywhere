@@ -75,7 +75,7 @@ resource "ibm_container_cluster" "create_cluster" {
   resource_group_id = "${data.ibm_resource_group.resource_group.id}"
   private_vlan_id   = "${var.private_vlan_id}"
   public_vlan_id    = "${var.public_vlan_id}"
-  tags              = ["${local.cluster_type_tag}", "${local.name_prefix}"]
+  tags              = ["${local.cluster_type_tag}"]
 }
 
 resource "null_resource" "create_cluster_config_dir" {
