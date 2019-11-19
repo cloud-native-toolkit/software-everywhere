@@ -27,6 +27,7 @@ locals {
   ingress_url_file      = "${path.cwd}/.tmp/ingress-subdomain.val"
   kube_version_file     = "${path.cwd}/.tmp/kube_version.val"
   tls_secret_file       = "${path.cwd}/.tmp/tls_secret.val"
+  registry_url_file     = "${path.cwd}/.tmp/registry_url.val"
   cluster_config_dir    = "${var.kubeconfig_download_dir}/.kube"
   name_prefix           = "${var.name_prefix != "" ? var.name_prefix : var.resource_group_name}"
   name_list             = ["${local.name_prefix}", "cluster"]
@@ -177,11 +178,27 @@ resource "null_resource" "oc_login" {
   }
 }
 
+resource "null_resource" "create_registry_namespace" {
+  provisioner "local-exec" {
+    command = "${path.module}/scripts/create-registry-namespace.sh ${var.resource_group_name} ${var.cluster_region} ${local.registry_url_file}"
+
+    environment = {
+      APIKEY = "${var.ibmcloud_api_key}"
+    }
+  }
+}
+
+data "local_file" "registry_url" {
+  depends_on = ["null_resource.create_registry_namespace"]
+
+  filename = "${local.registry_url_file}"
+}
+
 resource "null_resource" "ibmcloud_apikey_release" {
   depends_on = ["null_resource.oc_login"]
 
   provisioner "local-exec" {
-    command = "${path.module}/scripts/deploy-ibmcloud-config.sh ${local.ibmcloud_apikey_chart} ${local.config_namespace} ${var.ibmcloud_api_key} ${var.resource_group_name} ${data.local_file.server_url.content} ${var.cluster_type} ${local.cluster_name} ${data.local_file.ingress_subdomain.content} ${var.cluster_region} ${local.tls_secret_file}"
+    command = "${path.module}/scripts/deploy-ibmcloud-config.sh ${local.ibmcloud_apikey_chart} ${local.config_namespace} ${var.ibmcloud_api_key} ${var.resource_group_name} ${data.local_file.server_url.content} ${var.cluster_type} ${local.cluster_name} ${data.local_file.ingress_subdomain.content} ${var.cluster_region} ${data.local_file.registry_url} ${local.tls_secret_file}"
 
     environment = {
       KUBECONFIG_IKS = "${local.config_file_path}"
@@ -194,14 +211,4 @@ data "local_file" "tls_secret_name" {
   depends_on = ["null_resource.ibmcloud_apikey_release"]
 
   filename = "${local.tls_secret_file}"
-}
-
-resource "null_resource" "create_registry_namespace" {
-  provisioner "local-exec" {
-    command = "${path.module}/scripts/create-registry-namespace.sh ${var.resource_group_name} ${var.cluster_region}"
-
-    environment = {
-      APIKEY = "${var.ibmcloud_api_key}"
-    }
-  }
 }

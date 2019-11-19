@@ -9,7 +9,8 @@ CLUSTER_TYPE="$6"
 CLUSTER_NAME="$7"
 INGRESS_SUBDOMAIN="$8"
 REGION="$9"
-TLS_SECRET_FILE="${10}"
+REGISTRY_URL="${10}"
+TLS_SECRET_FILE="${11}"
 
 if [[ -n "${KUBECONFIG_IKS}" ]]; then
     export KUBECONFIG="${KUBECONFIG_IKS}"
@@ -37,9 +38,6 @@ if [[ $? -ne 0 ]]; then
   echo "Error logging into ibmcloud"
   exit 1
 fi
-
-ibmcloud cr region-set "${REGION}"
-REGISTRY_URL=$(ibmcloud cr region | grep "icr.io" | sed -E "s/.*'(.*icr.io)'.*/\1/")
 
 echo "*** Generating kube yaml from helm template into ${OUTPUT_YAML}"
 helm init --client-only
