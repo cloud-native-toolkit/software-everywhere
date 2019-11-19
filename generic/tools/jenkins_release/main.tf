@@ -41,6 +41,7 @@ resource "null_resource" "jenkins_release_openshift" {
 
     environment = {
       TMP_DIR    = "${local.tmp_dir}"
+      SERVER_URL = "${var.server_url}"
     }
   }
 

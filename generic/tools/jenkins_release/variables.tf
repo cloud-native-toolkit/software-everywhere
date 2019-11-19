@@ -36,3 +36,8 @@ variable "helm_version" {
   description = "The version of helm chart that should be deployed"
   default     = "1.7.9"
 }
+
+variable "server_url" {
+  description = "The public url of the openshift/kubernetes cluster"
+  default     = ""
+}
