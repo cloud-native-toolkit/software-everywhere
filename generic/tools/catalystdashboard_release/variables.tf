@@ -30,5 +30,5 @@ variable "tls_secret_name" {
 
 variable "image_tag" {
   description = "The image version tag to use"
-  default     = "1.0.14"
+  default     = "1.0.15"
 }
