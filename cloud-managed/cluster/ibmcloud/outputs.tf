@@ -47,11 +47,13 @@ output "login_user" {
 }
 
 output "login_password" {
+  depends_on  = ["null_resource.oc_login"]
   value       = "${var.ibmcloud_api_key}"
   description = "The password used to log into the openshift cli"
 }
 
 output "ibmcloud_api_key" {
+  depends_on  = ["null_resource.oc_login"]
   value       = "${var.ibmcloud_api_key}"
   description = "The API key for the environment"
 }

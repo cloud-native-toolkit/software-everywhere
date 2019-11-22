@@ -10,7 +10,7 @@ CLUSTER_NAME="$7"
 INGRESS_SUBDOMAIN="$8"
 REGION="$9"
 REGISTRY_URL="${10}"
-TLS_SECRET_FILE="${11}"
+TLS_SECRET_NAME="${11}"
 
 if [[ -n "${KUBECONFIG_IKS}" ]]; then
     export KUBECONFIG="${KUBECONFIG_IKS}"
@@ -23,15 +23,8 @@ fi
 NAME="ibmcloud-config"
 OUTPUT_YAML="${TMP_DIR}/ibmcloud-apikey.yaml"
 
-#kubectl delete -n "${NAMESPACE}" -l app=${NAME}
 kubectl delete -n "${NAMESPACE}" secrets/ibmcloud-apikey
 kubectl delete -n "${NAMESPACE}" configmaps/ibmcloud-config
-
-TLS_SECRET_NAME=$(kubectl get secrets -o jsonpath='{range .items[?(@.data.tls\.key != "")]}{.metadata.name}{"\n"}{end}' | grep -v router-certs | grep -v router-wildcard-certs | head -1)
-
-if [[ -n "${TLS_SECRET_FILE}" ]]; then
-    echo -n "${TLS_SECRET_NAME}" > ${TLS_SECRET_FILE}
-fi
 
 ibmcloud login --apikey "${APIKEY}" -g "${RESOURCE_GROUP}" -r "${REGION}" 1> /dev/null 2> /dev/null
 if [[ $? -ne 0 ]]; then

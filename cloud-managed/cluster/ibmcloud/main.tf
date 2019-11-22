@@ -106,10 +106,9 @@ resource "null_resource" "get_server_url" {
   depends_on = ["data.ibm_container_cluster_config.cluster", "null_resource.ibmcloud_login"]
 
   provisioner "local-exec" {
-    command = "ibmcloud ks cluster-get --cluster $${CLUSTER_NAME} | grep \"Master URL\" | sed -E \"s/Master URL: +(.*)$/\\1/g\" | xargs echo -n > $${FILE}"
+    command = "ibmcloud ks cluster get --cluster ${local.cluster_name} | grep \"Master URL\" | sed -E \"s/Master URL: +(.*)$/\\1/g\" | xargs echo -n > $${FILE}"
 
     environment = {
-      CLUSTER_NAME = "${local.cluster_name}"
       FILE         = "${local.server_url_file}"
     }
   }
@@ -121,11 +120,29 @@ data "local_file" "server_url" {
   filename = "${local.server_url_file}"
 }
 
+resource "null_resource" "get_tls_secret_name" {
+  depends_on = ["data.ibm_container_cluster_config.cluster", "null_resource.ibmcloud_login"]
+
+  provisioner "local-exec" {
+    command = "ibmcloud ks cluster get --cluster ${local.cluster_name} | grep \"Ingress Secret\" | sed -E \"s/Ingress Secret: +(.*)$/\\1/g\" | xargs echo -n > $${FILE}"
+
+    environment = {
+      FILE         = "${local.tls_secret_file}"
+    }
+  }
+}
+
+data "local_file" "tls_secret_name" {
+  depends_on = ["null_resource.get_tls_secret_name"]
+
+  filename = "${local.tls_secret_file}"
+}
+
 resource "null_resource" "get_ingress_subdomain" {
   depends_on = ["data.ibm_container_cluster_config.cluster", "null_resource.ibmcloud_login"]
 
   provisioner "local-exec" {
-    command = "ibmcloud ks cluster-get --cluster $${CLUSTER_NAME} | grep \"Ingress Subdomain\" | sed -E \"s/Ingress Subdomain: +(.*)$/\\1/g\" | xargs echo -n > $${FILE}"
+    command = "ibmcloud ks cluster get --cluster $${CLUSTER_NAME} | grep \"Ingress Subdomain\" | sed -E \"s/Ingress Subdomain: +(.*)$/\\1/g\" | xargs echo -n > $${FILE}"
 
     environment = {
       CLUSTER_NAME = "${local.cluster_name}"
@@ -144,7 +161,7 @@ resource "null_resource" "get_cluster_type" {
   depends_on = ["data.ibm_container_cluster_config.cluster", "null_resource.ibmcloud_login"]
 
   provisioner "local-exec" {
-    command = "if [[ -n $(ibmcloud ks cluster-get --cluster $${CLUSTER_NAME} | grep -E \"Version.*openshift\") ]]; then echo -n \"openshift\" > $${FILE}; else echo -n \"kubernetes\" > $${FILE}; fi"
+    command = "if [[ -n $(ibmcloud ks cluster get --cluster $${CLUSTER_NAME} | grep -E \"Version.*openshift\") ]]; then echo -n \"openshift\" > $${FILE}; else echo -n \"kubernetes\" > $${FILE}; fi"
 
     environment = {
       CLUSTER_NAME = "${local.cluster_name}"
@@ -198,17 +215,11 @@ resource "null_resource" "ibmcloud_apikey_release" {
   depends_on = ["null_resource.oc_login"]
 
   provisioner "local-exec" {
-    command = "${path.module}/scripts/deploy-ibmcloud-config.sh ${local.ibmcloud_apikey_chart} ${local.config_namespace} ${var.ibmcloud_api_key} ${var.resource_group_name} ${data.local_file.server_url.content} ${var.cluster_type} ${local.cluster_name} ${data.local_file.ingress_subdomain.content} ${var.cluster_region} ${data.local_file.registry_url.content} ${local.tls_secret_file}"
+    command = "${path.module}/scripts/deploy-ibmcloud-config.sh ${local.ibmcloud_apikey_chart} ${local.config_namespace} ${var.ibmcloud_api_key} ${var.resource_group_name} ${data.local_file.server_url.content} ${var.cluster_type} ${local.cluster_name} ${data.local_file.ingress_subdomain.content} ${var.cluster_region} ${data.local_file.registry_url.content} ${data.local_file.tls_secret_name.content}"
 
     environment = {
       KUBECONFIG_IKS = "${local.config_file_path}"
       TMP_DIR        = "${local.tmp_dir}"
     }
   }
-}
-
-data "local_file" "tls_secret_name" {
-  depends_on = ["null_resource.ibmcloud_apikey_release"]
-
-  filename = "${local.tls_secret_file}"
 }
