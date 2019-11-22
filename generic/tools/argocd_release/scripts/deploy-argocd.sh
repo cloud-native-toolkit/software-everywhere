@@ -8,8 +8,7 @@ NAMESPACE="$2"
 VERSION="$3"
 INGRESS_HOST="$4"
 INGRESS_SUBDOMAIN="$5"
-INGRESS_TLSSECRET="$6"
-ENABLE_ARGO_CACHE="$7"
+ENABLE_ARGO_CACHE="$6"
 
 if [[ -n "${KUBECONFIG_IKS}" ]]; then
     export KUBECONFIG="${KUBECONFIG_IKS}"
@@ -58,21 +57,21 @@ if [[ -n "${TLS_SECRET_NAME}" ]]; then
 fi
 
 echo "*** Generating kube yaml from helm template into ${ARGOCD_BASE_KUSTOMIZE}"
-helm template ${ARGOCD_CHART} \
-    --namespace ${NAMESPACE} \
+helm template "${ARGOCD_CHART}" \
+    --namespace "${NAMESPACE}" \
     --name "argocd" \
-    --set ${HELM_VALUES} > ${ARGOCD_BASE_KUSTOMIZE}
+    --set "${HELM_VALUES}" > ${ARGOCD_BASE_KUSTOMIZE}
 
 echo "*** Generating access yaml from helm template into ${ARGOCD_ACCESS_KUSTOMIZE}"
-helm template ${ACCESS_CHART} \
-    --namespace ${NAMESPACE} \
+helm template "${ACCESS_CHART}" \
+    --namespace "${NAMESPACE}" \
     --set url="http://${INGRESS_HOST}" > ${ARGOCD_ACCESS_KUSTOMIZE}
 
 echo "*** Generating solsa-cm yaml from helm template into ${ARGOCD_SOLSACM_KUSTOMIZE}"
 helm template ${SOLSACM_CHART} \
     --namespace ${NAMESPACE} \
     --set ingress.subdomain="${INGRESS_SUBDOMAIN}" \
-    --set ingress.tlssecret="${INGRESS_TLSSECRET}" > ${ARGOCD_SOLSACM_KUSTOMIZE}
+    --set ingress.tlssecret="${TLS_SECRET_NAME}" > ${ARGOCD_SOLSACM_KUSTOMIZE}
 
 echo "*** Building final kube yaml from kustomize into ${ARGOCD_YAML}"
 kustomize build "${ARGOCD_KUSTOMIZE}" > "${ARGOCD_YAML}"
