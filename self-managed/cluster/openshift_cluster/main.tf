@@ -10,7 +10,7 @@ locals {
   tls_secret_file        = ""
   ingress_subdomain      = "apps-crc.testing"
   tmp_dir                = "${path.cwd}/.tmp"
-  registry_url           = "https://image-registry.openshift-image-registry:5000"
+  registry_url           = "image-registry.openshift-image-registry:5000"
 }
 
 resource "null_resource" "oc_login" {
