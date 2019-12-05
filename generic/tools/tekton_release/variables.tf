@@ -14,3 +14,8 @@ variable "cluster_ingress_hostname" {
   type        = "string"
   description = "Ingress hostname of the IKS cluster."
 }
+
+variable "tools_namespace" {
+  type        = "string"
+  description = "The namespace where tools are installed"
+}
