@@ -1,36 +1,61 @@
-apiVersion: apps/v1beta2
+apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: {{ template "catalyst-dashboard.fullname" . }}
+  name: {{ include "catalyst-dashboard.fullname" . }}
   labels:
-    app: {{ template "catalyst-dashboard.name" . }}
-    chart: {{ template "catalyst-dashboard.chart" . }}
+    app: {{ include "catalyst-dashboard.name" . }}
+    chart: {{ include "catalyst-dashboard.chart" . }}
     release: {{ .Release.Name }}
     heritage: {{ .Release.Service }}
-    "app.kubernetes.io/name": {{ template "catalyst-dashboard.fullname" . }}
-    "helm.sh/chart": {{ template "catalyst-dashboard.chart" . }}
+    "app.kubernetes.io/name": {{ include "catalyst-dashboard.fullname" . }}
+    "helm.sh/chart": {{ include "catalyst-dashboard.chart" . }}
     "app.kubernetes.io/instance": {{ .Release.Name }}
-    "app.kubernetes.io/component": {{ template "catalyst-dashboard.fullname" . }}-deployment
+    "app.kubernetes.io/component": {{ include "catalyst-dashboard.fullname" . }}-deployment
 spec:
   replicas: {{ .Values.replicaCount }}
   selector:
     matchLabels:
-      app: {{ template "catalyst-dashboard.name" . }}
+      app: {{ include "catalyst-dashboard.name" . }}
       release: {{ .Release.Name }}
   template:
     metadata:
       labels:
-        app: {{ template "catalyst-dashboard.name" . }}
+        app: {{ include "catalyst-dashboard.name" . }}
         release: {{ .Release.Name }}
-        "app.kubernetes.io/name": {{ template "catalyst-dashboard.name" . }}
+        "app.kubernetes.io/name": {{ include "catalyst-dashboard.name" . }}
         "helm.sh/chart": {{ printf "%s-%s" .Chart.Name .Chart.Version }}
-        "app.kubernetes.io/instance": {{ template "catalyst-dashboard.name" . }}
-        "app.kubernetes.io/component": {{ template "catalyst-dashboard.name" . }}-pod
+        "app.kubernetes.io/instance": {{ include "catalyst-dashboard.name" . }}
+        "app.kubernetes.io/component": {{ include "catalyst-dashboard.name" . }}-pod
     spec:
-      serviceAccountName: {{ template "catalyst-dashboard.name" . }}
+      serviceAccountName: {{ include "catalyst-dashboard.name" . }}
+      {{- if eq .Values.clusterType "openshift" }}
+      volumes:
+        - name: proxy-tls
+          secret:
+            secretName: {{ .Values.host }}-tls
+      {{- end }}
       containers:
+        {{- if eq .Values.clusterType "openshift" }}
+        - name: oauth-proxy
+          image: openshift/oauth-proxy:latest
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 8443
+              name: public
+          args:
+            - --https-address=:8443
+            - --provider=openshift
+            - --openshift-service-account={{ include "catalyst-dashboard.name" . }}
+            - --upstream=http://localhost:3000
+            - --tls-cert=/etc/tls/private/tls.crt
+            - --tls-key=/etc/tls/private/tls.key
+            - --cookie-secret=SECRET
+          volumeMounts:
+            - mountPath: /etc/tls/private
+              name: proxy-tls
+        {{- end }}
         - name: {{ .Chart.Name }}
-          image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
+          image: {{ printf "%s:%s" .Values.image.repository .Values.image.tag | quote }}
           imagePullPolicy: {{ .Values.image.pullPolicy }}
           ports:
             - name: http

@@ -1,6 +1,7 @@
-{{- if .Values.ingress.enabled -}}
+{{- if ne .Values.clusterType "openshift" -}}
 {{- $fullName := include "catalyst-dashboard.fullname" . -}}
 {{- $ingressPath := .Values.ingress.path -}}
+{{- $host := printf "%s.%s" .Values.host .Values.ingressSubdomain -}}
 apiVersion: extensions/v1beta1
 kind: Ingress
 metadata:
@@ -19,20 +20,16 @@ spec:
   tls:
   {{- range .Values.ingress.tls }}
     - hosts:
-      {{- range .hosts }}
-        - {{ . }}
-      {{- end }}
+        - {{ $host }}
       secretName: {{ .secretName }}
   {{- end }}
 {{- end }}
   rules:
-  {{- range .Values.ingress.hosts }}
-    - host: {{ . }}
+    - host: {{ $host }}
       http:
         paths:
           - path: {{ $ingressPath }}
             backend:
               serviceName: {{ $fullName }}
               servicePort: http
-  {{- end }}
 {{- end }}

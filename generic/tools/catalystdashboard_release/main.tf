@@ -5,7 +5,7 @@ locals {
 
 resource "null_resource" "catalystdashboard_release" {
   provisioner "local-exec" {
-    command = "${path.module}/scripts/deploy-catalystdashboard.sh ${var.releases_namespace} ${local.ingress_host} ${var.image_tag} \"${jsonencode(var.tool_config_maps)}\""
+    command = "${path.module}/scripts/deploy-catalystdashboard.sh ${var.releases_namespace} ${var.cluster_type} dashboard ${var.cluster_ingress_hostname} ${var.image_tag} \"${jsonencode(var.tool_config_maps)}\""
 
     environment = {
       KUBECONFIG_IKS  = "${var.cluster_config_file}"
