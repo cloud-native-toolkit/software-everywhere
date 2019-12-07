@@ -46,3 +46,9 @@ variable "service_namespace" {
   type        = "string"
   description = "The namespace where the service obj will be created"
 }
+
+variable "bind_script_version" {
+  type        = "string"
+  description = "The version of the bind script that will be applied - https://github.com/logdna/logdna-agent/releases"
+  default     = "1.6.2"
+}

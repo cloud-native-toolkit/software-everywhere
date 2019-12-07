@@ -3,7 +3,7 @@ resources:
 patchesJson6902:
  - path: patch-daemonset.yaml
    target:
-     group: extensions
-     version: v1beta1
+     group: apps
+     version: v1
      kind: DaemonSet
      name: logdna-agent

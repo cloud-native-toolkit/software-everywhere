@@ -58,7 +58,7 @@ data "local_file" "injestion_key" {
 resource "null_resource" "logdna_bind" {
 
   provisioner "local-exec" {
-    command = "${path.module}/scripts/bind-logdna.sh ${var.cluster_type} ${data.local_file.injestion_key.content} ${local.resource_location}"
+    command = "${path.module}/scripts/bind-logdna.sh ${var.cluster_type} ${data.local_file.injestion_key.content} ${local.resource_location} ${var.bind_script_version}"
 
     environment = {
       KUBECONFIG_IKS = "${var.cluster_config_file_path}"

@@ -6,6 +6,7 @@ MODULE_DIR=$(cd ${SCRIPT_DIR}/..; pwd -P)
 CLUSTER_TYPE="$1"
 LOGDNA_AGENT_KEY="$2"
 REGION="$3"
+BIND_SCRIPT_VERSION="$4"
 
 NAMESPACE="logdna-agent"
 
@@ -41,7 +42,7 @@ if [[ "${CLUSTER_TYPE}" == "openshift" ]]; then
     echo "*** Copying ${KUSTOMIZE_TEMPLATE}/* to ${KUSTOMIZE_DIR}"
     cp -Rv ${KUSTOMIZE_TEMPLATE}/* ${KUSTOMIZE_DIR}
 
-    curl https://raw.githubusercontent.com/logdna/logdna-agent/master/logdna-agent-ds-os.yaml -o "${LOGDNA_BASE_YAML}"
+    curl "https://raw.githubusercontent.com/logdna/logdna-agent/${BIND_SCRIPT_VERSION}/logdna-agent-ds-os.yaml" -o "${LOGDNA_BASE_YAML}"
 
     LOGDNA_API_HOST="api.${REGION}.logging.cloud.ibm.com"
     LOGDNA_LOG_HOST="logs.${REGION}.logging.cloud.ibm.com"
@@ -56,6 +57,7 @@ if [[ "${CLUSTER_TYPE}" == "openshift" ]]; then
 else
     kubectl create namespace "${NAMESPACE}"
 
+    # Should this be https://raw.githubusercontent.com/logdna/logdna-agent/${BIND_SCRIPT_VERSION}/logdna-agent-ds.yaml
     LOGDNA_AGENT_DS_YAML="https://assets.us-south.logging.cloud.ibm.com/clients/logdna-agent-ds.yaml"
 fi
 
