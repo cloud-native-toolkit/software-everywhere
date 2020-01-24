@@ -20,6 +20,7 @@ resource "null_resource" "deploy_appid" {
       REGION         = "${local.region}"
       RESOURCE_GROUP = "${var.resource_group_name}"
       TMP_DIR        = "${path.cwd}/.tmp"
+      CLUSTER_NAME   = "${var.cluster_name}"
     }
   }
 

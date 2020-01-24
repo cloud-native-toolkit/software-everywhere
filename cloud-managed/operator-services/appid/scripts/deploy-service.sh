@@ -17,6 +17,10 @@ if [[ -z "${TMP_DIR}" ]]; then
 fi
 mkdir -p ${TMP_DIR}
 
+if [[ -z "${CLUSTER_NAME}" ]]; then
+  CLUSTER_NAME="cluster"
+fi
+
 SERVICE_YAML_FILE="${TMP_DIR}/${SERVICE_NAME}.service.yaml"
 BINDING_YAML_FILE="${TMP_DIR}/${SERVICE_NAME}.binding.yaml"
 
@@ -32,6 +36,9 @@ metadata:
 spec:
   plan: ${SERVICE_PLAN}
   serviceClass: ${SERVICE_CLASS}
+  tags:
+   - operator
+   - ${CLUSTER_NAME}
   context:
     region: ${REGION}
     resourcegroup: ${RESOURCE_GROUP}

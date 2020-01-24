@@ -34,6 +34,8 @@ metadata:
 spec:
   plan: ${SERVICE_PLAN}
   serviceClass: ${SERVICE_CLASS}
+  tags:
+   - operator
   context:
     region: ${REGION}
     resourcegroup: ${RESOURCE_GROUP}

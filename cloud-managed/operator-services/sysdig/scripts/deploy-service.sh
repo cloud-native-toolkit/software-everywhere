@@ -8,6 +8,8 @@ BINDING_NAME="$5"
 BINDING_NAMESPACE_JSON="$6"
 BINDING_NAMESPACE_MAIN="$7"
 
+SERVICE_NAME=`echo $SERVICE_NAME | tr '[:upper:]' '[:lower:] ' `
+
 if [[ -n "${KUBECONFIG_IKS}" ]]; then
     export KUBECONFIG="${KUBECONFIG_IKS}"
 fi
@@ -32,6 +34,8 @@ metadata:
 spec:
   plan: ${SERVICE_PLAN}
   serviceClass: ${SERVICE_CLASS}
+  tags:
+   - operator
   context:
     region: ${REGION}
     resourcegroup: ${RESOURCE_GROUP}
