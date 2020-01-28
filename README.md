@@ -9,6 +9,10 @@ The modules have been organized into three major categories:
 - **infrastructure** - modules that are related to provisioning infrastructure like Sysdig, LogDNA, Cloudant, and PostgreSQL
 - **tools** - modules that provision tools applications into a cluster
 
+## Planning board
+
+https://github.com/ibm-garage-cloud/planning#workspaces/garage-cloud-tools-planning-5e290eb803d0cf9574c7d321/board?repos=220783094,209322627,235270089,206848279,194922712,215867112,213934348,215811182,218581979,224035701,198499224,198750718,198909549,193133606,193136242,192769591,191882111
+
 ## How to apply a module
 
 In order to use one of these modules, a terraform script should be created that references the desired module(s). For example, to use the `ibmcloud_cluster` module to provision a cluster, the following would be required:
