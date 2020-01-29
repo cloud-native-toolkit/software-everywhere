@@ -44,7 +44,7 @@ resource "null_resource" "get_openshift_version" {
   count = "${var.cluster_type == "openshift" ? "1" : "0"}"
 
   provisioner "local-exec" {
-    command = "ibmcloud ks versions --show-version ${var.cluster_type} | grep ${var.cluster_type} | xargs echo -n > ${local.kube_version_file}"
+    command = "ibmcloud ks versions --show-version openshift | grep default | sed -E \"s/^(.*) [(]default[)].*/\\1/g\" | xargs echo -n > ${local.kube_version_file}"
   }
 }
 
