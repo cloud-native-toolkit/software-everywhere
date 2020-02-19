@@ -8,21 +8,6 @@ variable "resource_location" {
   description = "Geographic location of the resource (e.g. us-south, us-east)"
 }
 
-variable "dev_namespace" {
-  type        = "string"
-  description = "Development namespace"
-}
-
-variable "test_namespace" {
-  type        = "string"
-  description = "Test namespace"
-}
-
-variable "staging_namespace" {
-  type        = "string"
-  description = "Staging namespace"
-}
-
 variable "cluster_config_file_path" {
   type        = "string"
   description = "The path to the config file for the cluster"
