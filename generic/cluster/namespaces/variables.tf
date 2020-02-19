@@ -5,22 +5,12 @@ variable "cluster_config_file_path" {
 
 variable "tools_namespace" {
   type        = "string"
-  description = "The tools namespace"
+  description = "The namespaces to create"
 }
 
-variable "dev_namespace" {
-  type        = "string"
-  description = "The dev namespace"
-}
-
-variable "test_namespace" {
-  type        = "string"
-  description = "The test namespace"
-}
-
-variable "staging_namespace" {
-  type        = "string"
-  description = "The staging namespace"
+variable "other_namespaces" {
+  type        = "list"
+  description = "The namespaces to create"
 }
 
 variable "cluster_type" {
