@@ -5,9 +5,9 @@ can be used to provision an environment in an IBM Cloud or OpenShift
 environment.
 
 The modules have been organized into three major categories:
-- **cluster** - modules that are related to creating or preparing a cluster for use (e.g. creating namespaces, creating service accounts)
-- **infrastructure** - modules that are related to provisioning infrastructure like Sysdig, LogDNA, Cloudant, and PostgreSQL
-- **tools** - modules that provision tools applications into a cluster
+- **cloud_managed** - modules to provision and manage resources in the IBM Cloud environment (clusters, services, etc)
+- **generic** - modules that are not specific to any one environment, typically working with kubernetes resources
+- **self_managed** - modules that provision/work with self_managed environments (CRC, other non-IBM Cloud managed clusters, in-cluster software, etc)
 
 ## How to apply a module
 
