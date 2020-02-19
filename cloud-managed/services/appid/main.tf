@@ -3,8 +3,6 @@ data "ibm_resource_group" "tools_resource_group" {
 }
 
 locals {
-  namespaces        = ["${var.dev_namespace}", "${var.test_namespace}", "${var.staging_namespace}"]
-  namespace_count   = 3
   role              = "Writer"
   name_prefix       = "${var.name_prefix != "" ? var.name_prefix : var.resource_group_name}"
   resource_location = "${var.resource_location == "us-east" ? "us-south" : var.resource_location}"
@@ -38,11 +36,11 @@ resource "ibm_resource_key" "appid_key" {
 }
 
 resource "ibm_container_bind_service" "appid_service_binding" {
-  count = "${local.namespace_count}"
+  count = "${var.namespace_count}"
 
   cluster_name_id       = "${var.cluster_id}"
   service_instance_name = "${ibm_resource_instance.appid_instance.name}"
-  namespace_id          = "${local.namespaces[count.index]}"
+  namespace_id          = "${var.namespaces[count.index]}"
   resource_group_id     = "${data.ibm_resource_group.tools_resource_group.id}"
   key                   = "${ibm_resource_key.appid_key.name}"
 

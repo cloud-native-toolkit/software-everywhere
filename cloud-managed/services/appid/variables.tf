@@ -13,19 +13,14 @@ variable "cluster_id" {
   description = "Id of the cluster"
 }
 
-variable "dev_namespace" {
-  type        = "string"
-  description = "Development namespace"
+variable "namespaces" {
+  type        = "list"
+  description = "Namespace"
 }
 
-variable "test_namespace" {
+variable "namespace_count" {
   type        = "string"
-  description = "Test namespace"
-}
-
-variable "staging_namespace" {
-  type        = "string"
-  description = "Staging namespace"
+  description = "The number of items in the namespaces variable"
 }
 
 variable "name_prefix" {
