@@ -1,6 +1,6 @@
 defdd#!/usr/bin/env bash
 
-NAMESPACE="logdna-agent"
+NAMESPACE="$1"
 
 if [[ -n "${KUBECONFIG_IKS}" ]]; then
    export KUBECONFIG="${KUBECONFIG_IKS}"

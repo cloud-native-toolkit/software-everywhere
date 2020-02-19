@@ -39,5 +39,5 @@ variable "plan" {
 variable "namespace" {
   type        = "string"
   description = "The namespace where the agent should be deployed"
-  default     = "tools"
+  default     = "logdna-agent"
 }

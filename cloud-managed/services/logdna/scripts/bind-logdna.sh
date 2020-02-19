@@ -6,8 +6,7 @@ MODULE_DIR=$(cd ${SCRIPT_DIR}/..; pwd -P)
 CLUSTER_TYPE="$1"
 LOGDNA_AGENT_KEY="$2"
 REGION="$3"
-
-NAMESPACE="logdna-agent"
+NAMESPACE="$4"
 
 if [[ -n "${KUBECONFIG_IKS}" ]]; then
    export KUBECONFIG="${KUBECONFIG_IKS}"
