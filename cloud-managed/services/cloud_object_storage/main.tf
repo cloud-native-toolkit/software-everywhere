@@ -3,8 +3,8 @@ data "ibm_resource_group" "tools_resource_group" {
 }
 
 locals {
-  namespaces      = ["${var.dev_namespace}", "${var.test_namespace}", "${var.staging_namespace}"]
-  namespace_count = 3
+  namespaces      = var.namespaces
+  namespace_count = var.namespace_count
   role            = "Manager"
   name_prefix     = "${var.name_prefix != "" ? var.name_prefix : var.resource_group_name}"
 }
