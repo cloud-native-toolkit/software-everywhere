@@ -2,7 +2,8 @@ provider "null" {
 }
 
 locals {
-  namespaces  = "${concat(${["var.tools_namespace"]}, var.other_namespaces)}"
+  tools_namespace = ["${var.tools_namespace}"]
+  namespaces      = "${concat(local.tools_namespace, var.other_namespaces)}"
 }
 
 resource "null_resource" "delete_namespaces" {
