@@ -1,0 +1,33 @@
+{
+  "name": "garage-terraform-modules",
+  "version": "2.2.1",
+  "description": "Terraform modules for IBM Garage Cloud-native Toolkit",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "release-it": {
+    "git": {
+      "tagName": "v${version}"
+    },
+    "github": {
+      "release": true
+    },
+    "hooks": {
+      "after:release": "echo Successfully released ${name} v${version} to ${repo.repository}."
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ibm-garage-cloud/garage-terraform-modules.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ibm-garage-cloud/garage-terraform-modules/issues"
+  },
+  "homepage": "https://github.com/ibm-garage-cloud/garage-terraform-modules#readme",
+  "devDependencies": {
+    "release-it": "^13.0.2"
+  }
+}
