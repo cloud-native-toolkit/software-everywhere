@@ -14,7 +14,8 @@
       "release": true
     },
     "npm": {
-      "publish": false
+      "publish": false,
+      "ignoreVersion": true
     },
     "hooks": {
       "after:release": "echo Successfully released ${name} v${version} to ${repo.repository}."
