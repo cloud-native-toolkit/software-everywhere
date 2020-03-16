@@ -42,5 +42,5 @@ variable "enable_cache" {
 variable "route_type" {
   type        = string
   description = "The type of route that should be created for OpenShift (passthrough or reencrypt)"
-  default     = "passthrough"
+  default     = "edge"
 }
