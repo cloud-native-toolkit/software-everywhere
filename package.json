@@ -1,6 +1,6 @@
 {
   "name": "garage-terraform-modules",
-  "version": "2.2.8",
+  "version": "2.2.9",
   "description": "Terraform modules for IBM Garage Cloud-native Toolkit",
   "main": "index.js",
   "scripts": {
