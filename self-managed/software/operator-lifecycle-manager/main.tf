@@ -1,6 +1,7 @@
 
 locals {
   operator_namespace = var.cluster_type == "ocp4" ? "openshift-marketplace" : "olm"
+  target_namespace   = var.cluster_type == "ocp4" ? "openshift-operators" : "operators"
 }
 
 resource "null_resource" "deploy_operator_lifecycle_manager" {
