@@ -6,6 +6,7 @@ locals {
 }
 
 resource "null_resource" "tekton_resources" {
+  count = var.cluster_type == "ocp4" ? 1 : 0
 
   triggers = {
     kubeconfig         = var.cluster_config_file_path

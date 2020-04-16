@@ -6,6 +6,7 @@ locals {
 }
 
 resource "null_resource" "tekton" {
+  count      = var.cluster_type == "ocp4" ? 1 : 0
 
   triggers = {
     kubeconfig = var.cluster_config_file_path
@@ -22,6 +23,7 @@ resource "null_resource" "tekton" {
 }
 
 resource "null_resource" "tekton_dashboard" {
+  count      = var.cluster_type == "ocp4" ? 1 : 0
   depends_on = [null_resource.tekton]
 
   triggers = {
@@ -52,6 +54,7 @@ resource "null_resource" "tekton_dashboard" {
 }
 
 resource "null_resource" "copy_cloud_configmap" {
+  count      = var.cluster_type == "ocp4" ? 1 : 0
   depends_on = [null_resource.tekton_dashboard]
 
   triggers = {
