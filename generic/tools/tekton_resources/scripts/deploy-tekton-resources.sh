@@ -14,9 +14,7 @@ if [[ -z "${TMP_DIR}" ]]; then
 fi
 mkdir -p "${TMP_DIR}"
 
-TASK_DIR="${TMP_DIR}/ibm-garage-tekton-tasks"
-
-git clone --branch "${REVISION}" "${GIT_URL}" "${TASK_DIR}"
+URL="${GIT_URL}/releases/download/${REVISION}/release.yaml"
 
 echo "*** Waiting for Tekton API group to be available"
 until oc get tasks
@@ -26,9 +24,4 @@ do
 done
 echo '>>> Tekton APIs are available'
 
-if [[ "${PRE_TEKTON}" == "true" ]]; then
-  kubectl create -f "${TASK_DIR}/pre-0.7.0/tasks/" -n "${NAMESPACE}"
-else
-  kubectl create -f "${TASK_DIR}/tasks/" -n "${NAMESPACE}"
-fi
-kubectl create -f "${TASK_DIR}/pipelines/" -n "${NAMESPACE}"
+kubectl apply -n "${NAMESPACE}" -f "${URL}"

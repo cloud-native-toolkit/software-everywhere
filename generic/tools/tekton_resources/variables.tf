@@ -28,11 +28,11 @@ variable "pre_tekton" {
 variable "revision" {
   type        = string
   description = "The revision Cloud Native Toolkit Tekton tasks and pipelines"
-  default     = "master"
+  default     = "1.2.0"
 }
 
 variable "git_url" {
   type        = string
   description = "The git url Cloud Native Toolkit Tekton tasks and pipelines"
-  default     = "https://github.com/ibm/ibm-garage-tekton-tasks.git"
+  default     = "https://github.com/ibm/ibm-garage-tekton-tasks"
 }
