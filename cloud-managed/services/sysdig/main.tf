@@ -46,14 +46,14 @@ resource "null_resource" "create_sysdig_agent" {
   depends_on = [ibm_resource_key.sysdig_instance_key]
 
   triggers = {
-    kubeconfig_iks = var.cluster_config_file_path
+    kubeconfig = var.cluster_config_file_path
   }
 
   provisioner "local-exec" {
-    command = "${path.module}/scripts/bind-sysdig.sh ${local.access_key} ${local.endpoint} ${var.namespace}"
+    command = "${path.module}/scripts/bind-sysdig.sh ${local.access_key} ${local.endpoint} ${var.namespace} ${var.cluster_type}"
 
     environment = {
-      KUBECONFIG_IKS = self.triggers.kubeconfig_iks
+      KUBECONFIG = self.triggers.kubeconfig
     }
   }
 
@@ -62,7 +62,7 @@ resource "null_resource" "create_sysdig_agent" {
     command = "${path.module}/scripts/unbind-sysdig.sh"
 
     environment = {
-      KUBECONFIG_IKS = self.triggers.kubeconfig_iks
+      KUBECONFIG = self.triggers.kubeconfig
     }
   }
 }
