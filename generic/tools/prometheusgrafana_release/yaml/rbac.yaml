@@ -1,0 +1,42 @@
+# The Prometheus operator creates 2 Service Accounts with pre-installed ClusterRole permissions
+#  i) prometheus-operator (used by the operator and ii) prometheus-k8s (used by Prometheus itself)
+# However the pre-installed ClusterRole for prometheus-k8s does not seem to work for cross-namespace monitoring
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  labels:
+    app.kubernetes.io/name: prometheus-k8s
+  name: prometheus-k8s
+---  
+# pre-installed prometheus-k8s cluster role did not work 
+apiVersion: rbac.authorization.k8s.io/v1beta1
+kind: ClusterRole
+metadata:
+  name: prometheus-k8s-applications
+rules:
+- apiGroups: [""]
+  resources:
+  - nodes
+  - services
+  - endpoints
+  - pods
+  verbs: ["get", "list", "watch"]
+- apiGroups: [""]
+  resources:
+  - configmaps
+  verbs: ["get"]
+- nonResourceURLs: ["/metrics"]
+  verbs: ["get"]
+---
+apiVersion: rbac.authorization.k8s.io/v1beta1
+kind: ClusterRoleBinding
+metadata:
+  name: prometheus-k8s-replace-me
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: prometheus-k8s-applications
+subjects:
+- kind: ServiceAccount
+  name: prometheus-k8s
+  namespace: replace-me
