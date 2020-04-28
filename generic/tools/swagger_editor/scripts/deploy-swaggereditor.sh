@@ -13,10 +13,7 @@ INGRESS_HOST="$4"
 INGRESS_SUBDOMAIN="$5"
 IMAGE_TAG="$6"
 ENABLE_OAUTH="$7"
-
-if [[ -n "${KUBECONFIG_IKS}" ]]; then
-    export KUBECONFIG="${KUBECONFIG_IKS}"
-fi
+CHART_VERSION="$8"
 
 if [[ -z "${TMP_DIR}" ]]; then
     TMP_DIR=".tmp"
@@ -26,59 +23,52 @@ if [[ -z "${IMAGE_TAG}" ]]; then
     IMAGE_TAG="latest"
 fi
 
+if [[ -z "${CHART_VERSION}" ]]; then
+  CHART_VERSION="1.2.0"
+fi
+
 if [[ "${CLUSTER_TYPE}" == "ocp3" ]] || [[ "${CLUSTER_TYPE}" == "ocp4" ]]; then
   CLUSTER_TYPE="openshift"
 fi
-
-CHART="${MODULE_DIR}/charts/swaggereditor-dashboard"
-CONFIG_CHART="${MODULE_DIR}/charts/swaggereditor-config"
 
 OUTPUT_YAML="${TMP_DIR}/swaggereditor.yaml"
 CONFIG_OUTPUT_YAML="${TMP_DIR}/swaggereditor-config.yaml"
 
 mkdir -p ${TMP_DIR}
 
-DASHBOARD_URL="http://${INGRESS_HOST}.${INGRESS_SUBDOMAIN}"
+DASHBOARD_URL="http://${INGRESS_HOST}-${NAMESPACE}.${INGRESS_SUBDOMAIN}"
 
 VALUES="ingress.hosts.0=${INGRESS_HOST}"
 if [[ -n "${TLS_SECRET_NAME}" ]]; then
     VALUES="${VALUES},ingress.tls[0].secretName=${TLS_SECRET_NAME}"
     VALUES="${VALUES},ingress.annotations.ingress\.bluemix\.net/redirect-to-https='True'"
 
-    DASHBOARD_URL="https://${INGRESS_HOST}.${INGRESS_SUBDOMAIN}"
+    DASHBOARD_URL="https://${INGRESS_HOST}-${NAMESPACE}.${INGRESS_SUBDOMAIN}"
 fi
 
 echo "*** Generating kube yaml from helm3 template into ${OUTPUT_YAML}"
-# helm3 init --client-only
-helm3 template "${NAME}" "${CHART}" \
+helm3 template "${NAME}" swaggereditor \
+    --repo https://ibm-garage-cloud.github.io/toolkit-charts/ \
     --namespace "${NAMESPACE}" \
+    --version "${CHART_VERSION}" \
     --set "clusterType=${CLUSTER_TYPE}" \
     --set "host=${INGRESS_HOST}" \
     --set "ingressSubdomain=${INGRESS_SUBDOMAIN}" \
+    --set "ingress.includeNamespace=true" \
     --set "image.tag=${IMAGE_TAG}" \
-    --set "oauthEnabled=${ENABLE_OAUTH}" \
+    --set "sso.enabled=${ENABLE_OAUTH}" \
     --set "${VALUES}"  > ${OUTPUT_YAML}
 
-SERVICE_ACCOUNT_NAME="swaggereditor-dashboard"
-kubectl create serviceaccount -n "${NAMESPACE}" ${SERVICE_ACCOUNT_NAME}
-
 echo "*** Applying kube yaml ${OUTPUT_YAML}"
-if [[ "${CLUSTER_TYPE}" == "openshift" ]]; then
-  oc adm policy add-scc-to-user privileged "${NAMESPACE}" -z ${SERVICE_ACCOUNT_NAME}
-  oc apply -n "${NAMESPACE}" -f ${OUTPUT_YAML}
+kubectl apply -n "${NAMESPACE}" -f ${OUTPUT_YAML} --validate=false
 
-  DASHBOARD_HOST=$(oc get route "apieditor" -n "${NAMESPACE}" -o jsonpath='{ .spec.host }')
-  DASHBOARD_URL="https://${DASHBOARD_HOST}"
-else
-  kubectl apply -n "${NAMESPACE}" -f ${OUTPUT_YAML}
-fi
-
-
-helm3 repo add toolkit-charts https://ibm-garage-cloud.github.io/toolkit-charts/
-helm3 template apieditor toolkit-charts/tool-config \
+helm3 template apieditor tool-config \
+  --repo https://ibm-garage-cloud.github.io/toolkit-charts/ \
   --namespace "${NAMESPACE}" \
   --set app="${NAME}" \
   --set url="${DASHBOARD_URL}" > "${CONFIG_OUTPUT_YAML}"
+
+echo "*** Applying config yaml ${CONFIG_OUTPUT_YAML}"
 kubectl apply -n "${NAMESPACE}" -f "${CONFIG_OUTPUT_YAML}"
 
 echo "*** Waiting for Swagger"

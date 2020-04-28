@@ -27,7 +27,14 @@ variable "image_tag" {
   default     = "v3.8.0"
 }
 
-variable "enable_oauth" {
+variable "enable_sso" {
+  type        = bool
   description = "Flag indicating if oauth should be applied (only available for OpenShift)"
-  default     = "falae"
+  default     = true
+}
+
+variable "chart_version" {
+  type        = string
+  description = "The version of the helm chart that will be installed"
+  default     = "1.2.2"
 }
