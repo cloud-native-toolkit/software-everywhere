@@ -132,14 +132,6 @@ data "local_file" "cluster_version" {
   filename = local.cluster_version_file
 }
 
-resource "null_resource" "oc_login" {
-  count      = var.cluster_type != "kubernetes" ? 1: 0
-
-  provisioner "local-exec" {
-    command = "oc login -u ${var.login_user} -p ${var.ibmcloud_api_key} --server=${local.server_url} > /dev/null"
-  }
-}
-
 # this should probably be moved to a separate module that operates at a namespace level
 resource "null_resource" "create_registry_namespace" {
   provisioner "local-exec" {
@@ -158,8 +150,6 @@ data "local_file" "registry_url" {
 }
 
 resource "null_resource" "setup_kube_config" {
-  count = var.cluster_type == "kubernetes" ? 1 : 0
-
   provisioner "local-exec" {
     command = "rm -f ${local.cluster_config_dir}/config && ln -s ${data.ibm_container_cluster_config.cluster.config_file_path} ${local.cluster_config_dir}/config"
   }
@@ -178,27 +168,52 @@ resource "null_resource" "create_cluster_pull_secret_iks" {
   }
 }
 
-resource "null_resource" "delete_ibmcloud_chart" {
-  depends_on = [null_resource.oc_login, null_resource.setup_kube_config]
-
-  provisioner "local-exec" {
-    command = "${path.module}/scripts/helm3-uninstall.sh ${local.ibmcloud_release_name} ${local.config_namespace}"
-  }
-}
-
 data "helm_repository" "toolkit-charts" {
   name = "toolkit-charts"
   url  = "https://ibm-garage-cloud.github.io/toolkit-charts"
 }
 
-resource "helm_release" "ibmcloud_config" {
-  depends_on = [null_resource.delete_ibmcloud_chart]
+resource "null_resource" "ibmcloud-config_cleanup" {
+  provisioner "local-exec" {
+    command = "kubectl delete configmap ibmcloud-config -n ${local.config_namespace} || true"
+
+    environment = {
+      KUBECONFIG = data.ibm_container_cluster_config.cluster.config_file_path
+    }
+  }
+  provisioner "local-exec" {
+    command = "kubectl delete secret ibmcloud-apikey -n ${local.config_namespace} || true"
+
+    environment = {
+      KUBECONFIG = data.ibm_container_cluster_config.cluster.config_file_path
+    }
+  }
+  provisioner "local-exec" {
+    command = "kubectl delete secret,configmap -l app=ibmcloud -n ${local.config_namespace} || true"
+
+    environment = {
+      KUBECONFIG = data.ibm_container_cluster_config.cluster.config_file_path
+    }
+  }
+  provisioner "local-exec" {
+    command = "kubectl delete secret sh.helm.release.v1.${local.ibmcloud_release_name}.v1 -n ${local.config_namespace} || true"
+
+    environment = {
+      KUBECONFIG = data.ibm_container_cluster_config.cluster.config_file_path
+    }
+  }
+}
+
+resource "helm_release" "ibmcloud-config" {
+  depends_on = [null_resource.ibmcloud-config_cleanup]
 
   name         = local.ibmcloud_release_name
   chart        = "ibmcloud"
   repository   = data.helm_repository.toolkit-charts.name
-  version      = "0.1.3"
+  version      = "0.1.5"
   namespace    = local.config_namespace
+  force_update = true
+  replace      = true
 
   set_sensitive {
     name  = "apikey"
