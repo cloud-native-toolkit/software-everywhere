@@ -43,7 +43,7 @@ The modules have been organized into three major categories:
 | *ArgoCD* | https://github.com/ibm-garage-cloud/terraform-tools-argocd.git | | |
 | *Artifactory* | https://github.com/ibm-garage-cloud/terraform-tools-artifactory.git | | |
 | *Developer Dashboard* | https://github.com/ibm-garage-cloud/terraform-tools-dashboard.git | | |
-| *Jaeger* | https://github.com/ibm-garage-cloud/terraform-tools-jaeger.git | | |
+| *Jaeger* | https://github.com/ibm-garage-cloud/terraform-tools-jaeger.git | ![Verify and release module](https://github.com/ibm-garage-cloud/terraform-tools-jaeger/workflows/Verify%20and%20release%20module/badge.svg) | ![Latest release](https://img.shields.io/github/v/release/ibm-garage-cloud/terraform-tools-jaeger?sort=semver) |
 | *Jenkins* | https://github.com/ibm-garage-cloud/terraform-tools-jenkins.git | ![Latest release](https://img.shields.io/github/v/release/ibm-garage-cloud/terraform-tools-jenkins?sort=semver) | ![Verify and release module](https://github.com/ibm-garage-cloud/terraform-tools-jenkins/workflows/Verify%20and%20release%20module/badge.svg) |
 | *Kafka* | https://github.com/ibm-garage-cloud/terraform-software-kafka.git | | |
 | *Nexus* | https://github.com/ibm-garage-cloud/terraform-tools-nexus.git | | |
