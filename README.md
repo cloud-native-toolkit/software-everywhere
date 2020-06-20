@@ -13,7 +13,7 @@ The modules have been organized into three major categories:
 
 ### IBM provider
 
-| **Module name**                 | **Module location** | **Latest release** | **Status** |
+| **Module name**                 | **Module location** | **Latest release** | **Last build status** |
 |---------------------------------|---------------------|--|--|
 | *IBM Cloud Cluster*             | https://github.com/ibm-garage-cloud/terraform-ibm-container-platform.git| | |
 | *Cloud Operator*                | self-managed/software/cloud_operator | | |
@@ -34,7 +34,7 @@ The modules have been organized into three major categories:
 
 ### K8s provider
 
-| **Module name**                 | **Module location** | **Latest release** | **Status** |
+| **Module name**                 | **Module location** | **Latest release** | **Last build status** |
 |---------------------------------|---------------------|--|--|
 | *OpenShift cluster* | self-managed/cluster/openshift_cluster | | |
 | *Namespace* | https://github.com/ibm-garage-cloud/terraform-cluster-namespace.git | ![Latest release](https://img.shields.io/github/v/release/ibm-garage-cloud/terraform-cluster-namespace?sort=semver) | ![Verify and release module](https://github.com/ibm-garage-cloud/terraform-cluster-namespace/workflows/Verify%20and%20release%20module/badge.svg) |
