@@ -52,7 +52,7 @@ The modules have been organized into three major categories:
 | *SonarQube* | https://github.com/ibm-garage-cloud/terraform-tools-sonarqube.git | | ![Latest release](https://img.shields.io/github/v/release/ibm-garage-cloud/terraform-tools-sonarqube?sort=semver) | ![Verify and release module](https://github.com/ibm-garage-cloud/terraform-tools-sonarqube/workflows/Verify%20and%20release%20module/badge.svg) |
 | *Swagger Editor* | https://github.com/ibm-garage-cloud/terraform-tools-swaggereditor.git | | ![Latest release](https://img.shields.io/github/v/release/ibm-garage-cloud/terraform-tools-swaggereditor?sort=semver) | ![Verify and release module](https://github.com/ibm-garage-cloud/terraform-tools-swaggereditor/workflows/Verify%20and%20release%20module/badge.svg) |
 | *Tekton* | https://github.com/ibm-garage-cloud/terraform-tools-tekton.git | | ![Latest release](https://img.shields.io/github/v/release/ibm-garage-cloud/terraform-tools-tekton?sort=semver) | ![Verify and release module](https://github.com/ibm-garage-cloud/terraform-tools-tekton/workflows/Verify%20and%20release%20module/badge.svg) |
-| *Tekton Resources* | https://github.com/ibm-garage-cloud/terraform-tools-tekton-resources.git | | | |
+| *Tekton Resources* | https://github.com/ibm-garage-cloud/terraform-tools-tekton-resources.git | | ![Latest release](https://img.shields.io/github/v/release/ibm-garage-cloud/terraform-tools-tekton-resources?sort=semver) | ![Verify and release module](https://github.com/ibm-garage-cloud/terraform-tools-tekton-resources/workflows/Verify%20and%20release%20module/badge.svg) |
 
 ## How to apply a module
 
