@@ -35,7 +35,7 @@ The modules have been organized into two major categories:
 
 | **Module name**                 | **Module location** | **Features** | **Latest release** | **Last build status** |
 |---------------------------------|---------------------|-------|--|--|
-| *OpenShift cluster* | self-managed/cluster/openshift_cluster | M | ![Latest release](https://img.shields.io/github/v/release/ibm-garage-cloud/terraform-k8s-ocp-cluster?sort=semver) | ![Verify and release module](https://github.com/ibm-garage-cloud/terraform-k8s-ocp-cluster/workflows/Verify%20and%20release%20module/badge.svg?event=push) |
+| *OpenShift cluster* | https://github.com/ibm-garage-cloud/terraform-k8s-ocp-cluster | M | ![Latest release](https://img.shields.io/github/v/release/ibm-garage-cloud/terraform-k8s-ocp-cluster?sort=semver) | ![Verify and release module](https://github.com/ibm-garage-cloud/terraform-k8s-ocp-cluster/workflows/Verify%20and%20release%20module/badge.svg?event=push) |
 | *Namespace* | https://github.com/ibm-garage-cloud/terraform-k8s-namespace.git | | ![Latest release](https://img.shields.io/github/v/release/ibm-garage-cloud/terraform-k8s-namespace?sort=semver) | ![Verify and release module](https://github.com/ibm-garage-cloud/terraform-k8s-namespace/workflows/Verify%20and%20release%20module/badge.svg) |
 | *Service Account* | https://github.com/ibm-garage-cloud/terraform-k8s-serviceaccount.git | | ![Latest release](https://img.shields.io/github/v/release/ibm-garage-cloud/terraform-k8s-serviceaccount?sort=semver) | ![Verify and release module](https://github.com/ibm-garage-cloud/terraform-k8s-serviceaccount/workflows/Verify%20and%20release%20module/badge.svg) |
 | *Operator Lifecycle Manager* | https://github.com/ibm-garage-cloud/terraform-k8s-olm.git | | ![Latest release](https://img.shields.io/github/v/release/ibm-garage-cloud/terraform-k8s-olm?sort=semver) | ![Verify and release module](https://github.com/ibm-garage-cloud/terraform-k8s-olm/workflows/Verify%20and%20release%20module/badge.svg) |
@@ -52,6 +52,11 @@ The modules have been organized into two major categories:
 | *Swagger Editor* | https://github.com/ibm-garage-cloud/terraform-tools-swaggereditor.git | | ![Latest release](https://img.shields.io/github/v/release/ibm-garage-cloud/terraform-tools-swaggereditor?sort=semver) | ![Verify and release module](https://github.com/ibm-garage-cloud/terraform-tools-swaggereditor/workflows/Verify%20and%20release%20module/badge.svg) |
 | *Tekton* | https://github.com/ibm-garage-cloud/terraform-tools-tekton.git | | ![Latest release](https://img.shields.io/github/v/release/ibm-garage-cloud/terraform-tools-tekton?sort=semver) | ![Verify and release module](https://github.com/ibm-garage-cloud/terraform-tools-tekton/workflows/Verify%20and%20release%20module/badge.svg) |
 | *Tekton Resources* | https://github.com/ibm-garage-cloud/terraform-tools-tekton-resources.git | | ![Latest release](https://img.shields.io/github/v/release/ibm-garage-cloud/terraform-tools-tekton-resources?sort=semver) | ![Verify and release module](https://github.com/ibm-garage-cloud/terraform-tools-tekton-resources/workflows/Verify%20and%20release%20module/badge.svg) |
+
+**Features:**
+
+- `G` - generates gitops structure
+- `M` - provides module metadata
 
 ## How to apply a module
 
