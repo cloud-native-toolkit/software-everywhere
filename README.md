@@ -4,10 +4,9 @@ This repository contains a collection of terraform modules that
 can be used to provision an environment in an IBM Cloud or OpenShift
 environment.
 
-The modules have been organized into three major categories:
-- **cloud_managed** - modules to provision and manage resources in the IBM Cloud environment (clusters, services, etc)
-- **generic** - modules that are not specific to any one environment, typically working with kubernetes resources
-- **self_managed** - modules that provision/work with self_managed environments (CRC, other non-IBM Cloud managed clusters, in-cluster software, etc)
+The modules have been organized into two major categories:
+- **ibm** - modules to provision and manage resources in the IBM Cloud environment (clusters, services, etc)
+- **k8s** - modules that are not specific to any one environment, typically working with kubernetes resources
 
 ## Module catalog
 
@@ -36,12 +35,12 @@ The modules have been organized into three major categories:
 
 | **Module name**                 | **Module location** | **Features** | **Latest release** | **Last build status** |
 |---------------------------------|---------------------|-------|--|--|
-| *OpenShift cluster* | self-managed/cluster/openshift_cluster | | | |
+| *OpenShift cluster* | self-managed/cluster/openshift_cluster | M | ![Latest release](https://img.shields.io/github/v/release/ibm-garage-cloud/terraform-k8s-ocp-cluster?sort=semver) | ![Verify and release module](https://github.com/ibm-garage-cloud/terraform-k8s-ocp-cluster/workflows/Verify%20and%20release%20module/badge.svg?event=push) |
 | *Namespace* | https://github.com/ibm-garage-cloud/terraform-k8s-namespace.git | | ![Latest release](https://img.shields.io/github/v/release/ibm-garage-cloud/terraform-k8s-namespace?sort=semver) | ![Verify and release module](https://github.com/ibm-garage-cloud/terraform-k8s-namespace/workflows/Verify%20and%20release%20module/badge.svg) |
 | *Service Account* | https://github.com/ibm-garage-cloud/terraform-k8s-serviceaccount.git | | ![Latest release](https://img.shields.io/github/v/release/ibm-garage-cloud/terraform-k8s-serviceaccount?sort=semver) | ![Verify and release module](https://github.com/ibm-garage-cloud/terraform-k8s-serviceaccount/workflows/Verify%20and%20release%20module/badge.svg) |
 | *Operator Lifecycle Manager* | https://github.com/ibm-garage-cloud/terraform-k8s-olm.git | | ![Latest release](https://img.shields.io/github/v/release/ibm-garage-cloud/terraform-k8s-olm?sort=semver) | ![Verify and release module](https://github.com/ibm-garage-cloud/terraform-k8s-olm/workflows/Verify%20and%20release%20module/badge.svg) |
 | *ArgoCD* | https://github.com/ibm-garage-cloud/terraform-tools-argocd.git | | ![Latest release](https://img.shields.io/github/v/release/ibm-garage-cloud/terraform-tools-argocd?sort=semver) | ![Verify and release module](https://github.com/ibm-garage-cloud/terraform-tools-argocd/workflows/Verify%20and%20release%20module/badge.svg) | 
-| *Artifactory* | https://github.com/ibm-garage-cloud/terraform-tools-artifactory.git | G | ![Latest release](https://img.shields.io/github/v/release/ibm-garage-cloud/terraform-tools-artifactory?sort=semver) | ![Verify and release module](https://github.com/ibm-garage-cloud/terraform-tools-artifactory/workflows/Verify%20and%20release%20module/badge.svg) |
+| *Artifactory* | https://github.com/ibm-garage-cloud/terraform-tools-artifactory.git | G, M | ![Latest release](https://img.shields.io/github/v/release/ibm-garage-cloud/terraform-tools-artifactory?sort=semver) | ![Verify and release module](https://github.com/ibm-garage-cloud/terraform-tools-artifactory/workflows/Verify%20and%20release%20module/badge.svg) |
 | *Developer Dashboard* | https://github.com/ibm-garage-cloud/terraform-tools-dashboard.git | G | ![Latest release](https://img.shields.io/github/v/release/ibm-garage-cloud/terraform-tools-dashboard?sort=semver) | ![Verify and release module](https://github.com/ibm-garage-cloud/terraform-tools-dashboard/workflows/Verify%20and%20release%20module/badge.svg) |
 | *Jaeger* | https://github.com/ibm-garage-cloud/terraform-tools-jaeger.git | | ![Latest release](https://img.shields.io/github/v/release/ibm-garage-cloud/terraform-tools-jaeger?sort=semver) | ![Verify and release module](https://github.com/ibm-garage-cloud/terraform-tools-jaeger/workflows/Verify%20and%20release%20module/badge.svg) | 
 | *Jenkins* | https://github.com/ibm-garage-cloud/terraform-tools-jenkins.git | | ![Latest release](https://img.shields.io/github/v/release/ibm-garage-cloud/terraform-tools-jenkins?sort=semver) | ![Verify and release module](https://github.com/ibm-garage-cloud/terraform-tools-jenkins/workflows/Verify%20and%20release%20module/badge.svg) |
