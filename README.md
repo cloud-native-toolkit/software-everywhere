@@ -16,7 +16,7 @@ The modules have been organized into two major categories:
 |---------------------------------|--------------------------------------------------------------------------|-------|--------------------|-----------------------|
 | *IBM Cloud Cluster*             | https://github.com/ibm-garage-cloud/terraform-ibm-container-platform.git |       | ![Latest release](https://img.shields.io/github/v/release/ibm-garage-cloud/terraform-ibm-container-platform?sort=semver) | ![Verify and release module](https://github.com/ibm-garage-cloud/terraform-ibm-container-platform/workflows/Verify%20and%20release%20module/badge.svg) |
 | *Cloud Operator*                | self-managed/software/cloud_operator                                     |       | | |
-| *AppId*                         | cloud-managed/services/appid                                             |       | | |
+| *AppId*                         | https://github.com/ibm-garage-cloud/terraform-ibm-appid.git              |       | ![Latest release](https://img.shields.io/github/v/release/ibm-garage-cloud/terraform-ibm-appid?sort=semver) | ![Verify and release module](https://github.com/ibm-garage-cloud/terraform-ibm-appid/workflows/Verify%20and%20release%20module/badge.svg) |
 | *Cloud Object Storage*          | cloud-managed/services/cloud_object_storage                              |       | | |
 | *Cloudant*                      | cloud-managed/services/cloudant                                          |       | | |
 | *LogDNA*                        | https://github.com/ibm-garage-cloud/terraform-ibm-logdna.git             |       | | |
