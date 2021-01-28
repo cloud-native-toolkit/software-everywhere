@@ -10,12 +10,30 @@ categories:
       - https://ibm-garage-cloud.github.io/terraform-ibm-image-registry/index.yaml
       - https://ibm-garage-cloud.github.io/terraform-ocp-image-registry/index.yaml
       - https://ibm-garage-cloud.github.io/terraform-k8s-image-registry/index.yaml
+  - category: source-control
+    selection: single
+    modules:
+      - https://ibm-garage-cloud.github.io/terraform-k8s-source-control/index.yaml
   - category: infrastructure
     selection: indirect
     modules:
       - https://ibm-garage-cloud.github.io/terraform-k8s-namespace/index.yaml
       - https://ibm-garage-cloud.github.io/terraform-k8s-olm/index.yaml
       - https://ibm-garage-cloud.github.io/terraform-ibm-cp4i/index.yaml
+  - category: ibm
+    selection: multiple
+    modules:
+      - https://ibm-garage-cloud.github.io/terraform-ibm-activity-tracker/index.yaml
+      - https://ibm-garage-cloud.github.io/terraform-ibm-appid/index.yaml
+      - https://ibm-garage-cloud.github.io/terraform-ibm-cloud-operator/index.yaml
+      - https://ibm-garage-cloud.github.io/terraform-ibm-logdna/index.yaml
+      - https://ibm-garage-cloud.github.io/terraform-ibm-sysdig/index.yaml
+      - https://ibm-garage-cloud.github.io/terraform-ibm-key-protect/index.yaml
+      - https://ibm-garage-cloud.github.io/terraform-ibm-mongodb/index.yaml
+      - https://ibm-garage-cloud.github.io/terraform-ibm-object-storage/index.yaml
+      - https://ibm-garage-cloud.github.io/terraform-ibm-redis/index.yaml
+      - https://ibm-garage-cloud.github.io/terraform-ibm-watson-assistant/index.yaml
+      - https://ibm-garage-cloud.github.io/terraform-ibm-watson-studio/index.yaml
   - category: tool
     selection: multiple
     modules:
@@ -28,3 +46,7 @@ categories:
       - https://ibm-garage-cloud.github.io/terraform-tools-swaggereditor/index.yaml
       - https://ibm-garage-cloud.github.io/terraform-tools-tekton/index.yaml
       - https://ibm-garage-cloud.github.io/terraform-tools-tekton-resources/index.yaml
+      - https://ibm-garage-cloud.github.io/terraform-tools-nexus/index.yaml
+      - https://ibm-garage-cloud.github.io/terraform-tools-jaeger/index.yaml
+      - https://ibm-garage-cloud.github.io/terraform-k8s-kafka/index.yaml
+      - https://ibm-garage-cloud.github.io/terraform-k8s-service-mesh/index.yaml
