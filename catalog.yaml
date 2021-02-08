@@ -37,6 +37,8 @@ categories:
         id: github.com/ibm-garage-cloud/terraform-k8s-olm
       - name: Cloud Pak Catalog
         id: github.com/ibm-garage-cloud/terraform-ibm-cp-catalog
+      - name: Cloud Pak Platform Navigator
+        id: github.com/ibm-garage-cloud/terraform-ibm-cp-platform-navigator
       - name: IBM Cloud Operator
         id: github.com/ibm-garage-cloud/terraform-ibm-cloud-operator
   - category: sre
@@ -73,6 +75,8 @@ categories:
         id: github.com/ibm-garage-cloud/terraform-ibm-watson-assistant
       - name: IBM Watson Studio
         id: github.com/ibm-garage-cloud/terraform-ibm-watson-studio
+      - name: App Connect
+        id: github.com/ibm-garage-cloud/terraform-ibm-cp-app-connect
   - category: dev-tool
     categoryName: Dev Tools
     selection: multiple
