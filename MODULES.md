@@ -6,6 +6,15 @@
 | *IBM Container Platform* | https://github.com/ibm-garage-cloud/terraform-ibm-container-platform | ![Latest release](https://img.shields.io/github/v/release/ibm-garage-cloud/terraform-ibm-container-platform?sort=semver) | ![Verify and release module](https://github.com/ibm-garage-cloud/terraform-ibm-container-platform/workflows/Verify%20and%20release%20module/badge.svg) |
 | *OpenShift Cluster* | https://github.com/ibm-garage-cloud/terraform-k8s-ocp-cluster | ![Latest release](https://img.shields.io/github/v/release/ibm-garage-cloud/terraform-k8s-ocp-cluster?sort=semver) | ![Verify and release module](https://github.com/ibm-garage-cloud/terraform-k8s-ocp-cluster/workflows/Verify%20and%20release%20module/badge.svg) |
 
+### IAM
+
+| **Module name** | **Module location** | **Latest release** | **Last build status** |
+|-----------------|---------------------|--------------------|-----------------------|
+| *IBM Resource Group* | https://github.com/ibm-garage-cloud/terraform-ibm-resource-group | ![Latest release](https://img.shields.io/github/v/release/ibm-garage-cloud/terraform-ibm-resource-group?sort=semver) | ![Verify and release module](https://github.com/ibm-garage-cloud/terraform-ibm-resource-group/workflows/Verify%20and%20release%20module/badge.svg) |
+| *IBM Access Group* | https://github.com/ibm-garage-cloud/terraform-ibm-access-group | ![Latest release](https://img.shields.io/github/v/release/ibm-garage-cloud/terraform-ibm-access-group?sort=semver) | ![Verify and release module](https://github.com/ibm-garage-cloud/terraform-ibm-access-group/workflows/Verify%20and%20release%20module/badge.svg) |
+| *IBM Account Users* | https://github.com/ibm-garage-cloud/terraform-ibm-account-users | ![Latest release](https://img.shields.io/github/v/release/ibm-garage-cloud/terraform-ibm-account-users?sort=semver) | ![Verify and release module](https://github.com/ibm-garage-cloud/terraform-ibm-account-users/workflows/Verify%20and%20release%20module/badge.svg) |
+| *IBM Add Users to Access Group* | https://github.com/ibm-garage-cloud/terraform-ibm-add-access-group-users | ![Latest release](https://img.shields.io/github/v/release/ibm-garage-cloud/terraform-ibm-add-access-group-users?sort=semver) | ![Verify and release module](https://github.com/ibm-garage-cloud/terraform-ibm-add-access-group-users/workflows/Verify%20and%20release%20module/badge.svg) |
+
 ### Image Registry
 
 | **Module name** | **Module location** | **Latest release** | **Last build status** |
