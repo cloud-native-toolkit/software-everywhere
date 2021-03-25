@@ -3,8 +3,8 @@
 
 | **Module name** | **Module id** | **Module location** | **Latest release** | **Last build status** |
 |-----------------|---------------|---------------------|--------------------|-----------------------|
-| *IBM Container Platform* |  | https://github.com/cloud-native-toolkit/terraform-ibm-container-platform | ![Latest release](https://img.shields.io/github/v/release/cloud-native-toolkit/terraform-ibm-container-platform?sort=semver) | ![Verify and release module](https://github.com/cloud-native-toolkit/terraform-ibm-container-platform/workflows/Verify%20and%20release%20module/badge.svg) |
-| *OpenShift Cluster* |  | https://github.com/cloud-native-toolkit/terraform-k8s-ocp-cluster | ![Latest release](https://img.shields.io/github/v/release/cloud-native-toolkit/terraform-k8s-ocp-cluster?sort=semver) | ![Verify and release module](https://github.com/cloud-native-toolkit/terraform-k8s-ocp-cluster/workflows/Verify%20and%20release%20module/badge.svg) |
+| *IBM Container Platform* | ibm-container-platform | https://github.com/cloud-native-toolkit/terraform-ibm-container-platform | ![Latest release](https://img.shields.io/github/v/release/cloud-native-toolkit/terraform-ibm-container-platform?sort=semver) | ![Verify and release module](https://github.com/cloud-native-toolkit/terraform-ibm-container-platform/workflows/Verify%20and%20release%20module/badge.svg) |
+| *OpenShift Cluster* | ocp-cluster | https://github.com/cloud-native-toolkit/terraform-k8s-ocp-cluster | ![Latest release](https://img.shields.io/github/v/release/cloud-native-toolkit/terraform-k8s-ocp-cluster?sort=semver) | ![Verify and release module](https://github.com/cloud-native-toolkit/terraform-k8s-ocp-cluster/workflows/Verify%20and%20release%20module/badge.svg) |
 
 ### IAM
 
