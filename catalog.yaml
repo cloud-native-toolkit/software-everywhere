@@ -39,6 +39,14 @@ categories:
     modules:
       - name: Source Control
         id: github.com/ibm-garage-cloud/terraform-k8s-source-control
+  - category: network
+    categoryName: Network
+    selection: multiple
+    modules:
+      - name: IBM VPC
+        id: github.com/cloud-native-toolkit/terraform-ibm-vpc
+      - name: VSI Bastion
+        id: github.com/cloud-native-toolkit/terraform-vsi-bastion
   - category: infrastructure
     categoryName: Infrastructure
     selection: indirect
