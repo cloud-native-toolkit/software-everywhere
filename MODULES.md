@@ -5,6 +5,7 @@
 |-----------------|---------------|---------------------|--------------------|-----------------------|
 | *IBM Container Platform* | ibm-container-platform | https://github.com/cloud-native-toolkit/terraform-ibm-container-platform | ![Latest release](https://img.shields.io/github/v/release/cloud-native-toolkit/terraform-ibm-container-platform?sort=semver) | ![Verify and release module](https://github.com/cloud-native-toolkit/terraform-ibm-container-platform/workflows/Verify%20and%20release%20module/badge.svg) |
 | *OpenShift Cluster* | ocp-cluster | https://github.com/cloud-native-toolkit/terraform-k8s-ocp-cluster | ![Latest release](https://img.shields.io/github/v/release/cloud-native-toolkit/terraform-k8s-ocp-cluster?sort=semver) | ![Verify and release module](https://github.com/cloud-native-toolkit/terraform-k8s-ocp-cluster/workflows/Verify%20and%20release%20module/badge.svg) |
+| *IBM OpenShift VPC cluster* | ibm-ocp-vpc | https://github.com/cloud-native-toolkit/terraform-ibm-ocp-vpc | ![Latest release](https://img.shields.io/github/v/release/cloud-native-toolkit/terraform-ibm-ocp-vpc?sort=semver) | ![Verify and release module](https://github.com/cloud-native-toolkit/terraform-ibm-ocp-vpc/workflows/Verify%20and%20release%20module/badge.svg) |
 
 ### IAM
 
@@ -34,7 +35,7 @@
 | **Module name** | **Module id** | **Module location** | **Latest release** | **Last build status** |
 |-----------------|---------------|---------------------|--------------------|-----------------------|
 | *IBM VPC* |  | https://github.com/cloud-native-toolkit/terraform-ibm-vpc | ![Latest release](https://img.shields.io/github/v/release/cloud-native-toolkit/terraform-ibm-vpc?sort=semver) | ![Verify and release module](https://github.com/cloud-native-toolkit/terraform-ibm-vpc/workflows/Verify%20and%20release%20module/badge.svg) |
-| *VSI Bastion* |  | https://github.com/cloud-native-toolkit/terraform-vsi-bastion | ![Latest release](https://img.shields.io/github/v/release/cloud-native-toolkit/terraform-vsi-bastion?sort=semver) | ![Verify and release module](https://github.com/cloud-native-toolkit/terraform-vsi-bastion/workflows/Verify%20and%20release%20module/badge.svg) |
+| *VSI Bastion* | vsi-bastion | https://github.com/cloud-native-toolkit/terraform-vsi-bastion | ![Latest release](https://img.shields.io/github/v/release/cloud-native-toolkit/terraform-vsi-bastion?sort=semver) | ![Verify and release module](https://github.com/cloud-native-toolkit/terraform-vsi-bastion/workflows/Verify%20and%20release%20module/badge.svg) |
 
 ### Infrastructure
 
