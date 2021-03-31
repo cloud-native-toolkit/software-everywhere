@@ -11,6 +11,8 @@ categories:
         aliases:
           - github.com/cloud-native-toolkit/terraform-ocp-cluster
         metadataUrl: https://cloud-native-toolkit.github.io/terraform-k8s-ocp-cluster/index.yaml
+      - name: IBM OpenShift VPC cluster
+        id: github.com/cloud-native-toolkit/terraform-ibm-ocp-vpc
   - category: iam
     categoryName: IAM
     selection: multiple
