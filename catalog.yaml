@@ -47,6 +47,8 @@ categories:
     modules:
       - name: IBM VPC
         id: github.com/cloud-native-toolkit/terraform-ibm-vpc
+      - name: IBM VPC SSH
+        id: github.com/cloud-native-toolkit/terraform-ibm-vpc-ssh
       - name: VSI Bastion
         id: github.com/cloud-native-toolkit/terraform-vsi-bastion
   - category: infrastructure
