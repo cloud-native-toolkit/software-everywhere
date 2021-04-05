@@ -77,6 +77,8 @@ categories:
         id: github.com/cloud-native-toolkit/terraform-ibm-sysdig
       - name: IBM Sysdig Bind
         id: github.com/cloud-native-toolkit/terraform-ibm-sysdig-bind
+      - name: IBM SCC Collector
+        id: github.com/cloud-native-toolkit/terraform-ibm-scc-collector
   - category: middleware
     categoryName: Middleware
     selection: multiple
