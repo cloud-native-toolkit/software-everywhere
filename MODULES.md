@@ -53,7 +53,9 @@
 |-----------------|---------------|---------------------|--------------------|-----------------------|
 | *IBM Activity Tracker* | ibm-activity-tracker | https://github.com/cloud-native-toolkit/terraform-ibm-activity-tracker | ![Latest release](https://img.shields.io/github/v/release/cloud-native-toolkit/terraform-ibm-activity-tracker?sort=semver) | ![Verify and release module](https://github.com/cloud-native-toolkit/terraform-ibm-activity-tracker/workflows/Verify%20and%20release%20module/badge.svg) |
 | *IBM LogDNA* | logdna | https://github.com/cloud-native-toolkit/terraform-ibm-logdna | ![Latest release](https://img.shields.io/github/v/release/cloud-native-toolkit/terraform-ibm-logdna?sort=semver) | ![Verify and release module](https://github.com/cloud-native-toolkit/terraform-ibm-logdna/workflows/Verify%20and%20release%20module/badge.svg) |
+| *IBM LogDNA Bind* |  | https://github.com/cloud-native-toolkit/terraform-ibm-logdna-bind | ![Latest release](https://img.shields.io/github/v/release/cloud-native-toolkit/terraform-ibm-logdna-bind?sort=semver) | ![Verify and release module](https://github.com/cloud-native-toolkit/terraform-ibm-logdna-bind/workflows/Verify%20and%20release%20module/badge.svg) |
 | *IBM Sysdig* | sysdig | https://github.com/cloud-native-toolkit/terraform-ibm-sysdig | ![Latest release](https://img.shields.io/github/v/release/cloud-native-toolkit/terraform-ibm-sysdig?sort=semver) | ![Verify and release module](https://github.com/cloud-native-toolkit/terraform-ibm-sysdig/workflows/Verify%20and%20release%20module/badge.svg) |
+| *IBM Sysdig Bind* |  | https://github.com/cloud-native-toolkit/terraform-ibm-sysdig-bind | ![Latest release](https://img.shields.io/github/v/release/cloud-native-toolkit/terraform-ibm-sysdig-bind?sort=semver) | ![Verify and release module](https://github.com/cloud-native-toolkit/terraform-ibm-sysdig-bind/workflows/Verify%20and%20release%20module/badge.svg) |
 
 ### Middleware
 
