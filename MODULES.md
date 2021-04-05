@@ -35,6 +35,7 @@
 | **Module name** | **Module id** | **Module location** | **Latest release** | **Last build status** |
 |-----------------|---------------|---------------------|--------------------|-----------------------|
 | *IBM VPC* | ibm-vpc | https://github.com/cloud-native-toolkit/terraform-ibm-vpc | ![Latest release](https://img.shields.io/github/v/release/cloud-native-toolkit/terraform-ibm-vpc?sort=semver) | ![Verify and release module](https://github.com/cloud-native-toolkit/terraform-ibm-vpc/workflows/Verify%20and%20release%20module/badge.svg) |
+| *IBM VPC SSH* | ibm-vpc-ssh | https://github.com/cloud-native-toolkit/terraform-ibm-vpc-ssh | ![Latest release](https://img.shields.io/github/v/release/cloud-native-toolkit/terraform-ibm-vpc-ssh?sort=semver) | ![Verify and release module](https://github.com/cloud-native-toolkit/terraform-ibm-vpc-ssh/workflows/Verify%20and%20release%20module/badge.svg) |
 | *VSI Bastion* | vsi-bastion | https://github.com/cloud-native-toolkit/terraform-vsi-bastion | ![Latest release](https://img.shields.io/github/v/release/cloud-native-toolkit/terraform-vsi-bastion?sort=semver) | ![Verify and release module](https://github.com/cloud-native-toolkit/terraform-vsi-bastion/workflows/Verify%20and%20release%20module/badge.svg) |
 
 ### Infrastructure
@@ -56,7 +57,7 @@
 | *IBM LogDNA Bind* |  | https://github.com/cloud-native-toolkit/terraform-ibm-logdna-bind | ![Latest release](https://img.shields.io/github/v/release/cloud-native-toolkit/terraform-ibm-logdna-bind?sort=semver) | ![Verify and release module](https://github.com/cloud-native-toolkit/terraform-ibm-logdna-bind/workflows/Verify%20and%20release%20module/badge.svg) |
 | *IBM Sysdig* | sysdig | https://github.com/cloud-native-toolkit/terraform-ibm-sysdig | ![Latest release](https://img.shields.io/github/v/release/cloud-native-toolkit/terraform-ibm-sysdig?sort=semver) | ![Verify and release module](https://github.com/cloud-native-toolkit/terraform-ibm-sysdig/workflows/Verify%20and%20release%20module/badge.svg) |
 | *IBM Sysdig Bind* |  | https://github.com/cloud-native-toolkit/terraform-ibm-sysdig-bind | ![Latest release](https://img.shields.io/github/v/release/cloud-native-toolkit/terraform-ibm-sysdig-bind?sort=semver) | ![Verify and release module](https://github.com/cloud-native-toolkit/terraform-ibm-sysdig-bind/workflows/Verify%20and%20release%20module/badge.svg) |
-| *IBM SCC Collector* |  | https://github.com/cloud-native-toolkit/terraform-ibm-scc-collector | ![Latest release](https://img.shields.io/github/v/release/cloud-native-toolkit/terraform-ibm-scc-collector?sort=semver) | ![Verify and release module](https://github.com/cloud-native-toolkit/terraform-ibm-scc-collector/workflows/Verify%20and%20release%20module/badge.svg) |
+| *IBM SCC Collector* | scc-collector | https://github.com/cloud-native-toolkit/terraform-ibm-scc-collector | ![Latest release](https://img.shields.io/github/v/release/cloud-native-toolkit/terraform-ibm-scc-collector?sort=semver) | ![Verify and release module](https://github.com/cloud-native-toolkit/terraform-ibm-scc-collector/workflows/Verify%20and%20release%20module/badge.svg) |
 
 ### Middleware
 
