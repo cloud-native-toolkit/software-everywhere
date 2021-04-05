@@ -71,8 +71,12 @@ categories:
         id: github.com/cloud-native-toolkit/terraform-ibm-activity-tracker
       - name: IBM LogDNA
         id: github.com/cloud-native-toolkit/terraform-ibm-logdna
+      - name: IBM LogDNA Bind
+        id: github.com/cloud-native-toolkit/terraform-ibm-logdna-bind
       - name: IBM Sysdig
         id: github.com/cloud-native-toolkit/terraform-ibm-sysdig
+      - name: IBM Sysdig Bind
+        id: github.com/cloud-native-toolkit/terraform-ibm-sysdig-bind
   - category: middleware
     categoryName: Middleware
     selection: multiple
