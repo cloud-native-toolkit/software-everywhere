@@ -47,6 +47,10 @@ categories:
     modules:
       - name: IBM VPC
         id: github.com/cloud-native-toolkit/terraform-ibm-vpc
+      - name: IBM VPC Gateways
+        id: github.com/cloud-native-toolkit/terraform-ibm-vpc-gateways
+      - name: IBM VPC Subnets
+        id: github.com/cloud-native-toolkit/terraform-ibm-vpc-subnets
       - name: IBM VPC SSH
         id: github.com/cloud-native-toolkit/terraform-ibm-vpc-ssh
       - name: VSI Bastion
@@ -93,6 +97,8 @@ categories:
         id: github.com/cloud-native-toolkit/terraform-k8s-kafka
       - name: IBM Key Protect
         id: github.com/cloud-native-toolkit/terraform-ibm-key-protect
+      - name: IBM Hyper Protect
+        id: github.com/cloud-native-toolkit/terraform-ibm-hpcs
       - name: IBM MongoDB
         id: github.com/cloud-native-toolkit/terraform-ibm-mongodb
       - name: IBM Object Storage
