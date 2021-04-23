@@ -53,12 +53,12 @@ categories:
         id: github.com/cloud-native-toolkit/terraform-ibm-vpc-subnets
       - name: IBM VPC SSH
         id: github.com/cloud-native-toolkit/terraform-ibm-vpc-ssh
+      - name: VPE Gateway
+        id: github.com/cloud-native-toolkit/terraform-ibm-vpe-gateway
       - name: VSI Bastion
         id: github.com/cloud-native-toolkit/terraform-vsi-bastion
       - name: VSI OpenVPN
         id: github.com/cloud-native-toolkit/terraform-vsi-vpn
-      - name: VPE Gateway
-        id: github.com/cloud-native-toolkit/terraform-ibm-vpe-gateway
       - name: Transit Gateway
         id: github.com/cloud-native-toolkit/terraform-ibm-transit-gateway
   - category: infrastructure
