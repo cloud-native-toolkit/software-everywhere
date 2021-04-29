@@ -146,4 +146,4 @@ categories:
       - name: Tekton Resources
         id: github.com/cloud-native-toolkit/terraform-tools-tekton-resources
       - name: Cluster Config
-        id: https://github.com/cloud-native-toolkit/template-tools-cluster-config
+        id: github.com/cloud-native-toolkit/template-tools-cluster-config
