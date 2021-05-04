@@ -109,6 +109,8 @@ categories:
         id: github.com/cloud-native-toolkit/terraform-ibm-key-protect
       - name: IBM Hyper Protect
         id: github.com/cloud-native-toolkit/terraform-ibm-hpcs
+      - name: IBM KMS Key
+        id: github.com/cloud-native-toolkit/terraform-ibm-kms-key
       - name: IBM MongoDB
         id: github.com/cloud-native-toolkit/terraform-ibm-mongodb
       - name: IBM Object Storage
