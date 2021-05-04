@@ -27,6 +27,8 @@ categories:
         id: github.com/cloud-native-toolkit/terraform-ibm-account-users
       - name: IBM Add Users to Access Group
         id: github.com/cloud-native-toolkit/terraform-ibm-add-access-group-users
+      - name: IBM Service Authorization
+        id: github.com/cloud-native-toolkit/terraform-ibm-iam-service-authorization
   - category: image-registry
     categoryName: Image Registry
     selection: single
