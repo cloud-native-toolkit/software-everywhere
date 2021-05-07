@@ -63,6 +63,8 @@ categories:
         id: github.com/cloud-native-toolkit/terraform-vsi-bastion
       - name: VSI OpenVPN
         id: github.com/cloud-native-toolkit/terraform-vsi-vpn
+      - name: VPC VSI
+        id: github.com/cloud-native-toolkit/terraform-ibm-vpc-vsi
       - name: Transit Gateway
         id: github.com/cloud-native-toolkit/terraform-ibm-transit-gateway
   - category: infrastructure
