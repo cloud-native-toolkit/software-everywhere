@@ -19,8 +19,12 @@ categories:
     categoryName: IAM
     selection: multiple
     modules:
+      - name: IBM Onboard FS Cloud Account
+        id: github.com/cloud-native-toolkit/terraform-ibm-onboard-fs-account
       - name: IBM Resource Group
         id: github.com/cloud-native-toolkit/terraform-ibm-resource-group
+      - name: IBM Account Access Group
+        id: github.com/cloud-native-toolkit/terraform-ibm-account-access-group
       - name: IBM Access Group
         id: github.com/cloud-native-toolkit/terraform-ibm-access-group
       - name: IBM Account Users
