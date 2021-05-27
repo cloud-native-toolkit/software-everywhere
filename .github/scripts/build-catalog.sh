@@ -7,9 +7,9 @@ DEST_DIR="$1"
 
 if [[ -z "${DEST_DIR}" ]]; then
   DEST_DIR="${BASE_DIR}/dist"
+  rm -rf "${DEST_DIR}"
 fi
 
-rm -rf "${DEST_DIR}"
 mkdir -p "${DEST_DIR}"
 
 if [[ -z "${TMO_DIR}" ]]; then

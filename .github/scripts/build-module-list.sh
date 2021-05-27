@@ -8,9 +8,9 @@ OUTPUT_FILE="$2"
 
 if [[ -z "${DEST_DIR}" ]]; then
   DEST_DIR="${BASE_DIR}/dist"
+  rm -rf "${DEST_DIR}"
 fi
 
-rm -rf "${DEST_DIR}"
 mkdir -p "${DEST_DIR}"
 
 if [[ -z "${OUTPUT_FILE}" ]]; then
