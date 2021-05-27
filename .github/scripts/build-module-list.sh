@@ -4,6 +4,7 @@ SCRIPT_DIR=$(cd "$(dirname "$0")" && pwd -P)
 BASE_DIR=$(cd "${SCRIPT_DIR}/../.." && pwd -P)
 
 DEST_DIR="$1"
+OUTPUT_FILE="$2"
 
 if [[ -z "${DEST_DIR}" ]]; then
   DEST_DIR="${BASE_DIR}/dist"
@@ -12,14 +13,18 @@ fi
 rm -rf "${DEST_DIR}"
 mkdir -p "${DEST_DIR}"
 
-if [[ -z "${TMO_DIR}" ]]; then
+if [[ -z "${OUTPUT_FILE}" ]]; then
+  OUTPUT_FILE="MODULES.md"
+fi
+
+if [[ -z "${TMP_DIR}" ]]; then
   TMP_DIR="${BASE_DIR}/.tmp"
 fi
 
 rm -rf "${TMP_DIR}"
 mkdir -p "${TMP_DIR}"
 
-OUTPUT="${DEST_DIR}/MODULES.md"
+OUTPUT="${DEST_DIR}/${OUTPUT_FILE}"
 
 echo "## Module catalog" > "${OUTPUT}"
 
