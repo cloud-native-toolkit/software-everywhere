@@ -55,3 +55,4 @@ jobs:
           publish_dir: ${{ env.DIST_DIR }}
           publish_branch: ${{ env.PUBLISH_BRANCH }}
           enable_jekyll: true
+          cname: modules.cloudnativetoolkit.dev
