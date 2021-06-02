@@ -127,7 +127,7 @@ categories:
         id: github.com/cloud-native-toolkit/terraform-ibm-object-storage
       - name: IBM Object Storage Bucket
         id: github.com/cloud-native-toolkit/terraform-ibm-object-storage-bucket
-      - name: IBM Redist
+      - name: IBM Redis
         id: github.com/cloud-native-toolkit/terraform-ibm-redis
       - name: Service Mesh
         id: github.com/cloud-native-toolkit/terraform-k8s-service-mesh
