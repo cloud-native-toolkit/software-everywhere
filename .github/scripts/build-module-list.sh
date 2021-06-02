@@ -26,7 +26,7 @@ mkdir -p "${TMP_DIR}"
 
 OUTPUT="${DEST_DIR}/${OUTPUT_FILE}"
 
-echo "# Automation modules" > "${OUTPUT}"
+echo "# [Automation modules](https://github.com/cloud-native-toolkit/garage-terraform-modules" > "${OUTPUT}"
 
 echo "The Cloud-Native Toolkit provides a library of modules that can be used to automate the provisioning of an environment. These modules have been organized into categories for readability. Any of the modules can be added directly in a terraform template to apply the behavior." >> "${OUTPUT}"
 echo "A yaml version of the catalog can be found [here](./index.yaml)" >> "${OUTPUT}"
@@ -51,7 +51,7 @@ yq r -j "${BASE_DIR}/catalog.yaml" | jq -r '.categories | .[] | .category' | whi
     module_name=$(echo "${module}" | jq -r '.name')
     module_id=$(echo "${module}" | jq -r '.id')
     module_type=$(echo "${module}" | jq -r '.type')
-    if [[ -z "${module_type}" ]]; then
+    if [[ -z "${module_type}" ]] || [[ "${module_type}" == "null" ]]; then
       module_type="terraform"
     fi
 
@@ -71,7 +71,7 @@ yq r -j "${BASE_DIR}/catalog.yaml" | jq -r '.categories | .[] | .category' | whi
       id=$(curl -sL "${module_url}" | yq r - 'name')
     fi
 
-    echo "| *${module_name}* | ${id} | ${module_type} | ${module_location} | ![Latest release](${module_release}) | ![Verify and release module](${module_build}) |" >> "${OUTPUT}"
+    echo "| *${module_name}* | ${id} | ${module_type} | [${module_location}](${module_location}) | ![Latest release](${module_release}) | ![Verify and release module](${module_build}) |" >> "${OUTPUT}"
   done
 
   echo "" >> "${OUTPUT}"
