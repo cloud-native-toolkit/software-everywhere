@@ -73,6 +73,8 @@ categories:
         id: github.com/cloud-native-toolkit/terraform-ibm-transit-gateway
       - name: VPC Flow Logs
         id: github.com/cloud-native-toolkit/terraform-ibm-flow-log
+      - name: VPC VPN Gateway
+        id: github.com/cloud-native-toolkit/terraform-ibm-vpn-gateway
   - category: infrastructure
     categoryName: Infrastructure
     selection: indirect
