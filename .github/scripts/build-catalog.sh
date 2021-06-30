@@ -53,7 +53,7 @@ yq e -j "${BASE_DIR}/catalog.yaml" | jq -r '.categories | .[] | .category' | whi
         yq ea 'select(fileIndex == 0) * select(fileIndex == 1)' - "${TMP_DIR}/defaults.yaml" | \
         yq e '[.]' - | \
         yq e '{"modules": . }' - | \
-        yq ea -i 'select(fileIndex == 0) *d select(fileIndex == 1)' "${DEST_DIR}/${category}.yaml" -
+        yq ea -i 'select(fileIndex == 0) *+ select(fileIndex == 1)' "${DEST_DIR}/${category}.yaml" -
       rm "${TMP_DIR}/overlay.yaml"
       rm "${TMP_DIR}/defaults.yaml"
     else

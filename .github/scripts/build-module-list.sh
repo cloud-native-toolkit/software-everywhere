@@ -66,7 +66,7 @@ yq e -j '.' "${BASE_DIR}/catalog.yaml" | jq -r '.categories | .[] | .category' |
     http_status=$(curl -sLI "${module_url}" | grep -E "^HTTP/2" | sed "s~HTTP/2 ~~g")
     if [[ "${http_status}" =~ "200" ]]; then
       id=$(curl -sL "${module_url}" | yq e '.name' -)
-      module_type=$(curl -sL "${module_url}" | yq e '.type' -)
+      module_type=$(curl -sL "${module_url}" | yq e '.type // empty' -)
       if [[ -z "${module_type}" ]] || [[ "${module_type}" == "null" ]]; then
         echo "Unable to find type from ${module_url}"
         module_type="terraform"
