@@ -49,9 +49,11 @@ yq e -j "${BASE_DIR}/catalog.yaml" | jq -r '.categories | .[] | .category' | whi
       echo "provider: ${provider}" > "${TMP_DIR}/defaults.yaml"
       curl -sL "${module_url}" | \
         sed "s~github.com/ibm-garage-cloud~github.com/cloud-native-toolkit~g" |
-        yq m -x - "${TMP_DIR}/overlay.yaml" | \
-        yq m - "${TMP_DIR}/defaults.yaml" | \
-        yq p - "[+]" | yq p - "modules" | yq m -i -a "${DEST_DIR}/${category}.yaml" -
+        yq ea 'select(fileIndex == 0) * select(fileIndex == 1)' - "${TMP_DIR}/overlay.yaml" | \
+        yq ea 'select(fileIndex == 0) * select(fileIndex == 1)' - "${TMP_DIR}/defaults.yaml" | \
+        yq e '[.]' - | \
+        yq e '{"modules": . }' - | \
+        yq ea -i 'select(fileIndex == 0) *d select(fileIndex == 1)' "${DEST_DIR}/${category}.yaml" -
       rm "${TMP_DIR}/overlay.yaml"
       rm "${TMP_DIR}/defaults.yaml"
     else
@@ -63,11 +65,13 @@ done
 rm -f "${DEST_DIR}/index.yaml"
 
 echo "Touching ${DEST_DIR}/index.yaml"
-echo "" > "${DEST_DIR}/index.yaml"
+yq eval --null-input '{"categories": []}' > "${DEST_DIR}/index.yaml"
 
 echo "Merging categories"
 
 ls "${DEST_DIR}"/*.yaml | grep -v index.yaml | while read category_file; do
-  yq p "${category_file}" "[+]" | yq p - "categories" | yq m -i -a "${DEST_DIR}/index.yaml" -
+  yq e '[.]' "${category_file}" | \
+    yq e '{"categories": . }' - | \
+    yq ea -i --prettyPrint 'select(fileIndex == 0) *+ select(fileIndex == 1)' "${DEST_DIR}/index.yaml" -
   rm "${category_file}"
 done
