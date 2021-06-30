@@ -19,14 +19,14 @@ fi
 rm -rf "${TMP_DIR}"
 mkdir -p "${TMP_DIR}"
 
-yq r -j "${BASE_DIR}/catalog.yaml" | jq -r '.categories | .[] | .category' | while read category; do
+yq e -j "${BASE_DIR}/catalog.yaml" | jq -r '.categories | .[] | .category' | while read category; do
   echo "*** category: ${category}"
 
-  yq r -j "${BASE_DIR}/catalog.yaml" | \
+  yq e -j "${BASE_DIR}/catalog.yaml" | \
     jq -r --arg CATEGORY "${category}" '.categories | .[] | select(.category == $CATEGORY) | del(.modules)' | \
-    yq r --prettyPrint - > "${DEST_DIR}/${category}.yaml"
+    yq e --prettyPrint - > "${DEST_DIR}/${category}.yaml"
 
-  yq r -j "${BASE_DIR}/catalog.yaml" | \
+  yq e -j "${BASE_DIR}/catalog.yaml" | \
     jq -c --arg CATEGORY "${category}" '.categories | .[] | select(.category == $CATEGORY) | .modules | .[]' | \
     while read module; do
 
