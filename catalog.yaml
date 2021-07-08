@@ -141,6 +141,8 @@ categories:
         id: github.com/cloud-native-toolkit/terraform-ibm-cp-app-connect
       - name: Hyper Protect DBaaS MongoDB
         id: github.com/cloud-native-toolkit/terraform-ibm-hpdbaas-mongodb
+      - name: Hyper Protect DBaaS PostgreSQL
+        id: https://github.com/cloud-native-toolkit/terraform-ibm-hpdbaas-postgresql
   - category: dev-tool
     categoryName: Dev Tools
     selection: multiple
