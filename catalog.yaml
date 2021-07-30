@@ -105,6 +105,28 @@ categories:
         id: github.com/cloud-native-toolkit/terraform-ibm-sysdig-bind
       - name: IBM SCC Collector
         id: github.com/cloud-native-toolkit/terraform-vsi-scc-collector
+  - category: gitops
+    categoryName: GitOps
+    selection: multiple
+    modules:
+      - name: ArgoCD Bootstrap
+        id: github.com/cloud-native-toolkit/terraform-argocd-bootstrap
+      - name: VSI ArgoCD Bootstrap
+        id: github.com/cloud-native-toolkit/terraform-vsi-argocd-bootstrap
+      - name: GitOps repo
+        id: github.com/cloud-native-toolkit/terraform-tools-gitops
+      - name: Namespace
+        id: github.com/cloud-native-toolkit/terraform-gitops-namespace
+      - name: Console Link Job
+        id: github.com/cloud-native-toolkit/terraform-gitops-console-link-job
+      - name: Artifactory
+        id: github.com/cloud-native-toolkit/terraform-gitops-artifactory
+      - name: Developer Dashboard
+        id: github.com/cloud-native-toolkit/terraform-gitops-dashboard
+      - name: Pact Broker
+        id: github.com/cloud-native-toolkit/terraform-gitops-pact-broker
+      - name: SonarQube
+        id: github.com/cloud-native-toolkit/terraform-gitops-sonarqube
   - category: middleware
     categoryName: Middleware
     selection: multiple
