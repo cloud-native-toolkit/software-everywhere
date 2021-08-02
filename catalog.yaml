@@ -110,7 +110,7 @@ categories:
     selection: multiple
     modules:
       - name: ArgoCD Bootstrap
-        id: github.com/cloud-native-toolkit/terraform-argocd-bootstrap
+        id: github.com/cloud-native-toolkit/terraform-tools-argocd-bootstrap
       - name: VSI ArgoCD Bootstrap
         id: github.com/cloud-native-toolkit/terraform-vsi-argocd-bootstrap
       - name: GitOps repo
