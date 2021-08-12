@@ -161,10 +161,10 @@ categories:
         id: github.com/cloud-native-toolkit/terraform-ibm-watson-studio
       - name: App Connect
         id: github.com/cloud-native-toolkit/terraform-ibm-cp-app-connect
-      - name: Hyper Protect DBaaS MongoDB
-        id: github.com/cloud-native-toolkit/terraform-ibm-hpdbaas-mongodb
       - name: Hyper Protect DBaaS PostgreSQL
         id: github.com/cloud-native-toolkit/terraform-ibm-hpdbaas-postgresql
+      - name: Hyper Protect DBaaS MongoDB
+        id: github.com/cloud-native-toolkit/terraform-ibm-hpdbaas-mongodb
       - name: Event Streams
         id: github.com/cloud-native-toolkit/terraform-ibm-event-streams
       - name: Event Streams Topic
