@@ -164,11 +164,11 @@ categories:
       - name: Hyper Protect DBaaS MongoDB
         id: github.com/cloud-native-toolkit/terraform-ibm-hpdbaas-mongodb
       - name: Hyper Protect DBaaS PostgreSQL
-        id: https://github.com/cloud-native-toolkit/terraform-ibm-hpdbaas-postgresql
+        id: github.com/cloud-native-toolkit/terraform-ibm-hpdbaas-postgresql
       - name: Event Streams
-        id: https://github.com/cloud-native-toolkit/terraform-ibm-event-streams
+        id: github.com/cloud-native-toolkit/terraform-ibm-event-streams
       - name: Event Streams Topic
-        id: https://github.com/cloud-native-toolkit/terraform-ibm-event-streams-topic
+        id: github.com/cloud-native-toolkit/terraform-ibm-event-streams-topic
   - category: dev-tool
     categoryName: Dev Tools
     selection: multiple
