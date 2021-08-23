@@ -137,6 +137,8 @@ categories:
         id: github.com/cloud-native-toolkit/terraform-tools-jaeger
       - name: Kafka
         id: github.com/cloud-native-toolkit/terraform-k8s-kafka
+      - name: IBM KMS
+        id: github.com/cloud-native-toolkit/terraform-ibm-kms
       - name: IBM Key Protect
         id: github.com/cloud-native-toolkit/terraform-ibm-key-protect
       - name: IBM Hyper Protect
