@@ -130,3 +130,9 @@ A yaml version of the catalog can be found [here](./index.yaml)
 | *Tekton Resources* | tekton-resources | terraform | [https://github.com/cloud-native-toolkit/terraform-tools-tekton-resources](https://github.com/cloud-native-toolkit/terraform-tools-tekton-resources) | ![Latest release](https://img.shields.io/github/v/release/cloud-native-toolkit/terraform-tools-tekton-resources?sort=semver) | ![Verify and release module](https://github.com/cloud-native-toolkit/terraform-tools-tekton-resources/workflows/Verify%20and%20release%20module/badge.svg) |
 | *Cluster Config* | cluster-config | terraform | [https://github.com/cloud-native-toolkit/template-tools-cluster-config](https://github.com/cloud-native-toolkit/template-tools-cluster-config) | ![Latest release](https://img.shields.io/github/v/release/cloud-native-toolkit/template-tools-cluster-config?sort=semver) | ![Verify and release module](https://github.com/cloud-native-toolkit/template-tools-cluster-config/workflows/Verify%20and%20release%20module/badge.svg) |
 
+### Utilities
+
+| **Module name** | **Catalog id** | **Module type** | **Module location** | **Latest release** | **Last build status** |
+|-----------------|----------------|-----------------|---------------------|--------------------|-----------------------|
+| *Sealed Secret Cert* | sealed-secret-cert | terraform | [https://github.com/cloud-native-toolkit/terraform-util-sealed-secret-cert](https://github.com/cloud-native-toolkit/terraform-util-sealed-secret-cert) | ![Latest release](https://img.shields.io/github/v/release/cloud-native-toolkit/terraform-util-sealed-secret-cert?sort=semver) | ![Verify and release module](https://github.com/cloud-native-toolkit/terraform-util-sealed-secret-cert/workflows/Verify%20and%20release%20module/badge.svg) |
+
