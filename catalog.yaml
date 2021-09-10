@@ -38,6 +38,8 @@ categories:
     selection: single
     modules:
       - name: IBM Container Registry
+        id: github.com/cloud-native-toolkit/terraform-ibm-container-registry
+      - name: IBM Container Registry
         id: github.com/cloud-native-toolkit/terraform-ibm-image-registry
       - name: OpenShift Container Registry
         id: github.com/cloud-native-toolkit/terraform-ocp-image-registry
