@@ -203,8 +203,6 @@ categories:
         id: github.com/cloud-native-toolkit/terraform-tools-tekton
       - name: Tekton Resources
         id: github.com/cloud-native-toolkit/terraform-tools-tekton-resources
-      - name: Cluster Config
-        id: github.com/cloud-native-toolkit/template-tools-cluster-config
       - name: Turbonomic
         id: github.com/cloud-native-toolkit/terraform-tools-turbonomic
   - category: util
