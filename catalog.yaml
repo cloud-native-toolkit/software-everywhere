@@ -129,6 +129,8 @@ categories:
         id: github.com/cloud-native-toolkit/terraform-gitops-pact-broker
       - name: SonarQube
         id: github.com/cloud-native-toolkit/terraform-gitops-sonarqube
+      - name: Cluster Config
+        id: github.com/cloud-native-toolkit/terraform-gitops-cluster-config
   - category: middleware
     categoryName: Middleware
     selection: multiple
