@@ -177,6 +177,8 @@ categories:
         id: github.com/cloud-native-toolkit/terraform-ibm-event-streams-topic
       - name: IBM Certificate Manager
         id: github.com/cloud-native-toolkit/terraform-ibm-cert-manager
+      - name: IBM Certificate Manager Certificate
+        id: github.com/cloud-native-toolkit/terraform-ibm-cert-manager-cert
   - category: dev-tool
     categoryName: Dev Tools
     selection: multiple
