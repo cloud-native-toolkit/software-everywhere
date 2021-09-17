@@ -133,6 +133,8 @@ categories:
         id: github.com/cloud-native-toolkit/terraform-gitops-cluster-config
       - name: Image Registry
         id: github.com/cloud-native-toolkit/terraform-gitops-image-registry
+      - name: Tekton Resources
+        id: github.com/cloud-native-toolkit/terraform-gitops-tekton-resources
   - category: middleware
     categoryName: Middleware
     selection: multiple
