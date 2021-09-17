@@ -1,0 +1,241 @@
+{
+  "$id": "https://modules.cloudnativetoolkit.dev/schemas/catalog",
+  "title": "Automation Catalog",
+  "type": "object",
+  "required": ["categories"],
+  "properties": {
+    "categories": {
+      "type": "array",
+      "description": "List of categories of the modules",
+      "items": {
+        "$ref": "#/$defs/category"
+      }
+    }
+  },
+  "$defs": {
+    "category": {
+      "type": "object",
+      "required": ["category"],
+      "properties": {
+        "category": {
+          "type": "string",
+          "description": "The identifier of the category"
+        },
+        "categoryName": {
+          "type": "string",
+          "description": "The display name of the category"
+        },
+        "selection": {
+          "type": "string",
+          "description": "The selection mode of the category",
+          "enum": ["single", "multiple", "indirect"]
+        },
+        "modules": {
+          "type": "array",
+          "description": "The list of modules contained in the category",
+          "items": {
+            "$ref": "#/$defs/module"
+          }
+        }
+      }
+    },
+    "module": {
+      "type": "object",
+      "description": "Automation module",
+      "required": ["id", "name", "versions"],
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "The identifier of the module"
+        },
+        "name": {
+          "type": "string",
+          "description": "The unique name of the module"
+        },
+        "description": {
+          "type": "string",
+          "description": "The description of the module"
+        },
+        "alias": {
+          "type": "string",
+          "description": "An alternate name for the module"
+        },
+        "tags": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "versions": {
+          "type": "array",
+          "description": "Versioned module interface definitions",
+          "items": {
+            "$ref": "#/$defs/module-version"
+          }
+        }
+      }
+    },
+    "providers": {
+      "type": "object",
+      "description": "Terraform provider definition",
+      "required": ["name"],
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "The provider name"
+        },
+        "source": {
+          "type": "string",
+          "description": "The source identifier for the provider"
+        }
+      }
+    },
+    "module-dependency": {
+      "type": "object",
+      "description": "Reference to a module",
+      "required": ["id"],
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "The identifier of the reference"
+        },
+        "refs": {
+          "type": "array",
+          "description": "List of module refs",
+          "items": {
+            "$ref": "#/$defs/module-ref"
+          }
+        },
+        "interface": {
+          "type": "string",
+          "description": "The reference to the interface that will be matched for the dependency"
+        },
+        "optional": {
+          "type": "boolean",
+          "description": "Flag indicating that the dependency is optional"
+        }
+      }
+    },
+    "module-ref": {
+      "type": "object",
+      "description": "Module reference",
+      "required": ["source"],
+      "properties": {
+        "source": {
+          "type": "string",
+          "description": "Reference to the identifier of the module"
+        },
+        "version": {
+          "type": "string",
+          "description": "Version range of the module"
+        }
+      }
+    },
+    "module-version": {
+      "type": "object",
+      "required": ["version"],
+      "properties": {
+        "version": {
+          "type": "string",
+          "description": "The version of the module api"
+        },
+        "platforms": {
+          "type": "array",
+          "description": "Kubernetes platforms supported by the module",
+          "items": {
+            "type": "string"
+          }
+        },
+        "providers": {
+          "type": "array",
+          "description": "Required terraform providers for the module",
+          "items": {
+            "$ref": "#/$defs/providers"
+          }
+        },
+        "dependencies": {
+          "type": "array",
+          "description": "The external dependencies of the module",
+          "items": {
+            "$ref": "#/$defs/module-dependency"
+          }
+        },
+        "variables": {
+          "type": "array",
+          "description": "The input variables for the module",
+          "items": {
+            "$ref": "#/$defs/module-variable"
+          }
+        },
+        "outputs": {
+          "type": "array",
+          "description": "The output values for the module",
+          "items": {
+            "$ref": "#/$defs/module-output"
+          }
+        }
+      }
+    },
+    "module-variable": {
+      "type": "object",
+      "description": "A module variable",
+      "required": ["name"],
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "The name of the variable"
+        },
+        "type": {
+          "type": "string",
+          "description": "The type of the variable"
+        },
+        "description": {
+          "type": "string",
+          "description": "The description of variable"
+        },
+        "optional": {
+          "type": "boolean",
+          "description": "Flag to indicate that the variable is optional"
+        },
+        "default": {
+          "description": "The default value for the variable"
+        },
+        "scope": {
+          "type": "string",
+          "description": "The scope of the variable",
+          "enum": ["global","module","ignore"]
+        },
+        "moduleRef": {
+          "type": "object",
+          "description": "Reference to a module dependency",
+          "required": ["id","output"],
+          "properties": {
+            "id": {
+              "type": "string",
+              "description": "The id matching the defined dependency"
+            },
+            "output": {
+              "type": "string",
+              "description": "The referenced output variable of the dependent module"
+            }
+          }
+        }
+      }
+    },
+    "module-output": {
+      "type": "object",
+      "description": "Module output value",
+      "required": ["name"],
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "The name of the variable"
+        },
+        "description": {
+          "type": "string",
+          "description": "The description of the variable"
+        }
+      }
+    }
+  }
+}

@@ -44,6 +44,10 @@ jobs:
         run: |
           ./.github/scripts/build-module-list.sh ${{ env.DIST_DIR }} index.md
 
+      - name: Set up schemas
+        run: |
+          cp -R schemas ${{ env.DIST_DIR }}
+
       - name: Generate _catalog.yml
         run: |
           echo "title: Automation modules" > ${{ env.DIST_DIR }}/_catalog.yml
