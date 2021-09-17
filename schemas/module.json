@@ -1,10 +1,6 @@
 {
   "$id": "https://modules.cloudnativetoolkit.dev/schemas/module",
   "title": "Automation Module",
-  "name": "module",
-  "author": "",
-  "version": "0.1.0",
-  "minimumCoreVersion": "",
   "type": "object",
   "description": "Automation module",
   "required": ["id", "name", "versions"],
