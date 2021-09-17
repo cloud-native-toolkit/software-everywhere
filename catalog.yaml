@@ -131,6 +131,8 @@ categories:
         id: github.com/cloud-native-toolkit/terraform-gitops-sonarqube
       - name: Cluster Config
         id: github.com/cloud-native-toolkit/terraform-gitops-cluster-config
+      - name: Image Registry
+        id: github.com/cloud-native-toolkit/terraform-gitops-image-registry
   - category: middleware
     categoryName: Middleware
     selection: multiple
