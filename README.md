@@ -8,7 +8,7 @@ The modules have been organized into two major categories:
 - **ibm** - modules to provision and manage resources in the IBM Cloud environment (clusters, services, etc)
 - **k8s** - modules that are not specific to any one environment, typically working with kubernetes resources
 
-[Module listing](https://cloud-native-toolkit.github.io/garage-terraform-modules)
+[Module listing](https://cloud-native-toolkit.github.io/automation-modules)
 
 ## Modules not migrated
 
