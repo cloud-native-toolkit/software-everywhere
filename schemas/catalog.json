@@ -60,6 +60,12 @@
           "type": "string",
           "description": "An alternate name for the module"
         },
+        "interfaces": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
         "tags": {
           "type": "array",
           "items": {
