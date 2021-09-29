@@ -1,0 +1,75 @@
+{
+  "$id": "https://modules.cloudnativetoolkit.dev/schemas/interface",
+  "title": "Automation Module Interface",
+  "type": "object",
+  "description": "Automation module interface",
+  "required": ["id", "name"],
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "The identifier of the interface"
+    },
+    "name": {
+      "type": "string",
+      "description": "The unique name of the interface"
+    },
+    "variables": {
+      "type": "array",
+      "description": "The required inputs for the interface",
+      "items": {
+        "$ref": "#/$defs/interface-variable"
+      }
+    },
+    "outputs": {
+      "type": "array",
+      "description": "The required outputs for the interface",
+      "items": {
+        "$ref": "#/$defs/interface-output"
+      }
+    }
+  },
+  "$defs": {
+    "interface-variable": {
+      "type": "object",
+      "description": "An interface variable",
+      "required": ["name"],
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "The name of the variable"
+        },
+        "type": {
+          "type": "string",
+          "description": "The type of the variable"
+        },
+        "description": {
+          "type": "string",
+          "description": "The description of variable"
+        },
+        "optional": {
+          "type": "boolean",
+          "description": "Flag to indicate that the variable is optional"
+        }
+      }
+    },
+    "interface-output": {
+      "type": "object",
+      "description": "An interface output value",
+      "required": ["name"],
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "The name of the variable"
+        },
+        "type": {
+          "type": "string",
+          "description": "The type of the variable"
+        },
+        "description": {
+          "type": "string",
+          "description": "The description of the variable"
+        }
+      }
+    }
+  }
+}

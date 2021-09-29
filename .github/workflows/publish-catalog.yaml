@@ -48,6 +48,10 @@ jobs:
         run: |
           cp -R schemas ${{ env.DIST_DIR }}
 
+      - name: Set up interfaces
+        run: |
+          cp -R interfaces ${{ env.DIST_DIR }}
+
       - name: Generate _catalog.yml
         run: |
           echo "title: Automation modules" > ${{ env.DIST_DIR }}/_catalog.yml

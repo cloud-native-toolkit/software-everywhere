@@ -77,6 +77,10 @@
           "type": "string",
           "description": "The reference to the interface that will be matched for the dependency"
         },
+        "defaultRef": {
+          "type": "string",
+          "description": "The default module reference that should be used if one is not provided"
+        },
         "optional": {
           "type": "boolean",
           "description": "Flag indicating that the dependency is optional"

@@ -27,9 +27,22 @@ mkdir -p "${TMP_DIR}"
 OUTPUT="${DEST_DIR}/${OUTPUT_FILE}"
 
 echo "# [Automation modules](https://github.com/cloud-native-toolkit/automations-modules)" > "${OUTPUT}"
+echo ""
 
 echo "The Cloud-Native Toolkit provides a library of modules that can be used to automate the provisioning of an environment. These modules have been organized into categories for readability. Any of the terraform modules can be added directly in a terraform template to apply the behavior." >> "${OUTPUT}"
+echo ""
+
+echo "## Module infrastructure" >> "${OUTPUT}"
+echo ""
+echo "### YAML catalog" >> "${OUTPUT}"
 echo "A yaml version of the catalog can be found [here](./index.yaml)" >> "${OUTPUT}"
+echo ""
+echo "### Interfaces" >> "${OUTPUT}"
+echo "Interfaces for the modules can be found [here](./interfaces)" >> "${OUTPUT}"
+echo ""
+echo "### Schemas" >> "${OUTPUT}"
+echo "The schemas to validate the catalog and module yaml can be found [here](./schemas)" >> "${OUTPUT}"
+echo ""
 
 echo "## Module catalog" >> "${OUTPUT}"
 

@@ -1,0 +1,24 @@
+id: github.com/cloud-native-toolkit/automation-modules#ibm-service
+name: ibm-service
+outputs:
+  - name: id
+    description: The id of the service.
+    type: string
+  - name: name
+    description: The name of the service.
+    type: string
+  - name: crn
+    description: The crn of the service.
+    type: string
+  - name: location
+    description: The region where the service has been deployed.
+    type: string
+  - name: service
+    description: The type of service that has been provisioned.
+    type: string
+  - name: label
+    description: The label of the service used to distinguish different services of the same type.
+    type: string
+  - name: type
+    description: The sub-type of the service. Often this is null
+    type: string
