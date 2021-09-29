@@ -1,6 +1,12 @@
 # [Automation modules](https://github.com/cloud-native-toolkit/automations-modules)
 The Cloud-Native Toolkit provides a library of modules that can be used to automate the provisioning of an environment. These modules have been organized into categories for readability. Any of the terraform modules can be added directly in a terraform template to apply the behavior.
+## Module infrastructure
+### YAML catalog
 A yaml version of the catalog can be found [here](./index.yaml)
+### Interfaces
+Interfaces for the modules can be found [here](./interfaces)
+### Schemas
+The schemas to validate the catalog and module yaml can be found [here](./schemas)
 ## Module catalog
 ### Cluster
 
