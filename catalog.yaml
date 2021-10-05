@@ -199,6 +199,8 @@ categories:
         id: github.com/cloud-native-toolkit/terraform-tools-jenkins
       - name: Nexus
         id: github.com/cloud-native-toolkit/terraform-tools-nexus
+      - name: OpenShift CICD
+        id: github.com/cloud-native-toolkit/terraform-tools-openshift-cicd
       - name: Pact Broker
         id: github.com/cloud-native-toolkit/terraform-tools-pactbroker
       - name: SonarQube
