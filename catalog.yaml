@@ -213,6 +213,10 @@ categories:
         id: github.com/cloud-native-toolkit/terraform-tools-tekton-resources
       - name: Turbonomic
         id: github.com/cloud-native-toolkit/terraform-tools-turbonomic
+      - name: Console Link Job
+        id: github.com/cloud-native-toolkit/terraform-k8s-console-link-job
+      - name: Buildah Unprivileged
+        id: github.com/cloud-native-toolkit/terraform-ocp-buildah-unprivileged
   - category: util
     categoryName: Utilities
     selection: multiple
