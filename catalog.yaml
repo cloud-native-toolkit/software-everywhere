@@ -80,7 +80,7 @@ categories:
       - name: VPC VPN Gateway
         id: github.com/cloud-native-toolkit/terraform-ibm-vpn-gateway
       - name: VPC VPN Server
-        id: https://github.com/cloud-native-toolkit/terraform-ibm-vpn-server
+        id: github.com/cloud-native-toolkit/terraform-ibm-vpn-server
   - category: infrastructure
     categoryName: Infrastructure
     selection: indirect
