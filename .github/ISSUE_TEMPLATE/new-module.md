@@ -18,3 +18,6 @@ ibm, aws, azure, etc
 
 **What is the purpose of the module?**
 Please describe what this automation module will do
+
+**What is the category of the module?**
+cluster, iam, network, database, integration, dev-tool, sre, infrastructure, util
