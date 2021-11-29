@@ -225,3 +225,5 @@ categories:
     modules:
       - name: Sealed Secret Cert
         id: github.com/cloud-native-toolkit/terraform-util-sealed-secret-cert
+      - name: Cluster Config
+        id: github.com/cloud-native-toolkit/template-tools-cluster-config
