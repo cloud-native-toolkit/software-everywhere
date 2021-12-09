@@ -139,6 +139,10 @@ categories:
         id: github.com/cloud-native-toolkit/terraform-gitops-image-registry
       - name: Tekton Resources
         id: github.com/cloud-native-toolkit/terraform-gitops-tekton-resources
+      - name: Cloud Pak MQ Operator
+        id: github.com/cloud-native-toolkit/terraform-gitops-cp-mq
+      - name: Cloud Pak API Connect Operator
+        id: github.com/cloud-native-toolkit/terraform-gitops-cp-apic
   - category: middleware
     categoryName: Middleware
     selection: multiple
