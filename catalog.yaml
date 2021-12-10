@@ -143,6 +143,8 @@ categories:
         id: github.com/cloud-native-toolkit/terraform-gitops-cp-mq
       - name: Cloud Pak API Connect Operator
         id: github.com/cloud-native-toolkit/terraform-gitops-cp-apic
+      - name: Cloud Pak Catalogs
+        id: github.com/cloud-native-toolkit/terraform-gitops-cp-catalogs
   - category: middleware
     categoryName: Middleware
     selection: multiple
