@@ -145,6 +145,8 @@ categories:
         id: github.com/cloud-native-toolkit/terraform-gitops-cp-apic
       - name: Cloud Pak Catalogs
         id: github.com/cloud-native-toolkit/terraform-gitops-cp-catalogs
+      - name: Cloud Pak Platform Navigator
+        id: github.com/cloud-native-toolkit/terraform-gitops-cp-platform-navigator
   - category: middleware
     categoryName: Middleware
     selection: multiple
