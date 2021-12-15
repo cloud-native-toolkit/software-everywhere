@@ -144,7 +144,7 @@ categories:
       - name: Cloud Pak API Connect Operator
         id: github.com/cloud-native-toolkit/terraform-gitops-cp-apic
       - name: Cloud Pak App Connect Operator
-        id: github.com/cloud-native-toolkit/terraform-gitops-cp-appconnect
+        id: github.com/cloud-native-toolkit/terraform-gitops-cp-app-connect
       - name: Cloud Pak Catalogs
         id: github.com/cloud-native-toolkit/terraform-gitops-cp-catalogs
       - name: Cloud Pak Platform Navigator
