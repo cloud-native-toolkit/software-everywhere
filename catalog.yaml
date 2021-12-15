@@ -197,6 +197,8 @@ categories:
         id: github.com/cloud-native-toolkit/terraform-ibm-cert-manager
       - name: IBM Certificate Manager Certificate
         id: github.com/cloud-native-toolkit/terraform-ibm-cert-manager-cert
+      - name: MongoDB on OCP
+        id: github.com/cloud-native-toolkit/terraform-ocp-mongodb
   - category: dev-tool
     categoryName: Dev Tools
     selection: multiple
