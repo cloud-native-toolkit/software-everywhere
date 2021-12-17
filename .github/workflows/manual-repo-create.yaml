@@ -24,7 +24,7 @@ jobs:
   create_repo:
     runs-on: ubuntu-latest
     steps:
-      - uses: cloud-native-toolkit/action-module-create
+      - uses: cloud-native-toolkit/action-module-create@main
         with:
           token: ${{ secrets.GIT_ADMIN_TOKEN }}
           owner: ${{ github.event.inputs.owner }}
