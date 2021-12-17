@@ -10,6 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - id: variables
+        name: Extract info from issue
         uses: cloud-native-toolkit/action-repo-issue-extractor@main
         with:
           token: ${{ secrets.GIT_ADMIN_TOKEN }}
@@ -29,6 +30,7 @@ jobs:
 
     steps:
       - id: create
+        name: Create repo
         uses: cloud-native-toolkit/action-module-create@main
         with:
           token: ${{ secrets.GIT_ADMIN_TOKEN }}
