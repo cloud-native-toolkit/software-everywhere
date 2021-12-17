@@ -38,7 +38,7 @@ jobs:
           strict: true
     outputs:
       repo_url: ${{ steps.create.outputs.repo_url }}
-      issue_number: ${{ steps.extract-values.outputs.issue_number }}
+      issue_number: ${{ needs.extract-values.outputs.issue_number }}
 
   comment-issue:
     runs-on: ubuntu-latest
