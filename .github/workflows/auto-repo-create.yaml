@@ -1,4 +1,4 @@
-name: Create repo from issue
+name: Process issue
 on:
   issues:
     types:
@@ -27,11 +27,25 @@ jobs:
     if: ${{ needs.extract-values.outputs.approved == 'true' && needs.extract-values.outputs.state == 'open' }}
 
     steps:
-      - uses: cloud-native-toolkit/action-module-create@main
+      - id: create
+        uses: cloud-native-toolkit/action-module-create@main
         with:
           token: ${{ secrets.GIT_ADMIN_TOKEN }}
           name: ${{ needs.extract-values.outputs.name }}
           type: ${{ needs.extract-values.outputs.type }}
           provider: ${{ needs.extract-values.outputs.provider }}
           strict: true
+    outputs:
+      repo_url: ${{ steps.create.outputs.repo_url }}
+      issue_number: ${{ steps.extract-values.outputs.issue_number }}
 
+  comment-issue:
+    runs-on: ubuntu-latest
+    needs: create-repo
+
+    steps:
+      - name: Close Issue
+        uses: peter-evans/close-issue@v1
+        with:
+          issue-number: ${{ needs.create-repo.outputs.issue_number }}
+          comment: Created repo - ${{ needs.create-repo.outputs.repo_url }}
