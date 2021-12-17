@@ -1,0 +1,34 @@
+name: Create repo manually
+on:
+  workflow_dispatch:
+    inputs:
+      name:
+        description: 'The name of the new repository that will be created'
+        required: true
+      type:
+        description: 'The type of module (terraform or gitops)'
+        required: true
+      provider:
+        description: 'The cloud provider this module will work against'
+        required: false
+      owner:
+        description: 'The github organization where the new repository should be created'
+        required: true
+        default: 'cloud-native-toolkit'
+      strict:
+        description: 'Flag that if value is true with throw an error if the repo already exists. If false then the existing repo will be (re-)configured'
+        required: false
+        default: true
+
+jobs:
+  create_repo:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: cloud-native-toolkit/action-module-create
+        with:
+          token: ${{ secrets.GIT_ADMIN_TOKEN }}
+          owner: ${{ github.event.inputs.owner }}
+          name: ${{ github.event.inputs.name }}
+          type: ${{ github.event.inputs.type }}
+          provider: ${{ github.event.inputs.provider }}
+          strict: ${{ github.event.inputs.strict }}
