@@ -1,0 +1,37 @@
+name: Create repo from issue
+on:
+  issues:
+    types:
+      - labeled
+      - unlabeled
+
+jobs:
+  extract-values:
+    runs-on: ubuntu-latest
+    steps:
+      - id: variables
+        uses: cloud-native-toolkit/action-repo-issue-extractor@main
+        with:
+          token: ${{ secrets.GIT_ADMIN_TOKEN }}
+    outputs:
+      name: ${{ steps.variables.outputs.name }}
+      type: ${{ steps.variables.outputs.type }}
+      provider: ${{ steps.variables.outputs.provider }}
+      approved: ${{ steps.variables.outputs.approved }}
+      state: ${{ steps.variables.outputs.state }}
+      requester: ${{ steps.variables.outputs.requester }}
+
+  create-repo:
+    runs-on: ubuntu-latest
+    needs: extract-values
+    if: ${{ needs.extract-values.outputs.approved == 'true' && needs.extract-values.outputs.state == 'open' }}
+
+    steps:
+      - uses: cloud-native-toolkit/action-module-create@main
+        with:
+          token: ${{ secrets.GIT_ADMIN_TOKEN }}
+          name: ${{ needs.extract-values.outputs.name }}
+          type: ${{ needs.extract-values.outputs.type }}
+          provider: ${{ needs.extract-values.outputs.provider }}
+          strict: true
+
