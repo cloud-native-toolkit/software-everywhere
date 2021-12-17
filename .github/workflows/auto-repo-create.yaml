@@ -20,6 +20,7 @@ jobs:
       approved: ${{ steps.variables.outputs.approved }}
       state: ${{ steps.variables.outputs.state }}
       requester: ${{ steps.variables.outputs.requester }}
+      issue_number: ${{ steps.variables.outputs.issue_number }}
 
   create-repo:
     runs-on: ubuntu-latest
