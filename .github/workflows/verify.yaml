@@ -1,16 +1,14 @@
-name: Publish catalog
+name: Verify
 
 # Controls when the action will run. Triggers the workflow on push or pull request
 # events but only for the main branch
 on:
-  push:
+  pull_request:
     branches: [ main ]
-  repository_dispatch:
-    types: [ released ]
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  publish:
+  verify:
     #    if: ${{ github.event_name == 'push' }}
     runs-on: ubuntu-latest
 
@@ -51,19 +49,7 @@ jobs:
         run: |
           ./.github/scripts/build-catalog.sh ${{ env.DIST_DIR }}
 
-      - name: Set up schemas
+      - name: Verify module schema
         run: |
-          cp -R schemas ${{ env.DIST_DIR }}
-
-      - name: Set up interfaces
-        run: |
-          cp -R interfaces ${{ env.DIST_DIR }}
-
-      - name: Deploy
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ${{ env.DIST_DIR }}
-          publish_branch: ${{ env.PUBLISH_BRANCH }}
-          enable_jekyll: false
-          cname: modules.cloudnativetoolkit.dev
+          npm i -g ajv-cli
+          ajv test -s ./schemas/catalog.json -d ${{ env.DIST_DIR }}/index.yaml --valid
