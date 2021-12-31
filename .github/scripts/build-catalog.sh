@@ -49,6 +49,7 @@ yq e '.categories | .[] | .category' "${BASE_DIR}/catalog.yaml" | while read cat
       type=$(echo "${module_url}" | sed -E "s/.*terraform-([^-]+)-.*/\1/g")
       echo "id: ${module_id}" > "${TMP_DIR}/overlay.yaml"
       echo "group: \"${module_group}\"" >> "${TMP_DIR}/overlay.yaml"
+      echo "displayName: \"${module_name}\"" >> "${TMP_DIR}/overlay.yaml"
       if [[ -n "${module_aliases}" ]]; then
         echo "aliasIds: [${module_aliases}]" >> "${TMP_DIR}/overlay.yaml"
       fi
