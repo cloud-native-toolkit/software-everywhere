@@ -6,111 +6,204 @@ categories:
       - name: IBM Container Platform
         id: github.com/cloud-native-toolkit/terraform-ibm-container-platform
         metadataUrl: https://cloud-native-toolkit.github.io/terraform-ibm-container-platform/index.yaml
+        group: openshift
+        cloudProvider: ibm
       - name: OpenShift Cluster
         id: github.com/cloud-native-toolkit/terraform-k8s-ocp-cluster
         aliases:
           - github.com/cloud-native-toolkit/terraform-ocp-cluster
         metadataUrl: https://cloud-native-toolkit.github.io/terraform-k8s-ocp-cluster/index.yaml
+        group: openshift
       - name: IBM OpenShift VPC cluster
         id: github.com/cloud-native-toolkit/terraform-ibm-ocp-vpc
+        group: openshift
+        cloudProvider: ibm
       - name: IBM Kubernetes VPC cluster
         id: github.com/cloud-native-toolkit/terraform-ibm-iks-vpc
+        group: kubernetes
+        cloudProvider: ibm
       - name: IBM OpenShift login
         id: github.com/cloud-native-toolkit/terraform-ocp-login
+        group: openshift
   - category: iam
     categoryName: IAM
     selection: multiple
     modules:
       - name: IBM Onboard FS Cloud Account
         id: github.com/cloud-native-toolkit/terraform-ibm-onboard-fs-account
+        cloudProvider: ibm
       - name: IBM Resource Group
         id: github.com/cloud-native-toolkit/terraform-ibm-resource-group
+        group: resource-group
+        cloudProvider: ibm
       - name: IBM Account Access Group
         id: github.com/cloud-native-toolkit/terraform-ibm-account-access-group
+        group: access-group
+        cloudProvider: ibm
       - name: IBM Access Group
         id: github.com/cloud-native-toolkit/terraform-ibm-access-group
+        group: access-group
+        cloudProvider: ibm
       - name: IBM Account Users
         id: github.com/cloud-native-toolkit/terraform-ibm-account-users
+        cloudProvider: ibm
       - name: IBM Add Users to Access Group
         id: github.com/cloud-native-toolkit/terraform-ibm-add-access-group-users
+        cloudProvider: ibm
       - name: IBM Service Authorization
         id: github.com/cloud-native-toolkit/terraform-ibm-iam-service-authorization
+        cloudProvider: ibm
   - category: image-registry
     categoryName: Image Registry
     selection: single
     modules:
       - name: IBM Container Registry
         id: github.com/cloud-native-toolkit/terraform-ibm-container-registry
+        group: registry
+        cloudProvider: ibm
       - name: IBM Container Registry
         id: github.com/cloud-native-toolkit/terraform-ibm-image-registry
+        group: registry
+        cloudProvider: ibm
       - name: OpenShift Container Registry
         id: github.com/cloud-native-toolkit/terraform-ocp-image-registry
+        group: registry
       - name: External Container Registry
         id: github.com/cloud-native-toolkit/terraform-k8s-image-registry
+        group: registry
   - category: source-control
     categoryName: Source Control
     selection: single
     modules:
       - name: Source Control
         id: github.com/cloud-native-toolkit/terraform-k8s-source-control
+        group: source-control
   - category: network
     categoryName: Network
     selection: multiple
     modules:
       - name: IBM VPC
         id: github.com/cloud-native-toolkit/terraform-ibm-vpc
+        group: vpc
+        cloudProvider: ibm
+      - name: AWS VPC
+        id: github.com/cloud-native-toolkit/terraform-aws-vpc
+        group: vpc
+        cloudProvider: aws
       - name: IBM VPC Gateways
         id: github.com/cloud-native-toolkit/terraform-ibm-vpc-gateways
+        group: vpc-gateways
+        cloudProvider: ibm
       - name: IBM VPC Subnets
         id: github.com/cloud-native-toolkit/terraform-ibm-vpc-subnets
+        group: vpc-subnets
+        cloudProvider: ibm
+      - name: AWS VPC Subnets
+        id: github.com/cloud-native-toolkit/terraform-aws-vpc-subnets
+        group: vpc-subnets
+        cloudProvider: aws
       - name: IBM VPC SSH
         id: github.com/cloud-native-toolkit/terraform-ibm-vpc-ssh
+        group: vpc-ssh
+        cloudProvider: ibm
       - name: VPE Gateway
         id: github.com/cloud-native-toolkit/terraform-ibm-vpe-gateway
+        group: vpc-vpe-gateway
+        cloudProvider: ibm
       - name: VSI Bastion
         id: github.com/cloud-native-toolkit/terraform-vsi-bastion
+        group: bastion
+        cloudProvider: ibm
+      - name: AWS Bastion
+        id: github.com/cloud-native-toolkit/terraform-aws-bastion
+        group: bastion
+        cloudProvider: aws
       - name: VSI OpenVPN
         id: github.com/cloud-native-toolkit/terraform-vsi-vpn
+        group: vpn
+        cloudProvider: ibm
       - name: VPC VSI
         id: github.com/cloud-native-toolkit/terraform-ibm-vpc-vsi
+        group: vsi
+        cloudProvider: ibm
       - name: Transit Gateway
         id: github.com/cloud-native-toolkit/terraform-ibm-transit-gateway
+        group: transit-gateway
+        cloudProvider: ibm
       - name: VPC Flow Logs
         id: github.com/cloud-native-toolkit/terraform-ibm-flow-log
+        group: vpc-flow-logs
+        cloudProvider: ibm
       - name: VPC VPN Gateway
         id: github.com/cloud-native-toolkit/terraform-ibm-vpn-gateway
+        group: vpn
+        cloudProvider: ibm
       - name: VPC VPN Server
         id: github.com/cloud-native-toolkit/terraform-ibm-vpn-server
+        group: vpn
+        cloudProvider: ibm
   - category: infrastructure
     categoryName: Infrastructure
     selection: indirect
     modules:
       - name: Namespace
         id: github.com/cloud-native-toolkit/terraform-k8s-namespace
+        group: namespace
+      - name: Namespace
+        id: github.com/cloud-native-toolkit/terraform-gitops-namespace
+        type: gitops
+        group: namespace
       - name: Operator Lifecycle Manager
         id: github.com/cloud-native-toolkit/terraform-k8s-olm
       - name: Cloud Pak Catalog
         id: github.com/cloud-native-toolkit/terraform-ibm-cp-catalog
+        softwareProvider: ibm-cp
       - name: Cloud Pak Platform Navigator
         id: github.com/cloud-native-toolkit/terraform-ibm-cp-platform-navigator
+        softwareProvider: ibm-cp
+        group: platform-navigator
       - name: IBM Cloud Operator
         id: github.com/cloud-native-toolkit/terraform-ibm-cloud-operator
+        softwareProvider: ibm
+      - name: Cloud Pak Catalogs
+        id: github.com/cloud-native-toolkit/terraform-gitops-cp-catalogs
+        group: catalog
+        softwareProvider: ibm-cp
+        type: gitops
+      - name: Cloud Pak Platform Navigator
+        id: github.com/cloud-native-toolkit/terraform-gitops-cp-platform-navigator
+        softwareProvider: ibm-cp
+        type: gitops
+        group: platform-navigator
+      - name: IBM Suite License Server
+        id: github.com/cloud-native-toolkit/terraform-gitops-cp-sls
+        softwareProvider: ibm-cp
+        group: sls
   - category: sre
     categoryName: SRE tools
     selection: multiple
     modules:
       - name: IBM Activity Tracker
         id: github.com/cloud-native-toolkit/terraform-ibm-activity-tracker
+        group: activity-tracker
+        cloudProvider: ibm
       - name: IBM LogDNA
         id: github.com/cloud-native-toolkit/terraform-ibm-logdna
+        group: logging
+        cloudProvider: ibm
       - name: IBM LogDNA Bind
         id: github.com/cloud-native-toolkit/terraform-ibm-logdna-bind
+        cloudProvider: ibm
       - name: IBM Sysdig
         id: github.com/cloud-native-toolkit/terraform-ibm-sysdig
+        group: monitoring
+        cloudProvider: ibm
       - name: IBM Sysdig Bind
         id: github.com/cloud-native-toolkit/terraform-ibm-sysdig-bind
+        cloudProvider: ibm
       - name: IBM SCC Collector
         id: github.com/cloud-native-toolkit/terraform-vsi-scc-collector
+        cloudProvider: ibm
   - category: gitops
     categoryName: GitOps
     selection: multiple
@@ -121,116 +214,223 @@ categories:
         id: github.com/cloud-native-toolkit/terraform-vsi-argocd-bootstrap
       - name: GitOps repo
         id: github.com/cloud-native-toolkit/terraform-tools-gitops
-      - name: Namespace
-        id: github.com/cloud-native-toolkit/terraform-gitops-namespace
-      - name: Console Link Job
-        id: github.com/cloud-native-toolkit/terraform-gitops-console-link-job
-      - name: Artifactory
-        id: github.com/cloud-native-toolkit/terraform-gitops-artifactory
-      - name: Developer Dashboard
-        id: github.com/cloud-native-toolkit/terraform-gitops-dashboard
-      - name: Pact Broker
-        id: github.com/cloud-native-toolkit/terraform-gitops-pact-broker
-      - name: SonarQube
-        id: github.com/cloud-native-toolkit/terraform-gitops-sonarqube
-      - name: Cluster Config
-        id: github.com/cloud-native-toolkit/terraform-gitops-cluster-config
-      - name: Image Registry
-        id: github.com/cloud-native-toolkit/terraform-gitops-image-registry
-      - name: Tekton Resources
-        id: github.com/cloud-native-toolkit/terraform-gitops-tekton-resources
-      - name: Cloud Pak MQ Operator
-        id: github.com/cloud-native-toolkit/terraform-gitops-cp-mq
-      - name: Cloud Pak API Connect Operator
-        id: github.com/cloud-native-toolkit/terraform-gitops-cp-apic
-      - name: Cloud Pak App Connect Operator
-        id: github.com/cloud-native-toolkit/terraform-gitops-cp-app-connect
-      - name: Cloud Pak Catalogs
-        id: github.com/cloud-native-toolkit/terraform-gitops-cp-catalogs
-      - name: Cloud Pak Platform Navigator
-        id: github.com/cloud-native-toolkit/terraform-gitops-cp-platform-navigator
+        type: terraform
   - category: middleware
     categoryName: Middleware
     selection: multiple
     modules:
       - name: IBM AppId
         id: github.com/cloud-native-toolkit/terraform-ibm-appid
+        cloudProvider: ibm
       - name: Jaeger
         id: github.com/cloud-native-toolkit/terraform-tools-jaeger
       - name: Kafka
         id: github.com/cloud-native-toolkit/terraform-k8s-kafka
+        group: kafka
       - name: IBM KMS
         id: github.com/cloud-native-toolkit/terraform-ibm-kms
+        group: kms
+        cloudProvider: ibm
       - name: IBM Key Protect
         id: github.com/cloud-native-toolkit/terraform-ibm-key-protect
+        group: kms
+        cloudProvider: ibm
       - name: IBM Hyper Protect
         id: github.com/cloud-native-toolkit/terraform-ibm-hpcs
+        group: kms
+        cloudProvider: ibm
       - name: IBM Hyper Protect Initialization
         id: github.com/cloud-native-toolkit/terraform-ibm-hpcs-initialization
+        group: kms
+        cloudProvider: ibm
       - name: IBM KMS Key
         id: github.com/cloud-native-toolkit/terraform-ibm-kms-key
-      - name: IBM MongoDB
-        id: github.com/cloud-native-toolkit/terraform-ibm-mongodb
-      - name: IBM Object Storage
-        id: github.com/cloud-native-toolkit/terraform-ibm-object-storage
-      - name: IBM Object Storage Bucket
-        id: github.com/cloud-native-toolkit/terraform-ibm-object-storage-bucket
-      - name: IBM Redis
-        id: github.com/cloud-native-toolkit/terraform-ibm-redis
+        group: kms-key
+        cloudProvider: ibm
       - name: Service Mesh
         id: github.com/cloud-native-toolkit/terraform-k8s-service-mesh
-      - name: IBM Watson Assistant
-        id: github.com/cloud-native-toolkit/terraform-ibm-watson-assistant
-      - name: IBM Watson Studio
-        id: github.com/cloud-native-toolkit/terraform-ibm-watson-studio
+        group: service-mesh
       - name: App Connect
         id: github.com/cloud-native-toolkit/terraform-ibm-cp-app-connect
-      - name: Hyper Protect DBaaS PostgreSQL
-        id: github.com/cloud-native-toolkit/terraform-ibm-hpdbaas-postgresql
-      - name: Hyper Protect DBaaS MongoDB
-        id: github.com/cloud-native-toolkit/terraform-ibm-hpdbaas-mongodb
+        group: app-connect
+        softwareProvider: ibm-cp
       - name: Event Streams
         id: github.com/cloud-native-toolkit/terraform-ibm-event-streams
+        group: kafka
+        cloudProvider: ibm
       - name: Event Streams Topic
         id: github.com/cloud-native-toolkit/terraform-ibm-event-streams-topic
+        group: kafka-topic
+        cloudProvider: ibm
+      - name: JetStack Cert Manager
+        id: github.com/cloud-native-toolkit/terraform-ibm-cert-manager
+        group: cert-manager
+        cloudProvider: ibm
       - name: IBM Certificate Manager
         id: github.com/cloud-native-toolkit/terraform-ibm-cert-manager
+        group: cert-manager
+        cloudProvider: ibm
       - name: IBM Certificate Manager Certificate
         id: github.com/cloud-native-toolkit/terraform-ibm-cert-manager-cert
+        cloudProvider: ibm
+      - name: Cloud Pak MQ Operator
+        id: github.com/cloud-native-toolkit/terraform-gitops-cp-mq
+        softwareProvider: ibm-cp
+        type: gitops
+        group: mq
+      - name: Cloud Pak API Connect Operator
+        id: github.com/cloud-native-toolkit/terraform-gitops-cp-apic
+        group: api-connect
+        softwareProvider: ibm-cp
+        type: gitops
+      - name: Cloud Pak App Connect Operator
+        id: github.com/cloud-native-toolkit/terraform-gitops-cp-app-connect
+        group: app-connect
+        softwareProvider: ibm-cp
+        type: gitops
+      - name: IBM Operational Decision Making
+        id: github.com/cloud-native-toolkit/terraform-gitops-cp-odm
+        type: gitops
+        softwareProvider: ibm-cp
+        group: odm
+      - name: IBM Sterling Order Management
+        id: github.com/cloud-native-toolkit/terraform-gitops-cp-sterling
+        type: gitops
+        group: sterling
+        softwareProvider: ibm-cp
+      - name: OpenLDAP
+        id: github.com/cloud-native-toolkit/terraform-gitops-openldap
+        type: gitops
+        group: ldap
+  - category: databases
+    categoryName: Databases
+    selection: multiple
+    modules:
       - name: MongoDB on OCP
         id: github.com/cloud-native-toolkit/terraform-ocp-mongodb
+        group: mongodb
+      - name: Hyper Protect DBaaS PostgreSQL
+        id: github.com/cloud-native-toolkit/terraform-ibm-hpdbaas-postgresql
+        group: postgresql
+        cloudProvider: ibm
+      - name: Hyper Protect DBaaS MongoDB
+        id: github.com/cloud-native-toolkit/terraform-ibm-hpdbaas-mongodb
+        group: mongodb
+        cloudProvider: ibm
+      - name: IBM MongoDB
+        id: github.com/cloud-native-toolkit/terraform-ibm-mongodb
+        group: mongodb
+        cloudProvider: ibm
+      - name: IBM Redis
+        id: github.com/cloud-native-toolkit/terraform-ibm-redis
+        group: redis
+        cloudProvider: ibm
+      - name: IBM DB2 Warehouse
+        id: github.com/cloud-native-toolkit/terraform-gitops-cp-db2wh
+        group: db2-warehouse
+        type: gitops
+        softwareProvider: ibm-cp
+      - name: IBM DB2 Schema
+        id: https://github.com/cloud-native-toolkit/terraform-gitops-db2-schema
+        group: db2-schema
+        type: gitops
+  - category: storage
+    categoryName: Storage
+    selection: multiple
+    modules:
+      - name: IBM Object Storage
+        id: github.com/cloud-native-toolkit/terraform-ibm-object-storage
+        group: object-storage
+        cloudProvider: ibm
+      - name: IBM Object Storage Bucket
+        id: github.com/cloud-native-toolkit/terraform-ibm-object-storage-bucket
+        group: object-storage-bucket
+        cloudProvider: ibm
+  - category: ai-ml
+    categoryName: AI/ML
+    selection: multiple
+    modules:
+      - name: IBM Watson Assistant
+        id: github.com/cloud-native-toolkit/terraform-ibm-watson-assistant
+        group: watson-assistant
+        cloudProvider: ibm
+      - name: IBM Watson Studio
+        id: github.com/cloud-native-toolkit/terraform-ibm-watson-studio
+        group: watson-studio
+        cloudProvider: ibm
   - category: dev-tool
     categoryName: Dev Tools
     selection: multiple
     modules:
       - name: ArgoCD
         id: github.com/cloud-native-toolkit/terraform-tools-argocd
+        group: argocd
       - name: Artifactory
         id: github.com/cloud-native-toolkit/terraform-tools-artifactory
+        group: artifactory
       - name: Developer Dashboard
         id: github.com/cloud-native-toolkit/terraform-tools-dashboard
+        group: dashboard
       - name: Jenkins
         id: github.com/cloud-native-toolkit/terraform-tools-jenkins
+        group: jenkins
       - name: Nexus
         id: github.com/cloud-native-toolkit/terraform-tools-nexus
+        group: nexus
       - name: OpenShift CICD
         id: github.com/cloud-native-toolkit/terraform-tools-openshift-cicd
+        group: cicd
       - name: Pact Broker
         id: github.com/cloud-native-toolkit/terraform-tools-pactbroker
+        group: pact-broker
       - name: SonarQube
         id: github.com/cloud-native-toolkit/terraform-tools-sonarqube
+        group: sonarqube
       - name: Swagger Editor
         id: github.com/cloud-native-toolkit/terraform-tools-swaggereditor
+        group: swagger-editor
       - name: Tekton
         id: github.com/cloud-native-toolkit/terraform-tools-tekton
+        group: tekton
       - name: Tekton Resources
         id: github.com/cloud-native-toolkit/terraform-tools-tekton-resources
+        group: tekton-resources
       - name: Turbonomic
         id: github.com/cloud-native-toolkit/terraform-tools-turbonomic
+        group: turbonomic
       - name: Console Link Job
         id: github.com/cloud-native-toolkit/terraform-k8s-console-link-job
+        group: console-link
       - name: Buildah Unprivileged
         id: github.com/cloud-native-toolkit/terraform-ocp-buildah-unprivileged
+      - name: Console Link Job
+        id: github.com/cloud-native-toolkit/terraform-gitops-console-link-job
+        group: console-link
+        type: gitops
+      - name: Artifactory
+        id: github.com/cloud-native-toolkit/terraform-gitops-artifactory
+        type: gitops
+        group: artifactory
+      - name: Developer Dashboard
+        id: github.com/cloud-native-toolkit/terraform-gitops-dashboard
+        type: gitops
+        group: dashboard
+      - name: Pact Broker
+        id: github.com/cloud-native-toolkit/terraform-gitops-pact-broker
+        type: gitops
+        group: pact-broker
+      - name: SonarQube
+        id: github.com/cloud-native-toolkit/terraform-gitops-sonarqube
+        type: gitops
+        group: sonarqube
+      - name: Image Registry
+        id: github.com/cloud-native-toolkit/terraform-gitops-image-registry
+        type: gitops
+        group: registry
+      - name: Tekton Resources
+        id: github.com/cloud-native-toolkit/terraform-gitops-tekton-resources
+        type: gitops
+        group: tekton-resources
   - category: util
     categoryName: Utilities
     selection: multiple
@@ -239,3 +439,8 @@ categories:
         id: github.com/cloud-native-toolkit/terraform-util-sealed-secret-cert
       - name: Cluster Config
         id: github.com/cloud-native-toolkit/template-tools-cluster-config
+        group: cluster-config
+      - name: Cluster Config
+        id: github.com/cloud-native-toolkit/terraform-gitops-cluster-config
+        type: gitops
+        group: cluster-config

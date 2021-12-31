@@ -26,7 +26,7 @@ mkdir -p "${TMP_DIR}"
 
 OUTPUT="${DEST_DIR}/${OUTPUT_FILE}"
 
-echo "# [Automation modules](https://github.com/cloud-native-toolkit/automations-modules)" > "${OUTPUT}"
+echo "# [Automation modules](https://github.com/cloud-native-toolkit/automation-modules)" > "${OUTPUT}"
 echo ""
 
 echo "The Cloud-Native Toolkit provides a library of modules that can be used to automate the provisioning of an environment. These modules have been organized into categories for readability. Any of the terraform modules can be added directly in a terraform template to apply the behavior." >> "${OUTPUT}"
@@ -46,10 +46,10 @@ echo ""
 
 echo "## Module catalog" >> "${OUTPUT}"
 
-yq e -j '.' "${BASE_DIR}/catalog.yaml" | jq -r '.categories | .[] | .category' | while read category; do
+yq e -o=json '.' "${BASE_DIR}/catalog.yaml" | jq -r '.categories | .[] | .category' | while read category; do
   echo "*** category: ${category}"
 
-  category_config=$(yq e -j '.' "${BASE_DIR}/catalog.yaml" | jq -c --arg CATEGORY "${category}" '.categories | .[] | select(.category == $CATEGORY) | del(.modules)')
+  category_config=$(yq e -o=json '.' "${BASE_DIR}/catalog.yaml" | jq -c --arg CATEGORY "${category}" '.categories | .[] | select(.category == $CATEGORY) | del(.modules)')
   category_name=$(echo "${category_config}" | jq -r '.categoryName // .category')
 
   echo "### ${category_name}" >> "${OUTPUT}"
@@ -57,7 +57,7 @@ yq e -j '.' "${BASE_DIR}/catalog.yaml" | jq -r '.categories | .[] | .category' |
   echo "| **Module name** | **Catalog id** | **Module type** | **Module location** | **Latest release** | **Last build status** |" >> "${OUTPUT}"
   echo "|-----------------|----------------|-----------------|---------------------|--------------------|-----------------------|" >> "${OUTPUT}"
 
-  yq e -j '.' "${BASE_DIR}/catalog.yaml" | \
+  yq e -o=json '.' "${BASE_DIR}/catalog.yaml" | \
     jq -c --arg CATEGORY "${category}" '.categories | .[] | select(.category == $CATEGORY) | .modules | .[]' | \
     while read module; do
 
