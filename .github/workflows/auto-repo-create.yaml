@@ -4,9 +4,15 @@ on:
     types:
       - labeled
       - unlabeled
+  issue_comment:
+    types:
+      - created
+      - edited
+      - deleted
 
 jobs:
   extract-values:
+    if: ${{ github.event.issue.state == 'open' }}
     runs-on: ubuntu-latest
     steps:
       - id: variables
@@ -23,13 +29,13 @@ jobs:
       category: ${{ steps.variables.outputs.category }}
       approved: ${{ steps.variables.outputs.approved }}
       requester: ${{ steps.variables.outputs.requester }}
-      state: ${{ steps.variables.outputs.state }}
       issue_number: ${{ steps.variables.outputs.issue_number }}
+      new_module: ${{ steps.variables.outputs.new_module }}
 
   create-repo:
     runs-on: ubuntu-latest
     needs: extract-values
-    if: ${{ needs.extract-values.outputs.approved == 'true' && needs.extract-values.outputs.state == 'open' }}
+    if: ${{ needs.extract-values.outputs.approved == 'true' && needs.extract-values.outputs.new_module == 'true' }}
 
     steps:
       - id: create

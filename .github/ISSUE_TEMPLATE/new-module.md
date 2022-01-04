@@ -2,7 +2,7 @@
 name: New automation module
 about: Request that a new automation module be created in the Cloud Native Toolkit
 title: 'Request new module: {name}'
-labels: 'new module'
+labels: 'new_module'
 assignees: seansund
 
 ---
