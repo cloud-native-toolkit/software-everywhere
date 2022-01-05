@@ -182,6 +182,8 @@ categories:
         id: github.com/cloud-native-toolkit/terraform-gitops-cp-sls
         softwareProvider: ibm-cp
         group: sls
+      - name: gitops-cp4d-operator
+        id: github.com/cloud-native-toolkit/terraform-gitops-cp4d-operator
   - category: sre
     categoryName: SRE tools
     selection: multiple
