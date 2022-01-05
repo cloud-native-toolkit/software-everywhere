@@ -1,0 +1,48 @@
+name: Add module to catalog
+on:
+  workflow_dispatch:
+    inputs:
+      repoUrl:
+        description: 'The url of the repo containing the module'
+        required: true
+      category:
+        description: 'The category the module should be part of'
+        required: true
+      name:
+        description: 'The display name of the module'
+        required: true
+      group:
+        description: 'The group the module should be part of'
+        required: false
+      cloudProvider:
+        description: 'The cloud provider of the module, if a terraform module (e.g ibm, aws, azure)'
+        required: false
+      softwareProvider:
+        description: 'The software provider of the module, if a gitops module (e.g. ibm-cp)'
+        required: false
+
+jobs:
+  add-to-catalog:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Update catalog module
+        uses: cloud-native-toolkit/action-add-to-catalog@main
+        with:
+          repoUrl: ${{ github.event.inputs.repoUrl }}
+          category: ${{ github.event.inputs.category }}
+          name: ${{ github.event.inputs.name }}
+          group: ${{ github.event.inputs.group }}
+          cloudProvider: ${{ github.event.inputs.cloudProvider }}
+          softwareProvider: ${{ github.event.inputs.softwareProvider }}
+
+      - name: Commit changes
+        uses: EndBug/add-and-commit@v7
+        with:
+          author_name: Cloud-Native Toolkit
+          author_email: cloud-native-toolkit@ibm.com
+          message: 'Adds entry to module catalog'
+          add: 'catalog.yaml'
+          pull_strategy: 'NO-PULL'
