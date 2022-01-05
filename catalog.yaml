@@ -182,10 +182,6 @@ categories:
         id: github.com/cloud-native-toolkit/terraform-gitops-cp-sls
         softwareProvider: ibm-cp
         group: sls
-      - name: Cloud Pak for Data Operator
-        id: github.com/cloud-native-toolkit/terraform-gitops-cp4d-operator
-        group: cp4d
-        softwareProvider: ibm-cp
   - category: sre
     categoryName: SRE tools
     selection: multiple
