@@ -1,72 +1,46 @@
-import {Content} from 'carbon-components-react';
 import React from 'react';
+import {Content, Header, HeaderMenu, HeaderMenuItem, HeaderName, HeaderNavigation} from 'carbon-components-react';
 
 import './app.scss';
-import Main from './pages/main/Main';
+import {CatalogPage} from './pages';
+import {BrowserRouter, Route, Routes} from 'react-router-dom';
+import {ContributingPage} from './pages/contributing/ContributingPage';
+import {HowToPage} from './pages/how-to/HowToPage';
+import {HowToTerraformPage} from './pages/how-to/terraform/HowToTerraformPage';
+import {HowToGitopsPage} from './pages/how-to/gitops/HowToGitopsPage';
 
 class App extends React.Component<any, any> {
 
   render() {
     return (
       <div className="App">
+        <Header aria-label="Automation modules">
+          <HeaderName href="/" prefix="">
+            Automation modules
+          </HeaderName>
+          <HeaderNavigation aria-label="Automation modules">
+            <HeaderMenuItem href="/">Module catalog</HeaderMenuItem>
+            <HeaderMenuItem href="/contributing">Contributing</HeaderMenuItem>
+            <HeaderMenu aria-label="How to" menuLinkName="How To">
+              <HeaderMenuItem href="/how-to/terraform">Create a terraform module</HeaderMenuItem>
+              <HeaderMenuItem href="/how-to/gitops">Create a gitops module</HeaderMenuItem>
+            </HeaderMenu>
+          </HeaderNavigation>
+        </Header>
         <Content>
-        <Main></Main>
+          <BrowserRouter>
+            <Routes>
+              <Route path="/" element={<CatalogPage />} />
+              <Route path="/contributing" element={<ContributingPage />} />
+              <Route path="/how-to" element={<HowToPage />} />
+              <Route path="/how-to/terraform" element={<HowToTerraformPage />} />
+              <Route path="/how-to/gitops" element={<HowToGitopsPage />} />
+            </Routes>
+          </BrowserRouter>
         </Content>
       </div>
     )
   }
 }
 
-// function App() {
-//   return (
-//     <div className="App">
-//       <header className="App-header">
-//         <img src={logo} className="App-logo" alt="logo" />
-//         <Counter />
-//         <p>
-//           Edit <code>src/App.tsx</code> and save to reload.
-//         </p>
-//         <span>
-//           <span>Learn </span>
-//           <a
-//             className="App-link"
-//             href="https://reactjs.org/"
-//             target="_blank"
-//             rel="noopener noreferrer"
-//           >
-//             React
-//           </a>
-//           <span>, </span>
-//           <a
-//             className="App-link"
-//             href="https://redux.js.org/"
-//             target="_blank"
-//             rel="noopener noreferrer"
-//           >
-//             Redux
-//           </a>
-//           <span>, </span>
-//           <a
-//             className="App-link"
-//             href="https://redux-toolkit.js.org/"
-//             target="_blank"
-//             rel="noopener noreferrer"
-//           >
-//             Redux Toolkit
-//           </a>
-//           ,<span> and </span>
-//           <a
-//             className="App-link"
-//             href="https://react-redux.js.org/"
-//             target="_blank"
-//             rel="noopener noreferrer"
-//           >
-//             React Redux
-//           </a>
-//         </span>
-//       </header>
-//     </div>
-//   );
-// }
-//
 export default App;

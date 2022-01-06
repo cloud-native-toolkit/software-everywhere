@@ -1,10 +1,11 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import {Column, Grid, Row} from 'carbon-components-react';
-import {ModuleGroupModel} from '../../models';
-import {Module} from '../module/Module';
-import {Mode, selectMode} from '../../features/mode/modeSlice';
+
+import {Module} from '../module';
 import {RootState} from '../../app/store';
+import {Mode, selectMode} from '../../features/mode/modeSlice';
+import {ModuleGroupModel} from '../../models';
 
 interface ModuleGroupValues {
   mode: Mode

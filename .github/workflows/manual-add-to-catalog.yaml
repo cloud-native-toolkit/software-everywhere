@@ -27,6 +27,8 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.TOKEN }}
 
       - name: Update catalog module
         uses: cloud-native-toolkit/action-add-to-catalog@main

@@ -3,16 +3,14 @@ import React from 'react';
 import {DataTable, HeaderData} from '../../ui-patterns/data-table/DataTable';
 import {
   moduleDisplayName,
-  ModuleGroupModel,
+  ModuleGroupModel, moduleLatestVersion,
   ModuleModel,
   moduleProvider,
   moduleStatus,
   moduleType,
   moduleUrl
 } from '../../models';
-import first from '../../util/first';
-import {semanticVersionDescending, semanticVersionFromString} from '../../util/semantic-version';
-import {ModuleLink} from '../module-link/ModuleLink';
+import {ModuleLink} from '../module-link';
 
 const headers: HeaderData<EnhancedModuleModel>[] = [{
   header: 'Module',
@@ -23,6 +21,9 @@ const headers: HeaderData<EnhancedModuleModel>[] = [{
 }, {
   header: 'Group',
   key: 'group'
+}, {
+  header: 'Latest version',
+  key: 'latestVersion'
 }, {
   header: 'Type',
   key: 'type'
@@ -47,6 +48,7 @@ interface EnhancedModuleModel extends ModuleModel {
   url: string;
   link: any;
   provider: string;
+  latestVersion: string;
 }
 
 export class ModuleGroupTable extends React.Component<ModuleTableProps, any> {
@@ -65,7 +67,8 @@ export class ModuleGroupTable extends React.Component<ModuleTableProps, any> {
               displayName: moduleDisplayName(m),
               type: moduleType(m),
               link: this.moduleLink(m),
-              provider: moduleProvider(m)
+              provider: moduleProvider(m),
+              latestVersion: moduleLatestVersion(m)
             }
           ))
         )

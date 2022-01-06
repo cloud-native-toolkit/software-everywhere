@@ -51,6 +51,10 @@ jobs:
         run: |
           ./.github/scripts/build-catalog.sh ${{ env.DIST_DIR }}
 
+      - name: Set up markdown
+        run: |
+          cp -R markdown ${{ env.DIST_DIR }}
+
       - name: Set up schemas
         run: |
           cp -R schemas ${{ env.DIST_DIR }}

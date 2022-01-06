@@ -1,14 +1,12 @@
 import React from 'react';
 import {Tile} from 'carbon-components-react';
+import {connect} from 'react-redux';
 
 import './Module.scss'
-import {ModuleModel, moduleUrl, moduleStatus, moduleDisplayName, moduleType} from '../../models';
-import {Mode, selectMode} from '../../features/mode/modeSlice';
-import first from '../../util/first';
-import {semanticVersionDescending, semanticVersionFromString} from '../../util/semantic-version';
 import {RootState} from '../../app/store';
-import {connect} from 'react-redux';
-import {ModuleLink} from '../module-link/ModuleLink';
+import {Mode, selectMode} from '../../features/mode/modeSlice';
+import {moduleDisplayName, moduleLatestVersion, ModuleModel, moduleStatus, moduleType, moduleUrl} from '../../models';
+import {ModuleLink} from '../module-link';
 
 interface ModuleValues {
   mode: Mode
@@ -31,6 +29,7 @@ class ModuleInternal extends React.Component<ModuleProps, any> {
         <div className="TileRow"><span className="Label">Name:</span> {this.moduleName}</div>
         <div className="TileRow"><span className="Label">Type:</span> {this.moduleType}</div>
         <div className="TileRow"><span className="Label">Status:</span> {this.moduleStatus}</div>
+        <div className="TileRow"><span className="Label">Latest version:</span> {this.moduleLatestVersion}</div>
         <div className="TileRow">{this.moduleLink}</div>
       </Tile>
     );
@@ -64,6 +63,10 @@ class ModuleInternal extends React.Component<ModuleProps, any> {
 
   get moduleStatus(): string {
     return moduleStatus(this.props.module)
+  }
+
+  get moduleLatestVersion(): string {
+    return moduleLatestVersion(this.props.module)
   }
 
   get moduleLink() {

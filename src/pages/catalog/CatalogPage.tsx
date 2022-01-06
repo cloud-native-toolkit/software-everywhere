@@ -1,9 +1,9 @@
 import React from 'react';
 import {Column, Grid, Row} from 'carbon-components-react';
-import {CatalogFilter} from '../../components/catalog-filter/CatalogFilter';
-import {Catalog} from '../../components/catalog/Catalog';
 
-class Main extends React.Component<any, any> {
+import {Catalog, CatalogFilter} from '../../components';
+
+export class CatalogPage extends React.Component<any, any> {
 
   render() {
     return (
@@ -11,15 +11,15 @@ class Main extends React.Component<any, any> {
         <Grid>
           <Row>
             <Column lg={{span: 12}} md={{span: 8}} sm={{span: 4}}>
-              <h1>Automation modules</h1>
+              <h1>Module catalog</h1>
             </Column>
           </Row>
           <Row>
             <Column lg={{span: 2}} md={{span: 2}} sm={{span: 4}}>
-              <CatalogFilter></CatalogFilter>
+              <CatalogFilter />
             </Column>
             <Column lg={{span: 10}} md={{span: 6}} sm={{span: 4}}>
-              <Catalog></Catalog>
+              <Catalog />
             </Column>
           </Row>
         </Grid>
@@ -27,5 +27,3 @@ class Main extends React.Component<any, any> {
     );
   }
 }
-
-export default Main

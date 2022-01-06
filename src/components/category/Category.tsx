@@ -1,11 +1,10 @@
 import React from 'react';
 import {connect} from 'react-redux';
 
-import {ModuleGroup} from '../module-group/ModuleGroup';
-import {CategoryModel, ModuleGroupModel} from '../../models';
-import {Mode, selectMode} from '../../features/mode/modeSlice';
+import {ModuleGroup, ModuleGroupTable} from '../module-group';
 import {RootState} from '../../app/store';
-import {ModuleGroupTable} from '../module-group/ModuleGroupTable';
+import {Mode, selectMode} from '../../features/mode/modeSlice';
+import {CategoryModel, ModuleGroupModel} from '../../models';
 
 interface CategoryValues {
   mode: Mode

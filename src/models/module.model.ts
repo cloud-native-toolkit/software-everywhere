@@ -1,5 +1,5 @@
 import first from '../util/first';
-import {semanticVersionDescending, semanticVersionFromString} from '../util/semantic-version';
+import {SemanticVersion, semanticVersionDescending, semanticVersionFromString} from '../util/semantic-version';
 
 export interface ModuleModel {
   displayName?: string
@@ -46,4 +46,15 @@ export const moduleType = (module: ModuleModel): string => {
 
 export const moduleProvider = (module: ModuleModel): string => {
   return module.cloudProvider || module.softwareProvider || ''
+}
+
+export const moduleLatestVersion = (module: ModuleModel): string => {
+  const versions: SemanticVersion[] = (module.versions || [])
+    .filter(v => v !== 'v0.0.0')
+    .map(semanticVersionFromString)
+    .sort(semanticVersionDescending)
+
+  return first(versions)
+    .map(v => v.label)
+    .orElse('')
 }

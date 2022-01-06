@@ -160,7 +160,7 @@ const filterModules = (filters: CatalogFiltersModel, modules: ModuleModel[]): Mo
 type FilterFunction = (filter: string, module: ModuleModel) => boolean
 
 const filterFunctions = {
-  cloudProvider: (filter: string, module: ModuleModel) => module.cloudProvider === filter,
+  cloudProvider: (filter: string, module: ModuleModel) => module.cloudProvider === filter || module.type === 'gitops',
   softwareProvider: (filter: string, module: ModuleModel) => module.softwareProvider === filter,
   moduleType: (filter: string, module: ModuleModel) => moduleType(module) === filter,
   status: (filter: string, module: ModuleModel) => moduleStatus(module) === filter,

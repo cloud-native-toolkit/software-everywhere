@@ -2,9 +2,9 @@ import React from 'react';
 import {connect} from 'react-redux';
 
 import {RootState} from '../../app/store';
-import {Category} from '../category/Category';
-import {Loading} from '../loading/Loading';
-import {ModeToggle} from '../mode-toggle/ModeToggle';
+import {Category} from '../category';
+import {Loading} from '../loading';
+import {ModeToggle} from '../mode-toggle';
 
 import {CatalogFiltersModel, CatalogModel} from '../../models';
 import {
@@ -33,9 +33,8 @@ class CatalogInternal extends React.Component<CatalogProps, any> {
   render() {
     return (
       <div className="Catalog">
-        <h2>Module catalog</h2>
-        <Loading status={this.props.status}></Loading>
-        <ModeToggle></ModeToggle>
+        <ModeToggle />
+        <Loading status={this.props.status} />
         {this.renderCatalog()}
       </div>
     )
@@ -56,7 +55,7 @@ class CatalogInternal extends React.Component<CatalogProps, any> {
       return
     }
 
-    return catalog.categories.map(c => <Category key={c.name} category={c}></Category>)
+    return catalog.categories.map(c => <Category key={c.name} category={c} />)
   }
 
   componentDidMount() {

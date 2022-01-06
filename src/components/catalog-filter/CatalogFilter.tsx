@@ -1,6 +1,7 @@
 import React from 'react';
 import {connect} from 'react-redux';
-import {Button, Select, SelectItem, TextInput} from 'carbon-components-react';
+import {Button, Column, Grid, Row, Select, SelectItem, TextInput, Tooltip} from 'carbon-components-react';
+import {Search16} from '@carbon/icons-react';
 
 import './CatalogFilter.scss';
 import {RootState} from '../../app/store';
@@ -79,16 +80,28 @@ class CatalogFilterInternal extends React.Component<CatalogFilterProps, any> {
           </Select>
         </div>
         <div className="FormElement">
-          <TextInput
-            id="searchText"
-            labelText="Module search"
-            defaultValue={this.searchText}
-            onChange={(e) => this.searchText = e.target.value}
-          />
-          <Button
-            size={"field"}
-            onClick={(e) => this.props.filterBySearchText(this.props, this.searchText)}
-          >Search</Button>
+          <Grid style={{paddingRight: '0', paddingLeft: '0'}}>
+            <Row>
+              <Column lg={{span: 9}} style={{paddingRight: '.5rem'}}>
+                <TextInput
+                  id="searchText"
+                  labelText="Module search"
+                  defaultValue={this.searchText}
+                  onChange={(e) => this.searchText = e.target.value}
+                />
+              </Column>
+              <Column lg={{span: 3}} style={{display: 'flex', paddingLeft: '.5rem'}}>
+                <Button
+                  className="SearchButton"
+                  style={{display: 'inline-block', alignSelf: 'flex-end'}}
+                  size={"field"}
+                  onClick={(e) => this.props.filterBySearchText(this.props, this.searchText)}
+                  renderIcon={Search16}
+                  hasIconOnly
+                />
+              </Column>
+            </Row>
+          </Grid>
         </div>
       </div>
     )

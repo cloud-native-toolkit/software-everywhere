@@ -3,12 +3,14 @@ import counterReducer from '../features/counter/counterSlice';
 import catalogReducer from '../features/catalog/catalogSlice';
 import catalogListReducer from '../features/catalog-list/catalogListSlice';
 import modeReducer from '../features/mode/modeSlice';
+import {markdownReducer} from '../features/markdown/markdownSlice'
 
 export const store = configureStore({
   reducer: {
     counter: counterReducer,
     catalog: catalogReducer,
     catalogList: catalogListReducer,
+    markdown: markdownReducer,
     mode: modeReducer,
   },
 });

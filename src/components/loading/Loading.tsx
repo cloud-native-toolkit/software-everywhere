@@ -8,7 +8,7 @@ export interface LoadingProps {
 export class Loading extends React.Component<LoadingProps, any> {
   render() {
     if (this.props.status === Status.loading) {
-      return (<div>Loading...</div>)
+      return (<div style={{fontSize: '3rem'}}>Loading...</div>)
     }
 
     return (<></>);

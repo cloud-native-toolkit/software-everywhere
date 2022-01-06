@@ -2,7 +2,7 @@ import {createAsyncThunk, createSlice, PayloadAction} from '@reduxjs/toolkit';
 
 import {RootState} from '../../app/store';
 import {CatalogFiltersModel, CatalogModel, CatalogResultModel} from '../../models';
-import {CatalogService} from '../../services/catalog/catalog.service';
+import {CatalogService} from '../../services';
 import {Status} from '../status';
 
 export interface CatalogState {

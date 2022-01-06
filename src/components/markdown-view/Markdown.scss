@@ -1,0 +1,36 @@
+
+.MarkdownView {
+
+}
+
+.MarkdownView {
+  ol {
+    list-style-type: decimal;
+    padding-left: 20px;
+    padding-top: 5px;
+
+    li {
+      padding-top: 2px;
+    }
+
+    ol {
+      list-style-type: lower-alpha;
+      padding-left: 20px;
+      padding-top: 5px;
+
+      li {
+        padding-top: 2px;
+      }
+    }
+
+    ul {
+      list-style-type: circle;
+      padding-left: 20px;
+      padding-top: 5px;
+
+      li {
+        padding-top: 2px;
+      }
+    }
+  }
+}
