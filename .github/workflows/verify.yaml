@@ -49,7 +49,7 @@ jobs:
         run: |
           ./.github/scripts/build-catalog.sh ${{ env.DIST_DIR }}
 
-      - name: Verify module schema
+      - name: Verify catalog schema
         run: |
           npm i -g ajv-cli
           ajv test -s ./schemas/catalog.json -d ${{ env.DIST_DIR }}/index.yaml --valid

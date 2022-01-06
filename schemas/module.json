@@ -96,7 +96,8 @@
       "properties": {
         "source": {
           "type": "string",
-          "description": "Reference to the identifier of the module"
+          "description": "Reference to the identifier of the module",
+          "pattern": "^((?!^http).)*$"
         },
         "version": {
           "type": "string",
