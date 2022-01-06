@@ -3,7 +3,7 @@ import ReactMarkdown from 'react-markdown'
 import remarkGfm from 'remark-gfm';
 import {connect} from 'react-redux';
 
-import './Markdown.scss';
+import '@primer/css/markdown/index.scss'
 import {RootState} from '../../app/store';
 import {fetchMarkdownAsync, selectMarkdown} from '../../features/markdown/markdownSlice';
 
@@ -26,7 +26,7 @@ interface MarkdownViewCompositeParams extends MarkdownViewValues, MarkdownViewDi
 class MarkdownViewInternal extends React.Component<MarkdownViewCompositeParams, any> {
   render() {
     return (
-      <ReactMarkdown className="MarkdownView" children={this.props.markdown[this.props.name]} remarkPlugins={[remarkGfm]} />
+      <ReactMarkdown className="markdown-body" children={this.props.markdown[this.props.name]} remarkPlugins={[remarkGfm]} />
     );
   }
 
