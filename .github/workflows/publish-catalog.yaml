@@ -53,7 +53,7 @@ jobs:
 
       - name: Set up markdown
         run: |
-          cp -R markdown ${{ env.DIST_DIR }}
+          cp -R md ${{ env.DIST_DIR }}
 
       - name: Set up schemas
         run: |
