@@ -30,6 +30,7 @@
     "yaml": "^1.10.2"
   },
   "scripts": {
+    "prestart": "cp -R md ./public",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",

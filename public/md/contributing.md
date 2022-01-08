@@ -2,10 +2,6 @@
 
 There are a number of ways to contribute to the work of building and verifying the automation modules 
 
-## Use the modules
-
-
-
 ## Create a new module
 
 If you've searched the catalog and can't find the module you need, you can request a new module be created, and optionally provide the implementation for the module.
