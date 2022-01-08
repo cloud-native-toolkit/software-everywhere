@@ -1,0 +1,22 @@
+
+.markdown-body {
+  ol {
+    list-style: decimal;
+
+    ol {
+      list-style: lower-roman;
+    }
+
+    ul {
+      list-style: circle;
+    }
+  }
+
+  ul {
+    list-style: disc;
+
+    ul {
+      list-style: circle;
+    }
+  }
+}

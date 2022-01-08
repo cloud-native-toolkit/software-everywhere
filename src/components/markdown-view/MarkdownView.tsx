@@ -4,6 +4,7 @@ import remarkGfm from 'remark-gfm';
 import {connect} from 'react-redux';
 
 import '@primer/css/markdown/index.scss'
+import './MarkdownView.scss'
 import {RootState} from '../../app/store';
 import {fetchMarkdownAsync, selectMarkdown} from '../../features/markdown/markdownSlice';
 
