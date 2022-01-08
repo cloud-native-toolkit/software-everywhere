@@ -11,11 +11,11 @@ class App extends React.Component<any, any> {
   render() {
     return (
       <div className="App">
-        <Header aria-label="Automation modules">
+        <Header aria-label="Software Everywhere">
           <HeaderName href="#" prefix="">
-            Automation modules
+            Software Everywhere
           </HeaderName>
-          <HeaderNavigation aria-label="Automation modules">
+          <HeaderNavigation aria-label="Software Everywhere">
             <HeaderMenuItem href="/">Module catalog</HeaderMenuItem>
             <HeaderMenuItem href="#/contributing">Contributing</HeaderMenuItem>
             <HeaderMenu aria-label="How to" menuLinkName="How To">
