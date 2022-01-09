@@ -453,3 +453,7 @@ categories:
         id: github.com/cloud-native-toolkit/terraform-gitops-cluster-config
         type: gitops
         group: cluster-config
+      - name: gitops-pull-secret
+        id: github.com/cloud-native-toolkit/terraform-gitops-pull-secret
+        displayName: Pull Secret
+        group: pull-secret
