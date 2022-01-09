@@ -20,8 +20,8 @@ class ModeToggleInternal extends React.Component<ModeToggleProps, any> {
   render() {
     return (
       <div style={{overflow: 'auto'}}>
-        <div style={{float: 'right'}}><Button disabled={this.props.mode === Mode.table} onClick={this.props.tableMode} size={"field"}>Table</Button></div>
-        <div style={{float: 'right'}}><Button disabled={this.props.mode === Mode.tiles} onClick={this.props.tileMode} size={"field"}>Tiles</Button></div>
+        <div style={{float: 'right'}}><Button kind="tertiary" disabled={this.props.mode === Mode.table} onClick={this.props.tableMode} size={"field"}>Table</Button></div>
+        <div style={{float: 'right'}}><Button kind="tertiary" disabled={this.props.mode === Mode.tiles} onClick={this.props.tileMode} size={"field"}>Tiles</Button></div>
       </div>
     )
   }

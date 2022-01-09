@@ -1,6 +1,7 @@
 import React from 'react';
 import {connect} from 'react-redux';
 
+import './Catalog.scss';
 import {RootState} from '../../app/store';
 import {Category} from '../category';
 import {Loading} from '../loading';
@@ -14,6 +15,7 @@ import {
   selectCatalogStatus
 } from '../../features/catalog/catalogSlice';
 import {Status} from '../../features/status';
+import {Button} from 'carbon-components-react';
 
 interface CatalogValues {
   catalog?: CatalogModel
@@ -33,7 +35,14 @@ class CatalogInternal extends React.Component<CatalogProps, any> {
   render() {
     return (
       <div className="Catalog">
-        <ModeToggle />
+        <div className="ButtonRow">
+          <div style={{float: 'left'}}>
+          <a
+            href="https://github.com/cloud-native-toolkit/automation-modules/issues/new?labels=new_module&template=new-module.md&title=Request+new+module%3A+%7Bname%7D"
+            target="_blank"><Button size="field">Request new module</Button></a>
+          </div>
+          <ModeToggle />
+        </div>
         <Loading status={this.props.status} />
         {this.renderCatalog()}
       </div>
