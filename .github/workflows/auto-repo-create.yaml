@@ -23,6 +23,7 @@ jobs:
     outputs:
       type: ${{ steps.variables.outputs.type }}
       name: ${{ steps.variables.outputs.name }}
+      displayName: ${{ steps.variables.outputs.displayName }}
       provider: ${{ steps.variables.outputs.provider }}
       softwareProvider: ${{ steps.variables.outputs.softwareProvider }}
       group: ${{ steps.variables.outputs.group }}
@@ -45,6 +46,7 @@ jobs:
           token: ${{ secrets.GIT_ADMIN_TOKEN }}
           type: ${{ needs.extract-values.outputs.type }}
           name: ${{ needs.extract-values.outputs.name }}
+          displayName: ${{ needs.extract-values.outputs.displayName }}
           provider: ${{ needs.extract-values.outputs.provider }}
           softwareProvider: ${{ needs.extract-values.outputs.softwareProvider }}
           strict: true
@@ -54,6 +56,7 @@ jobs:
       owner: ${{ steps.create.outputs.owner }}
       repo: ${{ steps.create.outputs.repo }}
       moduleName: ${{ steps.create.outputs.moduleName }}
+      displayName: ${{ steps.create.outputs.displayName }}
       cloudProvider: ${{ steps.create.outputs.cloudProvider }}
       softwareProvider: ${{ steps.create.outputs.softwareProvider }}
       group: ${{ needs.extract-values.outputs.group }}
@@ -83,6 +86,7 @@ jobs:
           repoUrl: ${{ needs.create-repo.outputs.repoUrl }}
           category: ${{ needs.create-repo.outputs.category }}
           name: ${{ needs.create-repo.outputs.moduleName }}
+          displayName: ${{ needs.create-repo.outputs.displayName }}
           group: ${{ needs.create-repo.outputs.group }}
           cloudProvider: ${{ needs.create-repo.outputs.cloudProvider }}
           softwareProvider: ${{ needs.create-repo.outputs.softwareProvider }}
