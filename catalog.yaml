@@ -145,6 +145,10 @@ categories:
         id: github.com/cloud-native-toolkit/terraform-ibm-vpn-server
         group: vpn
         cloudProvider: ibm
+      - name: azure-vpc
+        id: github.com/cloud-native-toolkit/terraform-azure-vpc
+        group: vpc
+        cloudProvider: azure
   - category: infrastructure
     categoryName: Infrastructure
     selection: indirect
