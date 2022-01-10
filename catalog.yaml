@@ -225,7 +225,7 @@ categories:
         id: github.com/cloud-native-toolkit/terraform-tools-gitops
         type: terraform
       - name: gitops-bootstrap
-        id: github.com/cloud-native-toolkit/terraform-gitops-bootstrap
+        id: github.com/cloud-native-toolkit/terraform-util-gitops-bootstrap
         displayName: Bootstrap GitOps
   - category: middleware
     categoryName: Middleware
