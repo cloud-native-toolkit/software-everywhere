@@ -443,6 +443,9 @@ categories:
         id: github.com/cloud-native-toolkit/terraform-gitops-tekton-resources
         type: gitops
         group: tekton-resources
+      - name: gitops-turbonomic
+        id: github.com/cloud-native-toolkit/terraform-gitops-ocp-turbonomic
+        group: turbonomic
   - category: util
     categoryName: Utilities
     selection: multiple
