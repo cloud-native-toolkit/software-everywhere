@@ -149,6 +149,11 @@ categories:
         id: github.com/cloud-native-toolkit/terraform-azure-vpc
         group: vpc
         cloudProvider: azure
+      - name: aws-ec2
+        id: github.com/cloud-native-toolkit/terraform-aws-ec2
+        displayName: AWS EC2
+        group: vsi
+        cloudProvider: aws
   - category: infrastructure
     categoryName: Software Infrastructure
     selection: indirect
