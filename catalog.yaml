@@ -363,6 +363,8 @@ categories:
         id: github.com/cloud-native-toolkit/terraform-ibm-object-storage-bucket
         group: object-storage-bucket
         cloudProvider: ibm
+      - name: storageclass
+        id: github.com/cloud-native-toolkit/terraform-gitops-ocp-storageclass
   - category: ai-ml
     categoryName: AI/ML
     selection: multiple
