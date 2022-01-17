@@ -365,6 +365,9 @@ categories:
         cloudProvider: ibm
       - name: storageclass
         id: github.com/cloud-native-toolkit/terraform-gitops-ocp-storageclass
+      - name: Portworx on IBM Cloud
+        id: github.com/cloud-native-toolkit/terraform-portworx
+        cloudProvider: ibm
   - category: ai-ml
     categoryName: AI/ML
     selection: multiple
