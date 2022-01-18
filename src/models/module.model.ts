@@ -11,9 +11,10 @@ export interface ModuleModel {
   type: string
   group?: string
   versions?: string[]
+  repo?: string
 }
 
-export const moduleUrl = (module: ModuleModel): string => `https://github.com/cloud-native-toolkit/terraform-${module.name}`
+export const moduleUrl = (module: ModuleModel): string => `https://${module.id}`
 
 export const moduleStatus = (module: ModuleModel): string => {
   const isPending = (versions: string[] = []): boolean => {
