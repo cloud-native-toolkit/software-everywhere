@@ -347,6 +347,10 @@ categories:
         id: github.com/cloud-native-toolkit/terraform-gitops-cp-db2wh
         group: db2-warehouse
         type: gitops
+      - name: IBM DB2U Operator
+        id: github.com/cloud-native-toolkit/terraform-gitops-cp-db2wh
+        group: terraform-gitops-db2u-operator
+        type: gitops
         softwareProvider: ibm-cp
       - name: IBM DB2 Schema
         id: https://github.com/cloud-native-toolkit/terraform-gitops-db2-schema
