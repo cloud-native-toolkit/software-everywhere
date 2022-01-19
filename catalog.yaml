@@ -193,6 +193,13 @@ categories:
         group: sls
       - name: gitops-cp4d-operator
         id: github.com/cloud-native-toolkit/terraform-gitops-cp4d-operator
+        type: gitops
+      - name: gitops-cp4d-instance
+        id: github.com/cloud-native-toolkit/terraform-gitops-cp4d-instance
+        type: gitops
+      - name: cp-foundational-services
+        id: github.com/cloud-native-toolkit/terraform-gitops-cp-foundational-services
+        type: gitops
   - category: sre
     categoryName: SRE tools
     selection: multiple
