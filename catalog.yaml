@@ -319,6 +319,7 @@ categories:
         id: github.com/cloud-native-toolkit/terraform-gitops-openldap
         type: gitops
         group: ldap
+        softwareProvider: opensource
   - category: databases
     categoryName: Databases
     selection: multiple
