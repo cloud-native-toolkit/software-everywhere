@@ -44,7 +44,7 @@ jobs:
       uses: peter-evans/create-or-update-comment@v1
       with:
         issue-number: ${{ github.event.issue.number }}
-        body: Error extracting values. ${{ toJSON(needs) }}
+        body: Error extracting values. ${{ toJSON(github.event) }}
 
   create-repo:
     runs-on: ubuntu-latest
@@ -85,7 +85,7 @@ jobs:
       uses: peter-evans/create-or-update-comment@v1
       with:
         issue-number: ${{ github.event.issue.number }}
-        body: Error creating repo. ${{ toJSON(needs) }}
+        body: Error creating repo. ${{ toJSON(github.event) }}
 
   close-issue:
     runs-on: ubuntu-latest
