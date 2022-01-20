@@ -290,9 +290,9 @@ categories:
         group: kafka-topic
         cloudProvider: ibm
       - name: JetStack Cert Manager
-        id: github.com/cloud-native-toolkit/terraform-ibm-cert-manager
+        id: github.com/cloud-native-toolkit/terraform-gitops-ocp-cert-manager
         group: cert-manager
-        cloudProvider: ibm
+        softwareProvider: ibm-cp
       - name: IBM Certificate Manager
         id: github.com/cloud-native-toolkit/terraform-ibm-cert-manager
         group: cert-manager
