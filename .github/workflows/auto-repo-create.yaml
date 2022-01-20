@@ -44,7 +44,7 @@ jobs:
       uses: peter-evans/create-or-update-comment@v1
       with:
         issue-number: ${{ github.event.issue.number }}
-        body: "Error extracting values. See details at: https://github.com/cloud-native-toolkit/automation-modules/actions/runs/"${{ github.run_id }}
+        body: Error extracting values. See details at: https://github.com/cloud-native-toolkit/automation-modules/actions/runs/${{ github.run_id }}
 
   create-repo:
     runs-on: ubuntu-latest
@@ -85,7 +85,7 @@ jobs:
       uses: peter-evans/create-or-update-comment@v1
       with:
         issue-number: ${{ github.event.issue.number }}
-        body: "Error creating repo. See details at: https://github.com/cloud-native-toolkit/automation-modules/actions/runs/"${{ github.run_id }}
+        body: Error creating repo. See details at: https://github.com/cloud-native-toolkit/automation-modules/actions/runs/${{ github.run_id }}
 
   close-issue:
     runs-on: ubuntu-latest
