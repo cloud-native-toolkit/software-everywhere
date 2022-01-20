@@ -42,11 +42,9 @@ jobs:
     steps:
     - name: Add comment
       uses: peter-evans/create-or-update-comment@v1
-      env:
-        NEEDS_CONTEXT: ${{ toJSON(needs) }}
       with:
         issue-number: ${{ github.event.issue.number }}
-        body: Error extracting values. ${{ NEEDS_CONTEXT }}
+        body: Error extracting values. ${{ toJSON(needs) }}
 
   create-repo:
     runs-on: ubuntu-latest
@@ -85,11 +83,9 @@ jobs:
     steps:
     - name: Add comment
       uses: peter-evans/create-or-update-comment@v1
-      env:
-        NEEDS_CONTEXT: ${{ toJSON(needs) }}
       with:
         issue-number: ${{ github.event.issue.number }}
-        body: Error creating repo. ${{ NEEDS_CONTEXT }}
+        body: Error creating repo. ${{ toJSON(needs) }}
 
   close-issue:
     runs-on: ubuntu-latest
