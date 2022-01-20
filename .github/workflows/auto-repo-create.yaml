@@ -62,7 +62,21 @@ jobs:
       group: ${{ needs.extract-values.outputs.group }}
       category: ${{ needs.extract-values.outputs.category }}
 
-  comment-issue:
+  error-issue:
+    runs-on: ubuntu-latest
+    needs: create-repo
+    if: ${{ github.event.state == 'error' || github.event.state == 'failure' }}
+
+    steps:
+    - name: Add comment
+      uses: peter-evans/create-or-update-comment@v1
+      with:
+        issue-number: ${{ github.event.issue.number }}
+        body: |
+          Error in repo creation.  
+          ${{ github.event.toString() }}
+
+  close-issue:
     runs-on: ubuntu-latest
     needs: create-repo
 
