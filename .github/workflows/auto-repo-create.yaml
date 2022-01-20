@@ -72,7 +72,7 @@ jobs:
       uses: peter-evans/create-or-update-comment@v1
       with:
         issue-number: ${{ github.event.issue.number }}
-        body: Error in repo creation. ${{ github.event.toString() }}
+        body: Error in repo creation. ${{ github.event }}
 
   close-issue:
     runs-on: ubuntu-latest
