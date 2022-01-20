@@ -194,12 +194,15 @@ categories:
       - name: gitops-cp4d-operator
         id: github.com/cloud-native-toolkit/terraform-gitops-cp4d-operator
         type: gitops
+        softwareProvider: ibm-cp
       - name: gitops-cp4d-instance
         id: github.com/cloud-native-toolkit/terraform-gitops-cp4d-instance
         type: gitops
+        softwareProvider: ibm-cp
       - name: cp-foundational-services
         id: github.com/cloud-native-toolkit/terraform-gitops-cp-foundational-services
         type: gitops
+        softwareProvider: ibm-cp
   - category: sre
     categoryName: SRE tools
     selection: multiple
@@ -355,7 +358,7 @@ categories:
         group: db2-warehouse
         type: gitops
       - name: IBM DB2U Operator
-        id: github.com/cloud-native-toolkit/terraform-gitops-cp-db2wh
+        id: github.com/cloud-native-toolkit/terraform-gitops-db2u-operator
         group: terraform-gitops-db2u-operator
         type: gitops
         softwareProvider: ibm-cp
