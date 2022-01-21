@@ -200,7 +200,8 @@ categories:
         type: gitops
         softwareProvider: ibm-cp
       - name: cp-foundational-services
-        id: github.com/cloud-native-toolkit/terraform-gitops-cp-foundational-services
+        id: >-
+          github.com/cloud-native-toolkit/terraform-gitops-cp-foundational-services
         type: gitops
         softwareProvider: ibm-cp
   - category: sre
@@ -242,6 +243,9 @@ categories:
       - name: gitops-bootstrap
         id: github.com/cloud-native-toolkit/terraform-util-gitops-bootstrap
         displayName: Bootstrap GitOps
+      - name: gitops-ocs-operator
+        id: github.com/cloud-native-toolkit/terraform-gitops-ocs-operator
+        displayName: ocs-operator
   - category: middleware
     categoryName: Middleware
     selection: multiple
