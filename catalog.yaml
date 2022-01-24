@@ -246,6 +246,9 @@ categories:
       - name: gitops-ocs-operator
         id: github.com/cloud-native-toolkit/terraform-gitops-ocs-operator
         displayName: ocs-operator
+      - name: gitops-ibm-ocs
+        id: github.com/cloud-native-toolkit/terraform-gitops-ibm-ocs
+        displayName: ibm-ocs
   - category: middleware
     categoryName: Middleware
     selection: multiple
