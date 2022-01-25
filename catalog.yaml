@@ -27,6 +27,10 @@ categories:
       - name: IBM OpenShift login
         id: github.com/cloud-native-toolkit/terraform-ocp-login
         group: openshift
+      - name: aws-rosa
+        id: github.com/cloud-native-toolkit/terraform-aws-rosa
+        displayName: AWS ROSA
+        cloudProvider: aws
   - category: iam
     categoryName: IAM
     selection: multiple
