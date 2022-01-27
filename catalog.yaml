@@ -354,6 +354,11 @@ categories:
         id: github.com/cloud-native-toolkit/terraform-gitops-cp-event-streams
         displayName: Event Streams
         group: kafka
+      - name: aws-kms
+        id: github.com/cloud-native-toolkit/terraform-aws-kms
+        displayName: AWS KMS
+        group: kms
+        cloudProvider: aws
   - category: databases
     categoryName: Databases
     selection: multiple
