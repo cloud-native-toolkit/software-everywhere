@@ -162,6 +162,11 @@ categories:
         id: github.com/cloud-native-toolkit/terraform-aws-ssh-key
         displayName: AWS SSH Key
         cloudProvider: aws
+      - name: aws-vpn-server
+        id: github.com/cloud-native-toolkit/terraform-aws-vpn-server
+        displayName: AWS VPN Server
+        group: vpn
+        cloudProvider: aws
   - category: infrastructure
     categoryName: Software Infrastructure
     selection: indirect
