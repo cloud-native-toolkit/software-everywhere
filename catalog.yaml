@@ -359,6 +359,9 @@ categories:
         displayName: AWS KMS
         group: kms
         cloudProvider: aws
+      - name: gitops-cp-mq-uniform-cluster
+        id: github.com/cloud-native-toolkit/terraform-gitops-cp-mq-uniform-cluster
+        displayName: CP MQ Uniform Cluster
   - category: databases
     categoryName: Databases
     selection: multiple
