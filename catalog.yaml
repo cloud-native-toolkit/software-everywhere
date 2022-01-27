@@ -341,6 +341,10 @@ categories:
         type: gitops
         group: ldap
         softwareProvider: opensource
+      - name: gitops-cp-event-streams
+        id: github.com/cloud-native-toolkit/terraform-gitops-cp-event-streams
+        displayName: Event Streams
+        group: kafka
   - category: databases
     categoryName: Databases
     selection: multiple
