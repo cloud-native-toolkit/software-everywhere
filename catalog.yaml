@@ -158,6 +158,10 @@ categories:
         displayName: AWS EC2
         group: vsi
         cloudProvider: aws
+      - name: aws-ssh-key
+        id: github.com/cloud-native-toolkit/terraform-aws-ssh-key
+        displayName: AWS SSH Key
+        cloudProvider: aws
   - category: infrastructure
     categoryName: Software Infrastructure
     selection: indirect
