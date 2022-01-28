@@ -10,6 +10,7 @@ Module interfaces can be used in one of two ways:
 - [Cluster](cluster.yaml)
 - [IBM Service](ibm-service.yaml)
 - [Sync](sync.yaml)
+- [IBM VPC Resource](ibm-vpc-resource.yaml)
 
 ## Usage
 

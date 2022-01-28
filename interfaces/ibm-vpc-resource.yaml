@@ -1,0 +1,9 @@
+id: github.com/cloud-native-toolkit/automation-modules#ibm-vpc-resource
+name: ibm-vpc-resource
+outputs:
+  - name: id
+    description: The id of the resource
+    type: string
+  - name: name
+    description: The name of the resource
+    type: string
