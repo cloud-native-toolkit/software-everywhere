@@ -218,7 +218,7 @@ categories:
         type: gitops
         softwareProvider: ibm-cp
       - name: CP4I Dependency Manager
-        id: github.com/cloud-native-toolkit/terraform-cp4i-dependency-management.git
+        id: github.com/cloud-native-toolkit/terraform-cp4i-dependency-management
         type: terraform
   - category: sre
     categoryName: SRE tools
