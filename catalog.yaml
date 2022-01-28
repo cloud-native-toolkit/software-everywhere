@@ -365,6 +365,11 @@ categories:
       - name: gitops-cp-mq-uniform-cluster
         id: github.com/cloud-native-toolkit/terraform-gitops-cp-mq-uniform-cluster
         displayName: CP MQ Uniform Cluster
+      - name: gitops-terraform-gitops-data-virtualization
+        id: github.com/cloud-native-toolkit/terraform-gitops-terraform-gitops-data-virtualization
+        displayName: Data Virtualization
+        softwareProvider: ibm-cp
+    catalogFile: catalog.yaml
   - category: databases
     categoryName: Databases
     selection: multiple
