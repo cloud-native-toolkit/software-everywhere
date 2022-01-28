@@ -32,6 +32,7 @@ yq e '.categories | .[] | .category' "${BASE_DIR}/catalog.yaml" | while read cat
     while read module; do
 
     module_name=$(echo "${module}" | jq -r '.name')
+    module_display_name=$(echo "${module}" | jq -r --arg NAME "${module_name}" '.displayName // $NAME')
     module_id=$(echo "${module}" | jq -r '.id')
     module_group=$(echo "${module}" | jq -r '.group // empty')
     module_type=$(echo "${module}" | jq -r '.type // "terraform"')
@@ -49,7 +50,7 @@ yq e '.categories | .[] | .category' "${BASE_DIR}/catalog.yaml" | while read cat
       type=$(echo "${module_url}" | sed -E "s/.*terraform-([^-]+)-.*/\1/g")
       echo "id: ${module_id}" > "${TMP_DIR}/overlay.yaml"
       echo "group: \"${module_group}\"" >> "${TMP_DIR}/overlay.yaml"
-      echo "displayName: \"${module_name}\"" >> "${TMP_DIR}/overlay.yaml"
+      echo "displayName: \"${module_display_name}\"" >> "${TMP_DIR}/overlay.yaml"
       if [[ -n "${module_aliases}" ]]; then
         echo "aliasIds: [${module_aliases}]" >> "${TMP_DIR}/overlay.yaml"
       fi
