@@ -61,10 +61,25 @@ export class CatalogService {
       _catalog = await this.loadYaml();
     }
 
+    const payload = filterCatalog(_catalog, catalogFilters)
+
     return {
-      payload: filterCatalog(_catalog, catalogFilters),
-      filters: catalogFilters || {}
+      payload,
+      filters: catalogFilters || {},
+      count: this.count(payload),
+      totalCount: this.count(_catalog)
     }
+  }
+
+  count(catalog: CatalogModel): number {
+    return catalog.categories.reduce((total: number, category: CategoryModel) => {
+
+      const categoryTotal: number = category.groups.reduce((groupTotal: number, group: ModuleGroupModel) => {
+        return groupTotal + group.modules.length
+      }, 0)
+
+      return total + categoryTotal
+    }, 0)
   }
 
   async loadYaml(): Promise<CatalogModel> {

@@ -16,6 +16,7 @@ import {
 } from '../../features/catalog/catalogSlice';
 import {Status} from '../../features/status';
 import {Button} from 'carbon-components-react';
+import {CatalogCounts} from '../catalog-counts';
 
 interface CatalogValues {
   catalog?: CatalogModel
@@ -43,6 +44,7 @@ class CatalogInternal extends React.Component<CatalogProps, any> {
           </div>
           <ModeToggle />
         </div>
+        <CatalogCounts />
         <Loading status={this.props.status} />
         {this.renderCatalog()}
       </div>
@@ -74,7 +76,7 @@ class CatalogInternal extends React.Component<CatalogProps, any> {
 
 const mapStateToProps = (state: RootState): CatalogValues => {
 
-  const props = {
+  const props: CatalogValues = {
     catalog: selectCatalog(state),
     filters: selectCatalogFilters(state),
     status: selectCatalogStatus(state)

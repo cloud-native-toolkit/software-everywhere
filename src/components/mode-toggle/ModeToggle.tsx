@@ -1,6 +1,6 @@
 import React from 'react';
 import {connect} from 'react-redux';
-import {Button} from 'carbon-components-react';
+import {Button, ContentSwitcher, ContentSwitcherOnChangeData, Switch} from 'carbon-components-react';
 import {RootState} from '../../app/store';
 import {Mode, selectMode, tableMode, tileMode} from '../../features/mode/modeSlice';
 
@@ -17,11 +17,29 @@ export interface ModeToggleProps extends ModeToggleValues, ModeToggleDispatch {
 }
 
 class ModeToggleInternal extends React.Component<ModeToggleProps, any> {
+  selected(mode: Mode): boolean {
+    const result = mode === this.props.mode
+
+    console.log(`Selected (${mode}): ${result}`)
+
+    return result
+  }
+
+  switchContent(e: ContentSwitcherOnChangeData) {
+    if (e.name === 'table') {
+      this.props.tableMode()
+    } else if (e.name === 'tiles') {
+      this.props.tileMode()
+    }
+  }
+
   render() {
     return (
       <div style={{overflow: 'auto'}}>
-        <div style={{float: 'right'}}><Button kind="tertiary" disabled={this.props.mode === Mode.table} onClick={this.props.tableMode} size={"field"}>Table</Button></div>
-        <div style={{float: 'right'}}><Button kind="tertiary" disabled={this.props.mode === Mode.tiles} onClick={this.props.tileMode} size={"field"}>Tiles</Button></div>
+        <ContentSwitcher onChange={this.switchContent.bind(this)} style={{width: '200px', float: 'right'}}>
+          <Switch name={'table'} text='Table' selected={this.selected(Mode.table)}/>
+          <Switch name={'tiles'} text='Tiles' selected={this.selected(Mode.tiles)}/>
+        </ContentSwitcher>
       </div>
     )
   }

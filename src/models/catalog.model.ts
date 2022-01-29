@@ -11,6 +11,8 @@ export interface CatalogFiltersModel {
 export interface CatalogResultModel {
   payload: CatalogModel;
   filters?: CatalogFiltersModel;
+  totalCount: number;
+  count: number;
 }
 
 export interface CatalogModel {
