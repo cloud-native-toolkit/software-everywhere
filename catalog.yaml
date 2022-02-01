@@ -221,6 +221,9 @@ categories:
       - name: CP4I Dependency Manager
         id: github.com/cloud-native-toolkit/terraform-cp4i-dependency-management
         type: terraform
+      - name: gitops-cp-truststore
+        id: github.com/cloud-native-toolkit/terraform-gitops-cp-truststore
+        displayName: CP TrustStore
   - category: sre
     categoryName: SRE tools
     selection: multiple
@@ -367,7 +370,8 @@ categories:
         id: github.com/cloud-native-toolkit/terraform-gitops-cp-mq-uniform-cluster
         displayName: CP MQ Uniform Cluster
       - name: gitops-terraform-gitops-data-virtualization
-        id: github.com/cloud-native-toolkit/terraform-gitops-terraform-gitops-data-virtualization
+        id: >-
+          github.com/cloud-native-toolkit/terraform-gitops-terraform-gitops-data-virtualization
         displayName: Data Virtualization
         softwareProvider: ibm-cp
     catalogFile: catalog.yaml
