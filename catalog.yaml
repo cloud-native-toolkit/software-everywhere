@@ -347,11 +347,6 @@ categories:
         type: gitops
         softwareProvider: ibm-cp
         group: odm
-      - name: IBM Sterling Order Management
-        id: github.com/cloud-native-toolkit/terraform-gitops-cp-sterling
-        type: gitops
-        group: sterling
-        softwareProvider: ibm-cp
       - name: OpenLDAP
         id: github.com/cloud-native-toolkit/terraform-gitops-openldap
         type: gitops
