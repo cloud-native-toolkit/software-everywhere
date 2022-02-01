@@ -171,6 +171,10 @@
           "type": "boolean",
           "description": "Flag to indicate that the variable is optional"
         },
+        "important": {
+          "type": "boolean",
+          "description": "Flag to indicate that the variable is important and should be bubbled up to the global namespace"
+        },
         "default": {
           "description": "The default value for the variable"
         },
