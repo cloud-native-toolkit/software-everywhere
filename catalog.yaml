@@ -516,6 +516,9 @@ categories:
       - name: gitops-turbonomic
         id: github.com/cloud-native-toolkit/terraform-gitops-ocp-turbonomic
         group: turbonomic
+      - name: gitops-cp-watson-studio
+        id: github.com/cloud-native-toolkit/terraform-gitops-cp-watson-studio
+        displayName: CP Watson Studio
   - category: util
     categoryName: Utilities
     selection: multiple
