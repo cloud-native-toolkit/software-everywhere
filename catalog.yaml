@@ -369,6 +369,9 @@ categories:
           github.com/cloud-native-toolkit/terraform-gitops-terraform-gitops-data-virtualization
         displayName: Data Virtualization
         softwareProvider: ibm-cp
+      - name: gitops-cp-sterling-oms
+        id: github.com/cloud-native-toolkit/terraform-gitops-cp-sterling-oms
+        displayName: CP Sterling Order Management
     catalogFile: catalog.yaml
   - category: databases
     categoryName: Databases
