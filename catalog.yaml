@@ -447,6 +447,11 @@ categories:
           github.com/cloud-native-toolkit/terraform-gitops-cp-watson-knowledge-catalog
         displayName: Watson Knowledge Catalog
         softwareProvider: ibm-cp
+      - name: gitops-cp-watson-machine-learning
+        id: >-
+          github.com/cloud-native-toolkit/terraform-gitops-cp-watson-machine-learning
+        displayName: Watson Machine Learning
+        softwareProvider: ibm-cp
   - category: dev-tool
     categoryName: Dev Tools
     selection: multiple
