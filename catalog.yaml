@@ -438,6 +438,10 @@ categories:
         id: github.com/cloud-native-toolkit/terraform-ibm-watson-studio
         group: watson-studio
         cloudProvider: ibm
+      - name: gitops-cp-bas
+        id: github.com/cloud-native-toolkit/terraform-gitops-cp-bas
+        displayName: CP Behavior Analytics Service
+        softwareProvider: ibm-cp
   - category: dev-tool
     categoryName: Dev Tools
     selection: multiple
