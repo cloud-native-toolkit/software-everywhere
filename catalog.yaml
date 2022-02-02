@@ -426,6 +426,11 @@ categories:
       - name: Portworx on IBM Cloud
         id: github.com/cloud-native-toolkit/terraform-portworx
         cloudProvider: ibm
+      - name: aws-s3-instance
+        id: github.com/cloud-native-toolkit/terraform-aws-s3-instance
+        displayName: AWS S3 Instance
+        group: object-storage
+        cloudProvider: aws
   - category: ai-ml
     categoryName: AI/ML
     selection: multiple
