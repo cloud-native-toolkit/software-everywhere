@@ -431,6 +431,11 @@ categories:
         displayName: AWS S3 Instance
         group: object-storage
         cloudProvider: aws
+      - name: aws-s3-bucket
+        id: github.com/cloud-native-toolkit/terraform-aws-s3-bucket
+        displayName: AWS S3 Bucket
+        group: object-storage-bucket
+        cloudProvider: aws
   - category: ai-ml
     categoryName: AI/ML
     selection: multiple
