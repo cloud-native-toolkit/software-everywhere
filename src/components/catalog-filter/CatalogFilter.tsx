@@ -17,6 +17,7 @@ interface CatalogFilterValues {
 
 interface CatalogFilterDispatch {
   fetchCatalogList: () => void
+  filterByCategory: (props: CatalogFilterProps, value: string) => void
   filterByCloudProvider: (props: CatalogFilterProps, value: string) => void
   filterBySoftwareProvider: (props: CatalogFilterProps, value: string) => void
   filterByModuleType: (props: CatalogFilterProps, value: string) => void
@@ -36,6 +37,15 @@ class CatalogFilterInternal extends React.Component<CatalogFilterProps, any> {
     return (
       <div className="CatalogFilter">
         <div className="FormElement">
+          <Select
+            id="categories"
+            helperText="Filter by category"
+            defaultValue={this.props.catalogFilters?.category || ''}
+            labelText="Category"
+            onChange={(e) => this.props.filterByCategory(this.props, e.target.value)}
+          >
+            {this.selectItems(this.props.catalogList.categoryValues)}
+          </Select>
           <Select
             defaultValue={this.props.catalogFilters?.cloudProvider || ''}
             helperText="Filter by a cloud provider"
@@ -154,6 +164,7 @@ const dispatchCatalogList = (dispatch: any) => {
 const mapDispatchToProps = (dispatch: any): CatalogFilterDispatch => {
   return {
     fetchCatalogList: dispatchCatalogList(dispatch),
+    filterByCategory: dispatchFilterBy('category', dispatch),
     filterByCloudProvider: dispatchFilterBy('cloudProvider', dispatch),
     filterBySoftwareProvider: dispatchFilterBy('softwareProvider', dispatch),
     filterByModuleType: dispatchFilterBy('moduleType', dispatch),

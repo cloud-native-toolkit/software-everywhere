@@ -10,7 +10,13 @@ import {
   moduleType
 } from '../../models';
 import first from '../../util/first';
-import {addSoftwareProvider, buildCatalogList, CatalogListModel} from '../../models/catalog-list.model';
+import {
+  addSoftwareProvider,
+  buildCatalogList,
+  CatalogListModel,
+  ListValue,
+  withCategories
+} from '../../models/catalog-list.model';
 
 let _catalog: CatalogModel;
 
@@ -51,11 +57,10 @@ export class CatalogService {
       return result;
     }, buildCatalogList())
 
-    return catalogList
+    return withCategories(catalogList, catalog.categories)
   }
 
   async fetch(catalogFilters?: CatalogFiltersModel): Promise<CatalogResultModel> {
-    const cloudProvider = catalogFilters?.cloudProvider
 
     if (!_catalog) {
       _catalog = await this.loadYaml();
@@ -145,18 +150,26 @@ const filterCatalog = (catalog: CatalogModel, filters?: CatalogFiltersModel): Ca
     return catalog
   }
 
-  return {
+  const result = {
     categories: filterCategories(filters, catalog.categories)
   }
+
+  console.log('Filtered result: ', result)
+
+  return result
 }
 
 const filterCategories = (filters: CatalogFiltersModel, categories: CategoryModel[]): CategoryModel[] => {
-  return categories.map(c => {
-    return {
-      name: c.name,
-      groups: filterModuleGroups(filters, c.groups)
-    }
-  })
+  return categories
+    .filter(c => {
+      return !filters.category || filters.category === c.name
+    })
+    .map(c => {
+      return {
+        name: c.name,
+        groups: filterModuleGroups(filters, c.groups)
+      }
+    })
 }
 
 const filterModuleGroups = (filters: CatalogFiltersModel, groups: ModuleGroupModel[]): ModuleGroupModel[] => {
@@ -194,13 +207,15 @@ const filterModule = (filters: CatalogFiltersModel) => {
     return Object.keys(filters).every(key => {
       // @ts-ignore
       const filter = filters[key]
+      // @ts-ignore
+      const filterFunction = filterFunctions[key]
 
-      if (!filter) {
+      if (!filter || !filterFunction) {
         return true
       }
 
       // @ts-ignore
-      return filterFunctions[key](filter, module)
+      return filterFunction(filter, module)
     })
   }
 }

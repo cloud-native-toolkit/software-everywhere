@@ -35,12 +35,10 @@ class ModeToggleInternal extends React.Component<ModeToggleProps, any> {
 
   render() {
     return (
-      <div style={{overflow: 'auto'}}>
-        <ContentSwitcher onChange={this.switchContent.bind(this)} style={{width: '200px', float: 'right'}}>
-          <Switch name={'table'} text='Table' selected={this.selected(Mode.table)}/>
-          <Switch name={'tiles'} text='Tiles' selected={this.selected(Mode.tiles)}/>
-        </ContentSwitcher>
-      </div>
+      <ContentSwitcher onChange={this.switchContent.bind(this)} style={{width: '200px'}}>
+        <Switch name={'table'} text='Table' selected={this.selected(Mode.table)}/>
+        <Switch name={'tiles'} text='Tiles' selected={this.selected(Mode.tiles)}/>
+      </ContentSwitcher>
     )
   }
 }

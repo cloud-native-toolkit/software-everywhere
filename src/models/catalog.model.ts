@@ -6,6 +6,7 @@ export interface CatalogFiltersModel {
   softwareProvider?: string;
   searchText?: string;
   status?: string;
+  category?: string;
 }
 
 export interface CatalogResultModel {

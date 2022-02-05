@@ -17,7 +17,7 @@ const headers: HeaderData<EnhancedModuleModel>[] = [{
   key: 'displayName'
 }, {
   header: 'Name',
-  key: 'name'
+  key: 'link'
 }, {
   header: 'Group',
   key: 'group'
@@ -34,8 +34,8 @@ const headers: HeaderData<EnhancedModuleModel>[] = [{
   header: 'Provider',
   key: 'provider'
 }, {
-  header: 'Url',
-  key: 'link'
+  header: 'Build',
+  key: 'buildBadge'
 }];
 
 interface ModuleTableProps {
@@ -49,6 +49,7 @@ interface EnhancedModuleModel extends ModuleModel {
   link: any;
   provider: string;
   latestVersion: string;
+  buildBadge: any;
 }
 
 export class ModuleGroupTable extends React.Component<ModuleTableProps, any> {
@@ -68,7 +69,8 @@ export class ModuleGroupTable extends React.Component<ModuleTableProps, any> {
               type: moduleType(m),
               link: this.moduleLink(m),
               provider: moduleProvider(m),
-              latestVersion: moduleLatestVersion(m)
+              latestVersion: moduleLatestVersion(m),
+              buildBadge: this.moduleBuildBadge(m)
             }
           ))
         )
@@ -79,8 +81,14 @@ export class ModuleGroupTable extends React.Component<ModuleTableProps, any> {
     );
   }
 
+  moduleBuildBadge(module: ModuleModel) {
+    return (
+      <img src={`${moduleUrl(module)}/actions/workflows/verify.yaml/badge.svg`} />
+    )
+  }
+
   moduleLink(module: ModuleModel) {
-    return (<ModuleLink module={module} />)
+    return (<ModuleLink module={module} label={module.name} />)
   }
 
   get title(): string {

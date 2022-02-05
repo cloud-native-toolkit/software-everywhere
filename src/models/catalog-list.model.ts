@@ -1,4 +1,5 @@
 import {capitalize} from '../util/string-util';
+import {CategoryModel} from './category.model';
 
 export interface ListValue {
   text: string;
@@ -10,6 +11,7 @@ export interface CatalogListModel {
   softwareProviderValues: ListValue[];
   moduleTypeValues: ListValue[];
   statusValues: ListValue[];
+  categoryValues: ListValue[];
 }
 
 export const buildCatalogList = (): CatalogListModel => {
@@ -34,6 +36,9 @@ export const buildCatalogList = (): CatalogListModel => {
     softwareProviderValues: [
       {text: 'All providers', value: ''},
       {text: 'IBM Cloud Pak', value: 'ibm-cp'}
+    ],
+    categoryValues: [
+      {text: 'All categories', value: ''}
     ]
   }
 }
@@ -46,54 +51,26 @@ export const addSoftwareProvider = (catalogList: CatalogListModel, value: string
   catalogList.softwareProviderValues.push({value, text: capitalize(text || value)});
 }
 
-
-export class CatalogList1 implements CatalogListModel {
-  cloudProviderValues: ListValue[] = [];
-  softwareProviderValues: ListValue[] = [];
-  moduleTypeValues: ListValue[] = [];
-  statusValues: ListValue[] = [];
-
-  constructor() {
-    this.cloudProviderValues = [
-      {text: 'All providers', value: ''},
-      {text: 'IBM', value: 'ibm'},
-      {text: 'AWS', value: 'aws'},
-      {text: 'Azure', value: 'azure'}
-    ]
-
-    this.moduleTypeValues = [
-      {text: 'All types', value: ''},
-      {text: 'Terraform', value: 'terraform'},
-      {text: 'GitOps', value: 'gitops'}
-    ]
-
-    this.statusValues = [
-      {text: 'All statuses', value: ''},
-      {text: 'Released', value: 'released'},
-      {text: 'Beta', value: 'beta'},
-      {text: 'Pending', value: 'pending'}
-    ]
-
-    this.softwareProviderValues = [
-      {text: 'All providers', value: ''},
-      {text: 'IBM Cloud Pak', value: 'ibm-cp'}
-    ]
+export const withCategories = (catalogList: CatalogListModel, categories: CategoryModel[]): CatalogListModel => {
+  if (!categories || categories.length === 0) {
+    return catalogList
   }
 
-  addSoftwareProvider(value: string, text?: string) {
-    if (this.softwareProviderValues.map(v => v.value).includes(value)) {
-      return;
+  const categoryValues: ListValue[] = categories.reduce((result: ListValue[], category: CategoryModel) => {
+    const listValue: ListValue = {text: category.displayName || category.name, value: category.name}
+
+    if (!result.map(l => l.value).includes(listValue.value)) {
+      result.push(listValue)
     }
 
-    this.softwareProviderValues.push({value, text: capitalize(text || value)});
-  }
+    return result
+  }, catalogList.categoryValues.slice())
 
-  asValues(): CatalogListModel {
-    return {
-      cloudProviderValues: this.cloudProviderValues,
-      softwareProviderValues: this.softwareProviderValues,
-      moduleTypeValues: this.moduleTypeValues,
-      statusValues: this.statusValues
+  return Object.assign(
+    {},
+    catalogList,
+    {
+      categoryValues
     }
-  }
+  )
 }

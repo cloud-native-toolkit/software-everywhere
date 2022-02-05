@@ -26,11 +26,11 @@ class ModuleInternal extends React.Component<ModuleProps, any> {
       <Tile className="Module">
         {this.badge()}
         <div className="TileRow"><span className="Label">{this.moduleDisplayName}</span></div>
-        <div className="TileRow"><span className="Label">Name:</span> {this.moduleName}</div>
+        <div className="TileRow"><span className="Label">Name:</span> {this.moduleLink}</div>
         <div className="TileRow"><span className="Label">Type:</span> {this.moduleType}</div>
         <div className="TileRow"><span className="Label">Status:</span> {this.moduleStatus}</div>
         <div className="TileRow"><span className="Label">Latest version:</span> {this.moduleLatestVersion}</div>
-        <div className="TileRow">{this.moduleLink}</div>
+        <div className="TileRow">{this.moduleBuildBadge}</div>
       </Tile>
     );
   }
@@ -70,7 +70,13 @@ class ModuleInternal extends React.Component<ModuleProps, any> {
   }
 
   get moduleLink() {
-    return (<ModuleLink module={this.props.module} />)
+    return (<ModuleLink module={this.props.module} label={this.props.module.name}/>)
+  }
+
+  get moduleBuildBadge() {
+    return (
+      <img src={`${moduleUrl(this.props.module)}/actions/workflows/verify.yaml/badge.svg`} />
+    )
   }
 }
 

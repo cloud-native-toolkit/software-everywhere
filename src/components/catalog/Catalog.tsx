@@ -15,7 +15,7 @@ import {
   selectCatalogStatus
 } from '../../features/catalog/catalogSlice';
 import {Status} from '../../features/status';
-import {Button} from 'carbon-components-react';
+import {Button, Column, Grid, Row} from 'carbon-components-react';
 import {CatalogCounts} from '../catalog-counts';
 
 interface CatalogValues {
@@ -36,15 +36,23 @@ class CatalogInternal extends React.Component<CatalogProps, any> {
   render() {
     return (
       <div className="Catalog">
-        <div className="ButtonRow">
-          <div style={{float: 'left'}}>
-          <a
-            href="https://github.com/cloud-native-toolkit/automation-modules/issues/new?labels=new_module&template=new-module.md&title=Request+new+module%3A+%7Bname%7D"
-            target="_blank"><Button size="field">Request new module</Button></a>
-          </div>
-          <ModeToggle />
-        </div>
-        <CatalogCounts />
+        <Grid style={{paddingTop: '10px', paddingBottom: '10px', paddingLeft: 0, paddingRight: 0}}>
+          <Row>
+            <Column>
+              <a
+                href="https://github.com/cloud-native-toolkit/automation-modules/issues/new?labels=new_module&template=new-module.md&title=Request+new+module%3A+%7Bname%7D"
+                target="_blank"><Button size="field">Request new module</Button></a>
+            </Column>
+            <Column>
+              <CatalogCounts />
+            </Column>
+            <Column>
+              <div style={{float: 'right'}}>
+                <ModeToggle />
+              </div>
+            </Column>
+          </Row>
+        </Grid>
         <Loading status={this.props.status} />
         {this.renderCatalog()}
       </div>

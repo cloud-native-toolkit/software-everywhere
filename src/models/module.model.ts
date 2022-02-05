@@ -1,5 +1,6 @@
 import first from '../util/first';
 import {SemanticVersion, semanticVersionDescending, semanticVersionFromString} from '../util/semantic-version';
+import React from 'react';
 
 export interface ModuleModel {
   displayName?: string

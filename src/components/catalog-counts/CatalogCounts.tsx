@@ -11,7 +11,7 @@ export interface CatalogCountProps {
 
 class CatalogCountsInternal extends React.Component<CatalogCountProps, any> {
 
-  countView() {
+  render() {
     if (this.props.count === undefined || this.props.totalCount === undefined) {
       return (
         <>&nbsp;</>
@@ -27,19 +27,9 @@ class CatalogCountsInternal extends React.Component<CatalogCountProps, any> {
     }
 
     return (
-      <>
-        <div><div style={{fontWeight: 'bold', float: 'left'}}>Modules:</div> <div style={{width: '75px', float: 'left', paddingLeft: '10px'}}>{moduleCount()}</div></div>
-      </>
-    )
-  }
-
-  render() {
-
-    return (
-      <div style={{overflow: 'auto', width: '100%'}}>
-        <div style={{float: 'right'}}>
-          {this.countView()}
-        </div>
+      <div style={{paddingTop: '10px', margin: 'auto', width: '160px'}}>
+        <div style={{fontWeight: 'bold', width: '75px', float: 'left', paddingRight: '5px', fontSize: 'large', textAlign: 'right'}}>{moduleCount()}</div>
+        <div style={{float: 'left', fontSize: 'large'}}>modules</div>
       </div>
     )
   }
