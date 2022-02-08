@@ -27,8 +27,8 @@ class CatalogCountsInternal extends React.Component<CatalogCountProps, any> {
     }
 
     return (
-      <div style={{paddingTop: '10px', margin: 'auto', width: '200px'}}>
-        <div style={{fontWeight: 'bold', width: '100px', float: 'left', paddingRight: '5px', fontSize: 'x-large', textAlign: 'right'}}>{moduleCount()}</div>
+      <div style={{paddingTop: '10px', margin: 'auto', width: '225px'}}>
+        <div style={{fontWeight: 'bold', width: '125px', float: 'left', paddingRight: '5px', fontSize: 'x-large', textAlign: 'right'}}>{moduleCount()}</div>
         <div style={{float: 'left', fontSize: 'x-large'}}>modules</div>
       </div>
     )
