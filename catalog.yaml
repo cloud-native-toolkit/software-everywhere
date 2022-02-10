@@ -380,6 +380,12 @@ categories:
       - name: MongoDB on OCP
         id: github.com/cloud-native-toolkit/terraform-ocp-mongodb
         group: mongodb
+      - name: MongoDB Operator
+        id: github.com/cloud-native-toolkit/terraform-gitops-mongo-ce-operator
+        group: mongodb
+      - name: MongoDB Instance
+        id: github.com/cloud-native-toolkit/terraform-gitops-mongo-ce
+        group: mongodb
       - name: Hyper Protect DBaaS PostgreSQL
         id: github.com/cloud-native-toolkit/terraform-ibm-hpdbaas-postgresql
         group: postgresql
