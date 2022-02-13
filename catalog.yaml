@@ -376,6 +376,10 @@ categories:
       - name: gitops-cp-sterling-oms
         id: github.com/cloud-native-toolkit/terraform-gitops-cp-sterling-oms
         displayName: CP Sterling Order Management
+      - name: Maximo Application Suite
+        id: github.com/cloud-native-toolkit/terraform-gitops-cp-maximo
+        group: maximo
+        softwareProvider: ibm-cp
     catalogFile: catalog.yaml
   - category: databases
     categoryName: Databases
