@@ -5,6 +5,7 @@ There are two major schemas (with a number of sub-types) that define the automat
 - Module
 - Catalog
 - Interface
+- Provider
 
 ## Schemas
 
@@ -25,6 +26,12 @@ The catalog schema defines the collection of module metadata, organized into cat
 The interface schema defines the metadata for an interface that can be used as a marker to identify similar modules and to enforce/validate required inputs and outputs across a set of modules. It contains a `name` and `id` to identify the module and optional `variables` and `outputs` arrays to describe the inputs and outputs that define the interface.
 
 [Interface schema](interface.json)
+
+### Provider
+
+The provider schema defines the metadata for a terraform provider.
+
+[Provider schema](provider.json)
 
 ## Usage
 

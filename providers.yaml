@@ -1,0 +1,18 @@
+providers:
+  - name: ibm
+    source: ibm-cloud/ibm
+    variables:
+      - name: ibmcloud_api_key
+        scope: global
+      - name: region
+  - name: gitops
+    source: cloud-native-toolkit/gitops
+    dependencies:
+      - id: clis
+        refs:
+          - source: github.com/cloud-native-toolkit/terraform-util-clis.git
+    variables:
+      - name: bin_dir
+        moduleRef:
+          id: clis
+          output: bin_dir

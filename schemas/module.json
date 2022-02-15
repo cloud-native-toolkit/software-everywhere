@@ -9,6 +9,16 @@
       "type": "string",
       "description": "The identifier of the module"
     },
+    "kind": {
+      "type": "string",
+      "description": "The CR kind",
+      "pattern": "Module"
+    },
+    "apiVersion": {
+      "type": "string",
+      "description": "The CR group and version",
+      "pattern": "cloudnativetoolkit.dev/[a-z0-9]+"
+    },
     "name": {
       "type": "string",
       "description": "The unique name of the module",

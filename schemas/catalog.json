@@ -4,11 +4,28 @@
   "type": "object",
   "required": ["categories"],
   "properties": {
+    "kind": {
+      "type": "string",
+      "description": "The CR kind",
+      "pattern": "Catalog"
+    },
+    "apiVersion": {
+      "type": "string",
+      "description": "The CR group and version",
+      "pattern": "cloudnativetoolkit.dev/[a-z0-9]+"
+    },
     "categories": {
       "type": "array",
       "description": "List of categories of the modules",
       "items": {
         "$ref": "#/$defs/category"
+      }
+    },
+    "providers": {
+      "type": "array",
+      "description": "List of providers that might be used by the modules",
+      "items": {
+        "$ref": "#/$defs/provider"
       }
     }
   },
@@ -81,9 +98,38 @@
         }
       }
     },
-    "providers": {
+    "provider": {
       "type": "object",
       "description": "Terraform provider definition",
+      "required": ["name"],
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "The provider name"
+        },
+        "source": {
+          "type": "string",
+          "description": "The source identifier for the provider"
+        },
+        "dependencies": {
+          "type": "array",
+          "description": "Module dependencies for the provider",
+          "items": {
+            "$ref": "#/$defs/module-dependency"
+          }
+        },
+        "variables": {
+          "type": "array",
+          "description": "Variables needed for the provider",
+          "items": {
+            "$ref": "#/$defs/module-variable"
+          }
+        }
+      }
+    },
+    "provider-ref": {
+      "type": "object",
+      "description": "Terraform provider reference definition",
       "required": ["name"],
       "properties": {
         "name": {
@@ -157,7 +203,7 @@
           "type": "array",
           "description": "Required terraform providers for the module",
           "items": {
-            "$ref": "#/$defs/providers"
+            "$ref": "#/$defs/provider-ref"
           }
         },
         "dependencies": {

@@ -90,12 +90,13 @@ done
 rm -f "${DEST_DIR}/index.yaml"
 
 echo "Touching ${DEST_DIR}/index.yaml"
-yq eval --null-input '{"categories": []}' > "${DEST_DIR}/index.yaml"
+echo '{"apiVersion": "cloudnativetoolkit.dev/v1alpha1", "kind": "Catalog", "categories": []}' | \
+ yq ea 'select(fileIndex == 0) *+ select(fileIndex == 1)' - "${BASE_DIR}/providers.yaml" > "${DEST_DIR}/index.yaml"
 
 rm -f "${DEST_DIR}/summary.yaml"
 
 echo "Touching ${DEST_DIR}/summary.yaml"
-yq eval --null-input '{"categories": []}' > "${DEST_DIR}/summary.yaml"
+cp "${DEST_DIR}/index.yaml" "${DEST_DIR}/summary.yaml"
 
 echo "Merging categories"
 
