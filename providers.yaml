@@ -5,6 +5,7 @@ providers:
       - name: ibmcloud_api_key
         scope: global
       - name: region
+        scope: global
   - name: gitops
     source: cloud-native-toolkit/gitops
     dependencies:
