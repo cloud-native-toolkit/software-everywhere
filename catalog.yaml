@@ -386,6 +386,11 @@ categories:
         id: github.com/cloud-native-toolkit/terraform-gitops-cp-maximo
         group: maximo
         softwareProvider: ibm-cp
+      - name: gitops-cp-odm
+        id: github.com/cloud-native-toolkit/terraform-gitops-cp-odm
+        displayName: IBM ODM
+        group: odm
+        softwareProvider: ibm-cp
     catalogFile: catalog.yaml
   - category: databases
     categoryName: Databases
