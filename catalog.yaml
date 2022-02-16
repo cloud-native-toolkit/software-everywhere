@@ -227,6 +227,9 @@ categories:
       - name: gitops-cp4s
         id: github.com/cloud-native-toolkit/terraform-gitops-cp4s
         displayName: Cloud Pak for Security
+      - name: gitops-cp4ba-operator
+        id: github.com/cloud-native-toolkit/terraform-gitops-cp4ba-operator
+        displayName: Cloud Pak for Business Automation operator
   - category: sre
     categoryName: SRE tools
     selection: multiple
