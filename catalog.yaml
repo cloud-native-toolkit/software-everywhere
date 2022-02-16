@@ -224,6 +224,9 @@ categories:
       - name: gitops-cp-truststore
         id: github.com/cloud-native-toolkit/terraform-gitops-cp-truststore
         displayName: CP TrustStore
+      - name: gitops-cp4s
+        id: github.com/cloud-native-toolkit/terraform-gitops-cp4s
+        displayName: Cloud Pak for Security
   - category: sre
     categoryName: SRE tools
     selection: multiple
