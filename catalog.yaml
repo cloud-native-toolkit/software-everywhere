@@ -42,6 +42,10 @@ categories:
         id: github.com/cloud-native-toolkit/terraform-ibm-resource-group
         group: resource-group
         cloudProvider: ibm
+      - name: Azure Resource Group
+        id: github.com/cloud-native-toolkit/terraform-azure-resource-group
+        group: resource-group
+        cloudProvider: azure
       - name: IBM Account Access Group
         id: github.com/cloud-native-toolkit/terraform-ibm-account-access-group
         group: access-group
