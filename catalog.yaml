@@ -230,6 +230,10 @@ categories:
       - name: gitops-cp4ba-operator
         id: github.com/cloud-native-toolkit/terraform-gitops-cp4ba-operator
         displayName: Cloud Pak for Business Automation operator
+      - name: gitops-cp-ban-operator
+        id: github.com/cloud-native-toolkit/terraform-gitops-cp-ban-operator
+        displayName: IBM Business Automation Navigator and UMS operator
+        softwareProvider: ibm-cp
   - category: sre
     categoryName: SRE tools
     selection: multiple
