@@ -1,4 +1,24 @@
 providers:
+  - name: azure
+    source: "hashicorp/azurerm"
+    variables:
+      - name: subscription_id
+        scope: global
+      - name: client_id
+        scope: global
+      - name: client_secret
+        scope: global
+      - name: tenant_id
+        scope: global
+  - name: aws
+    source: "hashicorp/aws"
+    variables:
+      - name: region
+        scope: global
+      - name: access_key
+        scope: global
+      - name: secret_key
+        scope: global
   - name: ibm
     source: ibm-cloud/ibm
     variables:
