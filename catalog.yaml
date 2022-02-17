@@ -234,6 +234,11 @@ categories:
         id: github.com/cloud-native-toolkit/terraform-gitops-cp-ban-operator
         displayName: IBM Business Automation Navigator and UMS operator
         softwareProvider: ibm-cp
+      - name: IBM DB2 OLTP
+        id: github.com/cloud-native-toolkit/terraform-gitops-cp-db2-oltp
+        group: gitops-cp-db2-oltp
+        type: gitops
+        softwareProvider: ibm-cp
   - category: sre
     categoryName: SRE tools
     selection: multiple
