@@ -409,6 +409,11 @@ categories:
         displayName: IBM ODM
         group: odm
         softwareProvider: ibm-cp
+      - name: gitops-cp-apic
+        id: github.com/cloud-native-toolkit/terraform-gitops-cp-apic
+        displayName: Api Connect Instance
+        group: api-management
+        softwareProvider: ibm-cp
     catalogFile: catalog.yaml
   - category: databases
     categoryName: Databases
