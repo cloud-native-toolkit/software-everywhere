@@ -356,7 +356,7 @@ categories:
         type: gitops
         group: mq
       - name: Cloud Pak API Connect Operator
-        id: github.com/cloud-native-toolkit/terraform-gitops-cp-apic
+        id: github.com/cloud-native-toolkit/terraform-gitops-cp-apic-operator
         group: api-connect
         softwareProvider: ibm-cp
         type: gitops
