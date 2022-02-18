@@ -31,6 +31,7 @@ categories:
         id: github.com/cloud-native-toolkit/terraform-aws-rosa
         displayName: AWS ROSA
         cloudProvider: aws
+        group: openshift
   - category: iam
     categoryName: IAM
     selection: multiple
