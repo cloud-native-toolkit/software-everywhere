@@ -172,6 +172,11 @@ categories:
         displayName: AWS VPN Server
         group: vpn
         cloudProvider: aws
+      - name: azure-vpc-subnets
+        id: github.com/cloud-native-toolkit/terraform-azure-vpc-subnets
+        displayName: Azure VPC Subnets
+        group: vpc-subnets
+        cloudProvider: azure
   - category: infrastructure
     categoryName: Software Infrastructure
     selection: indirect
