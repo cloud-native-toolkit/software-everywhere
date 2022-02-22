@@ -178,6 +178,11 @@ categories:
         displayName: Azure VPC Subnets
         group: vpc-subnets
         cloudProvider: azure
+      - name: aws-internet-gateway
+        id: github.com/cloud-native-toolkit/terraform-aws-internet-gateway
+        displayName: AWS Internet Gateway
+        group: vpc-gateways
+        cloudProvider: aws
   - category: infrastructure
     categoryName: Software Infrastructure
     selection: indirect
