@@ -420,6 +420,11 @@ categories:
         displayName: Api Connect Instance
         group: api-management
         softwareProvider: ibm-cp
+      - name: gitops-cp-ace-designer
+        id: github.com/cloud-native-toolkit/terraform-gitops-cp-ace-designer
+        displayName: ACE Designer
+        group: ace-designer
+        softwareProvider: ibm-cp
     catalogFile: catalog.yaml
   - category: databases
     categoryName: Databases
