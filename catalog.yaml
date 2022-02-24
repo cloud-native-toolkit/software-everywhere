@@ -395,9 +395,15 @@ categories:
         displayName: AWS KMS
         group: kms
         cloudProvider: aws
+      - name: gitops-cp-queue-manager
+        id: github.com/cloud-native-toolkit/terraform-gitops-cp-queue-manager
+        displayName: MQ Queue Manager
+        group: queue-manager
+        softwareProvider: ibm-cp
       - name: gitops-cp-mq-uniform-cluster
         id: github.com/cloud-native-toolkit/terraform-gitops-cp-mq-uniform-cluster
         displayName: CP MQ Uniform Cluster
+        softwareProvider: ibm-cp
       - name: gitops-terraform-gitops-data-virtualization
         id: >-
           github.com/cloud-native-toolkit/terraform-gitops-terraform-gitops-data-virtualization
