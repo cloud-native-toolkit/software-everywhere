@@ -436,6 +436,10 @@ categories:
         displayName: ACE Designer
         group: ace-designer
         softwareProvider: ibm-cp
+      - name: gitops-cp-datapower
+        id: github.com/cloud-native-toolkit/terraform-gitops-cp-datapower
+        displayName: DataPower
+        softwareProvider: ibm-cp
     catalogFile: catalog.yaml
   - category: databases
     categoryName: Databases
