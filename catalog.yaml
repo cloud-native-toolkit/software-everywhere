@@ -498,7 +498,7 @@ categories:
       - name: storageclass
         id: github.com/cloud-native-toolkit/terraform-gitops-ocp-storageclass
       - name: Portworx on IBM Cloud
-        id: github.com/cloud-native-toolkit/terraform-portworx
+        id: github.com/cloud-native-toolkit/terraform-ibm-portworx
         cloudProvider: ibm
       - name: aws-s3-instance
         id: github.com/cloud-native-toolkit/terraform-aws-s3-instance
@@ -510,7 +510,7 @@ categories:
         displayName: AWS S3 Bucket
         group: object-storage-bucket
         cloudProvider: aws
-      - name: terraform-aws-portworx
+      - name: Portworx on AWS
         id: github.com/cloud-native-toolkit/terraform-aws-portworx
         displayName: terraform-aws-portworx
   - category: ai-ml
