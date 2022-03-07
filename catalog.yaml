@@ -513,6 +513,10 @@ categories:
       - name: Portworx on AWS
         id: github.com/cloud-native-toolkit/terraform-aws-portworx
         displayName: terraform-aws-portworx
+      - name: azure-portworx
+        id: github.com/cloud-native-toolkit/terraform-azure-portworx
+        displayName: azure-portworx
+        cloudProvider: azure
   - category: ai-ml
     categoryName: AI/ML
     selection: multiple
