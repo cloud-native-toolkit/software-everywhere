@@ -501,6 +501,7 @@ categories:
         displayName: Portworx on IBM Cloud
         id: github.com/cloud-native-toolkit/terraform-ibm-portworx
         cloudProvider: ibm
+        group: portworx
       - name: aws-s3-instance
         id: github.com/cloud-native-toolkit/terraform-aws-s3-instance
         displayName: AWS S3 Instance
@@ -514,10 +515,12 @@ categories:
       - name: aws-portworx
         displayName: Portworx on AWS
         id: github.com/cloud-native-toolkit/terraform-aws-portworx
+        group: portworx
       - name: azure-portworx
         id: github.com/cloud-native-toolkit/terraform-azure-portworx
         displayName: Portworx on Azure
         cloudProvider: azure
+        group: portworx
   - category: ai-ml
     categoryName: AI/ML
     selection: multiple
