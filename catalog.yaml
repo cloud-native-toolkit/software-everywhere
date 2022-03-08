@@ -444,6 +444,10 @@ categories:
         id: github.com/cloud-native-toolkit/terraform-gitops-cp-datapower
         displayName: DataPower
         softwareProvider: ibm-cp
+      - name: gitops-cp-aspera-operator
+        id: github.com/cloud-native-toolkit/terraform-gitops-cp-aspera-operator
+        displayName: Aspera operator
+        softwareProvider: ibm-cp
     catalogFile: catalog.yaml
   - category: databases
     categoryName: Databases
