@@ -192,6 +192,10 @@ categories:
         displayName: AWS NAT Gateway
         group: nat-gateway
         cloudProvider: aws
+      - name: aws-vpc-peering
+        id: github.com/cloud-native-toolkit/terraform-aws-vpc-peering
+        displayName: AWS VPC Peering
+        cloudProvider: aws
   - category: infrastructure
     categoryName: Software Infrastructure
     selection: indirect
