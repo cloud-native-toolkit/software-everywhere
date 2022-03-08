@@ -65,6 +65,10 @@ categories:
         id: >-
           github.com/cloud-native-toolkit/terraform-ibm-iam-service-authorization
         cloudProvider: ibm
+      - name: aws-iam-user
+        id: github.com/cloud-native-toolkit/terraform-aws-iam-user
+        displayName: AWS IAM User
+        cloudProvider: aws
   - category: image-registry
     categoryName: Image Registry
     selection: single
