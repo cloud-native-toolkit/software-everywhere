@@ -413,10 +413,13 @@ categories:
         id: github.com/cloud-native-toolkit/terraform-gitops-cp-mq-uniform-cluster
         displayName: CP MQ Uniform Cluster
         softwareProvider: ibm-cp
-      - name: gitops-terraform-gitops-data-virtualization
-        id: >-
-          github.com/cloud-native-toolkit/terraform-gitops-terraform-gitops-data-virtualization
+      - name: gitops-terraform-gitops-cp-data-virtualization
+        id: github.com/cloud-native-toolkit/terraform-gitops-terraform-gitops-cp-data-virtualization
         displayName: Data Virtualization
+        softwareProvider: ibm-cp
+      - name: gitops-cp-data-virtualization-service
+        id: https://github.com/cloud-native-toolkit/terraform-gitops-cp-data-virtualization-service
+        displayName: Data Virtualization Service
         softwareProvider: ibm-cp
       - name: gitops-cp-sterling-oms
         id: github.com/cloud-native-toolkit/terraform-gitops-cp-sterling-oms
