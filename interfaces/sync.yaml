@@ -1,0 +1,6 @@
+id: github.com/cloud-native-toolkit/automation-modules#sync
+name: sync
+outputs:
+  - name: sync
+    description: Value used to sync downstream modules
+    type: string

@@ -1,0 +1,3214 @@
+apiVersion: cloudnativetoolkit.dev/v1alpha1
+kind: Catalog
+categories:
+  - category: ai-ml
+    categoryName: AI/ML
+    selection: multiple
+    modules:
+      - cloudProvider: ""
+        softwareProvider: ibm-cp
+        type: gitops
+        name: gitops-cp-bas
+        description: Module to populate a gitops repo with the resources to provision the Behavior Analysis Service from the IBM Cloud Pak
+        tags:
+          - cloud pak
+          - behavior analysis service
+          - bas
+        versions:
+          - v1.0.1
+          - v1.0.0
+        id: github.com/cloud-native-toolkit/terraform-gitops-cp-bas
+        alias: bas
+        group: ""
+        displayName: CP Behavior Analytics Service
+      - cloudProvider: ""
+        softwareProvider: ibm-cp
+        type: gitops
+        name: gitops-cp-watson-knowledge-catalog
+        description: Module to populate a gitops repo with the resources to provision cp-watson-knowledge-catalog
+        tags:
+          - tools
+          - gitops
+        versions: []
+        id: github.com/cloud-native-toolkit/terraform-gitops-cp-watson-knowledge-catalog
+        group: ""
+        displayName: Watson Knowledge Catalog
+      - cloudProvider: ""
+        softwareProvider: ibm-cp
+        type: gitops
+        name: gitops-cp-watson-machine-learning
+        description: Module to populate a gitops repo with the resources to provision Watson Machine Learning on Cloud Pak for Data
+        tags:
+          - tools
+          - gitops
+          - wml
+          - watson machine learning
+          - cloud pak for data
+          - cpd
+          - cp4d
+        versions:
+          - v1.0.1
+          - v1.0.0
+        id: github.com/cloud-native-toolkit/terraform-gitops-cp-watson-machine-learning
+        group: ""
+        displayName: Watson Machine Learning
+      - cloudProvider: ""
+        softwareProvider: ibm-cp
+        type: gitops
+        name: gitops-cp-waiops
+        description: Module to populate a gitops repo with the resources to provision cp-waiops
+        tags:
+          - tools
+          - gitops
+        versions: []
+        id: github.com/cloud-native-toolkit/terraform-gitops-cp-waiops
+        group: ""
+        displayName: Watson AI Ops
+      - cloudProvider: ""
+        softwareProvider: ibm-cp
+        type: gitops
+        name: gitops-cp-waiops-eventmgr
+        description: Module to populate a gitops repo with the resources to provision cp-waiops-eventmgr
+        tags:
+          - tools
+          - gitops
+        versions: []
+        id: github.com/cloud-native-toolkit/terraform-gitops-cp-waiops-eventmgr
+        group: ""
+        displayName: Watson AIOps Event Manager
+  - category: cluster
+    categoryName: Cluster
+    selection: single
+    modules:
+      - cloudProvider: ibm
+        softwareProvider: ""
+        type: terraform
+        id: github.com/cloud-native-toolkit/terraform-ibm-container-platform
+        name: ibm-container-platform
+        description: Provisions a new or connects to an existing IBM Cloud container platform cluster (Kubernetes or OpenShift)
+        alias: cluster
+        tags:
+          - cluster
+          - ibm cloud
+          - kubernetes
+          - openshift
+        versions:
+          - v1.21.1
+          - v1.21.0
+          - v1.20.8
+          - v1.20.7
+          - v1.20.6
+          - v1.20.5
+          - v1.20.4
+          - v1.20.3
+          - v1.20.2
+          - v1.20.1
+          - v1.20.0
+          - v1.19.1
+          - v1.19.0
+        interfaces:
+          - github.com/cloud-native-toolkit/automation-modules#cluster
+        group: openshift
+        displayName: IBM Container Platform
+      - cloudProvider: ""
+        softwareProvider: ""
+        type: terraform
+        id: github.com/cloud-native-toolkit/terraform-k8s-ocp-cluster
+        name: ocp-cluster
+        description: Connects to an existing OpenShift cluster
+        alias: cluster
+        tags:
+          - cluster
+          - openshift
+        versions:
+          - v2.4.7
+          - v2.4.6
+          - v2.4.5
+          - v2.4.4
+          - v2.4.3
+          - v2.4.2
+          - v2.4.1
+          - v2.4.0
+        interfaces:
+          - github.com/cloud-native-toolkit/automation-modules#cluster
+        group: openshift
+        displayName: OpenShift Cluster
+        aliasIds:
+          - github.com/cloud-native-toolkit/terraform-ocp-cluster
+      - cloudProvider: ibm
+        softwareProvider: ""
+        type: terraform
+        id: github.com/cloud-native-toolkit/terraform-ibm-ocp-vpc
+        name: ibm-ocp-vpc
+        alias: cluster
+        description: Provisions an IBM Cloud OCP cluster
+        tags:
+          - ocp
+          - cluster
+          - vpc
+        versions:
+          - v1.13.0
+          - v1.12.2
+          - v1.12.1
+          - v1.12.0
+          - v1.11.0
+          - v1.10.3
+          - v1.10.2
+          - v1.10.1
+          - v1.10.0
+          - v1.9.0
+          - v1.8.0
+          - v1.7.0
+          - v1.6.1
+          - v1.6.0
+          - v1.5.0
+          - v1.4.1
+          - v1.4.0
+          - v1.3.4
+          - v1.3.3
+          - v1.3.2
+          - v1.3.1
+          - v1.3.0
+          - v1.2.5
+          - v1.2.4
+          - v1.2.3
+          - v1.2.2
+          - v1.2.1
+          - v1.2.0
+          - v1.1.1
+          - v1.1.0
+          - v1.0.0
+        interfaces:
+          - github.com/cloud-native-toolkit/automation-modules#cluster
+        registryId: cloud-native-toolkit/ocp-vpc/ibm
+        group: openshift
+        displayName: IBM OpenShift VPC cluster
+      - cloudProvider: ibm
+        softwareProvider: ""
+        type: terraform
+        id: github.com/cloud-native-toolkit/terraform-ibm-iks-vpc
+        name: ibm-iks-vpc
+        alias: cluster
+        description: Provisions an IBM Cloud IKS cluster
+        interfaces:
+          - github.com/cloud-native-toolkit/automation-modules#cluster
+          - github.com/cloud-native-toolkit/automation-modules#sync
+        tags:
+          - iks
+          - cluster
+          - vpc
+        versions:
+          - v1.0.1
+          - v1.0.0
+          - v0.0.0
+        group: kubernetes
+        displayName: IBM Kubernetes VPC cluster
+      - cloudProvider: ""
+        softwareProvider: ""
+        type: terraform
+        id: github.com/cloud-native-toolkit/terraform-ocp-login
+        name: ocp-login
+        alias: cluster
+        interfaces:
+          - github.com/cloud-native-toolkit/automation-modules#cluster
+        description: Module to perform a simple cluster login and provide the cluster path
+        tags:
+          - openshift
+        versions:
+          - v1.2.8
+          - v1.2.7
+          - v1.2.6
+          - v1.2.5
+          - v1.2.4
+          - v1.2.3
+          - v1.2.2
+          - v1.2.1
+          - v1.2.0
+          - v1.1.1
+          - v1.1.0
+          - v1.0.0
+          - v0.0.0
+        group: openshift
+        displayName: IBM OpenShift login
+      - cloudProvider: aws
+        softwareProvider: ""
+        type: terraform
+        name: aws-rosa
+        description: Module to provision rosa on aws rosa cluster
+        tags:
+          - ocp
+          - cluster
+          - vpc
+        versions:
+          - v1.0.0
+        id: github.com/cloud-native-toolkit/terraform-aws-rosa
+        alias: rosa-cluster
+        group: openshift
+        displayName: AWS ROSA
+  - category: databases
+    categoryName: Databases
+    selection: multiple
+    modules:
+      - cloudProvider: ""
+        softwareProvider: ""
+        type: terraform
+        id: github.com/cloud-native-toolkit/terraform-ocp-mongodb
+        name: MongoDB
+        description: Module to install MongoDB-CE on OCP Cluster
+        tags:
+          - tools
+        versions:
+          - v1.2.1
+          - v1.2.0
+          - v1.1.1
+          - v1.1.0
+          - v1.0.0
+        group: mongodb
+        displayName: MongoDB on OCP
+      - cloudProvider: ""
+        softwareProvider: ""
+        type: gitops
+        name: gitops-mongo-ce-operator
+        description: Module to populate a gitops repo with the resources to provision mongo-ce operator
+        tags:
+          - tools
+          - gitops
+        versions:
+          - v1.0.4
+          - v1.0.3
+          - v1.0.2
+          - v1.0.1
+          - v1.0.0
+        id: github.com/cloud-native-toolkit/terraform-gitops-mongo-ce-operator
+        group: mongodb
+        displayName: MongoDB Operator
+      - cloudProvider: ""
+        softwareProvider: ""
+        type: gitops
+        name: gitops-mongo-ce
+        description: Module to populate a gitops repo with the resources to provision mongo-ce instance
+        tags:
+          - tools
+          - gitops
+        versions:
+          - v1.1.3
+          - v1.1.2
+          - v1.1.1
+          - v1.1.0
+          - v1.0.1
+          - v1.0.0
+        id: github.com/cloud-native-toolkit/terraform-gitops-mongo-ce
+        group: mongodb
+        displayName: MongoDB Instance
+      - cloudProvider: ibm
+        softwareProvider: ""
+        type: terraform
+        id: github.com/cloud-native-toolkit/terraform-ibm-hpdbaas-postgresql
+        name: ibm-hbdbaas-postgresql
+        description: Module to provision Hyper Protect DBaaS for PostgreSQL instance
+        tags:
+          - tools
+          - infrastructure
+          - postgresql
+          - hyper protect
+          - saas
+        versions:
+          - v1.1.0
+          - v1.0.0
+          - v0.0.0
+        group: postgresql
+        displayName: Hyper Protect DBaaS PostgreSQL
+      - cloudProvider: ibm
+        softwareProvider: ""
+        type: terraform
+        id: github.com/cloud-native-toolkit/terraform-ibm-hpdbaas-mongodb
+        name: ibm-hpdbaas-mongodb
+        description: Module to provision Hyper Protect DBaaS for MongoDB instance
+        tags:
+          - tools
+          - infrastructure
+          - mongodb
+          - saas
+        versions:
+          - v1.0.0
+          - v0.0.0
+        group: mongodb
+        displayName: Hyper Protect DBaaS MongoDB
+      - cloudProvider: ibm
+        softwareProvider: ""
+        type: terraform
+        id: github.com/cloud-native-toolkit/terraform-ibm-mongodb
+        name: ibm-mongodb
+        description: Module to provision Databases for MongoDB instance
+        tags:
+          - tools
+          - infrastructure
+          - mongodb
+          - saas
+        versions:
+          - v1.1.1
+          - v1.1.0
+        group: mongodb
+        displayName: IBM MongoDB
+      - cloudProvider: ibm
+        softwareProvider: ""
+        type: terraform
+        id: github.com/cloud-native-toolkit/terraform-ibm-redis
+        name: ibm-redis
+        description: Module to provision a managed Redis instance in an IBM Cloud account
+        tags:
+          - service
+          - data
+          - cache
+        versions:
+          - v2.2.1
+          - v2.2.0
+          - v2.1.1
+        group: redis
+        displayName: IBM Redis
+      - cloudProvider: ""
+        softwareProvider: ""
+        type: terraform
+        id: github.com/cloud-native-toolkit/terraform-gitops-cp-db2wh
+        name: gitops-cp-db2wh
+        description: ""
+        tags:
+          - tools
+          - gitops
+        versions: []
+        group: db2-warehouse
+        displayName: IBM DB2 Warehouse
+      - cloudProvider: ""
+        softwareProvider: ibm-cp
+        type: gitops
+        id: github.com/cloud-native-toolkit/terraform-gitops-db2u-operator
+        name: gitops-db2
+        description: Module to populate a gitops repo with the resources to provision db2
+        tags:
+          - tools
+          - gitops
+        versions:
+          - v1.0.5
+          - v1.0.4
+          - v1.0.3
+          - v1.0.2
+          - v1.0.1
+          - v1.0.0
+        group: terraform-gitops-db2u-operator
+        displayName: IBM DB2U Operator
+  - category: dev-tool
+    categoryName: Dev Tools
+    selection: multiple
+    modules:
+      - cloudProvider: ""
+        softwareProvider: ""
+        type: terraform
+        id: github.com/cloud-native-toolkit/terraform-tools-argocd
+        name: argocd
+        description: Module to install ArgoCD into a cluster via an operator
+        tags:
+          - tools
+          - devops
+          - gitops
+          - argocd
+        versions:
+          - v2.18.1
+          - v2.18.0
+          - v2.17.10
+          - v2.17.9
+          - v2.17.8
+          - v2.17.7
+          - v2.17.6
+          - v2.17.5
+          - v2.17.4
+          - v2.17.3
+          - v2.17.2
+          - v2.17.1
+          - v2.17.0
+          - v2.16.3
+          - v2.16.2
+          - v2.16.1
+          - v2.16.0
+          - v2.15.1
+          - v2.15.0
+          - v2.14.1
+          - v2.14.0
+          - v2.13.1
+          - v2.13.0
+          - v2.12.1
+          - v2.12.0
+          - v2.11.1
+          - v2.11.0
+          - v2.10.2
+          - v2.10.1
+        group: argocd
+        displayName: ArgoCD
+      - cloudProvider: ""
+        softwareProvider: ""
+        type: terraform
+        id: github.com/cloud-native-toolkit/terraform-tools-artifactory
+        name: artifactory
+        description: Module to install Artifactory into a cluster
+        tags:
+          - tools
+          - devops
+          - artifact management
+        versions:
+          - v1.12.2
+          - v1.12.1
+          - v1.12.0
+          - v1.11.0
+          - v1.10.3
+          - v1.10.2
+          - v1.10.1
+          - v1.10.0
+          - v1.9.9
+          - v1.9.8
+          - v1.9.7
+          - v1.9.6
+        group: artifactory
+        displayName: Artifactory
+      - cloudProvider: ""
+        softwareProvider: ""
+        type: terraform
+        id: github.com/cloud-native-toolkit/terraform-tools-dashboard
+        name: dashboard
+        description: Module to install Dashboard into a cluster
+        tags:
+          - tools
+          - devops
+          - dashboard
+        versions:
+          - v1.10.14
+          - v1.10.13
+          - v1.10.12
+          - v1.10.11
+          - v1.10.10
+          - v1.10.9
+          - v1.10.8
+          - v1.10.7
+          - v1.10.6
+          - v1.10.5
+          - v1.10.4
+        group: dashboard
+        displayName: Developer Dashboard
+      - cloudProvider: ""
+        softwareProvider: ""
+        type: terraform
+        id: github.com/cloud-native-toolkit/terraform-tools-jenkins
+        name: jenkins
+        description: Module to install Jenkins into a cluster
+        tags:
+          - tools
+          - devops
+          - jenkins
+          - continuous integration
+        versions:
+          - v1.4.4
+          - v1.4.3
+        group: jenkins
+        displayName: Jenkins
+      - cloudProvider: ""
+        softwareProvider: ""
+        type: terraform
+        id: github.com/cloud-native-toolkit/terraform-tools-openshift-cicd
+        name: openshift-cicd
+        description: Module to provision Tekton and ArgoCD into an OpenShift cluster together
+        tags:
+          - tools
+          - devops
+          - tekton
+          - argocd
+        versions:
+          - v1.7.9
+          - v1.7.8
+          - v1.7.7
+          - v1.7.6
+          - v1.7.5
+          - v1.7.4
+          - v1.7.3
+          - v1.7.2
+          - v1.7.1
+          - v1.7.0
+          - v1.5.6
+          - v1.5.5
+          - v1.5.4
+          - v1.5.3
+          - v1.5.2
+          - v1.5.1
+          - v1.5.0
+          - v1.4.3
+          - v1.4.2
+          - v1.4.1
+          - v1.4.0
+          - v1.3.0
+          - v1.2.2
+          - v1.2.1
+          - v1.2.0
+          - v1.1.0
+          - v1.0.1
+          - v1.0.0
+          - v0.0.0
+        group: cicd
+        displayName: OpenShift CICD
+      - cloudProvider: ""
+        softwareProvider: ""
+        type: terraform
+        id: github.com/cloud-native-toolkit/terraform-tools-pactbroker
+        name: pactbroker
+        description: Module to install Pactbroker into a cluster
+        tags:
+          - tools
+          - devops
+          - contract testing
+          - pact
+        versions:
+          - v1.5.5
+          - v1.5.4
+          - v1.5.3
+          - v1.5.2
+          - v1.5.1
+          - v1.5.0
+          - v1.4.3
+          - v1.4.2
+          - v1.4.1
+        group: pact-broker
+        displayName: Pact Broker
+      - cloudProvider: ""
+        softwareProvider: ""
+        type: terraform
+        id: github.com/cloud-native-toolkit/terraform-tools-sonarqube
+        name: sonarqube
+        description: Module to install Sonarqube into a cluster
+        tags:
+          - tools
+          - devops
+          - quality gate
+          - lint
+        versions:
+          - v1.10.2
+          - v1.10.1
+          - v1.10.0
+          - v1.9.4
+          - v1.9.3
+          - v1.9.2
+        group: sonarqube
+        displayName: SonarQube
+      - cloudProvider: ""
+        softwareProvider: ""
+        type: terraform
+        id: github.com/cloud-native-toolkit/terraform-tools-swaggereditor
+        name: swaggereditor
+        description: Module to install Swagger editor into a cluster
+        tags:
+          - tools
+          - devops
+          - swagger editor
+        versions:
+          - v1.5.1
+          - v1.5.0
+          - v1.4.2
+          - v1.4.1
+        group: swagger-editor
+        displayName: Swagger Editor
+      - cloudProvider: ""
+        softwareProvider: ""
+        type: terraform
+        id: github.com/cloud-native-toolkit/terraform-tools-tekton
+        name: tekton
+        description: Module to install Tekton into a cluster
+        tags:
+          - tools
+          - devops
+          - tekton
+          - continuous integration
+        versions:
+          - v2.4.0
+          - v2.3.5
+          - v2.3.4
+          - v2.3.3
+          - v2.3.2
+          - v2.3.1
+          - v2.3.0
+          - v2.2.1
+          - v2.2.0
+          - v2.1.3
+          - v2.1.2
+          - v2.1.1
+          - v2.1.0
+          - v2.0.2
+        group: tekton
+        displayName: Tekton
+      - cloudProvider: ""
+        softwareProvider: ""
+        type: terraform
+        id: github.com/cloud-native-toolkit/terraform-tools-tekton-resources
+        name: tekton-resources
+        description: Module to install Tekton resources into a cluster
+        tags:
+          - tools
+          - devops
+          - continuous integration
+          - tekton
+        versions:
+          - v2.3.0
+          - v2.2.24
+          - v2.2.23
+          - v2.2.22
+          - v2.2.21
+          - v2.2.20
+          - v2.2.19
+          - v2.2.18
+          - v2.2.17
+          - v2.2.16
+          - v2.2.15
+          - v2.2.14
+          - v2.2.13
+          - v2.2.12
+          - v2.2.11
+          - v2.2.10
+          - v2.2.9
+          - v2.2.8
+          - v2.2.7
+          - v2.2.6
+          - v2.2.5
+          - v2.2.4
+          - v2.2.3
+          - v2.2.2
+          - v2.2.1
+          - v2.2.0
+          - v2.1.12
+        group: tekton-resources
+        displayName: Tekton Resources
+      - cloudProvider: ""
+        softwareProvider: ""
+        type: terraform
+        id: github.com/cloud-native-toolkit/terraform-tools-turbonomic
+        name: turbonomic
+        description: Module to install Turbonomic
+        tags:
+          - tools
+          - devops
+          - quality gate
+          - lint
+        versions:
+          - v1.4.1
+          - v1.4.0
+          - v1.3.1
+          - v1.3.0
+          - v1.2.0
+          - v1.1.1
+          - v1.1.0
+          - v1.0.2
+          - v1.0.1
+        group: turbonomic
+        displayName: Turbonomic
+      - cloudProvider: ""
+        softwareProvider: ""
+        type: terraform
+        id: github.com/cloud-native-toolkit/terraform-k8s-console-link-job
+        name: console-link-job
+        description: Module to install a cronjob to create console links from routes and config maps
+        tags:
+          - cronjob
+          - console-link
+        versions:
+          - v1.0.2
+          - v1.0.1
+          - v1.0.0
+          - v0.0.0
+        group: console-link
+        displayName: Console Link Job
+      - cloudProvider: ""
+        softwareProvider: ""
+        type: terraform
+        id: github.com/cloud-native-toolkit/terraform-ocp-buildah-unprivileged
+        name: ocp-buildah-unprivileged
+        description: Module to configure a Red Hat OpenShift cluster to allow buildah to run unprivileged. (This is primarily necessary for IBM ROKS clusters.)
+        tags:
+          - buildah
+          - userspace
+          - unprivileged
+          - ROKS
+        versions:
+          - v1.1.0
+          - v1.0.0
+          - v0.0.0
+        group: ""
+        displayName: Buildah Unprivileged
+      - cloudProvider: ""
+        softwareProvider: ""
+        type: terraform
+        id: github.com/cloud-native-toolkit/terraform-gitops-console-link-job
+        name: gitops-console-link-job
+        description: Module that populates a gitops repository with the Console Link Cronjob chart from https://charts.cloudnativetoolkit.dev. The chart deploys a cron job into a cluster that runs periodically (every 5 minutes by default) looking for matching resources and creating cron jobs and config maps with the information. The matching resources include routes with the `console-link.cloud-native-toolkit.dev/enabled=true` label and `logdna-agent` and `sysdig-agent` daemonsets.
+        tags:
+          - tools
+          - gitops
+          - consolelink
+          - cronjob
+        versions:
+          - v1.4.5
+          - v1.4.4
+          - v1.4.3
+          - v1.4.2
+          - v1.4.1
+          - v1.4.0
+          - v1.3.0
+          - v1.2.1
+          - v1.2.0
+          - v1.1.0
+          - v1.0.4
+          - v1.0.3
+          - v1.0.2
+          - v1.0.1
+          - v1.0.0
+          - v0.0.0
+        group: console-link
+        displayName: Console Link Job
+      - cloudProvider: ""
+        softwareProvider: ""
+        type: terraform
+        id: github.com/cloud-native-toolkit/terraform-gitops-artifactory
+        name: gitops-artifactory
+        description: ""
+        tags:
+          - tools
+          - gitops
+          - artifactory
+          - artifact management
+        versions:
+          - v1.2.0
+          - v1.1.1
+          - v1.1.0
+          - v1.0.1
+          - v1.0.0
+          - v0.0.0
+        group: artifactory
+        displayName: Artifactory
+      - cloudProvider: ""
+        softwareProvider: ""
+        type: terraform
+        id: github.com/cloud-native-toolkit/terraform-gitops-dashboard
+        name: gitops-dashboard
+        description: Module to configure the provisioning of the Developer Dashboard in a GitOps repo
+        tags:
+          - tools
+          - gitops
+          - dashboard
+        versions:
+          - v1.6.1
+          - v1.6.0
+          - v1.5.1
+          - v1.5.0
+          - v1.4.1
+          - v1.4.0
+          - v1.3.2
+          - v1.3.1
+          - v1.3.0
+          - v1.2.0
+          - v1.1.0
+          - v1.0.1
+          - v1.0.0
+          - v0.0.0
+        group: dashboard
+        displayName: Developer Dashboard
+      - cloudProvider: ""
+        softwareProvider: ""
+        type: terraform
+        id: github.com/cloud-native-toolkit/terraform-gitops-pact-broker
+        name: gitops-pact-broker
+        description: Module to populate gitops repo to deploy Pact Broker
+        tags:
+          - tools
+          - devops
+          - pact
+          - contract testing
+        versions:
+          - v1.1.3
+          - v1.1.2
+          - v1.1.1
+          - v1.1.0
+          - v1.0.0
+          - v0.1.2
+          - v0.1.1
+          - v0.1.0
+          - v0.0.0
+        group: pact-broker
+        displayName: Pact Broker
+      - cloudProvider: ""
+        softwareProvider: ""
+        type: terraform
+        id: github.com/cloud-native-toolkit/terraform-gitops-sonarqube
+        name: gitops-sonarqube
+        description: Module to populate gitops repo to deploy SonarQube
+        tags:
+          - tools
+          - devops
+          - sonarqube
+          - gitops
+        versions:
+          - v1.2.2
+          - v1.2.1
+          - v1.2.0
+          - v1.1.0
+          - v1.0.0
+          - v0.0.0
+        group: sonarqube
+        displayName: SonarQube
+      - cloudProvider: ""
+        softwareProvider: ""
+        type: terraform
+        id: github.com/cloud-native-toolkit/terraform-gitops-image-registry
+        name: gitops-image-registry
+        description: Module to populate a gitops repo with the configuration needed to access an image registry, using a config maps and secrets.
+        tags:
+          - gitops
+          - config
+          - image registry
+        versions:
+          - v1.1.3
+          - v1.1.2
+          - v1.1.1
+          - v1.1.0
+          - v1.0.1
+          - v1.0.0
+          - v0.0.0
+        group: registry
+        displayName: Image Registry
+      - cloudProvider: ""
+        softwareProvider: ""
+        type: terraform
+        id: github.com/cloud-native-toolkit/terraform-gitops-tekton-resources
+        name: gitops-tekton-resources
+        description: Module to populate a gitops repo with Tekton resources (tasks and pipelines).
+        tags:
+          - tools
+          - gitops
+          - tekton resources
+        versions:
+          - v1.1.3
+          - v1.1.2
+          - v1.1.1
+          - v1.1.0
+          - v1.0.0
+          - v0.0.0
+        group: tekton-resources
+        displayName: Tekton Resources
+      - cloudProvider: ""
+        softwareProvider: ""
+        type: terraform
+        id: github.com/cloud-native-toolkit/terraform-gitops-ocp-turbonomic
+        name: gitops-ocp-turbonomic
+        description: Module to install Turbonomic via Gitops
+        tags:
+          - tools
+          - gitops
+        versions:
+          - v2.1.3
+          - v2.1.2
+          - v2.1.1
+          - v2.1.0
+          - v2.0.0
+          - v1.1.1
+        group: turbonomic
+        displayName: gitops-turbonomic
+      - cloudProvider: ""
+        softwareProvider: ibm-cp
+        type: gitops
+        name: gitops-cp-watson-studio
+        description: Module to populate a gitops repo with the resources to provision cp-watson-studio
+        tags:
+          - tools
+          - gitops
+          - watson-studio
+          - ws
+          - cp4d
+          - cpd
+        versions:
+          - v1.1.0
+          - v1.0.0
+        id: github.com/cloud-native-toolkit/terraform-gitops-cp-watson-studio
+        group: ""
+        displayName: CP Watson Studio
+  - category: gitops
+    categoryName: GitOps
+    selection: multiple
+    modules:
+      - cloudProvider: ""
+        softwareProvider: ""
+        type: terraform
+        id: github.com/cloud-native-toolkit/terraform-tools-argocd-bootstrap
+        name: argocd-bootstrap
+        alias: argocd-bootstrap
+        description: Module to provision ArgoCD and bootstrap an application using the GitOps repo
+        tags:
+          - tools
+          - gitops
+          - bootstrap
+        versions:
+          - v1.6.0
+          - v1.5.1
+          - v1.5.0
+          - v1.4.4
+          - v1.4.3
+          - v1.4.2
+          - v1.4.1
+        group: ""
+        displayName: ArgoCD Bootstrap
+      - cloudProvider: ""
+        softwareProvider: ""
+        type: terraform
+        id: github.com/cloud-native-toolkit/terraform-vsi-argocd-bootstrap
+        name: vsi-argocd-bootstrap
+        alias: argocd-bootstrap
+        description: Module to provision ArgoCD and bootstrap an application using the GitOps repo
+        tags:
+          - tools
+          - gitops
+          - bootstrap
+        versions:
+          - v1.2.0
+          - v1.1.1
+          - v1.1.0
+          - v1.0.0
+          - v0.0.0
+        group: ""
+        displayName: VSI ArgoCD Bootstrap
+      - cloudProvider: ""
+        softwareProvider: ""
+        type: terraform
+        name: gitops-repo
+        description: Module to provision and set up a GitOps repository
+        tags:
+          - tools
+          - devops
+          - gitops
+        versions:
+          - v1.15.1
+          - v1.15.0
+          - v1.14.9
+          - v1.14.8
+          - v1.14.7
+          - v1.14.6
+          - v1.14.5
+          - v1.14.4
+          - v1.14.3
+          - v1.14.2
+          - v1.14.1
+        id: github.com/cloud-native-toolkit/terraform-tools-gitops
+        group: ""
+        displayName: GitOps repo
+      - cloudProvider: ""
+        softwareProvider: ""
+        type: terraform
+        id: github.com/cloud-native-toolkit/terraform-util-gitops-bootstrap
+        name: gitops-bootstrap
+        description: Module to connect existing ArgoCD and KubeSeal instances with a GitOps repo
+        tags:
+          - tools
+          - gitops
+          - bootstrap
+        versions:
+          - v1.2.4
+          - v1.2.3
+          - v1.2.2
+          - v1.2.1
+          - v1.2.0
+          - v1.1.0
+          - v1.0.2
+          - v1.0.1
+          - v1.0.0
+        group: ""
+        displayName: Bootstrap GitOps
+      - cloudProvider: ""
+        softwareProvider: ""
+        type: gitops
+        name: gitops-ocs-operator
+        description: Module to populate a gitops repo with the resources to provision ocs-operator
+        tags:
+          - tools
+          - gitops
+        versions: []
+        id: github.com/cloud-native-toolkit/terraform-gitops-ocs-operator
+        group: ""
+        displayName: ocs-operator
+      - cloudProvider: ""
+        softwareProvider: ""
+        type: gitops
+        name: gitops-ibm-ocs
+        description: Module to populate a gitops repo with the resources to provision ibm-ocs using the OpenShift Data Foundation add-on for ROKS clusters.
+        tags:
+          - tools
+          - gitops
+        versions:
+          - v0.0.1
+        id: github.com/cloud-native-toolkit/terraform-gitops-ibm-ocs
+        group: ""
+        displayName: ibm-ocs
+  - category: iam
+    categoryName: IAM
+    selection: multiple
+    modules:
+      - cloudProvider: ibm
+        softwareProvider: ""
+        type: terraform
+        id: github.com/cloud-native-toolkit/terraform-ibm-onboard-fs-account
+        name: ibm-onboard-fs-account
+        description: Module to set account-level values that enable FS computing
+        tags:
+          - fscloud
+          - ibmcloud
+          - account
+        versions:
+          - v1.1.0
+          - v1.0.1
+          - v1.0.0
+          - v0.0.0
+        group: ""
+        displayName: IBM Onboard FS Cloud Account
+      - cloudProvider: ibm
+        softwareProvider: ""
+        type: terraform
+        id: github.com/cloud-native-toolkit/terraform-ibm-resource-group
+        name: ibm-resource-group
+        alias: resource_group
+        description: Creates a resource groups in the account
+        tags:
+          - ibm cloud
+          - resource group
+          - account
+        versions:
+          - v3.2.2
+          - v3.2.1
+          - v3.2.0
+          - v3.1.1
+          - v3.1.0
+          - v3.0.3
+          - v3.0.2
+          - v3.0.1
+          - v3.0.0
+          - v2.4.7
+          - v2.4.6
+          - v2.4.5
+          - v2.4.4
+          - v2.4.3
+          - v2.4.2
+          - v2.4.1
+          - v2.4.0
+          - v2.3.0
+          - v2.2.1
+          - v2.2.0
+          - v2.1.1
+          - v2.1.0
+          - v2.0.0
+          - v1.4.1
+          - v1.4.0
+          - v1.3.0
+          - v1.2.0
+          - v1.1.0
+          - v1.0.0
+          - v0.0.0
+        interfaces:
+          - github.com/cloud-native-toolkit/automation-modules#sync
+        registryId: cloud-native-toolkit/resource-group/ibm
+        group: resource-group
+        displayName: IBM Resource Group
+      - cloudProvider: azure
+        softwareProvider: ""
+        type: terraform
+        name: azure-resource-group
+        description: Module to provision a resource group on Azure
+        tags:
+          - azure
+          - resource group
+        versions:
+          - v1.0.2
+          - v1.0.1
+          - v1.0.0
+        id: github.com/cloud-native-toolkit/terraform-azure-resource-group
+        group: resource-group
+        displayName: Azure Resource Group
+      - cloudProvider: ibm
+        softwareProvider: ""
+        type: terraform
+        id: github.com/cloud-native-toolkit/terraform-ibm-account-access-group
+        name: ibm-account-access-group
+        description: Module to provision account-wide access groups for an FS-enabled account
+        tags:
+          - account
+          - access group
+        versions:
+          - v1.1.0
+          - v1.0.0
+          - v0.0.0
+        group: access-group
+        displayName: IBM Account Access Group
+      - cloudProvider: ibm
+        softwareProvider: ""
+        type: terraform
+        id: github.com/cloud-native-toolkit/terraform-ibm-access-group
+        name: ibm-access-group
+        description: Module to create ADMIN and USER access groups for a set of resource groups
+        tags:
+          - tools
+          - ibm cloud
+          - access groups
+        versions:
+          - v3.0.0
+          - v2.3.0
+          - v2.2.0
+          - v2.1.1
+          - v2.1.0
+          - v2.0.0
+          - v1.2.1
+          - v1.2.0
+          - v1.1.2
+          - v1.1.1
+          - v1.1.0
+          - v1.0.0
+          - v0.1.0
+          - v0.0.0
+        group: access-group
+        displayName: IBM Access Group
+      - cloudProvider: ibm
+        softwareProvider: ""
+        type: terraform
+        id: github.com/cloud-native-toolkit/terraform-ibm-account-users
+        name: ibm-account-users
+        description: Module to invite users to the account
+        provider: ibm
+        tags:
+          - tools
+          - devops
+        versions:
+          - v1.1.0
+          - v1.0.0
+          - v0.0.0
+        group: ""
+        displayName: IBM Account Users
+      - cloudProvider: ibm
+        softwareProvider: ""
+        type: terraform
+        id: github.com/cloud-native-toolkit/terraform-ibm-add-access-group-users
+        name: ibm-add-access-group-users
+        description: Module to add users to provided access groups in an IBM Cloud account
+        provider: ibm
+        tags:
+          - tools
+          - devops
+        versions:
+          - v1.0.0
+          - v0.0.0
+        group: ""
+        displayName: IBM Add Users to Access Group
+      - cloudProvider: ibm
+        softwareProvider: ""
+        type: terraform
+        id: github.com/cloud-native-toolkit/terraform-ibm-iam-service-authorization
+        name: ibm-iam-service-authorization
+        alias: service-authorization
+        description: Module to create an authorization policy that will allow one service to access another.
+        tags:
+          - iam
+          - service
+          - authorization
+          - policy
+        versions:
+          - v1.2.8
+          - v1.2.7
+          - v1.2.6
+          - v1.2.5
+          - v1.2.4
+          - v1.2.3
+          - v1.2.2
+          - v1.2.1
+          - v1.2.0
+          - v1.1.2
+          - v1.1.1
+          - v1.1.0
+          - v1.0.1
+          - v1.0.0
+          - v0.0.0
+        group: ""
+        displayName: IBM Service Authorization
+      - cloudProvider: aws
+        softwareProvider: ""
+        type: terraform
+        name: aws-iam-user
+        description: Module to provision iam-user on aws
+        tags:
+          - tools
+          - devops
+        versions: []
+        id: github.com/cloud-native-toolkit/terraform-aws-iam-user
+        group: ""
+        displayName: AWS IAM User
+  - category: image-registry
+    categoryName: Image Registry
+    selection: single
+    modules:
+      - cloudProvider: ibm
+        softwareProvider: ""
+        type: terraform
+        id: github.com/cloud-native-toolkit/terraform-ibm-container-registry
+        name: ibm-container-registry
+        alias: registry
+        description: Module to set up the IBM Container Registry, including creating a namespace and upgrading the plan
+        tags:
+          - tools
+          - devops
+        versions:
+          - v1.1.1
+          - v1.1.0
+          - v1.0.0
+          - v0.0.0
+        group: registry
+        displayName: IBM Container Registry
+      - cloudProvider: ibm
+        softwareProvider: ""
+        type: terraform
+        id: github.com/cloud-native-toolkit/terraform-ibm-image-registry
+        name: ibm-image-registry
+        alias: registry
+        description: Module to set up a namespace in the IBM Container Registry and configure the cluster
+        tags:
+          - tools
+          - devops
+        versions:
+          - v2.1.2
+          - v2.1.1
+          - v2.1.0
+          - v2.0.3
+          - v2.0.2
+          - v2.0.1
+          - v2.0.0
+          - v1.5.0
+          - v1.4.0
+          - v1.3.6
+          - v1.3.5
+          - v1.3.4
+          - v1.3.3
+          - v1.3.2
+          - v1.3.1
+          - v1.3.0
+          - v1.2.3
+        group: registry
+        displayName: IBM Container Registry
+      - cloudProvider: ""
+        softwareProvider: ""
+        type: terraform
+        id: github.com/cloud-native-toolkit/terraform-ocp-image-registry
+        name: ocp-image-registry
+        alias: registry
+        provider: k8s
+        description: Module to set up the internal OCP Image Registry in a cluster
+        tags:
+          - tools
+          - devops
+          - ocp
+          - image registry
+        versions:
+          - v1.4.0
+          - v1.3.4
+          - v1.3.3
+          - v1.3.2
+          - v1.3.1
+          - v1.3.0
+          - v1.2.2
+          - v1.2.1
+        group: registry
+        displayName: OpenShift Container Registry
+      - cloudProvider: ""
+        softwareProvider: ""
+        type: terraform
+        id: github.com/cloud-native-toolkit/terraform-k8s-image-registry
+        name: k8s-image-registry
+        alias: registry
+        description: Sets up an external image registry for use within the cluster
+        tags:
+          - tools
+          - devops
+        versions:
+          - v1.1.7
+          - v1.1.6
+          - v1.1.5
+          - v1.1.4
+        group: registry
+        displayName: External Container Registry
+  - category: infrastructure
+    categoryName: Software Infrastructure
+    selection: indirect
+    modules:
+      - cloudProvider: ""
+        softwareProvider: ""
+        type: terraform
+        id: github.com/cloud-native-toolkit/terraform-k8s-namespace
+        name: namespace
+        description: Creates a namespace in the cluster
+        platforms:
+          - kubernetes
+          - ocp3
+          - ocp4
+        tags:
+          - infrastructure
+          - namespace
+        versions:
+          - v3.1.4
+          - v3.1.3
+          - v3.1.2
+          - v2.8.0
+          - v3.1.1
+          - v3.1.0
+          - v3.0.2
+          - v3.0.1
+          - v3.0.0
+          - v2.7.3
+          - v2.7.2
+          - v2.7.1
+          - v2.7.0
+          - v2.6.1
+          - v2.6.0
+          - v2.5.2
+        group: namespace
+        displayName: Namespace
+      - cloudProvider: ""
+        softwareProvider: ""
+        type: terraform
+        id: github.com/cloud-native-toolkit/terraform-gitops-namespace
+        name: gitops-namespace
+        description: Module to configure the provisioning of a namespace in a GitOps repo
+        tags:
+          - tools
+          - gitops
+        versions:
+          - v1.11.1
+          - v1.11.0
+          - v1.10.6
+          - v1.10.5
+          - v1.10.4
+          - v1.10.3
+          - v1.10.2
+          - v1.10.1
+          - v1.10.0
+          - v1.9.1
+          - v1.9.0
+          - v1.8.3
+          - v1.8.2
+          - v1.8.1
+          - v1.8.0
+          - v1.7.2
+          - v1.7.1
+          - v1.7.0
+          - v1.6.0
+          - v1.5.3
+          - v1.5.2
+          - v1.5.1
+          - v1.5.0
+          - v1.4.1
+          - v1.4.0
+          - v1.3.2
+          - v1.3.1
+          - v1.3.0
+          - v1.2.1
+          - v1.2.0
+          - v1.1.0
+          - v1.0.0
+          - v0.0.0
+        alias: namespace
+        group: namespace
+        displayName: Namespace
+      - cloudProvider: ""
+        softwareProvider: ""
+        type: terraform
+        id: github.com/cloud-native-toolkit/terraform-k8s-olm
+        name: olm
+        description: Installs Operator Lifecycle Manager in the cluster
+        platforms:
+          - kubernetes
+          - ocp3
+          - ocp4
+        tags:
+          - operators
+        versions:
+          - v1.3.2
+          - v1.3.1
+          - v1.3.0
+          - v1.2.6
+          - v1.2.5
+          - v1.2.4
+          - v1.2.3
+          - v1.2.2
+        group: ""
+        displayName: Operator Lifecycle Manager
+      - cloudProvider: ""
+        softwareProvider: ibm-cp
+        type: terraform
+        id: github.com/cloud-native-toolkit/terraform-ibm-cp-catalog
+        name: ibm-cp-catalog
+        description: Base install of the Cloud Pak for Integration operator catalog and pull secrets
+        tags:
+          - tools
+          - devops
+        provider: k8s
+        versions:
+          - v1.3.3
+          - v1.3.2
+          - v1.3.1
+          - v1.3.0
+          - v1.2.0
+          - v1.1.0
+          - v1.0.4
+          - v1.0.3
+        group: ""
+        displayName: Cloud Pak Catalog
+      - cloudProvider: ""
+        softwareProvider: ibm-cp
+        type: terraform
+        id: github.com/cloud-native-toolkit/terraform-ibm-cp-platform-navigator
+        name: ibm-cp-platform-navigator
+        description: Module to install the Cloud Pak Platform Navigator
+        tags:
+          - tools
+          - devops
+        provider: k8s
+        versions:
+          - v1.3.0
+          - v1.2.3
+          - v1.2.2
+          - v1.2.1
+          - v1.2.0
+          - v1.1.0
+          - v1.0.0
+          - v0.0.0
+        group: platform-navigator
+        displayName: Cloud Pak Platform Navigator
+      - cloudProvider: ""
+        softwareProvider: ibm-cp
+        type: terraform
+        id: github.com/cloud-native-toolkit/terraform-gitops-cp-catalogs
+        name: gitops-cp-catalogs
+        description: Module to populate a gitops repository with the resources needed to install the operator catalogs required to install IBM Cloud Paks.
+        tags:
+          - tools
+          - gitops
+          - IBM
+          - cloud pak
+          - catalog
+          - operators
+        versions:
+          - v1.2.0
+          - v1.1.0
+          - v1.0.5
+          - v1.0.4
+          - v1.0.3
+          - v1.0.2
+          - v1.0.1
+          - v1.0.0
+          - v0.0.0
+        group: catalog
+        displayName: Cloud Pak Catalogs
+      - cloudProvider: ""
+        softwareProvider: ibm-cp
+        type: terraform
+        id: github.com/cloud-native-toolkit/terraform-gitops-cp-platform-navigator
+        name: gitops-cp-platform-navigator
+        description: Module to populate a gitops repository with the resources to deploy Platorm Navigator from IBM Cloud Pak for Integration
+        tags:
+          - tools
+          - gitops
+          - IBM
+          - cloud pak
+          - cp4i
+          - platform nagigator
+        versions:
+          - v1.0.3
+          - v1.0.2
+          - v1.0.1
+          - v1.0.0
+          - v0.0.0
+        group: platform-navigator
+        displayName: Cloud Pak Platform Navigator
+      - cloudProvider: ""
+        softwareProvider: ibm-cp
+        type: gitops
+        id: github.com/cloud-native-toolkit/terraform-gitops-cp-sls
+        name: gitops-cp-sls
+        description: Module to populate a gitops repository for IBM SLS service
+        tags:
+          - gitops
+          - cloudpak
+          - ibm
+          - license
+        versions:
+          - v2.0.1
+          - v2.0.0
+          - v1.0.1
+          - v1.0.0
+        group: sls
+        displayName: IBM Suite License Server
+      - cloudProvider: ""
+        softwareProvider: ibm-cp
+        type: gitops
+        id: github.com/cloud-native-toolkit/terraform-gitops-cp4d-operator
+        name: gitops-cp4d-operator
+        description: Module to populate a gitops repo with the resources to provision cp4d-operator
+        tags:
+          - tools
+          - gitops
+        versions:
+          - v0.0.5
+          - v0.0.4
+          - v0.0.3
+          - v0.0.2
+          - v0.0.1
+        group: ""
+        displayName: gitops-cp4d-operator
+      - cloudProvider: ""
+        softwareProvider: ""
+        type: terraform
+        id: github.com/cloud-native-toolkit/terraform-cp4i-dependency-management
+        name: cp4i-dependency-management
+        description: Module to configure the manage and coordinate channels, versions, and license keys across different Cloud Pak for Integration components
+        tags:
+          - cloud pak
+          - dependency management
+          - channel
+        versions:
+          - v1.1.3
+          - v1.1.2
+          - v1.1.1
+          - v1.1.0
+          - v1.0.0
+          - v0.4.1
+          - v0.4.0
+          - v0.3.1
+          - v0.3.0
+          - v0.2.1
+          - v0.2.0
+          - v0.1.0
+        group: ""
+        displayName: CP4I Dependency Manager
+      - cloudProvider: ""
+        softwareProvider: ""
+        type: gitops
+        name: gitops-cp-truststore
+        description: Module to populate a gitops repo with the resources to provision cp-truststore
+        tags:
+          - tools
+          - gitops
+        versions:
+          - v1.0.2
+          - v1.0.1
+          - v1.0.0
+        id: github.com/cloud-native-toolkit/terraform-gitops-cp-truststore
+        group: ""
+        displayName: CP TrustStore
+      - cloudProvider: ""
+        softwareProvider: ""
+        type: gitops
+        name: gitops-cp4s
+        description: Module to populate a gitops repo with the resources to provision cp4s
+        tags:
+          - tools
+          - gitops
+        versions: []
+        id: github.com/cloud-native-toolkit/terraform-gitops-cp4s
+        group: ""
+        displayName: Cloud Pak for Security
+      - cloudProvider: ""
+        softwareProvider: ""
+        type: gitops
+        name: gitops-cp4ba-operator
+        description: Module to populate a gitops repo with the resources to provision cp4ba-operator
+        tags:
+          - tools
+          - gitops
+        versions: []
+        id: github.com/cloud-native-toolkit/terraform-gitops-cp4ba-operator
+        group: ""
+        displayName: Cloud Pak for Business Automation operator
+      - cloudProvider: ""
+        softwareProvider: ibm-cp
+        type: gitops
+        name: gitops-cp-ban-operator
+        description: Module to populate a gitops repo with the resources to provision cp-ban-operator
+        tags:
+          - tools
+          - gitops
+        versions: []
+        id: github.com/cloud-native-toolkit/terraform-gitops-cp-ban-operator
+        group: ""
+        displayName: IBM Business Automation Navigator and UMS operator
+  - category: middleware
+    categoryName: Middleware
+    selection: multiple
+    catalogFile: catalog.yaml
+    modules:
+      - cloudProvider: ibm
+        softwareProvider: ""
+        type: terraform
+        id: github.com/cloud-native-toolkit/terraform-ibm-appid
+        name: ibm-appid
+        description: Provisions the IBM Cloud AppId service
+        tags:
+          - tools
+          - devops
+        versions:
+          - v1.3.0
+          - v1.2.0
+          - v1.1.1
+        group: ""
+        displayName: IBM AppId
+      - cloudProvider: ibm
+        softwareProvider: ""
+        type: terraform
+        id: github.com/cloud-native-toolkit/terraform-ibm-kms
+        name: ibm-kms
+        description: Module to provision Key Protect
+        tags:
+          - tools
+          - kms
+          - hpcs
+          - key protect
+        versions:
+          - v0.3.4
+          - v0.3.3
+          - v0.3.2
+          - v0.2.0
+          - v0.1.3
+          - v0.1.2
+          - v0.1.1
+          - v0.1.0
+          - v0.0.0
+        interfaces:
+          - github.com/cloud-native-toolkit/automation-modules#ibm-service
+        group: kms
+        displayName: IBM KMS
+      - cloudProvider: ibm
+        softwareProvider: ""
+        type: terraform
+        id: github.com/cloud-native-toolkit/terraform-ibm-key-protect
+        name: key-protect
+        description: Module to provision Key Protect
+        tags:
+          - tools
+          - vault
+        versions:
+          - v2.3.0
+          - v2.2.1
+          - v2.2.0
+          - v2.1.1
+          - v2.1.0
+          - v2.0.4
+          - v2.0.3
+          - v2.0.2
+          - v2.0.1
+          - v2.0.0
+          - v1.4.0
+          - v1.3.2
+        group: kms
+        displayName: IBM Key Protect
+      - cloudProvider: ibm
+        softwareProvider: ""
+        type: terraform
+        id: github.com/cloud-native-toolkit/terraform-ibm-hpcs
+        name: hpcs
+        description: Module to provision Hyper Protect Crypto Service in an IBM Cloud account
+        tags:
+          - tools
+          - vault
+        versions:
+          - v1.5.0
+          - v1.4.0
+          - v1.3.0
+          - v1.2.1
+          - v1.2.0
+          - v1.1.5
+          - v1.1.4
+          - v1.1.3
+          - v1.1.2
+        group: kms
+        displayName: IBM Hyper Protect
+      - cloudProvider: ibm
+        softwareProvider: ""
+        type: terraform
+        id: github.com/cloud-native-toolkit/terraform-ibm-hpcs-initialization
+        name: hpcs-initialization
+        description: Module to initialize a Hyper Protect Crypto Service instance
+        tags:
+          - kms
+          - crypto
+          - hpcs
+          - initialize
+        versions:
+          - v1.0.4
+          - v1.0.3
+          - v1.0.2
+          - v1.0.1
+        group: kms
+        displayName: IBM Hyper Protect Initialization
+      - cloudProvider: ibm
+        softwareProvider: ""
+        type: terraform
+        id: github.com/cloud-native-toolkit/terraform-ibm-kms-key
+        name: ibm-kms-key
+        alias: kms-key
+        description: Module to lookup or create a KMS key
+        tags:
+          - kms
+          - key
+        versions:
+          - v1.5.1
+          - v1.5.0
+          - v1.4.0
+          - v1.3.0
+          - v1.2.1
+          - v1.2.0
+          - v1.1.0
+          - v1.0.4
+          - v1.0.3
+          - v1.0.2
+          - v1.0.1
+          - v1.0.0
+          - v0.0.0
+        group: kms-key
+        displayName: IBM KMS Key
+      - cloudProvider: ""
+        softwareProvider: ibm-cp
+        type: terraform
+        id: github.com/cloud-native-toolkit/terraform-ibm-cp-app-connect
+        name: cp-app-connect
+        description: Module to install App Connect in the cluster
+        tags:
+          - tools
+          - devops
+        provider: k8s
+        versions:
+          - v1.1.0
+          - v1.0.2
+          - v1.0.1
+          - v1.0.0
+          - v0.0.0
+        group: app-connect
+        displayName: App Connect
+      - cloudProvider: ibm
+        softwareProvider: ""
+        type: terraform
+        id: github.com/cloud-native-toolkit/terraform-ibm-event-streams
+        name: ibm-event-streams
+        alias: event-streams
+        description: |
+          Module to work with an IBM Cloud Event Streams instance. If the `provision` flag is true then an new instance
+          of IBM Cloud Event Streams is provisioned. Otherwise, the module will find an existing instance with the
+          provided name and create a credential. The name and id of the Event Streams instance as well as the name and id
+          of the credential instance are exported from the module for use by other modules.
+        tags:
+          - tools
+          - infrastructure
+          - event streams
+          - saas
+        versions:
+          - v1.1.0
+          - v1.0.0
+          - v0.0.0
+        group: kafka
+        displayName: Event Streams
+      - cloudProvider: ibm
+        softwareProvider: ""
+        type: terraform
+        id: github.com/cloud-native-toolkit/terraform-ibm-event-streams-topic
+        name: ibm-event-streams-topic
+        alias: topic
+        description: Module to provision a topic in an existing managed IBM Cloud Event Streams instance
+        tags:
+          - tools
+          - kafka
+          - event streams
+          - topic
+        versions:
+          - v1.0.0
+          - v0.0.0
+        group: kafka-topic
+        displayName: Event Streams Topic
+      - cloudProvider: ""
+        softwareProvider: ibm-cp
+        type: terraform
+        id: github.com/cloud-native-toolkit/terraform-ocp-certmanager
+        name: cert-manager-jetstack
+        description: Module to install JetStack Cert Manager
+        tags:
+          - cert manager
+          - jetstack
+          - tools
+        versions:
+          - v1.0.2
+          - v1.0.1
+          - v1.0.0
+        group: cert-manager
+        displayName: JetStack Cert Manager
+      - cloudProvider: ""
+        softwareProvider: jetstack
+        type: gitops
+        id: github.com/cloud-native-toolkit/terraform-gitops-ocp-cert-manager
+        name: gitops-cert-manager-jetstack
+        description: Module to populate a gitops repository with the resources to deploy the JetStack Cert Manager
+        tags:
+          - cert manager
+          - jetstack
+          - gitops
+        versions:
+          - v1.2.1
+          - v1.2.0
+          - v1.1.0
+          - v1.0.1
+          - v1.0.0
+        group: cert-manager
+        displayName: JetStack Cert Manager
+      - cloudProvider: ibm
+        softwareProvider: ""
+        type: terraform
+        id: github.com/cloud-native-toolkit/terraform-ibm-cert-manager
+        name: ibm-cert-manager
+        description: Module to provision an IBM Cloud Certificate Manager instance.
+        tags:
+          - ibm cloud
+          - certificate
+          - cert manager
+        versions:
+          - v1.1.0
+          - v1.0.2
+          - v1.0.1
+          - v1.0.0
+          - v0.0.0
+        group: cert-manager
+        displayName: IBM Certificate Manager
+      - cloudProvider: ibm
+        softwareProvider: ""
+        type: terraform
+        id: github.com/cloud-native-toolkit/terraform-ibm-cert-manager-cert
+        name: ibm-cert-manager-cert
+        description: Module to upload and/or retrieve a certificate and private key from IBM Certificate Manager
+        tags:
+          - ibm
+          - certificate manager
+          - certificate
+        versions:
+          - v1.1.0
+          - v1.0.4
+          - v1.0.3
+        group: ""
+        displayName: IBM Certificate Manager Certificate
+      - cloudProvider: ""
+        softwareProvider: ibm-cp
+        type: terraform
+        id: github.com/cloud-native-toolkit/terraform-gitops-cp-mq
+        name: gitops-cp-mq
+        description: Module to populate a gitops repository with the resources to provision the MQ operator from IBM Cloud Pak for Integration.
+        tags:
+          - tools
+          - gitops
+          - ibm
+          - cloud pak
+          - operator
+          - ace
+        versions:
+          - v1.1.3
+          - v1.1.2
+          - v1.1.1
+          - v1.1.0
+          - v1.0.0
+          - v0.0.0
+        group: mq
+        displayName: Cloud Pak MQ Operator
+      - cloudProvider: ""
+        softwareProvider: ibm-cp
+        type: terraform
+        id: github.com/cloud-native-toolkit/terraform-gitops-cp-apic-operator
+        name: gitops-cp-apic-opearator
+        description: Module to populate a gitops repository with the resources to provision the API Connect operator from IBM Cloud Pak for Integration.
+        tags:
+          - tools
+          - gitops
+          - ibm
+          - cloud pak
+          - operator
+          - ace
+        versions:
+          - v1.2.1
+          - v1.2.0
+          - v1.1.0
+          - v1.0.0
+          - v0.0.0
+        group: api-connect
+        displayName: Cloud Pak API Connect Operator
+      - cloudProvider: ""
+        softwareProvider: ibm-cp
+        type: terraform
+        id: github.com/cloud-native-toolkit/terraform-gitops-cp-app-connect
+        name: gitops-cp-ace
+        description: Module to populate a gitops repository with the resources to provision the ACE operator from IBM Cloud Pak for Integration.
+        tags:
+          - tools
+          - gitops
+          - ibm
+          - cloud pak
+          - operator
+          - ace
+        versions:
+          - v1.0.4
+          - v1.0.3
+          - v1.0.2
+          - v1.0.1
+          - v1.0.0
+          - v0.0.0
+        group: app-connect
+        displayName: Cloud Pak App Connect Operator
+      - cloudProvider: ""
+        softwareProvider: ibm-cp
+        type: gitops
+        name: gitops-cp-odm
+        description: Module to populate a gitops repo with the resources to provision cp-odm
+        tags:
+          - tools
+          - gitops
+        versions: []
+        id: github.com/cloud-native-toolkit/terraform-gitops-cp-odm
+        group: odm
+        displayName: IBM Operational Decision Making
+      - cloudProvider: ""
+        softwareProvider: opensource
+        type: terraform
+        id: github.com/cloud-native-toolkit/terraform-gitops-openldap
+        name: gitops-openldap
+        description: ""
+        tags:
+          - tools
+          - gitops
+        versions:
+          - v2.0.0
+          - v1.0.3
+          - v1.0.2
+          - v1.0.1
+          - v1.0.0
+        group: ldap
+        displayName: OpenLDAP
+      - cloudProvider: ""
+        softwareProvider: ""
+        type: terraform
+        name: gitops-cp-eventstreams
+        description: Module to populate a gitops repository with the resources to provision the Event Streams operator from IBM Cloud Pak for Integration.
+        tags:
+          - tools
+          - gitops
+          - ibm
+          - cloud pak
+          - operator
+          - eventstreams
+        versions:
+          - v1.0.0
+        id: github.com/cloud-native-toolkit/terraform-gitops-cp-event-streams
+        group: kafka
+        displayName: Event Streams
+      - cloudProvider: aws
+        softwareProvider: ""
+        type: terraform
+        name: aws-kms
+        description: Module to provision kms on aws
+        tags:
+          - tools
+          - devops
+        versions:
+          - v1.0.0
+        id: github.com/cloud-native-toolkit/terraform-aws-kms
+        group: kms
+        displayName: AWS KMS
+      - cloudProvider: ""
+        softwareProvider: ibm-cp
+        type: gitops
+        name: gitops-cp-queue-manager
+        description: Module to populate a gitops repo with the resources to provision a Queue Manager from the cloud pak
+        tags:
+          - tools
+          - gitops
+          - ibm
+          - cloud pak
+          - operator
+          - ace
+        versions:
+          - v1.0.2
+          - v1.0.1
+          - v1.0.0
+        id: github.com/cloud-native-toolkit/terraform-gitops-cp-queue-manager
+        group: queue-manager
+        displayName: MQ Queue Manager
+      - cloudProvider: ""
+        softwareProvider: ibm-cp
+        type: gitops
+        name: gitops-cp-mq-uniform-cluster
+        description: Module to populate a gitops repo with the resources to provision cp-mq-uniform-cluster
+        tags:
+          - tools
+          - gitops
+        versions:
+          - v1.0.0
+        id: github.com/cloud-native-toolkit/terraform-gitops-cp-mq-uniform-cluster
+        group: ""
+        displayName: CP MQ Uniform Cluster
+      - cloudProvider: ""
+        softwareProvider: ""
+        type: gitops
+        name: gitops-cp-sterling-oms
+        description: Module to populate a gitops repo with the resources to provision cp-sterling-oms
+        tags:
+          - tools
+          - gitops
+        versions: []
+        id: github.com/cloud-native-toolkit/terraform-gitops-cp-sterling-oms
+        group: ""
+        displayName: CP Sterling Order Management
+      - cloudProvider: ""
+        softwareProvider: ibm-cp
+        type: gitops
+        name: gitops-cp-maximo
+        description: IBM Maximo Application Suite
+        tags:
+          - gitops
+        versions:
+          - v1.0.2
+          - v1.0.1
+        id: github.com/cloud-native-toolkit/terraform-gitops-cp-maximo
+        group: maximo
+        displayName: Maximo Application Suite
+      - cloudProvider: ""
+        softwareProvider: ibm-cp
+        type: gitops
+        name: gitops-cp-odm
+        description: Module to populate a gitops repo with the resources to provision cp-odm
+        tags:
+          - tools
+          - gitops
+        versions: []
+        id: github.com/cloud-native-toolkit/terraform-gitops-cp-odm
+        group: odm
+        displayName: IBM ODM
+      - cloudProvider: ""
+        softwareProvider: ibm-cp
+        type: gitops
+        name: gitops-cp-apic
+        description: Module to populate a gitops repo with the resources to provision cp-apic
+        tags:
+          - tools
+          - gitops
+        versions: []
+        id: github.com/cloud-native-toolkit/terraform-gitops-cp-apic
+        group: api-management
+        displayName: Api Connect Instance
+      - cloudProvider: ""
+        softwareProvider: ibm-cp
+        type: gitops
+        name: gitops-cp-ace-designer
+        description: Module to populate a gitops repo with the resources to provision cp-ace-designer
+        tags:
+          - cp4i
+          - ace
+          - designer
+          - gitops
+        versions:
+          - v1.0.0
+        id: github.com/cloud-native-toolkit/terraform-gitops-cp-ace-designer
+        group: ace-designer
+        displayName: ACE Designer
+      - cloudProvider: ""
+        softwareProvider: ibm-cp
+        type: gitops
+        name: gitops-cp-datapower
+        description: Module to populate a gitops repo with the resources to provision cp-datapower
+        tags:
+          - tools
+          - gitops
+        versions: []
+        id: github.com/cloud-native-toolkit/terraform-gitops-cp-datapower
+        group: ""
+        displayName: DataPower
+      - cloudProvider: ""
+        softwareProvider: ibm-cp
+        type: gitops
+        name: gitops-cp-aspera-operator
+        description: Module to populate a gitops repo with the resources to provision cp-aspera-operator
+        tags:
+          - tools
+          - gitops
+        versions: []
+        id: github.com/cloud-native-toolkit/terraform-gitops-cp-aspera-operator
+        group: ""
+        displayName: Aspera operator
+  - category: network
+    categoryName: Network
+    selection: multiple
+    modules:
+      - cloudProvider: ibm
+        softwareProvider: ""
+        type: terraform
+        id: github.com/cloud-native-toolkit/terraform-ibm-vpc
+        name: ibm-vpc
+        description: Provisions the IBM Cloud VPC instance with network acls
+        tags:
+          - infrastructure
+          - networking
+        versions:
+          - v1.15.5
+          - v1.15.4
+          - v1.15.3
+          - v1.15.2
+          - v1.15.1
+          - v1.15.0
+          - v1.14.0
+          - v1.13.1
+          - v1.13.0
+          - v1.12.0
+          - v1.11.7
+          - v1.11.6
+          - v1.11.5
+          - v1.11.4
+          - v1.11.3
+          - v1.11.2
+          - v1.11.1
+          - v1.11.0
+          - v1.10.3
+          - v1.10.2
+          - v1.10.1
+          - v1.10.0
+          - v1.9.4
+          - v1.9.3
+          - v1.9.2
+          - v1.9.1
+          - v1.9.0
+          - v1.8.3
+          - v1.8.2
+          - v1.8.1
+          - v1.8.0
+          - v1.7.4
+          - v1.7.3
+          - v1.7.2
+          - v1.7.1
+          - v1.7.0
+          - v1.6.0
+          - v1.5.2
+          - v1.5.1
+          - v1.5.0
+          - v1.4.1
+          - v1.4.0
+          - v1.3.2
+          - v1.3.1
+          - v1.3.0
+          - v1.2.0
+          - v1.1.1
+          - v1.1.0
+        interfaces:
+          - github.com/cloud-native-toolkit/automation-modules#ibm-vpc-resource
+        registryId: cloud-native-toolkit/vpc/ibm
+        group: vpc
+        displayName: IBM VPC
+      - cloudProvider: aws
+        softwareProvider: ""
+        type: terraform
+        id: github.com/cloud-native-toolkit/terraform-aws-vpc
+        name: aws-vpc
+        description: Provisions the AWS VPC instance
+        tags:
+          - infrastructure
+          - networking
+          - aws
+        versions:
+          - v1.2.2
+          - v1.2.1
+          - v1.2.0
+          - v1.1.0
+          - v1.0.1
+          - v1.0.0
+        group: vpc
+        displayName: AWS VPC
+      - cloudProvider: ibm
+        softwareProvider: ""
+        type: terraform
+        id: github.com/cloud-native-toolkit/terraform-ibm-vpc-gateways
+        name: ibm-vpc-gateways
+        description: Terraform module to provision public gateways for an existing VPC instance
+        tags:
+          - network
+          - vpc
+          - public gateway
+        versions:
+          - v1.8.1
+          - v1.8.0
+          - v1.7.0
+          - v1.6.1
+          - v1.6.0
+          - v1.5.1
+          - v1.5.0
+          - v1.4.0
+          - v1.3.0
+          - v1.2.2
+          - v1.2.1
+          - v1.2.0
+          - v1.1.0
+          - v1.0.0
+          - v0.0.0
+        registryId: cloud-native-toolkit/vpc-gateways/ibm
+        group: vpc-gateways
+        displayName: IBM VPC Gateways
+      - cloudProvider: ibm
+        softwareProvider: ""
+        type: terraform
+        id: github.com/cloud-native-toolkit/terraform-ibm-vpc-subnets
+        name: ibm-vpc-subnets
+        description: Module to provision a collection of subnets for an existing VPC
+        tags:
+          - network
+          - subnets
+          - vpc
+        versions:
+          - v1.12.1
+          - v1.12.0
+          - v1.11.0
+          - v1.10.0
+          - v1.9.7
+          - v1.9.6
+          - v1.9.5
+          - v1.9.4
+          - v1.9.3
+          - v1.9.2
+          - v1.9.1
+          - v1.9.0
+          - v1.8.2
+          - v1.8.1
+          - v1.8.0
+          - v1.7.0
+          - v1.6.2
+          - v1.6.1
+          - v1.6.0
+          - v1.5.1
+          - v1.5.0
+          - v1.4.0
+          - v1.3.1
+          - v1.3.0
+          - v1.2.6
+          - v1.2.5
+          - v1.2.4
+          - v1.2.3
+          - v1.2.2
+          - v1.2.1
+          - v1.2.0
+          - v1.1.1
+          - v1.1.0
+          - v1.0.3
+          - v1.0.2
+          - v1.0.1
+          - v1.0.0
+          - v0.0.0
+        interfaces:
+          - github.com/cloud-native-toolkit/automation-modules#ibm-vpc-resource
+        registryId: cloud-native-toolkit/vpc-subnets/ibm
+        group: vpc-subnets
+        displayName: IBM VPC Subnets
+      - cloudProvider: aws
+        softwareProvider: ""
+        type: terraform
+        id: github.com/cloud-native-toolkit/terraform-aws-vpc-subnets
+        name: aws-vpc-subnets
+        description: Create subnets for VPC
+        tags:
+          - infrastructure
+          - networking
+        versions:
+          - v1.0.2
+          - v1.0.1
+          - v1.0.0
+        group: vpc-subnets
+        displayName: AWS VPC Subnets
+      - cloudProvider: ibm
+        softwareProvider: ""
+        type: terraform
+        id: github.com/cloud-native-toolkit/terraform-ibm-vpc-ssh
+        name: ibm-vpc-ssh
+        alias: ssh
+        description: Module to register an ssh key into the IBM Cloud infrastructure for use in securely accessing VPC resources
+        tags:
+          - vpc
+          - ssh
+          - infrastructure
+          - security
+        versions:
+          - v1.7.1
+          - v1.7.0
+          - v1.6.0
+          - v1.5.1
+          - v1.5.0
+          - v1.4.0
+          - v1.3.0
+          - v1.2.0
+          - v1.1.1
+          - v1.1.0
+          - v1.0.5
+          - v1.0.4
+          - v1.0.3
+          - v1.0.2
+          - v1.0.1
+          - v1.0.0
+          - v0.0.0
+        group: vpc-ssh
+        displayName: IBM VPC SSH
+      - cloudProvider: ibm
+        softwareProvider: ""
+        type: terraform
+        id: github.com/cloud-native-toolkit/terraform-ibm-vpe-gateway
+        name: ibm-vpe-gateway
+        alias: vpe
+        description: Provisions a Virtual Private Gateway for a provided resource, connecting that resource to the provided subnet
+        tags:
+          - infrastructure
+          - network
+          - virtual private gateway
+          - fscloud
+        versions:
+          - v1.6.0
+          - v1.5.1
+          - v1.5.0
+          - v1.4.0
+          - v1.3.1
+          - v1.3.0
+          - v1.2.3
+          - v1.2.2
+          - v1.2.1
+          - v1.2.0
+          - v1.1.1
+          - v1.1.0
+          - v1.0.0
+          - v0.0.0
+        group: vpc-vpe-gateway
+        displayName: VPE Gateway
+      - cloudProvider: ibm
+        softwareProvider: ""
+        type: terraform
+        id: github.com/cloud-native-toolkit/terraform-vsi-bastion
+        name: vsi-bastion
+        description: Module to provision Basion in a vsi image
+        tags:
+          - network
+          - vpc
+          - bastion
+        versions:
+          - v1.9.0
+          - v1.8.0
+          - v1.7.1
+          - v1.7.0
+          - v1.6.0
+          - v1.5.1
+          - v1.5.0
+          - v1.4.1
+          - v1.4.0
+          - v1.3.8
+          - v1.3.7
+          - v1.3.6
+          - v1.3.5
+          - v1.3.4
+          - v1.3.3
+          - v1.3.2
+          - v1.3.1
+          - v1.3.0
+          - v1.2.0
+          - v1.1.1
+          - v1.1.0
+          - v1.0.0
+          - v0.0.0
+        group: bastion
+        displayName: VSI Bastion
+      - cloudProvider: aws
+        softwareProvider: ""
+        type: terraform
+        id: github.com/cloud-native-toolkit/terraform-aws-bastion
+        name: aws-ec2-insatnce
+        description: Module to provision ec2 on aws
+        tags:
+          - infrastructure
+          - ec2
+          - virtual instance
+          - vpc
+        versions:
+          - v1.0.0
+        group: bastion
+        displayName: AWS Bastion
+      - cloudProvider: ibm
+        softwareProvider: ""
+        type: terraform
+        id: github.com/cloud-native-toolkit/terraform-vsi-vpn
+        name: vsi-vpn
+        description: Module to provision OpenVPN into a Virtual Private Cloud Virtual Server Instance
+        tags:
+          - infrastructure
+          - network
+          - vpc
+          - vpn
+        versions:
+          - v1.7.0
+          - v1.6.5
+          - v1.6.4
+          - v1.6.3
+          - v1.6.2
+          - v1.6.1
+          - v1.6.0
+          - v1.5.0
+          - v1.4.1
+          - v1.4.0
+          - v1.3.1
+          - v1.3.0
+          - v1.2.4
+          - v1.2.3
+          - v1.2.2
+          - v1.2.1
+          - v1.2.0
+          - v1.1.0
+          - v1.0.7
+          - v1.0.6
+          - v1.0.5
+          - v1.0.4
+          - v1.0.3
+          - v1.0.2
+          - v1.0.1
+          - v1.0.0
+          - v0.0.1
+          - v0.0.0
+        group: vpn
+        displayName: VSI OpenVPN
+      - cloudProvider: ibm
+        softwareProvider: ""
+        type: terraform
+        id: github.com/cloud-native-toolkit/terraform-ibm-vpc-vsi
+        name: ibm-vpc-vsi
+        description: Module to provision virtual server instance
+        tags:
+          - tools
+          - infrastructure
+          - virtual server
+        versions:
+          - v1.11.0
+          - v1.10.0
+          - v1.9.1
+          - v1.9.0
+          - v1.8.1
+          - v1.8.0
+          - v1.7.1
+          - v1.7.0
+          - v1.6.0
+          - v1.5.2
+          - v1.5.1
+          - v1.5.0
+          - v1.4.1
+          - v1.4.0
+          - v1.3.2
+          - v1.3.1
+          - v1.3.0
+          - v1.2.2
+          - v1.2.1
+          - v1.2.0
+          - v1.1.0
+          - v1.0.0
+          - v0.0.0
+        group: vsi
+        displayName: VPC VSI
+      - cloudProvider: ibm
+        softwareProvider: ""
+        type: terraform
+        id: github.com/cloud-native-toolkit/terraform-ibm-transit-gateway
+        name: ibm-transit-gateway
+        description: Provisions the IBM Cloud Transit Gateway with connections to VPC instances
+        tags:
+          - infrastructure
+          - networking
+        versions:
+          - v0.2.2
+          - v0.2.1
+          - v0.2.0
+          - v0.1.0
+          - v0.0.1
+        group: transit-gateway
+        displayName: Transit Gateway
+      - cloudProvider: ibm
+        softwareProvider: ""
+        type: terraform
+        id: github.com/cloud-native-toolkit/terraform-ibm-flow-log
+        name: ibm-flow-logs
+        description: Module to create Flow Logs for a provided resource
+        tags:
+          - audit
+          - flow log
+          - vpc
+        versions:
+          - v1.0.1
+          - v1.0.0
+          - v0.0.0
+        group: vpc-flow-logs
+        displayName: VPC Flow Logs
+      - cloudProvider: ibm
+        softwareProvider: ""
+        type: terraform
+        id: github.com/cloud-native-toolkit/terraform-ibm-vpn-gateway
+        name: ibm-vpc-vpn-gateway
+        description: Module to provision a VPN Gateway within a Virtual Private Cloud instance
+        tags:
+          - infrastructure
+          - networking
+          - vpn
+          - vpc
+        versions:
+          - v1.1.2
+          - v1.1.1
+          - v1.1.0
+          - v1.0.1
+          - v1.0.0
+          - v0.0.0
+        group: vpn
+        displayName: VPC VPN Gateway
+      - cloudProvider: ibm
+        softwareProvider: ""
+        type: terraform
+        id: github.com/cloud-native-toolkit/terraform-ibm-vpn-server
+        name: ibm-vpn-server
+        description: Module to provision a client to site VPN server instance in an IBM Cloud account
+        tags:
+          - vpc
+          - vpn server
+          - client to site
+        versions:
+          - v0.0.11
+          - v0.0.11
+          - v0.0.11
+          - v0.0.10
+          - v0.0.9
+          - v0.0.8
+          - v0.0.7
+          - v0.0.6
+          - v0.0.5
+          - v0.0.4
+          - v0.0.3
+          - v0.0.2
+          - v0.0.1
+          - v0.0.0
+        group: vpn
+        displayName: VPC VPN Server
+      - cloudProvider: azure
+        softwareProvider: ""
+        type: terraform
+        id: github.com/cloud-native-toolkit/terraform-azure-vpc
+        name: azure-vpc
+        description: Module to provision vpc on azure
+        tags:
+          - vpc
+          - vnet
+          - azure
+        versions:
+          - v1.0.1
+          - v1.0.0
+        group: vpc
+        displayName: Azure VPC
+      - cloudProvider: aws
+        softwareProvider: ""
+        type: terraform
+        id: github.com/cloud-native-toolkit/terraform-aws-ec2
+        name: aws-ec2-insatnce
+        description: Module to provision ec2 on aws
+        tags:
+          - infrastructure
+          - ec2
+          - virtual instance
+          - vpc
+        versions:
+          - v1.0.5
+          - v1.0.4
+          - v1.0.3
+          - v1.0.2
+          - v1.0.1
+          - v1.0.0
+        group: vsi
+        displayName: AWS EC2
+      - cloudProvider: aws
+        softwareProvider: ""
+        type: terraform
+        name: aws-ssh-key
+        description: Module to register an ssh key into the AWS Cloud infrastructure for use in securely accessing VPC resources
+        tags:
+          - vpc
+          - ssh
+          - infrastructure
+          - security
+        versions:
+          - v1.0.2
+          - v1.0.1
+          - v1.0.0
+        id: github.com/cloud-native-toolkit/terraform-aws-ssh-key
+        group: vpc-ssh
+        displayName: AWS SSH Key
+      - cloudProvider: aws
+        softwareProvider: ""
+        type: terraform
+        name: aws-vpn-server
+        description: Module to provision vpn-server on aws
+        tags:
+          - tools
+          - devops
+        versions: []
+        id: github.com/cloud-native-toolkit/terraform-aws-vpn-server
+        group: vpn
+        displayName: AWS VPN Server
+      - cloudProvider: azure
+        softwareProvider: ""
+        type: terraform
+        name: azure-vpc-subnets
+        description: Module to provision vpc-subnets on azure
+        tags:
+          - tools
+          - devops
+        versions:
+          - v1.2.0
+          - v1.1.0
+          - v1.0.2
+          - v1.0.1
+          - v1.0.0
+        id: github.com/cloud-native-toolkit/terraform-azure-vpc-subnets
+        group: vpc-subnets
+        displayName: Azure VPC Subnets
+      - cloudProvider: aws
+        softwareProvider: ""
+        type: terraform
+        name: aws-nat-gateway
+        description: Module to provision nat-gateway on aws
+        tags:
+          - tools
+          - devops
+        versions: []
+        id: github.com/cloud-native-toolkit/terraform-aws-nat-gateway
+        group: nat-gateway
+        displayName: AWS NAT Gateway
+      - cloudProvider: aws
+        softwareProvider: ""
+        type: terraform
+        name: aws-vpc-peering
+        description: Module to provision vpc-peering on aws
+        tags:
+          - tools
+          - devops
+        versions: []
+        id: github.com/cloud-native-toolkit/terraform-aws-vpc-peering
+        group: ""
+        displayName: AWS VPC Peering
+  - category: source-control
+    categoryName: Source Control
+    selection: single
+    modules:
+      - cloudProvider: ""
+        softwareProvider: ""
+        type: terraform
+        id: github.com/cloud-native-toolkit/terraform-k8s-source-control
+        name: source-control
+        alias: git
+        description: Module to install Source control into a cluster
+        tags:
+          - tools
+          - devops
+          - source control
+          - git
+        versions:
+          - v1.3.1
+          - v1.3.0
+          - v1.2.5
+          - v1.2.4
+          - v1.2.3
+          - v1.2.2
+          - v1.2.1
+        group: source-control
+        displayName: Source Control
+  - category: sre
+    categoryName: SRE tools
+    selection: multiple
+    modules:
+      - cloudProvider: ibm
+        softwareProvider: ""
+        type: terraform
+        id: github.com/cloud-native-toolkit/terraform-ibm-activity-tracker
+        name: ibm-activity-tracker
+        description: Provisions the IBM Cloud hosted Activity Tracker service
+        tags:
+          - sre
+          - account
+          - ibm cloud
+          - activity tracker
+        versions:
+          - v2.4.0
+          - v2.3.0
+          - v2.2.0
+          - v2.1.2
+          - v2.1.1
+          - v2.1.0
+          - v2.0.0
+          - v1.1.4
+          - v1.1.3
+        group: activity-tracker
+        displayName: IBM Activity Tracker
+      - cloudProvider: ibm
+        softwareProvider: ""
+        type: terraform
+        id: github.com/cloud-native-toolkit/terraform-ibm-logdna
+        name: logdna
+        description: Module to provision a LogDNA instance
+        tags:
+          - tools
+          - devops
+          - logdna
+          - logging
+        versions:
+          - v4.0.0
+          - v3.3.1
+          - v3.3.0
+          - v3.2.1
+          - v3.2.0
+          - v3.1.2
+          - v3.1.1
+          - v3.1.0
+          - v3.0.1
+          - v3.0.0
+          - v2.7.0
+          - v2.6.0
+          - v2.5.0
+          - v2.4.4
+          - v2.4.3
+        group: logging
+        displayName: IBM LogDNA
+      - cloudProvider: ibm
+        softwareProvider: ""
+        type: terraform
+        id: github.com/cloud-native-toolkit/terraform-ibm-logdna-bind
+        name: ibm-logdna-bind
+        description: Binds the logdna instance to a cluster
+        tags:
+          - tools
+          - logging
+        versions:
+          - v1.2.3
+          - v1.2.2
+          - v1.1.1
+          - v1.2.1
+          - v1.2.0
+          - v1.1.0
+          - v1.0.7
+          - v1.0.6
+          - v1.0.5
+          - v1.0.4
+          - v1.0.3
+          - v1.0.2
+          - v1.0.1
+          - v1.0.0
+          - v0.0.1
+          - v0.0.0
+        group: ""
+        displayName: IBM LogDNA Bind
+      - cloudProvider: ibm
+        softwareProvider: ""
+        type: terraform
+        id: github.com/cloud-native-toolkit/terraform-ibm-sysdig
+        name: sysdig
+        description: Module to set up the Sysdig into a cluster
+        tags:
+          - tools
+          - devops
+          - monitoring
+        versions:
+          - v4.0.1
+          - v4.0.0
+          - v3.4.0
+          - v3.3.0
+          - v3.2.2
+          - v3.2.1
+          - v3.2.0
+          - v3.1.3
+          - v3.1.2
+          - v3.1.1
+          - v3.1.0
+          - v3.0.1
+          - v3.0.0
+          - v2.7.0
+          - v2.6.0
+          - v2.5.0
+          - v2.4.0
+          - v2.3.3
+        group: monitoring
+        displayName: IBM Sysdig
+      - cloudProvider: ibm
+        softwareProvider: ""
+        type: terraform
+        id: github.com/cloud-native-toolkit/terraform-ibm-sysdig-bind
+        name: sysdig-bind
+        description: Module to bind a Sysdig instance to a cluster
+        tags:
+          - tools
+          - monitor
+          - sres
+        versions:
+          - v1.2.3
+          - v1.2.2
+          - v1.1.1
+          - v1.1.1
+          - v1.2.1
+          - v1.1.1
+          - v1.1.0
+          - v1.0.4
+          - v1.0.3
+          - v1.0.2
+          - v1.0.1
+          - v1.0.0
+          - v0.0.1
+          - v0.0.0
+        group: ""
+        displayName: IBM Sysdig Bind
+      - cloudProvider: ibm
+        softwareProvider: ""
+        type: terraform
+        id: github.com/cloud-native-toolkit/terraform-vsi-scc-collector
+        name: scc-collector
+        alias: scc
+        description: Module that installs an scc collector into a VPC VSI instance
+        tags:
+          - security
+        versions:
+          - v1.7.1
+          - v1.7.0
+          - v1.6.1
+          - v1.6.0
+          - v1.5.2
+          - v1.5.1
+          - v1.5.0
+          - v1.4.1
+          - v1.4.0
+          - v1.3.1
+          - v1.3.0
+          - v1.2.1
+          - v1.2.0
+          - v1.1.1
+          - v1.1.0
+          - v1.0.1
+          - v1.0.0
+        group: ""
+        displayName: IBM SCC Collector
+  - category: storage
+    categoryName: Storage
+    selection: multiple
+    modules:
+      - cloudProvider: ibm
+        softwareProvider: ""
+        type: terraform
+        id: github.com/cloud-native-toolkit/terraform-ibm-object-storage
+        name: ibm-object-storage
+        alias: cos
+        description: |
+          Module to work with an IBM Cloud Object Storage instance. If the `provision` flag is true then an new instance
+          of IBM Cloud Object Storage is provisioned. Otherwise, the module will find an existing instance with the
+          provided name and create a credential. The name and id of the Object Storage instance as well as the name and id
+          of the credential instance are exported from the module for use by other modules.
+        tags:
+          - tools
+          - infrastructure
+          - object storage
+          - saas
+        versions:
+          - v4.0.2
+          - v4.0.1
+          - v4.0.0
+          - v3.4.0
+          - v3.3.3
+          - v3.3.2
+          - v3.3.0
+          - v3.2.0
+          - v3.1.2
+          - v3.1.1
+          - v3.1.0
+          - v3.0.4
+          - v3.0.3
+          - v3.0.2
+          - v3.0.1
+          - v3.0.0
+          - v2.1.0
+          - v2.0.2
+        interfaces:
+          - github.com/cloud-native-toolkit/automation-modules#ibm-service
+        registryId: cloud-native-toolkit/object-storage/ibm
+        group: object-storage
+        displayName: IBM Object Storage
+      - cloudProvider: ibm
+        softwareProvider: ""
+        type: terraform
+        id: github.com/cloud-native-toolkit/terraform-ibm-object-storage-bucket
+        name: ibm-object-storage-bucket
+        alias: cos-bucket
+        description: Module to provision a Cloud Object Storage bucket
+        tags:
+          - object storage
+          - bucket
+        versions:
+          - v0.8.2
+          - v0.8.1
+          - v0.8.0
+          - v0.7.0
+          - v0.6.0
+          - v0.5.0
+          - v0.4.0
+          - v0.3.0
+          - v0.2.2
+          - v0.2.1
+          - v0.2.0
+          - v0.1.5
+          - v0.1.4
+          - v0.1.3
+        group: object-storage-bucket
+        displayName: IBM Object Storage Bucket
+      - cloudProvider: ""
+        softwareProvider: ""
+        type: gitops
+        id: github.com/cloud-native-toolkit/terraform-gitops-ocp-storageclass
+        name: gitops-storageclass
+        description: Module to populate a gitops repo with the resources to provision a storage class in an OCP cluster
+        tags:
+          - storageclass
+          - ocp
+          - gitops
+        versions:
+          - v1.2.3
+          - v1.2.2
+          - v1.2.1
+          - v1.2.0
+          - v1.1.0
+          - v1.0.0
+          - v0.0.2
+          - v0.0.1
+          - v0.0.0
+        group: ""
+        displayName: storageclass
+      - cloudProvider: ibm
+        softwareProvider: ""
+        type: terraform
+        id: github.com/cloud-native-toolkit/terraform-ibm-portworx
+        name: ibm-portworx
+        description: Terraform module to install Portworx storage in an OpenShift cluster.
+        tags:
+          - tools
+          - devops
+        versions:
+          - v1.0.4
+          - v1.0.3
+          - v1.0.2
+          - v1.0.1
+          - v1.0.0
+        group: portworx
+        displayName: Portworx on IBM Cloud
+      - cloudProvider: aws
+        softwareProvider: ""
+        type: terraform
+        id: github.com/cloud-native-toolkit/terraform-aws-s3-instance
+        name: aws-s3-instance
+        description: Module to provision s3-instance on aws
+        tags:
+          - aws
+          - s3 bucket
+          - s3
+          - instance s3
+        versions:
+          - v1.0.0
+          - v0.0.2
+          - v0.0.1
+        group: object-storage
+        displayName: AWS S3 Instance
+      - cloudProvider: aws
+        softwareProvider: ""
+        type: terraform
+        id: github.com/cloud-native-toolkit/terraform-aws-s3-bucket
+        name: aws-s3-bucket
+        description: Module to provision s3-bucket on aws
+        tags:
+          - aws
+          - s3 bucket
+          - s3
+          - file upload
+        versions:
+          - v1.0.0
+          - v0.0.1
+        group: object-storage-bucket
+        displayName: AWS S3 Bucket
+      - cloudProvider: ""
+        softwareProvider: ""
+        type: terraform
+        name: aws-portworx
+        description: Module to provision terraform-aws-portworx on a redhat rosa cluster
+        tags:
+          - tools
+          - devops
+        versions:
+          - v0.0.4
+          - v0.0.3
+          - v0.0.2
+          - v0.0.1
+        id: github.com/cloud-native-toolkit/terraform-aws-portworx
+        group: portworx
+        displayName: Portworx on AWS
+      - cloudProvider: azure
+        softwareProvider: ""
+        type: terraform
+        name: azure-portworx
+        description: Module to provision portworx on azure
+        tags:
+          - tools
+          - devops
+        versions: []
+        id: github.com/cloud-native-toolkit/terraform-azure-portworx
+        group: portworx
+        displayName: Portworx on Azure
+  - category: util
+    categoryName: Utilities
+    selection: multiple
+    modules:
+      - cloudProvider: ""
+        softwareProvider: ""
+        type: terraform
+        id: github.com/cloud-native-toolkit/terraform-util-sealed-secret-cert
+        name: sealed-secret-cert
+        description: Module to collect or generate the certificate and private key used for the sealed secret component
+        tags:
+          - tools
+          - devops
+        versions:
+          - v1.0.0
+          - v0.0.0
+        group: ""
+        displayName: Sealed Secret Cert
+      - cloudProvider: ""
+        softwareProvider: ""
+        type: terraform
+        id: github.com/cloud-native-toolkit/template-tools-cluster-config
+        name: cluster-config
+        description: Module to set up config maps and consolelinks in the cluster
+        tags:
+          - tools
+          - config
+          - cluster
+        versions:
+          - v0.1.2
+          - v0.1.1
+          - v0.1.0
+          - v0.0.1
+          - v0.0.0
+        group: cluster-config
+        displayName: Cluster Config
+      - cloudProvider: ""
+        softwareProvider: ""
+        type: terraform
+        id: github.com/cloud-native-toolkit/terraform-gitops-cluster-config
+        name: gitops-cluster-config
+        description: Module to populate a gitops repository with base configuration of the Red Hat OpenShift cluster (notification banner, help menus, etc)
+        tags:
+          - tools
+          - gitops
+          - cluster config
+          - ocp
+        versions:
+          - v1.0.0
+          - v0.0.0
+        group: cluster-config
+        displayName: Cluster Config
+      - cloudProvider: ""
+        softwareProvider: ""
+        type: gitops
+        id: github.com/cloud-native-toolkit/terraform-gitops-pull-secret
+        name: gitops-pull-secret
+        description: Module to populate a gitops repo with the resources to provision pull-secret
+        tags:
+          - tools
+          - gitops
+        versions:
+          - v1.1.1
+          - v1.1.0
+          - v1.0.0
+        group: pull-secret
+        displayName: Pull Secret
+      - cloudProvider: ""
+        softwareProvider: ""
+        type: terraform
+        id: github.com/cloud-native-toolkit/terraform-util-clis
+        name: util-clis
+        description: Module to install clis into local bin directory
+        tags:
+          - tools
+          - util
+          - cli
+          - yq
+          - jq
+          - igc
+        versions:
+          - v1.8.2
+          - v1.8.1
+          - v1.8.0
+          - v1.7.0
+          - v1.6.3
+          - v1.6.2
+          - v1.6.1
+          - v1.6.0
+          - v1.5.1
+          - v1.5.0
+          - v1.4.0
+          - v1.3.0
+          - v1.2.0
+          - v1.1.2
+          - v1.1.1
+          - v1.1.0
+          - v1.0.2
+          - v1.0.1
+          - v1.0.0
+          - v0.0.0
+        group: clis
+        displayName: CLI installer
+providers:
+  - name: azure
+    source: hashicorp/azurerm
+    variables:
+      - name: subscription_id
+        scope: global
+      - name: client_id
+        scope: global
+      - name: client_secret
+        scope: global
+      - name: tenant_id
+        scope: global
+  - name: aws
+    source: hashicorp/aws
+    variables:
+      - name: region
+        scope: global
+      - name: access_key
+        scope: global
+      - name: secret_key
+        scope: global
+  - name: ibm
+    source: ibm-cloud/ibm
+    variables:
+      - name: ibmcloud_api_key
+        scope: global
+      - name: region
+        scope: global
+  - name: gitops
+    source: cloud-native-toolkit/gitops
+    dependencies:
+      - id: clis
+        refs:
+          - source: github.com/cloud-native-toolkit/terraform-util-clis.git
+    variables:
+      - name: bin_dir
+        moduleRef:
+          id: clis
+          output: bin_dir

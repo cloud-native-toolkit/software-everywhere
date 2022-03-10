@@ -1,0 +1,31 @@
+id: github.com/cloud-native-toolkit/automation-modules#cluster
+name: cluster
+outputs:
+  - name: id
+    description: ID of the cluster.
+    type: string
+  - name: name
+    description: Name of the cluster.
+    type: string
+  - name: resource_group_name
+    description: Name of the resource group containing the cluster.
+    type: string
+  - name: region
+    description: Region containing the cluster.
+    type: string
+  - name: config_file_path
+    description: Path to the config file for the cluster (e.g. path to kube config).
+    type: string
+  - name: platform
+    description: Configuration values for the cluster platform
+    type: |
+      object({
+        id = string
+        kubeconfig = string
+        server_url = string
+        type = string
+        type_code = string
+        version = string
+        ingress = string
+        tls_secret = string
+      })
