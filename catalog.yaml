@@ -672,3 +672,6 @@ categories:
         id: github.com/cloud-native-toolkit/terraform-util-clis
         displayName: CLI installer
         group: clis
+      - name: gitops-ocp-ca-issuer
+        id: github.com/cloud-native-toolkit/terraform-gitops-ocp-ca-issuer
+        displayName: ocp-ca-issuer
