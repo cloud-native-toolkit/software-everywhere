@@ -675,3 +675,6 @@ categories:
       - name: gitops-ocp-ca-issuer
         id: github.com/cloud-native-toolkit/terraform-gitops-ocp-ca-issuer
         displayName: ocp-ca-issuer
+      - name: util-storage-class-manager
+        displayName: Storage Class Manager util
+        id: github.com/cloud-native-toolkit/terraform-util-storage-class-manager
