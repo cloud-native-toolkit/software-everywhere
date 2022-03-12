@@ -2954,6 +2954,7 @@ categories:
           - object storage
           - bucket
         versions:
+          - v0.8.3
           - v0.8.2
           - v0.8.1
           - v0.8.0
@@ -3173,6 +3174,18 @@ categories:
           - v0.0.0
         group: clis
         displayName: CLI installer
+      - cloudProvider: ""
+        softwareProvider: ""
+        type: gitops
+        name: gitops-ocp-ca-issuer
+        description: Module to populate a gitops repo with the resources to provision ocp-ca-issuer
+        tags:
+          - tools
+          - gitops
+        versions: []
+        id: github.com/cloud-native-toolkit/terraform-gitops-ocp-ca-issuer
+        group: ""
+        displayName: ocp-ca-issuer
 providers:
   - name: azure
     source: hashicorp/azurerm
