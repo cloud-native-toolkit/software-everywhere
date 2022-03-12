@@ -1,8 +1,0 @@
-#!/usr/bin/env bash
-
-oc new-app postgresql-persistent -n "${NAMESPACE}" \
- --name="${POSTGRESQL_DATABASE}" \
- -p POSTGRESQL_USER="${POSTGRESQL_USER}" \
- -p POSTGRESQL_PASSWORD="${POSTGRESQL_PASSWORD}" \
- -p POSTGRESQL_DATABASE="${POSTGRESQL_DATABASE}" \
- -p VOLUME_CAPACITY="${VOLUME_CAPACITY}"
