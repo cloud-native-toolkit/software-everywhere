@@ -8,6 +8,23 @@ categories:
       - cloudProvider: ""
         softwareProvider: ibm-cp
         type: gitops
+        name: gitops-cp-bas
+        description: Module to populate a gitops repo with the resources to provision the Behavior Analysis Service from the IBM Cloud Pak
+        tags:
+          - cloud pak
+          - behavior analysis service
+          - bas
+        versions:
+          - v1.0.3
+          - v1.0.1
+          - v1.0.0
+        id: github.com/cloud-native-toolkit/terraform-gitops-cp-bas
+        alias: bas
+        group: ""
+        displayName: CP Behavior Analytics Service
+      - cloudProvider: ""
+        softwareProvider: ibm-cp
+        type: gitops
         name: gitops-cp-watson-knowledge-catalog
         description: Module to populate a gitops repo with the resources to provision cp-watson-knowledge-catalog
         tags:
@@ -994,6 +1011,7 @@ categories:
           - gitops
           - bootstrap
         versions:
+          - v1.2.6
           - v1.2.5
           - v1.2.4
           - v1.2.3
@@ -3140,6 +3158,7 @@ categories:
           - jq
           - igc
         versions:
+          - v1.8.3
           - v1.8.2
           - v1.8.1
           - v1.8.0
