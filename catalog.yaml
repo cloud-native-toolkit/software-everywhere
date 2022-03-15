@@ -432,7 +432,7 @@ categories:
         softwareProvider: ibm-cp
       - name: gitops-cp-data-fabric
         id: github.com/cloud-native-toolkit/terraform-gitops-cp-data-fabric
-        displayName: Data Virtualization Service
+        displayName: CP4D Data Fabric
         softwareProvider: ibm-cp
       - name: gitops-cp-sterling-oms
         id: github.com/cloud-native-toolkit/terraform-gitops-cp-sterling-oms
