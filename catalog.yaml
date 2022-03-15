@@ -110,6 +110,10 @@ categories:
         id: github.com/cloud-native-toolkit/terraform-ibm-vpc-gateways
         group: vpc-gateways
         cloudProvider: ibm
+      - name: AWS VPC Gateways
+        id: github.com/cloud-native-toolkit/terraform-aws-vpc-gateways
+        group: vpc-gateways
+        cloudProvider: aws
       - name: IBM VPC Subnets
         id: github.com/cloud-native-toolkit/terraform-ibm-vpc-subnets
         group: vpc-subnets
