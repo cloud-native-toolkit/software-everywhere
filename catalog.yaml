@@ -238,16 +238,17 @@ categories:
         softwareProvider: ibm-cp
         group: sls
       - name: gitops-cp4d-operator
+        displayName: Cloud Pak for Data Instance
         id: github.com/cloud-native-toolkit/terraform-gitops-cp4d-operator
         type: gitops
         softwareProvider: ibm-cp
-      - name: gitops-cp4d-instance
+      - name: cp4d-instance
         id: github.com/cloud-native-toolkit/terraform-gitops-cp4d-instance
         type: gitops
         softwareProvider: ibm-cp
-      - name: cp-foundational-services
-        id: >-
-          github.com/cloud-native-toolkit/terraform-gitops-cp-foundational-services
+      - name: ibm-common-service
+        displayName: Cloud Pak Foundational Services
+        id: github.com/cloud-native-toolkit/terraform-gitops-cp-foundational-services
         type: gitops
         softwareProvider: ibm-cp
       - name: CP4I Dependency Manager
@@ -421,14 +422,16 @@ categories:
         id: github.com/cloud-native-toolkit/terraform-gitops-cp-mq-uniform-cluster
         displayName: CP MQ Uniform Cluster
         softwareProvider: ibm-cp
-      - name: gitops-terraform-gitops-cp-data-virtualization
-        id: >-
-          github.com/cloud-native-toolkit/terraform-gitops-terraform-gitops-cp-data-virtualization
+      - name: gitops-cp-data-virtualization-service
+        id: github.com/cloud-native-toolkit/terraform-gitops-terraform-gitops-cp-data-virtualization
         displayName: Data Virtualization
         softwareProvider: ibm-cp
       - name: gitops-cp-data-virtualization-service
-        id: >-
-          https://github.com/cloud-native-toolkit/terraform-gitops-cp-data-virtualization-service
+        id: https://github.com/cloud-native-toolkit/terraform-gitops-cp-data-virtualization-service
+        displayName: Data Virtualization Service
+        softwareProvider: ibm-cp
+      - name: gitops-cp-data-fabric
+        id: github.com/cloud-native-toolkit/terraform-gitops-cp-data-fabric
         displayName: Data Virtualization Service
         softwareProvider: ibm-cp
       - name: gitops-cp-sterling-oms
