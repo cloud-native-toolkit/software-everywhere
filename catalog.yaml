@@ -422,7 +422,7 @@ categories:
         id: github.com/cloud-native-toolkit/terraform-gitops-cp-mq-uniform-cluster
         displayName: CP MQ Uniform Cluster
         softwareProvider: ibm-cp
-      - name: gitops-cp-data-virtualization-service
+      - name: gitops-cp-data-virtualization
         id: github.com/cloud-native-toolkit/terraform-gitops-terraform-gitops-cp-data-virtualization
         displayName: Data Virtualization
         softwareProvider: ibm-cp
