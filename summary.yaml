@@ -2066,6 +2066,27 @@ categories:
       - cloudProvider: ""
         softwareProvider: ibm-cp
         type: gitops
+        name: gitops-cp-data-virtualization-service
+        description: Module to populate a gitops repo for Data Virtualization on CP4D
+        tags:
+          - tools
+          - gitops
+          - data virtualization
+          - cp4d
+          - cpd
+        versions:
+          - v2.0.2
+          - v2.0.1
+          - v2.0.0
+          - v1.0.2
+          - v1.0.1
+          - v1.0.0
+        id: github.com/cloud-native-toolkit/terraform-gitops-cp-data-virtualization-service
+        group: ""
+        displayName: Data Virtualization Service
+      - cloudProvider: ""
+        softwareProvider: ibm-cp
+        type: gitops
         name: gitops-cp-data-fabric
         description: Module to populate a gitops repo with the resources to provision cp-data-fabric
         tags:
