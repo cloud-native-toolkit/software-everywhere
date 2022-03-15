@@ -2075,7 +2075,7 @@ categories:
           - v1.0.0
         id: github.com/cloud-native-toolkit/terraform-gitops-cp-data-fabric
         group: ""
-        displayName: Data Virtualization Service
+        displayName: CP4D Data Fabric
       - cloudProvider: ""
         softwareProvider: ""
         type: gitops
