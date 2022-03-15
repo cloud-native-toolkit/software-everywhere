@@ -1580,6 +1580,7 @@ categories:
           - dependency management
           - channel
         versions:
+          - v1.2.0
           - v1.1.4
           - v1.1.3
           - v1.1.2
@@ -2443,6 +2444,7 @@ categories:
           - virtual instance
           - vpc
         versions:
+          - v1.0.1
           - v1.0.0
         group: bastion
         displayName: AWS Bastion
@@ -2631,6 +2633,7 @@ categories:
           - virtual instance
           - vpc
         versions:
+          - v1.0.7
           - v1.0.5
           - v1.0.4
           - v1.0.3
