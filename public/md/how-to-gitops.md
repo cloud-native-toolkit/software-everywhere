@@ -2,6 +2,40 @@
 
 In the automation module catalog, a GitOps module is a thin terraform module that populates a GitOps repository with the resources necessary to deploy the components to an OpenShift (or vanilla kubernetes) cluster. 
 
+## TL;DR
+
+The following contains a great deal of detail about the way the module and resulting GitOps repo are structured and how automation works to validate and release the module. Most of that is just context though. If you are building a GitOps module, here is a straightforward process to follow:
+
+### Start with the deployment yaml
+
+When all is said and done, the purpose of this module is to push valid yaml files into a git repo that will then be used by ArgoCD to provision the resource(s). That means the first thing to do is create that valid yaml. 
+
+**Note:** Most of our gitops modules use helm charts because that is a very convenient way to package up the resources and inject some logic into the provisioning process. You can use kustomize or just raw yaml as well. Helm has a built-in mechanism for validating the yaml which is described below.
+
+**To validate a helm chart:**
+
+1. If your chart uses submodules, you must first download them by running `helm dep update {chart dir}`
+2. Validate the chart syntax by running `helm lint {chart dir}`
+3. Validate the templates and the default parameters in the values file by running `helm template test {chart dir} -n test`. Look through the resulting yaml content to ensure it is behaving as you expect.
+
+### Validate the generated yaml in the git repo
+
+Some modules are able to use a static yaml files and can skip this step. However, most of the modules generate yaml from the variables passed as input to the module. The generated yaml should be validated. There are a couple of ways this can be done:
+
+- Print the generated yaml file content in the `.github/scripts/validate-deploy.sh`. By default, this script clones the git repo and validates the git repo is structured as expected. Ensure all the generated files are printed to the console 9e.g. using `cat`). You can even copy these files from the log and paste them into a local file for testing.
+- While the test is running, clone the generated gitops repo and validate the contents. If necessary, add a `sleep` call to increase the time available to clone the repo. You can apply the yaml directly from this repo to a cluster to validate it does what you expect.
+
+### Validate the ArgoCD config and deployment into the cluster
+
+The last step is to validate the deployment in the cluster. The `.github/scripts/validate-deploy.sh` script should ultimately include logic to automate this validation. However, as the module is being developed it might be necessary to manually inspect the cluster to understand the installed components.
+
+1. Connect to the OpenShift console. It will either be using `toolkit-dev-ocp48` or `toolkit-dev-ocp48-gitops` in the "Cloud-Native Squad" IBM Cloud account.
+2. Open ArgoCD from the top application menu. Open the ArgoCD applications that have been generated and verify the resources are being created without errors.
+3. From the OpenShift console, open the projects and inspect the workloads that are being created. Make sure they are deployed without errors.
+4. Build the logic in `.github/scripts/validate-deploy.sh` to automatically validate the checks that you made manually. 
+
+And that's it! Your module should be done. Mark the pull request as ready and wait for it to be merged. Congratulations, you've created a GitOps module.
+
 ## Anatomy of the GitOps module repository
 
 An automation modules is created from a template repository that includes a skeleton of the module logic and the automation framework to validate and release the module.

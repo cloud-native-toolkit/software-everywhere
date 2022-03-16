@@ -1,0 +1,80 @@
+categories:
+  - category: newCluster
+    categoryName: Create New Cluster
+    boms:
+      - name: CP4I
+        path: ./boms/cp4i_aws.yaml
+        cloudProvider: AWS
+        bomModules:
+          - aws-rosa
+          - openshift-cicd
+          - ocp-login
+          - argocd-bootstrap
+          - gitops-console-link-job
+          - gitops-namespace
+          - gitops-cp-mq
+          - gitops-cp-ace
+          - gitops-cp-apic
+          - gitops-cp-eventstreams
+      - name: CP4I
+        path: ./boms/cp4i_azure.yaml
+        cloudProvider: Azure
+        bomModules:
+          - azure-aro
+          - argocd-bootstrap
+          - gitops-console-link-job
+          - gitops-namespace
+          - gitops-cp-mq
+          - gitops-cp-ace
+          - gitops-cp-apic
+          - gitops-cp-eventstreams
+      - name: CP4D
+        path: ./boms/cp4d_azure.yaml
+        cloudProvider: Azure
+        bomModules:
+          - azure-aro
+          - argocd-bootstrap
+          - gitops-console-link-job
+          - gitops-namespace
+          - cp4d TBD
+      - name: CP4D Demo
+        path: ./boms/cp4d_demo_azure.yaml
+        cloudProvider: Azure
+        bomModules:
+          - azure-aro
+          - openshift-cicd
+          - ocp-login
+          - argocd-bootstrap
+          - gitops-console-link-job
+          - gitops-namespace
+          - cp4d TBD
+          - cp4d demo TBD
+      - name: CP4I
+        path: ./boms/cp4i_ibm.yaml
+        cloudProvider: IBM
+        bomModules:
+          - ibm-ocp-vpc
+          - openshift-cicd
+          - argocd-bootstrap
+          - gitops-console-link-job
+          - gitops-namespace
+          - gitops-cp-mq
+          - gitops-cp-ace
+          - gitops-cp-apic
+          - gitops-cp-eventstreams
+  - category: existingCluster
+    categoryName: Use Existing Cluster
+    boms:
+      - name: CP4I
+        path: ./boms/cp4i_ibm_existing_cluster.yaml
+        cloudProvider: IBM
+        bomModules:
+          - ocp-login
+          - openshift-cicd
+          - argocd-bootstrap
+          - gitops-console-link-job
+          - gitops-namespace
+          - gitops-cp-mq
+          - gitops-cp-ace
+          - gitops-cp-apic
+          - gitops-cp-eventstreams
