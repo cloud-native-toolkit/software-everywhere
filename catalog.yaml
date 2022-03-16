@@ -248,7 +248,8 @@ categories:
         softwareProvider: ibm-cp
       - name: ibm-common-service
         displayName: Cloud Pak Foundational Services
-        id: github.com/cloud-native-toolkit/terraform-gitops-cp-foundational-services
+        id: >-
+          github.com/cloud-native-toolkit/terraform-gitops-cp-foundational-services
         type: gitops
         softwareProvider: ibm-cp
       - name: CP4I Dependency Manager
@@ -423,11 +424,13 @@ categories:
         displayName: CP MQ Uniform Cluster
         softwareProvider: ibm-cp
       - name: gitops-cp-data-virtualization
-        id: github.com/cloud-native-toolkit/terraform-gitops-cp-data-virtualization
+        id: >-
+          github.com/cloud-native-toolkit/terraform-gitops-cp-data-virtualization
         displayName: Data Virtualization
         softwareProvider: ibm-cp
       - name: gitops-cp-data-virtualization-service
-        id: github.com/cloud-native-toolkit/terraform-gitops-cp-data-virtualization-service
+        id: >-
+          github.com/cloud-native-toolkit/terraform-gitops-cp-data-virtualization-service
         displayName: Data Virtualization Service
         softwareProvider: ibm-cp
       - name: gitops-cp-data-fabric
@@ -684,4 +687,6 @@ categories:
         displayName: ocp-ca-issuer
       - name: util-storage-class-manager
         displayName: Storage Class Manager util
+        id: github.com/cloud-native-toolkit/terraform-util-storage-class-manager
+      - name: Storage Class Manager
         id: github.com/cloud-native-toolkit/terraform-util-storage-class-manager
