@@ -1528,6 +1528,7 @@ categories:
           - cp4i
           - platform nagigator
         versions:
+          - v1.0.4
           - v1.0.3
           - v1.0.2
           - v1.0.1
@@ -1570,18 +1571,6 @@ categories:
           - v0.0.1
         group: ""
         displayName: Cloud Pak for Data Instance
-      - cloudProvider: ""
-        softwareProvider: ibm-cp
-        type: gitops
-        name: ibm-common-service
-        description: GitOps module to install ibm-common-service (Cloud Pak Foundational Services)
-        tags:
-          - tools
-          - gitops
-        versions: []
-        id: github.com/cloud-native-toolkit/terraform-gitops-cp-foundational-services
-        group: ""
-        displayName: Cloud Pak Foundational Services
       - cloudProvider: ""
         softwareProvider: ""
         type: terraform
@@ -1639,12 +1628,13 @@ categories:
       - cloudProvider: ""
         softwareProvider: ""
         type: gitops
-        name: gitops-cp4ba-operator
+        name: iaf-operator
         description: Module to populate a gitops repo with the resources to provision cp4ba-operator
         tags:
           - tools
           - gitops
-        versions: []
+        versions:
+          - v1.0.0
         id: github.com/cloud-native-toolkit/terraform-gitops-cp4ba-operator
         group: ""
         displayName: Cloud Pak for Business Automation operator
@@ -2117,6 +2107,7 @@ categories:
           - tools
           - gitops
         versions:
+          - v1.1.0
           - v1.0.0
         id: github.com/cloud-native-toolkit/terraform-gitops-cp-data-fabric
         group: ""
@@ -2205,7 +2196,12 @@ categories:
         tags:
           - tools
           - gitops
-        versions: []
+          - IBM
+          - cloud pak
+          - cp4i
+          - aspera
+        versions:
+          - v0.0.1
         id: github.com/cloud-native-toolkit/terraform-gitops-cp-aspera-operator
         group: ""
         displayName: Aspera operator
