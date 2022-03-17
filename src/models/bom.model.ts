@@ -18,7 +18,3 @@ export const bomPath = (bom: BomModel): string => {
 export const bomName = (bom: BomModel): string => {
   return bom.name
 }
-
-export let bomModulesList = (bom: BomModel): string[] => {
-  return bom.bomModules
-}

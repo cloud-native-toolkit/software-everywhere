@@ -1,4 +1,5 @@
 import React from 'react';
+import yaml from 'yaml';
 
 import './Bom.scss';
 
@@ -13,13 +14,17 @@ import {
   ClickableTile,
 } from 'carbon-components-react';
 
-import {bomModulesList, bomCloudProvider, bomPath, bomName, BomModel} from '../../models';
+import { bomCloudProvider, bomPath, bomName, BomModel } from '../../models';
 
 export interface BomProps {
-  bom: BomModel
+  bom: BomModel;
 }
 
 class BomInternal extends React.Component<BomProps, any> {
+
+  state = {
+    modules: [],
+  };
 
   render() {
     return this.renderTile()
@@ -91,16 +96,36 @@ class BomInternal extends React.Component<BomProps, any> {
    return bomName(this.props.bom)
   }
 
-  get bomModulesList(): string[] {
-   return bomModulesList(this.props.bom)
+  componentDidMount() {
+    this.loadYaml();
+  }
+
+  async loadYaml() {
+    const result = await fetch(this.bomPath);
+    const text = await result.text();
+
+    try {
+      var bomModules = yaml.parse(text);
+      var moduleArray=[];
+      for (var key in bomModules.spec.modules) {
+          var obj = bomModules.spec.modules[key].name;
+          moduleArray.push(obj)
+      }
+      this.setState({ modules:  moduleArray});
+    } catch (error) {
+      console.log('Error parsing catalog: ', error)
+      throw error
+    }
   }
 
   renderBomModules() {
-    if (this.props.bom.bomModules.length === 0) {
+    var moduleArray = this.state.modules
+
+    if (moduleArray.length === 0) {
       return (<div>No Modules</div>)
     }
 
-    const bomModules = this.props.bom.bomModules.map((m) => <li>{m}</li>)
+    const bomModules = moduleArray.map((m) => <li>{m}</li>)
 
     return (
       <div className="text">
