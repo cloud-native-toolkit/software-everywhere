@@ -2134,14 +2134,15 @@ categories:
       - cloudProvider: ""
         softwareProvider: ibm-cp
         type: gitops
+        id: github.com/cloud-native-toolkit/terraform-gitops-cp-maximo
         name: gitops-cp-maximo
         description: IBM Maximo Application Suite
         tags:
           - gitops
         versions:
+          - v1.0.3
           - v1.0.2
           - v1.0.1
-        id: github.com/cloud-native-toolkit/terraform-gitops-cp-maximo
         group: maximo
         displayName: Maximo Application Suite
       - cloudProvider: ""
