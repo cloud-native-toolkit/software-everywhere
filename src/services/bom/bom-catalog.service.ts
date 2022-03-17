@@ -62,8 +62,21 @@ export class BomService {
 
     return {
       payload,
-      filters: bomCatalogFilters || {}
+      filters: bomCatalogFilters || {},
+      count: this.count(payload),
+      totalCount: this.count(_bom)
     }
+  }
+
+  count(bomCatalog: BomCatalogModel): number {
+    return bomCatalog.categories.reduce((total: number, bomCategory: BomCategoryModel) => {
+
+      const bomCategoryTotal: number = bomCategory.boms.reduce((bomTotal: number, bom: BomGroupModel) => {
+        return bomTotal + bom.boms.length
+      }, 0)
+
+      return total + bomCategoryTotal
+    }, 0)
   }
 
   async loadYaml(): Promise<BomCatalogModel> {

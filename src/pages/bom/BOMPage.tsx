@@ -1,7 +1,7 @@
 import React from 'react';
 import {Column, Grid, Row} from 'carbon-components-react';
 
-import {BomCatalog} from '../../components';
+import {BomCatalog, BomFilter} from '../../components';
 
 export class BOMPage extends React.Component<any, any> {
 
@@ -15,7 +15,10 @@ export class BOMPage extends React.Component<any, any> {
             </Column>
           </Row>
           <Row>
-            <Column lg={{span: 12}} md={{span: 8}} sm={{span: 4}}>
+            <Column lg={{span: 2}} md={{span: 2}} sm={{span: 4}}>
+              <BomFilter />
+            </Column>
+            <Column lg={{span: 10}} md={{span: 6}} sm={{span: 4}}>
               <BomCatalog />
             </Column>
           </Row>

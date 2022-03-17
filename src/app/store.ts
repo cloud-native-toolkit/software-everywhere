@@ -5,6 +5,7 @@ import catalogListReducer from '../features/catalog-list/catalogListSlice';
 import modeReducer from '../features/mode/modeSlice';
 import bomCatalogReducer from '../features/bomCatalog/bomCatalogSlice';
 import {markdownReducer} from '../features/markdown/markdownSlice'
+import bomCatalogListReducer from '../features/bom-catalog-list/bomCatalogListSlice'
 
 export const store = configureStore({
   reducer: {
@@ -13,7 +14,8 @@ export const store = configureStore({
     catalogList: catalogListReducer,
     markdown: markdownReducer,
     mode: modeReducer,
-    bomCatalog: bomCatalogReducer
+    bomCatalog: bomCatalogReducer,
+    bomCatalogList: bomCatalogListReducer
   },
 });
 

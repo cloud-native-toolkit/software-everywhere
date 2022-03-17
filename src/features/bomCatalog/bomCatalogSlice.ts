@@ -7,11 +7,15 @@ import {Status} from '../status';
 
 export interface BomCatalogState {
   value?: BomCatalogModel
+  filters?: BomCatalogFiltersModel
   status: Status
+  count?: number
+  totalCount?: number
 }
 
 const initialState: BomCatalogState = {
   value: undefined,
+  filters: {},
   status: Status.idle
 }
 
@@ -40,12 +44,18 @@ export const bomCatalogSlice = createSlice({
         console.log('Bom Catalog loaded')
         state.status = Status.idle;
         state.value = action.payload.payload;
+        state.filters = action.payload.filters;
+        state.count = action.payload.count;
+        state.totalCount = action.payload.totalCount;
       });
 
   }
 })
 
 export const selectBomCatalog = (state: RootState): BomCatalogModel | undefined => state.bomCatalog.value
+export const selectBomCatalogCount = (state: RootState): number | undefined => state.bomCatalog.count
+export const selectBomCatalogTotalCount = (state: RootState): number | undefined => state.bomCatalog.totalCount
+export const selectBomCatalogFilters = (state: RootState): BomCatalogFiltersModel | undefined => state.bomCatalog.filters
 export const selectBomCatalogStatus = (state: RootState): Status | undefined => state.bomCatalog.status
 
 export default bomCatalogSlice.reducer

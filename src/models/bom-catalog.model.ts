@@ -7,6 +7,8 @@ export interface BomCatalogFiltersModel {
 export interface BomCatalogResultModel {
   payload: BomCatalogModel;
   filters?: BomCatalogFiltersModel;
+  totalCount: number;
+  count: number;
 }
 
 export interface BomCatalogModel {
