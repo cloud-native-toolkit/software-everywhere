@@ -25,6 +25,8 @@ interface CatalogFilterDispatch {
   filterBySearchText: (props: CatalogFilterProps, value: string) => void
 }
 
+const defaultStatus = 'released';
+
 export interface CatalogFilterProps extends CatalogFilterValues, CatalogFilterDispatch {
 }
 
@@ -54,6 +56,7 @@ class CatalogFilterInternal extends React.Component<CatalogFilterProps, any> {
                   style={{display: 'inline-block', alignSelf: 'flex-end'}}
                   size={"field"}
                   onClick={(e) => this.props.filterBySearchText(this.props, this.searchText)}
+                  iconDescription="Search"
                   renderIcon={Search16}
                   hasIconOnly
                 />
@@ -105,7 +108,7 @@ class CatalogFilterInternal extends React.Component<CatalogFilterProps, any> {
         </div>
         <div className="FormElement">
           <Select
-            defaultValue={this.props.catalogFilters?.status || ''}
+            defaultValue={this.props.catalogFilters?.status || defaultStatus}
             helperText="Filter by status"
             id="status"
             labelText="Status"
@@ -132,6 +135,7 @@ class CatalogFilterInternal extends React.Component<CatalogFilterProps, any> {
 
   componentDidMount() {
     this.props.fetchCatalogList()
+    this.props.filterByStatus(this.props, defaultStatus)
   }
 }
 
