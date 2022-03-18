@@ -3153,7 +3153,8 @@ categories:
         tags:
           - tools
           - devops
-        versions: []
+        versions:
+          - v0.0.1
         id: github.com/cloud-native-toolkit/terraform-azure-portworx
         group: portworx
         displayName: Portworx on Azure
