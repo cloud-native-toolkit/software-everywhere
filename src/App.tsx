@@ -17,6 +17,7 @@ class App extends React.Component<any, any> {
           </HeaderName>
           <HeaderNavigation aria-label="Software Everywhere">
             <HeaderMenuItem href="/">Module catalog</HeaderMenuItem>
+            <HeaderMenuItem href="https://github.com/cloud-native-toolkit" target="_blank" rel="noopener noreferrer">Git organization</HeaderMenuItem>
             <HeaderMenuItem href="#/contributing">Contributing</HeaderMenuItem>
             <HeaderMenu aria-label="How to" menuLinkName="How To">
               <HeaderMenuItem href="#/how-to/terraform">Create a terraform module</HeaderMenuItem>
