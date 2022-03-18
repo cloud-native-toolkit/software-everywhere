@@ -37,6 +37,31 @@ class CatalogFilterInternal extends React.Component<CatalogFilterProps, any> {
     return (
       <div className="CatalogFilter">
         <div className="FormElement">
+          <Grid style={{paddingRight: '0', paddingLeft: '0'}}>
+            <Row>
+              <Column lg={{span: 9}} style={{paddingRight: '.5rem'}}>
+                <TextInput
+                  id="searchText"
+                  labelText="Module search"
+                  defaultValue={this.searchText}
+                  onChange={(e) => this.searchText = e.target.value}
+                  onKeyPress={(e) => {if(e.key === 'Enter') this.props.filterBySearchText(this.props, this.searchText)}}
+                />
+              </Column>
+              <Column lg={{span: 3}} style={{display: 'flex', paddingLeft: '.5rem'}}>
+                <Button
+                  className="SearchButton"
+                  style={{display: 'inline-block', alignSelf: 'flex-end'}}
+                  size={"field"}
+                  onClick={(e) => this.props.filterBySearchText(this.props, this.searchText)}
+                  renderIcon={Search16}
+                  hasIconOnly
+                />
+              </Column>
+            </Row>
+          </Grid>
+        </div>
+        <div className="FormElement">
           <Select
             id="categories"
             helperText="Filter by category"
@@ -88,30 +113,6 @@ class CatalogFilterInternal extends React.Component<CatalogFilterProps, any> {
           >
             {this.selectItems(this.props.catalogList.statusValues)}
           </Select>
-        </div>
-        <div className="FormElement">
-          <Grid style={{paddingRight: '0', paddingLeft: '0'}}>
-            <Row>
-              <Column lg={{span: 9}} style={{paddingRight: '.5rem'}}>
-                <TextInput
-                  id="searchText"
-                  labelText="Module search"
-                  defaultValue={this.searchText}
-                  onChange={(e) => this.searchText = e.target.value}
-                />
-              </Column>
-              <Column lg={{span: 3}} style={{display: 'flex', paddingLeft: '.5rem'}}>
-                <Button
-                  className="SearchButton"
-                  style={{display: 'inline-block', alignSelf: 'flex-end'}}
-                  size={"field"}
-                  onClick={(e) => this.props.filterBySearchText(this.props, this.searchText)}
-                  renderIcon={Search16}
-                  hasIconOnly
-                />
-              </Column>
-            </Row>
-          </Grid>
         </div>
       </div>
     )
