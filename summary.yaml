@@ -1012,6 +1012,7 @@ categories:
           - gitops
           - bootstrap
         versions:
+          - v1.2.8
           - v1.2.7
           - v1.2.6
           - v1.2.5
@@ -2168,7 +2169,8 @@ categories:
         tags:
           - tools
           - gitops
-        versions: []
+        versions:
+          - v0.0.1
         id: github.com/cloud-native-toolkit/terraform-gitops-cp-apic
         group: api-management
         displayName: Api Connect Instance
