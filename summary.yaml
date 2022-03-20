@@ -3284,6 +3284,34 @@ categories:
         id: github.com/cloud-native-toolkit/terraform-gitops-ocp-ca-issuer
         group: ""
         displayName: ocp-ca-issuer
+      - cloudProvider: ""
+        softwareProvider: ""
+        type: terraform
+        name: util-storage-class-manager
+        description: Module to collect and organize storage classes within a template
+        tags:
+          - storage class
+          - manager
+          - util
+        versions:
+          - v1.0.0
+        id: github.com/cloud-native-toolkit/terraform-util-storage-class-manager
+        group: ""
+        displayName: Storage Class Manager util
+      - cloudProvider: ""
+        softwareProvider: ""
+        type: terraform
+        name: util-storage-class-manager
+        description: Module to collect and organize storage classes within a template
+        tags:
+          - storage class
+          - manager
+          - util
+        versions:
+          - v1.0.0
+        id: github.com/cloud-native-toolkit/terraform-util-storage-class-manager
+        group: ""
+        displayName: Storage Class Manager
 providers:
   - name: azure
     source: hashicorp/azurerm
