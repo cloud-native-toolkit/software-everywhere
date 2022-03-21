@@ -1,31 +1,88 @@
-# IBM Ecosystem terraform modules
+# Software Everywhere
 
-This repository contains a collection of terraform modules that
-can be used to provision infrastructure and software across multi cloud environments typically into OpenShift
-clusters. You can view the modules on the following link.
+Software Everywhere aims to make it automate the provisioning of Red Hat OpenShift and deployment and use IBM Software in any environment. The automation is provided as a set of reusable modules that can be put together into different composite solutions.
 
-[Module listing](https://modules.cloudnativetoolkit.dev/)
+## Automation solutions
 
-## Modules not migrated
+A number of common reference architectures have been defined in the [automation solutions](https://github.com/cloud-native-toolkit/automation-solutions) repository.
 
-### SRE Tools
+## Automation modules
 
-| **Module name**                 | **Module location**                                                      | **Features** | **Latest release** | **Last build status** |
-|---------------------------------|--------------------------------------------------------------------------|-------|--------------------|-----------------------|
-| *Prometheus Grafana*            | generic/tools/prometheusgrafana_release | | | |
-| *LogDNA operator*               | cloud-managed/operator-services/logdna                                   |       | | |
-| *SysDig operator*               | cloud-managed/operator-services/sysdig                                   |       | | |
+The full catalog of automation modules is available from https://modules.cloudnativetoolkit.dev. The user interface is built from source in `src/` and the contents of the catalog are defined in `catalog.yaml`. Whenever the repository is changed a GitHub Action is triggered to build the user interface and build the catalog from the module metadata in each of the module repositories.
 
-### Middleware
+## Generating automation from a Bill of Materials
 
-| **Module name**                 | **Module location**                                                      | **Features** | **Latest release** | **Last build status** |
-|---------------------------------|--------------------------------------------------------------------------|-------|--------------------|-----------------------|
-| *Cloudant*                      | cloud-managed/services/cloudant                                          |       | | |
-| *PostGreSQL*                    | cloud-managed/services/postgres                                          |       | | |
-| *AppId operator*                | cloud-managed/operator-services/appid                                    |       | | |
-| *Cloud Object Storage operator* | cloud-managed/operator-services/cloud_object_storage                     |       | | |
-| *Cloudant operator*             | cloud-managed/operator-services/cloudant                                 |       | | |
-| *PostGreSQL operator*           | cloud-managed/operator-services/postgres                                 |       | | |
+The [iascable](https://github.com/cloud-native-toolkit/iascable) cli is used to generate an automation bundle from a Bill of Materials. The Bill of Materials is a yaml file that defines the modules that should go into an automation template.
+
+For example, the following will generate automation to provision Maximo Application Suite Core on an existing cluster:
+
+```yaml
+apiVersion: cloud.ibm.com/v1alpha1
+kind: BillOfMaterial
+metadata:
+  name: 400-gitops-cp-maximo
+  labels:
+    code: '400'
+  annotations:
+    displayName: Maximo
+    description: GitOps deployment of Maximo Core on OpenShift
+spec:
+  modules:
+    - name: ocp-login
+    - name: gitops-repo
+    - name: gitops-bootstrap
+    
+    # IBM Suite License Service
+    - name: gitops-namespace
+      alias: sls-namespace
+    - name: gitops-cp-sls
+      dependencies:
+        - name: namespace
+          ref: sls-namespace
+      variables:
+        - name: namespace
+          value: ibm-sls           
+        - name: cluster_ingress
+          scope: global
+          
+    # Mongo CE
+    - name: gitops-namespace
+      alias: mongo-namespace
+    - name: gitops-mongo-ce-operator
+      dependencies:
+        - name: namespace
+          ref: mongo-namespace
+      variables: 
+        - name: namespace
+          value: mongo            
+
+    - name: gitops-mongo-ce
+      dependencies:
+        - name: namespace
+          ref: mongo-namespace    
+      variables:
+        - name: namespace
+          value: mongo
+
+    # IBM Behavior Analysis Service       
+    - name: gitops-namespace
+      alias: bas-namespace
+    - name: gitops-cp-bas
+      dependencies:
+        - name: namespace
+          ref: bas-namespace
+      variables:
+        - name: namespace
+          value: masbas 
+
+    # Maximo Core
+    - name: gitops-cp-maximo
+      variables:
+        - name: instanceid
+          ref: mas8
+        - name: cluster_ingress
+          scope: global          
+```
 
 ## How to apply a module
 
