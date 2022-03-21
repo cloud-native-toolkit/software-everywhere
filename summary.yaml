@@ -914,7 +914,7 @@ categories:
           - v2.0.0
           - v1.1.1
         group: turbonomic
-        displayName: gitops-turbonomic
+        displayName: Turbonomic
       - cloudProvider: ""
         softwareProvider: ibm-cp
         type: gitops
@@ -932,7 +932,7 @@ categories:
           - v1.0.0
         id: github.com/cloud-native-toolkit/terraform-gitops-cp-watson-studio
         group: ""
-        displayName: CP Watson Studio
+        displayName: Watson Studio
   - category: gitops
     categoryName: GitOps
     selection: multiple
@@ -3283,7 +3283,7 @@ categories:
         versions: []
         id: github.com/cloud-native-toolkit/terraform-gitops-ocp-ca-issuer
         group: ""
-        displayName: ocp-ca-issuer
+        displayName: OCP CA Issuer
       - cloudProvider: ""
         softwareProvider: ""
         type: terraform
