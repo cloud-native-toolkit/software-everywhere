@@ -2777,9 +2777,11 @@ categories:
         name: aws-nat-gateway
         description: Module to provision nat-gateway on aws
         tags:
-          - tools
-          - devops
-        versions: []
+          - infrastructure
+          - networking
+          - aws
+        versions:
+          - v1.0.2
         id: github.com/cloud-native-toolkit/terraform-aws-nat-gateway
         group: nat-gateway
         displayName: AWS NAT Gateway
