@@ -3115,6 +3115,7 @@ categories:
           - s3
           - instance s3
         versions:
+          - v1.1.0
           - v1.0.0
           - v0.0.2
           - v0.0.1
@@ -3132,6 +3133,7 @@ categories:
           - s3
           - file upload
         versions:
+          - v1.1.0
           - v1.0.0
           - v0.0.1
         group: object-storage-bucket
