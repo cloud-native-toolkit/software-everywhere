@@ -1623,14 +1623,15 @@ categories:
         group: ""
         displayName: CP TrustStore
       - cloudProvider: ""
-        softwareProvider: ""
+        softwareProvider: ibm-cp
         type: gitops
         name: gitops-cp4s
-        description: Module to populate a gitops repo with the resources to provision cp4s
+        description: Module to populate a gitops repo with the resources to provision IBM Cloud Pak for Security
         tags:
           - tools
           - gitops
-        versions: []
+        versions:
+          - v1.0.0
         id: github.com/cloud-native-toolkit/terraform-gitops-cp4s
         group: ""
         displayName: Cloud Pak for Security
