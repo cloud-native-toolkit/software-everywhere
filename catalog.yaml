@@ -248,7 +248,8 @@ categories:
         softwareProvider: ibm-cp
       - name: ibm-common-service
         displayName: Cloud Pak Foundational Services
-        id: github.com/cloud-native-toolkit/terraform-gitops-cp-foundational-services
+        id: >-
+          github.com/cloud-native-toolkit/terraform-gitops-cp-foundational-services
         type: gitops
         softwareProvider: ibm-cp
       - name: CP4I Dependency Manager
@@ -423,11 +424,13 @@ categories:
         displayName: CP MQ Uniform Cluster
         softwareProvider: ibm-cp
       - name: gitops-cp-data-virtualization
-        id: github.com/cloud-native-toolkit/terraform-gitops-cp-data-virtualization
+        id: >-
+          github.com/cloud-native-toolkit/terraform-gitops-cp-data-virtualization
         displayName: Data Virtualization
         softwareProvider: ibm-cp
       - name: gitops-cp-data-virtualization-service
-        id: github.com/cloud-native-toolkit/terraform-gitops-cp-data-virtualization-service
+        id: >-
+          github.com/cloud-native-toolkit/terraform-gitops-cp-data-virtualization-service
         displayName: Data Virtualization Service
         softwareProvider: ibm-cp
       - name: gitops-cp-data-fabric
@@ -655,9 +658,10 @@ categories:
       - name: gitops-turbonomic
         id: github.com/cloud-native-toolkit/terraform-gitops-ocp-turbonomic
         group: turbonomic
+        displayName: Turbonomic
       - name: gitops-cp-watson-studio
         id: github.com/cloud-native-toolkit/terraform-gitops-cp-watson-studio
-        displayName: CP Watson Studio
+        displayName: Watson Studio
   - category: util
     categoryName: Utilities
     selection: multiple
@@ -681,7 +685,10 @@ categories:
         group: clis
       - name: gitops-ocp-ca-issuer
         id: github.com/cloud-native-toolkit/terraform-gitops-ocp-ca-issuer
-        displayName: ocp-ca-issuer
+        displayName: OCP CA Issuer
       - name: util-storage-class-manager
         displayName: Storage Class Manager util
         id: github.com/cloud-native-toolkit/terraform-util-storage-class-manager
+      - name: storage-class-manager
+        id: github.com/cloud-native-toolkit/terraform-util-storage-class-manager
+        displayName: Storage Class Manager
