@@ -3257,7 +3257,12 @@ categories:
           - yq
           - jq
           - igc
+          - ibmcloud
+          - argocd
+          - oc
+          - kubectl
         versions:
+          - v1.9.1
           - v1.9.0
           - v1.8.5
           - v1.8.4
@@ -3282,6 +3287,7 @@ categories:
           - v1.0.1
           - v1.0.0
           - v0.0.0
+        registryId: cloud-native-toolkit/clis/util
         group: clis
         displayName: CLI installer
       - cloudProvider: ""
