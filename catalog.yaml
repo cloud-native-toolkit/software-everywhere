@@ -273,6 +273,10 @@ categories:
         group: gitops-cp-db2-oltp
         type: gitops
         softwareProvider: ibm-cp
+      - name: CP4I Ace Dashboard
+        id: github.com/cloud-native-toolkit/terraform-gitops-cp-ace-dashboard
+        group: cp4i
+        softwareProvider: ibm-cp
   - category: sre
     categoryName: SRE tools
     selection: multiple
