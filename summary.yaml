@@ -1044,12 +1044,13 @@ categories:
       - cloudProvider: ""
         softwareProvider: ""
         type: gitops
-        name: gitops-ibm-ocs
+        name: gitops-ibm-odf
         description: Module to populate a gitops repo with the resources to provision ibm-ocs using the OpenShift Data Foundation add-on for ROKS clusters.
         tags:
           - tools
           - gitops
         versions:
+          - v0.0.2
           - v0.0.1
         id: github.com/cloud-native-toolkit/terraform-gitops-ibm-odf
         group: ""
