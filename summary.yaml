@@ -1660,6 +1660,21 @@ categories:
         id: github.com/cloud-native-toolkit/terraform-gitops-cp-ban-operator
         group: ""
         displayName: IBM Business Automation Navigator and UMS operator
+      - cloudProvider: ""
+        softwareProvider: ibm-cp
+        type: gitops
+        name: gitops-cp-ace-dashboard
+        description: Module to populate a gitops repo with the resources to provision the ACE Dashboard
+        tags:
+          - ace
+          - cp4i
+          - dashboard
+          - gitops
+        versions:
+          - v1.0.0
+        id: github.com/cloud-native-toolkit/terraform-gitops-cp-ace-dashboard
+        group: cp4i
+        displayName: CP4I Ace Dashboard
   - category: middleware
     categoryName: Middleware
     selection: multiple
