@@ -1051,9 +1051,9 @@ categories:
           - gitops
         versions:
           - v0.0.1
-        id: github.com/cloud-native-toolkit/terraform-gitops-ibm-ocs
+        id: github.com/cloud-native-toolkit/terraform-gitops-ibm-odf
         group: ""
-        displayName: ibm-ocs
+        displayName: ibm-odf
   - category: iam
     categoryName: IAM
     selection: multiple
@@ -2953,6 +2953,7 @@ categories:
           - monitor
           - sres
         versions:
+          - v1.3.0
           - v1.2.3
           - v1.2.2
           - v1.1.1
