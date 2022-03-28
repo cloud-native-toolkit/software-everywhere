@@ -284,15 +284,15 @@ categories:
         id: github.com/cloud-native-toolkit/terraform-ibm-log-analysis
         group: logging
         cloudProvider: ibm
-      - name: IBM LogDNA Bind
-        id: github.com/cloud-native-toolkit/terraform-ibm-logdna-bind
+      - name: IBM Log Analysis Bind
+        id: github.com/cloud-native-toolkit/terraform-ibm-log-analysis-bind
         cloudProvider: ibm
       - name: IBM Cloud Monitoring
         id: github.com/cloud-native-toolkit/terraform-ibm-cloud-monitoring
         group: monitoring
         cloudProvider: ibm
-      - name: IBM Sysdig Bind
-        id: github.com/cloud-native-toolkit/terraform-ibm-sysdig-bind
+      - name: IBM Cloud Monitoring Bind
+        id: github.com/cloud-native-toolkit/terraform-ibm-cloud-monitoring-bind
         cloudProvider: ibm
       - name: IBM SCC Collector
         id: github.com/cloud-native-toolkit/terraform-vsi-scc-collector
