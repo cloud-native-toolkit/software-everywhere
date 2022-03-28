@@ -514,12 +514,12 @@ categories:
         softwareProvider: ibm-cp
       - name: gitops-cp-db2
         displayName: IBM DB2 Database Instance
-        id: https://github.com/cloud-native-toolkit/terraform-gitops-cp-db2
+        id: github.com/cloud-native-toolkit/terraform-gitops-cp-db2
         group: db2
         type: gitops
       - name: gitops-cp-db2-schema
         displayName: IBM DB2 Database Schema
-        id: https://github.com/cloud-native-toolkit/terraform-gitops-cp-db2-schema
+        id: github.com/cloud-native-toolkit/terraform-gitops-cp-db2-schema
         group: db2
         type: gitops
   - category: storage
