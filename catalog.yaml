@@ -268,11 +268,6 @@ categories:
         id: github.com/cloud-native-toolkit/terraform-gitops-cp-ban-operator
         displayName: IBM Business Automation Navigator and UMS operator
         softwareProvider: ibm-cp
-      - name: IBM DB2 OLTP
-        id: github.com/cloud-native-toolkit/terraform-gitops-cp-db2-oltp
-        group: gitops-cp-db2-oltp
-        type: gitops
-        softwareProvider: ibm-cp
       - name: CP4I Ace Dashboard
         id: github.com/cloud-native-toolkit/terraform-gitops-cp-ace-dashboard
         group: cp4i
@@ -505,13 +500,26 @@ categories:
         id: github.com/cloud-native-toolkit/terraform-gitops-cp-db2wh
         group: db2-warehouse
         type: gitops
-      - name: IBM DB2U Operator
+      - name: gitops-db2u
         id: github.com/cloud-native-toolkit/terraform-gitops-db2u-operator
-        group: terraform-gitops-db2u-operator
+        displayName: IBM DB2U Operator
+        group: db2u-operator
         type: gitops
         softwareProvider: ibm-cp
-      - name: IBM DB2
+      - name: gitops-db2-oltp
+        id: github.com/cloud-native-toolkit/terraform-gitops-cp-db2-oltp
+        displayName: IBM DB2 OLTP (Db2oltpService)
+        group: gitops-cp-db2-oltp
+        type: gitops
+        softwareProvider: ibm-cp
+      - name: gitops-cp-db2
+        displayName: IBM DB2 Database Instance
         id: https://github.com/cloud-native-toolkit/terraform-gitops-cp-db2
+        group: db2
+        type: gitops
+      - name: gitops-cp-db2-schema
+        displayName: IBM DB2 Database Schema
+        id: https://github.com/cloud-native-toolkit/terraform-gitops-cp-db2-schema
         group: db2
         type: gitops
   - category: storage
