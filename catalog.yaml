@@ -508,7 +508,7 @@ categories:
         softwareProvider: ibm-cp
       - name: gitops-db2-oltp
         id: github.com/cloud-native-toolkit/terraform-gitops-cp-db2-oltp
-        displayName: IBM DB2 OLTP (Db2oltpService)
+        displayName: IBM DB2 OLTP Db2oltpService
         group: gitops-cp-db2-oltp
         type: gitops
         softwareProvider: ibm-cp
