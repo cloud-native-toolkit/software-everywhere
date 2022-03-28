@@ -1613,7 +1613,7 @@ categories:
           - v0.0.2
           - v0.0.1
         group: ""
-        displayName: Cloud Pak for Data Instance
+        displayName: Cloud Pak for Data Operator
       - cloudProvider: ""
         softwareProvider: ""
         type: terraform
