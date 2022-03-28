@@ -397,8 +397,34 @@ categories:
           - v1.0.2
           - v1.0.1
           - v1.0.0
-        group: terraform-gitops-db2u-operator
+        group: db2u-operator
         displayName: IBM DB2U Operator
+      - cloudProvider: ""
+        softwareProvider: ""
+        type: gitops
+        name: gitops-cp-db2
+        description: Module to populate a gitops repository with the resources to configure a schema on a DB2 instance
+        tags:
+          - db2
+          - schema
+          - gitops
+        versions:
+          - v0.0.2
+        id: github.com/cloud-native-toolkit/terraform-gitops-cp-db2
+        group: db2
+        displayName: IBM DB2 Database Instance
+      - cloudProvider: ""
+        softwareProvider: ibm-cp
+        type: gitops
+        name: gitops-cp-db2-schema
+        description: Module to populate a gitops repo with the resources to provision cp-db2-schema
+        tags:
+          - tools
+          - gitops
+        versions: []
+        id: github.com/cloud-native-toolkit/terraform-gitops-cp-db2-schema
+        group: db2
+        displayName: IBM DB2 Database Schema
   - category: dev-tool
     categoryName: Dev Tools
     selection: multiple
@@ -1160,12 +1186,14 @@ categories:
         type: terraform
         id: github.com/cloud-native-toolkit/terraform-ibm-access-group
         name: ibm-access-group
+        registryId: cloud-native-toolkit/access-group/ibm
         description: Module to create ADMIN and USER access groups for a set of resource groups
         tags:
           - tools
           - ibm cloud
           - access groups
         versions:
+          - v3.0.2
           - v3.0.0
           - v2.3.0
           - v2.2.0
@@ -2340,6 +2368,7 @@ categories:
           - vpc
           - public gateway
         versions:
+          - v1.8.2
           - v1.8.1
           - v1.8.0
           - v1.7.0
@@ -2381,6 +2410,7 @@ categories:
           - subnets
           - vpc
         versions:
+          - v1.12.2
           - v1.12.1
           - v1.12.0
           - v1.11.0
@@ -3039,6 +3069,7 @@ categories:
           - object storage
           - saas
         versions:
+          - v4.0.3
           - v4.0.2
           - v4.0.1
           - v4.0.0
