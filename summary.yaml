@@ -389,6 +389,8 @@ categories:
           - tools
           - gitops
         versions:
+          - v1.0.7
+          - v1.0.6
           - v1.0.5
           - v1.0.4
           - v1.0.3
@@ -2736,6 +2738,7 @@ categories:
           - virtual instance
           - vpc
         versions:
+          - v1.0.8
           - v1.0.7
           - v1.0.5
           - v1.0.4
@@ -3188,6 +3191,7 @@ categories:
           - tools
           - devops
         versions:
+          - v0.0.2
           - v0.0.1
         id: github.com/cloud-native-toolkit/terraform-azure-portworx
         group: portworx
