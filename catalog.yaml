@@ -280,15 +280,15 @@ categories:
         id: github.com/cloud-native-toolkit/terraform-ibm-activity-tracker
         group: activity-tracker
         cloudProvider: ibm
-      - name: IBM LogDNA
-        id: github.com/cloud-native-toolkit/terraform-ibm-logdna
+      - name: IBM Log Analysis
+        id: github.com/cloud-native-toolkit/terraform-ibm-log-analysis
         group: logging
         cloudProvider: ibm
       - name: IBM LogDNA Bind
         id: github.com/cloud-native-toolkit/terraform-ibm-logdna-bind
         cloudProvider: ibm
-      - name: IBM Sysdig
-        id: github.com/cloud-native-toolkit/terraform-ibm-sysdig
+      - name: IBM Cloud Monitoring
+        id: github.com/cloud-native-toolkit/terraform-ibm-cloud-monitoring
         group: monitoring
         cloudProvider: ibm
       - name: IBM Sysdig Bind
