@@ -238,18 +238,18 @@ categories:
         softwareProvider: ibm-cp
         group: sls
       - name: gitops-cp4d-operator
-        displayName: Cloud Pak for Data Instance
+        displayName: Cloud Pak for Data Operator
         id: github.com/cloud-native-toolkit/terraform-gitops-cp4d-operator
         type: gitops
         softwareProvider: ibm-cp
       - name: cp4d-instance
-        id: github.com/cloud-native-toolkit/terraform-gitops-cp4d-instance
+        displayName: Cloud Pak for Data Instance
+        id: github.com:cloud-native-toolkit/terraform-gitops-cp4d-instance.git
         type: gitops
         softwareProvider: ibm-cp
       - name: ibm-common-service
         displayName: Cloud Pak Foundational Services
-        id: >-
-          github.com/cloud-native-toolkit/terraform-gitops-cp-foundational-services
+        id: github.com/cloud-native-toolkit/terraform-gitops-cp-foundational-services
         type: gitops
         softwareProvider: ibm-cp
       - name: CP4I Dependency Manager
