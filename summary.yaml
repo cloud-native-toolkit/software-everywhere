@@ -2911,7 +2911,7 @@ categories:
         softwareProvider: ""
         type: terraform
         id: github.com/cloud-native-toolkit/terraform-ibm-log-analysis
-        name: ibm-log-anaysis
+        name: ibm-log-analysis
         description: Module to provision a IBM Log Anaysis instance on IBM Cloud
         tags:
           - tools
@@ -2919,6 +2919,7 @@ categories:
           - log analysis
           - ibm
         versions:
+          - v4.1.2
           - v4.1.1
           - v4.1.0
           - v4.0.0
