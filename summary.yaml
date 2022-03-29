@@ -3013,13 +3013,15 @@ categories:
         softwareProvider: ""
         type: terraform
         id: github.com/cloud-native-toolkit/terraform-ibm-cloud-monitoring-bind
-        name: sysdig-bind
-        description: Module to bind a Sysdig instance to a cluster
+        name: ibm-cloud-monitoring-bind
+        description: Module to bind an existing IBM Cloud Monitoring instance to a cluster
         tags:
           - tools
           - monitor
-          - sres
+          - sre
+          - kubernetes
         versions:
+          - v1.3.1
           - v1.3.0
           - v1.2.3
           - v1.2.2
@@ -3035,6 +3037,7 @@ categories:
           - v1.0.0
           - v0.0.1
           - v0.0.0
+        alias: sysdig-bind
         group: ""
         displayName: IBM Cloud Monitoring Bind
       - cloudProvider: ibm
