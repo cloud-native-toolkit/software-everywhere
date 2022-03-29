@@ -110,10 +110,6 @@ categories:
         id: github.com/cloud-native-toolkit/terraform-ibm-vpc-gateways
         group: vpc-gateways
         cloudProvider: ibm
-      - name: AWS VPC Gateways
-        id: github.com/cloud-native-toolkit/terraform-aws-vpc-gateways
-        group: vpc-gateways
-        cloudProvider: aws
       - name: IBM VPC Subnets
         id: github.com/cloud-native-toolkit/terraform-ibm-vpc-subnets
         group: vpc-subnets
@@ -189,12 +185,12 @@ categories:
       - name: aws-internet-gateway
         id: github.com/cloud-native-toolkit/terraform-aws-vpc-gateways
         displayName: AWS Internet Gateway
-        group: vpc-gateways
+        group: internet-gateway
         cloudProvider: aws
       - name: aws-nat-gateway
         id: github.com/cloud-native-toolkit/terraform-aws-nat-gateway
         displayName: AWS NAT Gateway
-        group: nat-gateway
+        group: vpc-gateways
         cloudProvider: aws
       - name: aws-vpc-peering
         id: github.com/cloud-native-toolkit/terraform-aws-vpc-peering
