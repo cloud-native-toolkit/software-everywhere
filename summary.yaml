@@ -402,6 +402,20 @@ categories:
         group: db2u-operator
         displayName: IBM DB2U Operator
       - cloudProvider: ""
+        softwareProvider: ibm-cp
+        type: gitops
+        name: gitops-db2-oltp
+        description: Module to populate a gitops repo wih the resources to provision IBM DB2
+        tags:
+          - db2
+          - tools
+          - gitops
+        versions:
+          - v1.0.6
+        id: github.com/cloud-native-toolkit/terraform-gitops-cp-db2-oltp
+        group: gitops-cp-db2-oltp
+        displayName: IBM DB2 OLTP Db2oltpService
+      - cloudProvider: ""
         softwareProvider: ""
         type: gitops
         name: gitops-cp-db2
