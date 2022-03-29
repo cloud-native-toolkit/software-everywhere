@@ -1630,6 +1630,19 @@ categories:
         group: ""
         displayName: Cloud Pak for Data Operator
       - cloudProvider: ""
+        softwareProvider: ibm-cp
+        type: gitops
+        name: ibm-common-service
+        description: GitOps module to install ibm-common-service (Cloud Pak Foundational Services)
+        tags:
+          - tools
+          - gitops
+        versions:
+          - v1.0.4
+        id: github.com/cloud-native-toolkit/terraform-gitops-cp-foundational-services
+        group: ""
+        displayName: Cloud Pak Foundational Services
+      - cloudProvider: ""
         softwareProvider: ""
         type: terraform
         id: github.com/cloud-native-toolkit/terraform-cp4i-dependency-management
