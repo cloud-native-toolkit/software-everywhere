@@ -2391,18 +2391,6 @@ categories:
         registryId: cloud-native-toolkit/vpc-gateways/ibm
         group: vpc-gateways
         displayName: IBM VPC Gateways
-      - cloudProvider: aws
-        softwareProvider: ""
-        type: terraform
-        name: aws-internet-gateway
-        description: Module to provision internet-gateway on aws
-        tags:
-          - tools
-          - devops
-        versions: []
-        id: github.com/cloud-native-toolkit/terraform-aws-vpc-gateways
-        group: vpc-gateways
-        displayName: AWS VPC Gateways
       - cloudProvider: ibm
         softwareProvider: ""
         type: terraform
@@ -2838,7 +2826,7 @@ categories:
           - devops
         versions: []
         id: github.com/cloud-native-toolkit/terraform-aws-vpc-gateways
-        group: vpc-gateways
+        group: internet-gateway
         displayName: AWS Internet Gateway
       - cloudProvider: aws
         softwareProvider: ""
@@ -2852,7 +2840,7 @@ categories:
         versions:
           - v1.0.2
         id: github.com/cloud-native-toolkit/terraform-aws-nat-gateway
-        group: nat-gateway
+        group: vpc-gateways
         displayName: AWS NAT Gateway
       - cloudProvider: aws
         softwareProvider: ""
