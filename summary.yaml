@@ -2831,6 +2831,18 @@ categories:
       - cloudProvider: aws
         softwareProvider: ""
         type: terraform
+        name: aws-internet-gateway
+        description: Module to provision internet-gateway on aws
+        tags:
+          - tools
+          - devops
+        versions: []
+        id: github.com/cloud-native-toolkit/terraform-aws-vpc-gateways
+        group: vpc-gateways
+        displayName: AWS Internet Gateway
+      - cloudProvider: aws
+        softwareProvider: ""
+        type: terraform
         name: aws-nat-gateway
         description: Module to provision nat-gateway on aws
         tags:
