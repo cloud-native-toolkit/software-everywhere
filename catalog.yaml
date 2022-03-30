@@ -245,7 +245,8 @@ categories:
         softwareProvider: ibm-cp
       - name: ibm-common-service
         displayName: Cloud Pak Foundational Services
-        id: github.com/cloud-native-toolkit/terraform-gitops-cp-foundational-services
+        id: >-
+          github.com/cloud-native-toolkit/terraform-gitops-cp-foundational-services
         type: gitops
         softwareProvider: ibm-cp
       - name: CP4I Dependency Manager
@@ -313,6 +314,9 @@ categories:
       - name: gitops-ibm-odf
         id: github.com/cloud-native-toolkit/terraform-gitops-ibm-odf
         displayName: ibm-odf
+      - name: test-new-process
+        id: github.com/cloud-native-toolkit/terraform-any-test-new-process
+        displayName: test-new-process
   - category: middleware
     categoryName: Middleware
     selection: multiple
