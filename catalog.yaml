@@ -32,6 +32,9 @@ categories:
         displayName: AWS ROSA
         cloudProvider: aws
         group: openshift
+      - name: foo
+        id: github.com/cloud-native-toolkit/terraform-any-foo
+        displayName: foo
   - category: iam
     categoryName: IAM
     selection: multiple
