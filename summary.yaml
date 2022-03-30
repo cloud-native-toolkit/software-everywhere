@@ -2985,6 +2985,7 @@ categories:
           - logging
           - kubernetes
         versions:
+          - v1.3.2
           - v1.3.1
           - v1.3.0
           - v1.2.4
@@ -3005,6 +3006,7 @@ categories:
           - v0.0.1
           - v0.0.0
         alias: ibm-logdna-bind
+        registryId: cloud-native-toolkit/log-analysis-bind/ibm
         group: ""
         displayName: IBM Log Analysis Bind
       - cloudProvider: ibm
@@ -3055,6 +3057,7 @@ categories:
           - sre
           - kubernetes
         versions:
+          - v1.3.2
           - v1.3.1
           - v1.3.0
           - v1.2.3
@@ -3072,6 +3075,7 @@ categories:
           - v0.0.1
           - v0.0.0
         alias: sysdig-bind
+        registryId: cloud-native-toolkit/cloud-monitoring-bind/ibm
         group: ""
         displayName: IBM Cloud Monitoring Bind
       - cloudProvider: ibm
