@@ -12,7 +12,7 @@ on:
 
 jobs:
   extract-values:
-    if: ${{ github.event.issue.state == 'open' && contains(github.event.issue.title, 'Request new module:') && !contains( github.event.issue.labels.*.name, 'repo_created') }}
+    if: ${{ github.event.issue.state == 'open' && contains( github.event.issue.labels.*.name, 'new_module') && !contains( github.event.issue.labels.*.name, 'repo_created') }}
     runs-on: ubuntu-latest
     steps:
       - id: variables
