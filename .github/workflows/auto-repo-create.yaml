@@ -12,7 +12,7 @@ on:
 
 jobs:
   extract-values:
-    if: ${{ github.event.issue.title.startsWith('Request new module:') }}
+    if: ${{ github.event.issue.state == 'open' }}
     runs-on: ubuntu-latest
     steps:
       - id: variables
