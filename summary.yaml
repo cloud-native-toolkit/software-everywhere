@@ -1101,6 +1101,18 @@ categories:
         id: github.com/cloud-native-toolkit/terraform-gitops-ibm-odf
         group: ""
         displayName: ibm-odf
+      - cloudProvider: ""
+        softwareProvider: ""
+        type: terraform
+        name: test-new-process
+        description: 'Module to provision test-new-process on '
+        tags:
+          - tools
+          - devops
+        versions: []
+        id: github.com/cloud-native-toolkit/terraform-any-test-new-process
+        group: ""
+        displayName: test-new-process
   - category: iam
     categoryName: IAM
     selection: multiple
