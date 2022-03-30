@@ -12,7 +12,7 @@ on:
 
 jobs:
   extract-values:
-    if: ${{ github.event.issue.state == 'open' }}
+    if: ${{ github.event.issue.title.startsWith('Request new module:') }}
     runs-on: ubuntu-latest
     steps:
       - id: variables
@@ -87,16 +87,22 @@ jobs:
         issue-number: ${{ github.event.issue.number }}
         body: "Error creating repo. See details at: https://github.com/cloud-native-toolkit/automation-modules/actions/runs/${{ github.run_id }}"
 
-  close-issue:
+
+  label_issues:
     runs-on: ubuntu-latest
     needs: create-repo
-
     steps:
-      - name: Close Issue
-        uses: peter-evans/close-issue@v1
+      - name: Label issue
+        uses: andymckay/labeler@master
         with:
-          issue-number: ${{ needs.create-repo.outputs.issue_number }}
-          comment: Created repo - ${{ needs.create-repo.outputs.repoUrl }}
+          add-labels: "repo_created"
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Add comment
+        uses: peter-evans/create-or-update-comment@v1
+        with:
+          issue-number: ${{ github.event.issue.number }}
+          body:  Created repo - ${{ needs.create-repo.outputs.repoUrl }}
+
 
   add-to-catalog:
     runs-on: ubuntu-latest
@@ -124,3 +130,9 @@ jobs:
           message: 'Adds entry to module catalog'
           add: 'catalog.yaml'
           pull_strategy: 'NO-PULL'
+
+      - name: Label issue
+        uses: andymckay/labeler@master
+        with:
+          add-labels: "added_to_catalog"
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
