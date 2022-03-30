@@ -314,9 +314,6 @@ categories:
       - name: gitops-ibm-odf
         id: github.com/cloud-native-toolkit/terraform-gitops-ibm-odf
         displayName: ibm-odf
-      - name: test-new-process
-        id: github.com/cloud-native-toolkit/terraform-any-test-new-process
-        displayName: test-new-process
   - category: middleware
     categoryName: Middleware
     selection: multiple
