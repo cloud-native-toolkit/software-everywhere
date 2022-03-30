@@ -2590,7 +2590,7 @@ categories:
         softwareProvider: ""
         type: terraform
         id: github.com/cloud-native-toolkit/terraform-aws-bastion
-        name: aws-ec2-insatnce
+        name: aws-ec2-bastion
         description: Module to provision ec2 on aws
         tags:
           - infrastructure
@@ -2598,6 +2598,7 @@ categories:
           - virtual instance
           - vpc
         versions:
+          - v1.0.2
           - v1.0.1
           - v1.0.0
         group: bastion
@@ -2849,9 +2850,11 @@ categories:
         name: aws-internet-gateway
         description: Module to provision internet-gateway on aws
         tags:
-          - tools
-          - devops
-        versions: []
+          - infrastructure
+          - networking
+          - aws
+        versions:
+          - v1.1.0
         id: github.com/cloud-native-toolkit/terraform-aws-vpc-gateways
         group: internet-gateway
         displayName: AWS Internet Gateway
