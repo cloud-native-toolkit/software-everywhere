@@ -674,9 +674,6 @@ categories:
       - name: gitops-cp-watson-studio
         id: github.com/cloud-native-toolkit/terraform-gitops-cp-watson-studio
         displayName: Watson Studio
-      - name: showcase-demo
-        id: github.com/cloud-native-toolkit/terraform-any-showcase-demo
-        displayName: showcase-demo
   - category: util
     categoryName: Utilities
     selection: multiple
