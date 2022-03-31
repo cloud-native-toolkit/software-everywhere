@@ -9,11 +9,13 @@ Publish content to:
 
 ## Definition of Done
 
-- [ ] link to Public Git Repo Epic
+- [ ] link to Public Git Repo 
 - [ ] link to Public BOM
 
 ### Dependencies
 
+- [ ] ...
+- [ ] ....
 - [ ] ...
 
 ### Publish content
