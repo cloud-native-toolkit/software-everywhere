@@ -1706,7 +1706,7 @@ categories:
         group: ""
         displayName: Cloud Pak for Security
       - cloudProvider: ""
-        softwareProvider: ""
+        softwareProvider: ibm-cp
         type: gitops
         name: iaf-operator
         description: Module to populate a gitops repo with the resources to provision cp4ba-operator
@@ -1715,9 +1715,22 @@ categories:
           - gitops
         versions:
           - v1.0.0
+        id: github.com/cloud-native-toolkit/terraform-gitops-cp4ba-iaf-operator
+        group: cp4ba
+        displayName: CP4BA Automation Foundation Operator
+      - cloudProvider: ""
+        softwareProvider: ibm-cp
+        type: gitops
+        name: cp4ba-operator
+        description: Module to populate a gitops repo with the resources to provision cp4ba-operator
+        tags:
+          - tools
+          - gitops
+        versions:
+          - v1.0.0
         id: github.com/cloud-native-toolkit/terraform-gitops-cp4ba-operator
-        group: ""
-        displayName: Cloud Pak for Business Automation operator
+        group: cp4ba
+        displayName: Cloud Pak for Business Automation (CP4BA) Operator
       - cloudProvider: ""
         softwareProvider: ibm-cp
         type: gitops
@@ -1727,9 +1740,9 @@ categories:
           - tools
           - gitops
         versions: []
-        id: github.com/cloud-native-toolkit/terraform-gitops-cp-ban-operator
-        group: ""
-        displayName: IBM Business Automation Navigator and UMS operator
+        id: github.com/cloud-native-toolkit/terraform-gitops-cp4ba-ban
+        group: cp4ba
+        displayName: CP4BA Business Automation Navigator
       - cloudProvider: ""
         softwareProvider: ibm-cp
         type: gitops
