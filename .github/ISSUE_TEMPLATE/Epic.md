@@ -12,7 +12,7 @@ Publish content to:
 - [ ] link to Public Git Repo 
 - [ ] link to Public BOM
 
-### Dependencies
+### Dependencies (name & hyperlink)
 
 - [ ] name and hyperlink
 - [ ] ....
