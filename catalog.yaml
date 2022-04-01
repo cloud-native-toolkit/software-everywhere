@@ -261,13 +261,21 @@ categories:
       - name: gitops-cp4s
         id: github.com/cloud-native-toolkit/terraform-gitops-cp4s
         displayName: Cloud Pak for Security
+      - name: gitops-cp4ba-iaf-operator
+        id: github.com/cloud-native-toolkit/terraform-gitops-cp4ba-iaf-operator
+        displayName: CP4BA Automation Foundation Operator
+        group: cp4ba
+        softwareProvider: ibm-cp
       - name: gitops-cp4ba-operator
         id: github.com/cloud-native-toolkit/terraform-gitops-cp4ba-operator
-        displayName: Cloud Pak for Business Automation operator
-      - name: gitops-cp-ban-operator
-        id: github.com/cloud-native-toolkit/terraform-gitops-cp-ban-operator
-        displayName: IBM Business Automation Navigator and UMS operator
+        displayName: Cloud Pak for Business Automation (CP4BA) Operator
+        group: cp4ba
         softwareProvider: ibm-cp
+      - name: gitops-cp4ba-ban
+        id: github.com/cloud-native-toolkit/terraform-gitops-cp4ba-ban
+        displayName: CP4BA Business Automation Navigator
+        softwareProvider: ibm-cp
+        group: cp4ba
       - name: CP4I Ace Dashboard
         id: github.com/cloud-native-toolkit/terraform-gitops-cp-ace-dashboard
         group: cp4i
