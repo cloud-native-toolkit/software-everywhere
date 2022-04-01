@@ -148,6 +148,7 @@ categories:
           - cluster
           - vpc
         versions:
+          - v1.13.2
           - v1.13.1
           - v1.13.0
           - v1.12.2
@@ -565,6 +566,8 @@ categories:
           - tekton
           - argocd
         versions:
+          - v1.7.12
+          - v1.7.11
           - v1.7.10
           - v1.7.9
           - v1.7.8
@@ -2857,6 +2860,7 @@ categories:
           - networking
           - aws
         versions:
+          - v1.2.0
           - v1.1.0
         id: github.com/cloud-native-toolkit/terraform-aws-vpc-gateways
         group: internet-gateway
