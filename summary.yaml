@@ -459,6 +459,8 @@ categories:
           - gitops
           - argocd
         versions:
+          - v2.18.3
+          - v2.18.2
           - v2.18.1
           - v2.18.0
           - v2.17.10
@@ -567,6 +569,7 @@ categories:
           - tekton
           - argocd
         versions:
+          - v1.7.13
           - v1.7.12
           - v1.7.11
           - v1.7.10
@@ -1143,6 +1146,12 @@ categories:
           - resource group
           - account
         versions:
+          - v3.2.6
+          - v3.2.5
+          - v3.2.5
+          - v3.2.4
+          - v3.2.4
+          - v3.2.3
           - v3.2.2
           - v3.2.1
           - v3.2.0
