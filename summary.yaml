@@ -3470,7 +3470,7 @@ categories:
         group: ""
         displayName: Storage Class Manager
 providers:
-  - name: azure
+  - name: azurerm
     source: hashicorp/azurerm
     variables:
       - name: subscription_id
