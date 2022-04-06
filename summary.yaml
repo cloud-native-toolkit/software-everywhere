@@ -1147,6 +1147,9 @@ categories:
           - resource group
           - account
         versions:
+          - v3.2.9
+          - v3.2.8
+          - v3.2.7
           - v3.2.6
           - v3.2.5
           - v3.2.5
@@ -2965,6 +2968,9 @@ categories:
           - ibm cloud
           - activity tracker
         versions:
+          - v2.4.3
+          - v2.4.2
+          - v2.4.1
           - v2.4.0
           - v2.3.0
           - v2.2.0
