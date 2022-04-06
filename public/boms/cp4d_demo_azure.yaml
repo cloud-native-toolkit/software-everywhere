@@ -1,0 +1,19 @@
+# TBD
+apiVersion: cloud.ibm.com/v1alpha1
+kind: BillOfMaterial
+metadata:
+  name: cp-data-demo-azure
+spec:
+  modules:
+    - name: azure-aro
+    - name: openshift-cicd
+    - name: ocp-login
+    - name: argocd-bootstrap
+    - name: gitops-console-link-job
+    - name: gitops-namespace
+      variables:
+        - name: name
+          alias: tools
+          value: tools
+    # - name: modules for cp4d
+    # - name: module for cp4d demo
