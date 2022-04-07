@@ -249,6 +249,18 @@ categories:
         alias: rosa-cluster
         group: openshift
         displayName: AWS ROSA
+      - cloudProvider: azure
+        softwareProvider: ""
+        type: terraform
+        name: azure-ocp-ipi
+        description: Module to provision ocp-ipi on azure
+        tags:
+          - tools
+          - devops
+        versions: []
+        id: github.com/cloud-native-toolkit/terraform-azure-ocp-ipi
+        group: ""
+        displayName: azure-ocp-ipi
   - category: databases
     categoryName: Databases
     selection: multiple
