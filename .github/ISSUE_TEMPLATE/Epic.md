@@ -1,5 +1,5 @@
 ---
-name: New Epic
+name: New Public Epic
 about: Request that a new Epic be created in the Cloud Native Toolkit
 title: 'Epic: {name}'
 labels: ''
