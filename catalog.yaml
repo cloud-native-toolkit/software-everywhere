@@ -284,6 +284,10 @@ categories:
         id: github.com/cloud-native-toolkit/terraform-gitops-cp-ace-dashboard
         group: cp4i
         softwareProvider: ibm-cp
+      - name: azure-lb
+        id: github.com/cloud-native-toolkit/terraform-azure-lb
+        displayName: terraform-azure-lb
+        cloudProvider: azure
   - category: sre
     categoryName: SRE tools
     selection: multiple
