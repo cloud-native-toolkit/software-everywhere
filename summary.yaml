@@ -1797,6 +1797,18 @@ categories:
         id: github.com/cloud-native-toolkit/terraform-azure-lb
         group: ""
         displayName: terraform-azure-lb
+      - cloudProvider: azure
+        softwareProvider: ""
+        type: terraform
+        name: azure-vm
+        description: Module to provision vm on azure
+        tags:
+          - tools
+          - devops
+        versions: []
+        id: github.com/cloud-native-toolkit/terraform-azure-vm
+        group: ""
+        displayName: terraform-azure-vm
   - category: middleware
     categoryName: Middleware
     selection: multiple
