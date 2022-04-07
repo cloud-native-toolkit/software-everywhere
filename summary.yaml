@@ -1785,6 +1785,18 @@ categories:
         id: github.com/cloud-native-toolkit/terraform-gitops-cp-ace-dashboard
         group: cp4i
         displayName: CP4I Ace Dashboard
+      - cloudProvider: azure
+        softwareProvider: ""
+        type: terraform
+        name: azure-lb
+        description: Module to provision lb on azure
+        tags:
+          - tools
+          - devops
+        versions: []
+        id: github.com/cloud-native-toolkit/terraform-azure-lb
+        group: ""
+        displayName: terraform-azure-lb
   - category: middleware
     categoryName: Middleware
     selection: multiple
