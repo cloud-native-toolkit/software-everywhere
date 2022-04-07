@@ -14,9 +14,9 @@ Publish content to:
 - [ ] link to Public Git Repo 
 - [ ] link to Public BOM
 
-### Dependencies (name & hyperlink)
+### Dependencies (name & hyperlink to Zenhub issue)
 
-- [ ] name and hyperlink
+- [ ] name and hyperlink to Zenhub issue
 - [ ] ....
 - [ ] ...
 
@@ -33,10 +33,10 @@ Publish content to:
 
 ### Delivery Kit
 
-- [ ] Create Delivery Kit from Powerpoint Template 
+- [ ] Complete Delivery Kit (Template: https://ibm.box.com/s/e0edgfh80wbr76bco7h57dmojznzw0k5) 
 - [ ] Business Value
 - [ ] Value to Partner
 - [ ] Delivery Approach
 - [ ] Dependencies 
 - [ ] Outcome Value
-- [ ] Save to (TBD)
+- [ ] Save to BOX (https://ibm.box.com/s/zsyo3v5qbm2sniw9h12gg8dq7jgdzl7z)
