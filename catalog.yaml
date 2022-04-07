@@ -288,6 +288,10 @@ categories:
         id: github.com/cloud-native-toolkit/terraform-azure-lb
         displayName: terraform-azure-lb
         cloudProvider: azure
+      - name: azure-vm
+        id: github.com/cloud-native-toolkit/terraform-azure-vm
+        displayName: terraform-azure-vm
+        cloudProvider: azure
   - category: sre
     categoryName: SRE tools
     selection: multiple
