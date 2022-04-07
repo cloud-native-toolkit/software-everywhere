@@ -7,12 +7,12 @@ assignees: ''
 
 ---
 
-Publish content to: 
+Publish content to: (add URL)
 
 ## Definition of Done
 
-- [ ] link to Public Git Repo 
-- [ ] link to Public BOM
+- [ ] link to Public Git Repo  (add URL)
+- [ ] link to Public BOM  (add URL)
 
 ### Dependencies (name & hyperlink to Zenhub issue)
 
@@ -22,8 +22,8 @@ Publish content to:
 
 ### Publish content
 
-- [ ] Generate automation logic and publish to repo 
-- [ ] Document installation instructions in README 
+- [ ] Generate automation logic and publish to repo   (add URL)
+- [ ] Document installation instructions in README   (add URL)
 
 ### Supported Platforms
 
