@@ -439,6 +439,7 @@ categories:
           - schema
           - gitops
         versions:
+          - v0.0.3
           - v0.0.2
         id: github.com/cloud-native-toolkit/terraform-gitops-cp-db2
         group: db2
@@ -1673,6 +1674,7 @@ categories:
           - tools
           - gitops
         versions:
+          - v1.0.5
           - v1.0.4
         id: github.com/cloud-native-toolkit/terraform-gitops-cp-foundational-services
         group: ""
