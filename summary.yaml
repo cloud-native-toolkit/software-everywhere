@@ -425,6 +425,7 @@ categories:
           - tools
           - gitops
         versions:
+          - v1.0.7
           - v1.0.6
         id: github.com/cloud-native-toolkit/terraform-gitops-cp-db2-oltp
         group: gitops-cp-db2-oltp
