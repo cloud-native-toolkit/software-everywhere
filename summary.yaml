@@ -1658,6 +1658,7 @@ categories:
           - tools
           - gitops
         versions:
+          - v0.0.6
           - v0.0.5
           - v0.0.4
           - v0.0.3
@@ -1730,6 +1731,7 @@ categories:
           - tools
           - gitops
         versions:
+          - v1.1.0
           - v1.0.0
         id: github.com/cloud-native-toolkit/terraform-gitops-cp4s
         group: ""
@@ -3299,6 +3301,7 @@ categories:
           - tools
           - devops
         versions:
+          - v1.0.5
           - v1.0.4
           - v1.0.3
           - v1.0.2
