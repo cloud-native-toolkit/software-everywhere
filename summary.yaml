@@ -474,6 +474,7 @@ categories:
           - gitops
           - argocd
         versions:
+          - v2.18.4
           - v2.18.3
           - v2.18.2
           - v2.18.1
@@ -1312,6 +1313,7 @@ categories:
           - authorization
           - policy
         versions:
+          - v1.2.9
           - v1.2.8
           - v1.2.7
           - v1.2.6
