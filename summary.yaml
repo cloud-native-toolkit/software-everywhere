@@ -1167,6 +1167,7 @@ categories:
           - resource group
           - account
         versions:
+          - v3.2.11
           - v3.2.10
           - v3.2.9
           - v3.2.8
