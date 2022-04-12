@@ -3023,6 +3023,7 @@ categories:
           - ibm cloud
           - activity tracker
         versions:
+          - v2.4.7
           - v2.4.6
           - v2.4.5
           - v2.4.4
