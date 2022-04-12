@@ -3024,6 +3024,7 @@ categories:
           - ibm cloud
           - activity tracker
         versions:
+          - v2.4.8
           - v2.4.7
           - v2.4.6
           - v2.4.5
@@ -3040,6 +3041,8 @@ categories:
           - v2.0.0
           - v1.1.4
           - v1.1.3
+        interfaces:
+          - github.com/cloud-native-toolkit/automation-modules#sync
         group: activity-tracker
         displayName: IBM Activity Tracker
       - cloudProvider: ibm
