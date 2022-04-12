@@ -404,6 +404,7 @@ categories:
           - tools
           - gitops
         versions:
+          - v1.0.10
           - v1.0.9
           - v1.0.8
           - v1.0.7
@@ -426,6 +427,7 @@ categories:
           - tools
           - gitops
         versions:
+          - v1.0.8
           - v1.0.7
           - v1.0.6
         id: github.com/cloud-native-toolkit/terraform-gitops-cp-db2-oltp
@@ -1805,6 +1807,7 @@ categories:
           - azure
           - lb
         versions:
+          - v0.0.2
           - v0.0.1
         id: github.com/cloud-native-toolkit/terraform-azure-lb
         group: ""
