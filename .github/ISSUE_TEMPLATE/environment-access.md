@@ -14,3 +14,6 @@ IBM Cloud account, AWS, Azure
 
 **Purpose**
 Describe the purpose for the access and the types of things you will need to do (to determine the level of access)
+
+**Duration of access**
+Provide the estimated length of time you will need the access
