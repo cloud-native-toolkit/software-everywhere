@@ -28,7 +28,11 @@ class BomGroupInternal<S extends BomGroupState = any> extends React.Component<Bo
 
     return (
       <div>
+<<<<<<< HEAD
         <h4>{this.props.bomGroup.name}</h4>
+=======
+        {/*<h4>{this.props.bomGroup.name}</h4>*/}
+>>>>>>> main
         {this.renderTileModules()}
       </div>
     );
@@ -51,6 +55,7 @@ class BomGroupInternal<S extends BomGroupState = any> extends React.Component<Bo
   }
 }
 
+<<<<<<< HEAD
 const mapStateToProps = (state: RootState): BomGroupValues => {
 
   const props = {
@@ -61,3 +66,6 @@ const mapStateToProps = (state: RootState): BomGroupValues => {
 }
 
 export const BomGroup = connect(mapStateToProps)(BomGroupInternal)
+=======
+export const BomGroup = BomGroupInternal
+>>>>>>> main

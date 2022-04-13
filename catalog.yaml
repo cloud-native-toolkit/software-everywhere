@@ -32,6 +32,13 @@ categories:
         displayName: AWS ROSA
         cloudProvider: aws
         group: openshift
+      - name: foo
+        id: github.com/cloud-native-toolkit/terraform-any-foo
+        displayName: foo
+      - name: azure-ocp-ipi
+        id: github.com/cloud-native-toolkit/terraform-azure-ocp-ipi
+        displayName: azure-ocp-ipi
+        cloudProvider: azure
   - category: iam
     categoryName: IAM
     selection: multiple
@@ -110,10 +117,6 @@ categories:
         id: github.com/cloud-native-toolkit/terraform-ibm-vpc-gateways
         group: vpc-gateways
         cloudProvider: ibm
-      - name: AWS VPC Gateways
-        id: github.com/cloud-native-toolkit/terraform-aws-vpc-gateways
-        group: vpc-gateways
-        cloudProvider: aws
       - name: IBM VPC Subnets
         id: github.com/cloud-native-toolkit/terraform-ibm-vpc-subnets
         group: vpc-subnets
@@ -187,14 +190,14 @@ categories:
         group: vpc-subnets
         cloudProvider: azure
       - name: aws-internet-gateway
-        id: github.com/cloud-native-toolkit/terraform-aws-internet-gateway
+        id: github.com/cloud-native-toolkit/terraform-aws-vpc-gateways
         displayName: AWS Internet Gateway
-        group: vpc-gateways
+        group: internet-gateway
         cloudProvider: aws
       - name: aws-nat-gateway
         id: github.com/cloud-native-toolkit/terraform-aws-nat-gateway
         displayName: AWS NAT Gateway
-        group: nat-gateway
+        group: vpc-gateways
         cloudProvider: aws
       - name: aws-vpc-peering
         id: github.com/cloud-native-toolkit/terraform-aws-vpc-peering
@@ -238,12 +241,13 @@ categories:
         softwareProvider: ibm-cp
         group: sls
       - name: gitops-cp4d-operator
-        displayName: Cloud Pak for Data Instance
+        displayName: Cloud Pak for Data Operator
         id: github.com/cloud-native-toolkit/terraform-gitops-cp4d-operator
         type: gitops
         softwareProvider: ibm-cp
       - name: cp4d-instance
-        id: github.com/cloud-native-toolkit/terraform-gitops-cp4d-instance
+        displayName: Cloud Pak for Data Instance
+        id: github.com:cloud-native-toolkit/terraform-gitops-cp4d-instance.git
         type: gitops
         softwareProvider: ibm-cp
       - name: ibm-common-service
@@ -261,18 +265,33 @@ categories:
       - name: gitops-cp4s
         id: github.com/cloud-native-toolkit/terraform-gitops-cp4s
         displayName: Cloud Pak for Security
+      - name: gitops-cp4ba-iaf-operator
+        id: github.com/cloud-native-toolkit/terraform-gitops-cp4ba-iaf-operator
+        displayName: CP4BA Automation Foundation Operator
+        group: cp4ba
+        softwareProvider: ibm-cp
       - name: gitops-cp4ba-operator
         id: github.com/cloud-native-toolkit/terraform-gitops-cp4ba-operator
-        displayName: Cloud Pak for Business Automation operator
-      - name: gitops-cp-ban-operator
-        id: github.com/cloud-native-toolkit/terraform-gitops-cp-ban-operator
-        displayName: IBM Business Automation Navigator and UMS operator
+        displayName: Cloud Pak for Business Automation (CP4BA) Operator
+        group: cp4ba
         softwareProvider: ibm-cp
-      - name: IBM DB2 OLTP
-        id: github.com/cloud-native-toolkit/terraform-gitops-cp-db2-oltp
-        group: gitops-cp-db2-oltp
-        type: gitops
+      - name: gitops-cp4ba-ban
+        id: github.com/cloud-native-toolkit/terraform-gitops-cp4ba-ban
+        displayName: CP4BA Business Automation Navigator
         softwareProvider: ibm-cp
+        group: cp4ba
+      - name: CP4I Ace Dashboard
+        id: github.com/cloud-native-toolkit/terraform-gitops-cp-ace-dashboard
+        group: cp4i
+        softwareProvider: ibm-cp
+      - name: azure-lb
+        id: github.com/cloud-native-toolkit/terraform-azure-lb
+        displayName: terraform-azure-lb
+        cloudProvider: azure
+      - name: azure-vm
+        id: github.com/cloud-native-toolkit/terraform-azure-vm
+        displayName: terraform-azure-vm
+        cloudProvider: azure
   - category: sre
     categoryName: SRE tools
     selection: multiple
@@ -281,19 +300,19 @@ categories:
         id: github.com/cloud-native-toolkit/terraform-ibm-activity-tracker
         group: activity-tracker
         cloudProvider: ibm
-      - name: IBM LogDNA
-        id: github.com/cloud-native-toolkit/terraform-ibm-logdna
+      - name: IBM Log Analysis
+        id: github.com/cloud-native-toolkit/terraform-ibm-log-analysis
         group: logging
         cloudProvider: ibm
-      - name: IBM LogDNA Bind
-        id: github.com/cloud-native-toolkit/terraform-ibm-logdna-bind
+      - name: IBM Log Analysis Bind
+        id: github.com/cloud-native-toolkit/terraform-ibm-log-analysis-bind
         cloudProvider: ibm
-      - name: IBM Sysdig
-        id: github.com/cloud-native-toolkit/terraform-ibm-sysdig
+      - name: IBM Cloud Monitoring
+        id: github.com/cloud-native-toolkit/terraform-ibm-cloud-monitoring
         group: monitoring
         cloudProvider: ibm
-      - name: IBM Sysdig Bind
-        id: github.com/cloud-native-toolkit/terraform-ibm-sysdig-bind
+      - name: IBM Cloud Monitoring Bind
+        id: github.com/cloud-native-toolkit/terraform-ibm-cloud-monitoring-bind
         cloudProvider: ibm
       - name: IBM SCC Collector
         id: github.com/cloud-native-toolkit/terraform-vsi-scc-collector
@@ -315,9 +334,9 @@ categories:
       - name: gitops-ocs-operator
         id: github.com/cloud-native-toolkit/terraform-gitops-ocs-operator
         displayName: ocs-operator
-      - name: gitops-ibm-ocs
-        id: github.com/cloud-native-toolkit/terraform-gitops-ibm-ocs
-        displayName: ibm-ocs
+      - name: gitops-ibm-odf
+        id: github.com/cloud-native-toolkit/terraform-gitops-ibm-odf
+        displayName: ibm-odf
   - category: middleware
     categoryName: Middleware
     selection: multiple
@@ -497,17 +516,34 @@ categories:
         id: github.com/cloud-native-toolkit/terraform-ibm-redis
         group: redis
         cloudProvider: ibm
+      - name: Existing IBM DB2 Warehouse
+        id: github.com/cloud-native-toolkit/terraform-tools-db2-warehouse
+        group: db2-warehouse
+        type: terraform
       - name: IBM DB2 Warehouse
         id: github.com/cloud-native-toolkit/terraform-gitops-cp-db2wh
         group: db2-warehouse
         type: gitops
-      - name: IBM DB2U Operator
+      - name: gitops-db2u
         id: github.com/cloud-native-toolkit/terraform-gitops-db2u-operator
-        group: terraform-gitops-db2u-operator
+        displayName: IBM DB2U Operator
+        group: db2u-operator
         type: gitops
         softwareProvider: ibm-cp
-      - name: IBM DB2
-        id: https://github.com/cloud-native-toolkit/terraform-gitops-cp-db2
+      - name: gitops-db2-oltp
+        id: github.com/cloud-native-toolkit/terraform-gitops-cp-db2-oltp
+        displayName: IBM DB2 OLTP Db2oltpService
+        group: gitops-cp-db2-oltp
+        type: gitops
+        softwareProvider: ibm-cp
+      - name: gitops-cp-db2
+        displayName: IBM DB2 Database Instance
+        id: github.com/cloud-native-toolkit/terraform-gitops-cp-db2
+        group: db2
+        type: gitops
+      - name: gitops-cp-db2-schema
+        displayName: IBM DB2 Database Schema
+        id: github.com/cloud-native-toolkit/terraform-gitops-cp-db2-schema
         group: db2
         type: gitops
   - category: storage
