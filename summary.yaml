@@ -478,6 +478,7 @@ categories:
           - gitops
           - argocd
         versions:
+          - v2.18.5
           - v2.18.4
           - v2.18.3
           - v2.18.2
@@ -1814,6 +1815,7 @@ categories:
           - azure
           - lb
         versions:
+          - v0.0.5
           - v0.0.4
           - v0.0.4
           - v0.0.3
