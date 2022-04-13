@@ -1,0 +1,19 @@
+id: github.com/cloud-native-toolkit/automation-modules#db2-warehouse
+name: db2-warehouse
+outputs:
+  - name: host
+    type: string
+    description: The host name for the DB2 Warehouse instance
+  - name: port
+    description: The port for the DB2 Warehouse instance
+    type: number
+  - name: database_name
+    description: The database name for the DB2 Warehouse instance
+    type: string
+  - name: username
+    description: The username for the DB2 Warehouse instance
+    type: string
+  - name: password
+    description: The password for the DB2 Warehouse instance
+    sensitive: true
+    type: string
