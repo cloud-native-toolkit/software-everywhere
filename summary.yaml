@@ -1463,6 +1463,7 @@ categories:
           - infrastructure
           - namespace
         versions:
+          - v3.2.0
           - v3.1.4
           - v3.1.3
           - v3.1.2
