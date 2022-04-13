@@ -385,6 +385,21 @@ categories:
       - cloudProvider: ""
         softwareProvider: ""
         type: terraform
+        name: db2-warehouse-existing
+        description: Module that represents an existing DB2 Warehouse instance
+        tags:
+          - tools
+          - db2 warehouse
+        interfaces:
+          - github.com/cloud-native-toolkit/automation-modules#db2-warehouse
+        versions:
+          - v0.1.0
+        id: github.com/cloud-native-toolkit/terraform-tools-db2-warehouse
+        group: db2-warehouse
+        displayName: Existing IBM DB2 Warehouse
+      - cloudProvider: ""
+        softwareProvider: ""
+        type: terraform
         id: github.com/cloud-native-toolkit/terraform-gitops-cp-db2wh
         name: gitops-cp-db2wh
         description: ""
