@@ -516,6 +516,10 @@ categories:
         id: github.com/cloud-native-toolkit/terraform-ibm-redis
         group: redis
         cloudProvider: ibm
+      - name: Existing IBM DB2 Warehouse
+        id: github.com/cloud-native-toolkit/terraform-tools-db2-warehouse
+        group: db2-warehouse
+        type: terraform
       - name: IBM DB2 Warehouse
         id: github.com/cloud-native-toolkit/terraform-gitops-cp-db2wh
         group: db2-warehouse
