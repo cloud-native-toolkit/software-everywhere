@@ -1814,6 +1814,7 @@ categories:
           - azure
           - lb
         versions:
+          - v0.0.3
           - v0.0.2
           - v0.0.1
         id: github.com/cloud-native-toolkit/terraform-azure-lb
