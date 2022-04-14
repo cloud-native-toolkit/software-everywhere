@@ -1871,7 +1871,7 @@ categories:
         group: ""
         displayName: cp-watson-assistant
   - category: middleware
-    categoryName: Middleware
+    categoryName: Software
     selection: multiple
     catalogFile: catalog.yaml
     modules:
