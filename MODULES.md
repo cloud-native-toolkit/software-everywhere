@@ -103,6 +103,7 @@ The schemas to validate the catalog and module yaml can be found [here](./schema
 | *CP4I Ace Dashboard* | gitops-cp-ace-dashboard | terraform | [https://github.com/cloud-native-toolkit/terraform-gitops-cp-ace-dashboard](https://github.com/cloud-native-toolkit/terraform-gitops-cp-ace-dashboard) | ![Latest release](https://img.shields.io/github/v/release/cloud-native-toolkit/terraform-gitops-cp-ace-dashboard?sort=semver) | ![Verify and release module](https://github.com/cloud-native-toolkit/terraform-gitops-cp-ace-dashboard/workflows/Verify%20and%20release%20module/badge.svg) |
 | *azure-lb* | azure-lb | terraform | [https://github.com/cloud-native-toolkit/terraform-azure-lb](https://github.com/cloud-native-toolkit/terraform-azure-lb) | ![Latest release](https://img.shields.io/github/v/release/cloud-native-toolkit/terraform-azure-lb?sort=semver) | ![Verify and release module](https://github.com/cloud-native-toolkit/terraform-azure-lb/workflows/Verify%20and%20release%20module/badge.svg) |
 | *azure-vm* | azure-vm | terraform | [https://github.com/cloud-native-toolkit/terraform-azure-vm](https://github.com/cloud-native-toolkit/terraform-azure-vm) | ![Latest release](https://img.shields.io/github/v/release/cloud-native-toolkit/terraform-azure-vm?sort=semver) | ![Verify and release module](https://github.com/cloud-native-toolkit/terraform-azure-vm/workflows/Verify%20and%20release%20module/badge.svg) |
+| *gitops-cp-watson-assistant* | gitops-cp-watson-assistant | terraform | [https://github.com/cloud-native-toolkit/terraform-gitops-cp-watson-assistant](https://github.com/cloud-native-toolkit/terraform-gitops-cp-watson-assistant) | ![Latest release](https://img.shields.io/github/v/release/cloud-native-toolkit/terraform-gitops-cp-watson-assistant?sort=semver) | ![Verify and release module](https://github.com/cloud-native-toolkit/terraform-gitops-cp-watson-assistant/workflows/Verify%20and%20release%20module/badge.svg) |
 
 ### SRE tools
 
@@ -126,7 +127,7 @@ The schemas to validate the catalog and module yaml can be found [here](./schema
 | *gitops-ocs-operator* | gitops-ocs-operator | terraform | [https://github.com/cloud-native-toolkit/terraform-gitops-ocs-operator](https://github.com/cloud-native-toolkit/terraform-gitops-ocs-operator) | ![Latest release](https://img.shields.io/github/v/release/cloud-native-toolkit/terraform-gitops-ocs-operator?sort=semver) | ![Verify and release module](https://github.com/cloud-native-toolkit/terraform-gitops-ocs-operator/workflows/Verify%20and%20release%20module/badge.svg) |
 | *gitops-ibm-odf* | gitops-ibm-odf | terraform | [https://github.com/cloud-native-toolkit/terraform-gitops-ibm-odf](https://github.com/cloud-native-toolkit/terraform-gitops-ibm-odf) | ![Latest release](https://img.shields.io/github/v/release/cloud-native-toolkit/terraform-gitops-ibm-odf?sort=semver) | ![Verify and release module](https://github.com/cloud-native-toolkit/terraform-gitops-ibm-odf/workflows/Verify%20and%20release%20module/badge.svg) |
 
-### Middleware
+### Software
 
 | **Module name** | **Catalog id** | **Module type** | **Module location** | **Latest release** | **Last build status** |
 |-----------------|----------------|-----------------|---------------------|--------------------|-----------------------|
