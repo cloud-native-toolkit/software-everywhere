@@ -341,7 +341,7 @@ categories:
         id: github.com/cloud-native-toolkit/terraform-gitops-ibm-odf
         displayName: ibm-odf
   - category: middleware
-    categoryName: Middleware
+    categoryName: Software
     selection: multiple
     modules:
       - name: IBM AppId
