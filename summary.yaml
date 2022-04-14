@@ -81,36 +81,6 @@ categories:
     categoryName: Cluster
     selection: single
     modules:
-      - cloudProvider: ibm
-        softwareProvider: ""
-        type: terraform
-        id: github.com/cloud-native-toolkit/terraform-ibm-container-platform
-        name: ibm-container-platform
-        description: Provisions a new or connects to an existing IBM Cloud container platform cluster (Kubernetes or OpenShift)
-        alias: cluster
-        tags:
-          - cluster
-          - ibm cloud
-          - kubernetes
-          - openshift
-        versions:
-          - v1.21.1
-          - v1.21.0
-          - v1.20.8
-          - v1.20.7
-          - v1.20.6
-          - v1.20.5
-          - v1.20.4
-          - v1.20.3
-          - v1.20.2
-          - v1.20.1
-          - v1.20.0
-          - v1.19.1
-          - v1.19.0
-        interfaces:
-          - github.com/cloud-native-toolkit/automation-modules#cluster
-        group: openshift
-        displayName: IBM Container Platform
       - cloudProvider: ""
         softwareProvider: ""
         type: terraform
@@ -2683,6 +2653,7 @@ categories:
           - vpc
           - bastion
         versions:
+          - v1.10.0
           - v1.9.0
           - v1.8.0
           - v1.7.1
