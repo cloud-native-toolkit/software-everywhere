@@ -292,6 +292,9 @@ categories:
         id: github.com/cloud-native-toolkit/terraform-azure-vm
         displayName: terraform-azure-vm
         cloudProvider: azure
+      - name: gitops-cp-watson-assistant
+        id: github.com/cloud-native-toolkit/terraform-gitops-cp-watson-assistant
+        displayName: cp-watson-assistant
   - category: sre
     categoryName: SRE tools
     selection: multiple
