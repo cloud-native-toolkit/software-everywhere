@@ -1041,6 +1041,7 @@ categories:
           - gitops
           - bootstrap
         versions:
+          - v1.6.7
           - v1.6.6
           - v1.6.5
           - v1.6.4
@@ -1857,6 +1858,18 @@ categories:
         id: github.com/cloud-native-toolkit/terraform-azure-vm
         group: ""
         displayName: terraform-azure-vm
+      - cloudProvider: ""
+        softwareProvider: ""
+        type: gitops
+        name: gitops-cp-watson-assistant
+        description: Module to populate a gitops repo with the resources to provision cp-watson-assistant
+        tags:
+          - tools
+          - gitops
+        versions: []
+        id: github.com/cloud-native-toolkit/terraform-gitops-cp-watson-assistant
+        group: ""
+        displayName: cp-watson-assistant
   - category: middleware
     categoryName: Middleware
     selection: multiple
