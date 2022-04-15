@@ -247,7 +247,7 @@ categories:
         softwareProvider: ibm-cp
       - name: cp4d-instance
         displayName: Cloud Pak for Data Instance
-        id: github.com:cloud-native-toolkit/terraform-gitops-cp4d-instance.git
+        id: github.com/cloud-native-toolkit/terraform-gitops-cp4d-instance
         type: gitops
         softwareProvider: ibm-cp
       - name: ibm-common-service
