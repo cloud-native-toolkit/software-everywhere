@@ -2958,12 +2958,14 @@ categories:
       - cloudProvider: aws
         softwareProvider: ""
         type: terraform
-        name: aws-vpn-server
-        description: Module to provision vpn-server on aws
+        name: aws-client-vpn
+        description: Module to provision vpn service on aws
         tags:
-          - tools
-          - devops
-        versions: []
+          - infrastructure
+          - networking
+          - aws
+        versions:
+          - v1.0.1
         id: github.com/cloud-native-toolkit/terraform-aws-vpn-server
         group: vpn
         displayName: AWS VPN Server
