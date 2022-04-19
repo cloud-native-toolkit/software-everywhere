@@ -2946,11 +2946,10 @@ categories:
         name: aws-ssh-key
         description: Module to register an ssh key into the AWS Cloud infrastructure for use in securely accessing VPC resources
         tags:
-          - vpc
-          - ssh
           - infrastructure
-          - security
+          - networking
         versions:
+          - v1.1.0
           - v1.0.2
           - v1.0.1
           - v1.0.0
