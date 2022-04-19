@@ -2737,10 +2737,9 @@ categories:
         description: Module to provision ec2 on aws
         tags:
           - infrastructure
-          - ec2
-          - virtual instance
-          - vpc
+          - networking
         versions:
+          - v1.1.0
           - v1.0.2
           - v1.0.1
           - v1.0.0
