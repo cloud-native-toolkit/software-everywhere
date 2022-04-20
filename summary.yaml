@@ -2923,12 +2923,13 @@ categories:
         softwareProvider: ""
         type: terraform
         id: github.com/cloud-native-toolkit/terraform-aws-ec2
-        name: aws-ec2-insatnce
+        name: aws-ec2-instance
         description: Module to provision ec2 on aws
         tags:
           - infrastructure
           - networking
         versions:
+          - v1.1.0
           - v1.0.10
           - v1.0.9
           - v1.0.8
