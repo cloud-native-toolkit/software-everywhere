@@ -2930,6 +2930,7 @@ categories:
           - infrastructure
           - networking
         versions:
+          - v1.4.0
           - v1.3.0
           - v1.2.0
           - v1.1.1
