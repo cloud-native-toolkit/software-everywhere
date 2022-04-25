@@ -705,6 +705,8 @@ categories:
     categoryName: Utilities
     selection: multiple
     modules:
+      - name: Sealed Secrets
+        id: github.com/cloud-native-toolkit/terraform-tools-sealed-secrets
       - name: Sealed Secret Cert
         id: github.com/cloud-native-toolkit/terraform-util-sealed-secret-cert
       - name: Cluster Config
