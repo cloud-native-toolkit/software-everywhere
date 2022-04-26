@@ -1194,6 +1194,7 @@ categories:
           - resource group
           - account
         versions:
+          - v3.2.14
           - v3.2.13
           - v3.2.12
           - v3.2.11
