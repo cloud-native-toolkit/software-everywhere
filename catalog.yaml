@@ -203,6 +203,11 @@ categories:
         id: github.com/cloud-native-toolkit/terraform-aws-vpc-peering
         displayName: AWS VPC Peering
         cloudProvider: aws
+      - name: aws-transit-gateway
+        id: github.com/cloud-native-toolkit/terraform-aws-transit-gateway
+        displayName: AWS Transit Gateway
+        group: transit-gateway
+        cloudProvider: aws
   - category: infrastructure
     categoryName: Software Infrastructure
     selection: indirect
