@@ -1620,6 +1620,22 @@ categories:
         group: platform-navigator
         displayName: Cloud Pak Platform Navigator
       - cloudProvider: ""
+        softwareProvider: ibm
+        type: gitops
+        name: gitops-ibmcloud-operator
+        description: Module to populate a gitops repo with the resources to provision the IBM Cloud operator in a cluster
+        tags:
+          - ibmcloud
+          - operator
+        versions:
+          - v0.2.1
+          - v0.2.0
+          - v0.1.1
+          - v0.1.0
+        id: github.com/cloud-native-toolkit/terraform-gitops-ibmcloud-operator
+        group: ""
+        displayName: IBM Cloud Operator
+      - cloudProvider: ""
         softwareProvider: ibm-cp
         type: terraform
         id: github.com/cloud-native-toolkit/terraform-gitops-cp-catalogs
@@ -3374,6 +3390,20 @@ categories:
           - v0.0.0
         group: ""
         displayName: storageclass
+      - cloudProvider: ibm
+        softwareProvider: ""
+        type: gitops
+        name: gitops-ibm-portworx
+        description: Module to populate a gitops repository with the resources required to provision Portworx in an OpenShift cluster
+        tags:
+          - gitops
+          - portworx
+          - ibmcloud
+        versions:
+          - v0.1.0
+        id: github.com/cloud-native-toolkit/terraform-gitops-ibm-portworx
+        group: portworx
+        displayName: Portworx on IBM Cloud (Gitops)
       - cloudProvider: ibm
         softwareProvider: ""
         type: terraform
