@@ -224,7 +224,7 @@ categories:
         softwareProvider: ibm-cp
         group: platform-navigator
       - name: IBM Cloud Operator
-        id: github.com/cloud-native-toolkit/terraform-ibm-cloud-operator
+        id: github.com/cloud-native-toolkit/terraform-gitops-ibmcloud-operator
         softwareProvider: ibm
       - name: Cloud Pak Catalogs
         id: github.com/cloud-native-toolkit/terraform-gitops-cp-catalogs
@@ -563,6 +563,11 @@ categories:
         cloudProvider: ibm
       - name: storageclass
         id: github.com/cloud-native-toolkit/terraform-gitops-ocp-storageclass
+      - name: gitops-ibm-portworx
+        displayName: Portworx on IBM Cloud (Gitops)
+        id: github.com/cloud-native-toolkit/terraform-gitops-ibm-portworx
+        cloudProvider: ibm
+        group: portworx
       - name: ibm-portworx
         displayName: Portworx on IBM Cloud
         id: github.com/cloud-native-toolkit/terraform-ibm-portworx
