@@ -148,6 +148,7 @@ categories:
           - cluster
           - vpc
         versions:
+          - v1.13.3
           - v1.13.2
           - v1.13.1
           - v1.13.0
@@ -2963,6 +2964,7 @@ categories:
           - infrastructure
           - networking
         versions:
+          - v1.6.1
           - v1.6.0
           - v1.5.0
           - v1.4.0
