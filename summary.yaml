@@ -1049,6 +1049,7 @@ categories:
           - gitops
           - bootstrap
         versions:
+          - v1.6.10
           - v1.6.9
           - v1.6.8
           - v1.6.7
