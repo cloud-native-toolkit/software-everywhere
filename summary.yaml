@@ -3071,11 +3071,13 @@ categories:
         softwareProvider: ""
         type: terraform
         name: aws-transit-gateway
-        description: Module to provision transit-gateway on aws
+        description: Module to provision vpn service on aws
         tags:
-          - tools
-          - devops
-        versions: []
+          - infrastructure
+          - networking
+          - aws
+        versions:
+          - v1.0.0
         id: github.com/cloud-native-toolkit/terraform-aws-transit-gateway
         group: transit-gateway
         displayName: AWS Transit Gateway
