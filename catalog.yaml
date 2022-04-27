@@ -37,7 +37,8 @@ categories:
         displayName: foo
       - name: azure-ocp-ipi
         id: github.com/cloud-native-toolkit/terraform-azure-ocp-ipi
-        displayName: azure-ocp-ipi
+        displayName: Azure OpenShift IPI
+        group: openshift
         cloudProvider: azure
   - category: iam
     categoryName: IAM
@@ -165,7 +166,7 @@ categories:
         id: github.com/cloud-native-toolkit/terraform-ibm-vpn-server
         group: vpn
         cloudProvider: ibm
-      - name: Azure VPC
+      - name: Azure VNet
         id: github.com/cloud-native-toolkit/terraform-azure-vpc
         group: vpc
         cloudProvider: azure
@@ -186,7 +187,7 @@ categories:
         cloudProvider: aws
       - name: azure-vpc-subnets
         id: github.com/cloud-native-toolkit/terraform-azure-vpc-subnets
-        displayName: Azure VPC Subnets
+        displayName: Azure VNet Subnets
         group: vpc-subnets
         cloudProvider: azure
       - name: aws-internet-gateway
@@ -208,6 +209,16 @@ categories:
         displayName: AWS Transit Gateway
         group: transit-gateway
         cloudProvider: aws
+      - name: azure-lb
+        id: github.com/cloud-native-toolkit/terraform-azure-lb
+        displayName: Azure Load Balancer
+        group: load-balancer
+        cloudProvider: azure
+      - name: azure-vm
+        id: github.com/cloud-native-toolkit/terraform-azure-vm
+        displayName: Azure VM
+        group: vsi
+        cloudProvider: azure        
   - category: infrastructure
     categoryName: Software Infrastructure
     selection: indirect
@@ -289,14 +300,6 @@ categories:
         id: github.com/cloud-native-toolkit/terraform-gitops-cp-ace-dashboard
         group: cp4i
         softwareProvider: ibm-cp
-      - name: azure-lb
-        id: github.com/cloud-native-toolkit/terraform-azure-lb
-        displayName: terraform-azure-lb
-        cloudProvider: azure
-      - name: azure-vm
-        id: github.com/cloud-native-toolkit/terraform-azure-vm
-        displayName: terraform-azure-vm
-        cloudProvider: azure
       - name: gitops-cp-watson-assistant
         id: github.com/cloud-native-toolkit/terraform-gitops-cp-watson-assistant
         displayName: cp-watson-assistant
