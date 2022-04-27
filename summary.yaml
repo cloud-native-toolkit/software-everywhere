@@ -262,8 +262,8 @@ categories:
           - devops
         versions: []
         id: github.com/cloud-native-toolkit/terraform-azure-ocp-ipi
-        group: ""
-        displayName: azure-ocp-ipi
+        group: openshift
+        displayName: Azure OpenShift IPI
   - category: databases
     categoryName: Databases
     selection: multiple
@@ -1865,37 +1865,6 @@ categories:
         id: github.com/cloud-native-toolkit/terraform-gitops-cp-ace-dashboard
         group: cp4i
         displayName: CP4I Ace Dashboard
-      - cloudProvider: azure
-        softwareProvider: ""
-        type: terraform
-        name: azure-lb
-        description: Module to provision a load balancer on Azure
-        tags:
-          - azure
-          - lb
-        versions:
-          - v0.0.6
-          - v0.0.5
-          - v0.0.4
-          - v0.0.4
-          - v0.0.3
-          - v0.0.2
-          - v0.0.1
-        id: github.com/cloud-native-toolkit/terraform-azure-lb
-        group: ""
-        displayName: terraform-azure-lb
-      - cloudProvider: azure
-        softwareProvider: ""
-        type: terraform
-        name: azure-vm
-        description: Module to provision vm on azure
-        tags:
-          - tools
-          - devops
-        versions: []
-        id: github.com/cloud-native-toolkit/terraform-azure-vm
-        group: ""
-        displayName: terraform-azure-vm
       - cloudProvider: ""
         softwareProvider: ""
         type: gitops
@@ -2957,7 +2926,7 @@ categories:
           - v1.0.1
           - v1.0.0
         group: vpc
-        displayName: Azure VPC
+        displayName: Azure VNet
       - cloudProvider: aws
         softwareProvider: ""
         type: terraform
@@ -3034,7 +3003,7 @@ categories:
           - v1.0.0
         id: github.com/cloud-native-toolkit/terraform-azure-vpc-subnets
         group: vpc-subnets
-        displayName: Azure VPC Subnets
+        displayName: Azure VNet Subnets
       - cloudProvider: aws
         softwareProvider: ""
         type: terraform
@@ -3094,6 +3063,37 @@ categories:
         id: github.com/cloud-native-toolkit/terraform-aws-transit-gateway
         group: transit-gateway
         displayName: AWS Transit Gateway
+      - cloudProvider: azure
+        softwareProvider: ""
+        type: terraform
+        name: azure-lb
+        description: Module to provision a load balancer on Azure
+        tags:
+          - azure
+          - lb
+        versions:
+          - v0.0.6
+          - v0.0.5
+          - v0.0.4
+          - v0.0.4
+          - v0.0.3
+          - v0.0.2
+          - v0.0.1
+        id: github.com/cloud-native-toolkit/terraform-azure-lb
+        group: load-balancer
+        displayName: Azure Load Balancer
+      - cloudProvider: azure
+        softwareProvider: ""
+        type: terraform
+        name: azure-vm
+        description: Module to provision vm on azure
+        tags:
+          - tools
+          - devops
+        versions: []
+        id: github.com/cloud-native-toolkit/terraform-azure-vm
+        group: vsi
+        displayName: Azure VM
   - category: source-control
     categoryName: Source Control
     selection: single
