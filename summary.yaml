@@ -496,6 +496,7 @@ categories:
           - gitops
           - argocd
         versions:
+          - v2.18.8
           - v2.18.7
           - v2.18.6
           - v2.18.5
