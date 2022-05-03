@@ -501,6 +501,7 @@ categories:
           - gitops
           - argocd
         versions:
+          - v2.18.14
           - v2.18.13
           - v2.18.12
           - v2.18.11
@@ -3518,6 +3519,18 @@ categories:
         id: github.com/cloud-native-toolkit/terraform-azure-portworx
         group: portworx
         displayName: Portworx on Azure
+      - cloudProvider: azure
+        softwareProvider: ""
+        type: terraform
+        name: azure-storage-blob
+        description: Module to provision storage-blob on azure
+        tags:
+          - tools
+          - devops
+        versions: []
+        id: github.com/cloud-native-toolkit/terraform-azure-storage-blob
+        group: object-storage-bucket
+        displayName: Azure Storage Blob
   - category: util
     categoryName: Utilities
     selection: multiple
