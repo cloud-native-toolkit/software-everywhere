@@ -218,7 +218,7 @@ categories:
         id: github.com/cloud-native-toolkit/terraform-azure-vm
         displayName: Azure VM
         group: vsi
-        cloudProvider: azure        
+        cloudProvider: azure
   - category: infrastructure
     categoryName: Software Infrastructure
     selection: indirect
@@ -600,6 +600,11 @@ categories:
         displayName: Portworx on Azure
         cloudProvider: azure
         group: portworx
+      - name: azure-storage-blob
+        id: github.com/cloud-native-toolkit/terraform-azure-storage-blob
+        displayName: Azure Storage Blob
+        group: object-storage-bucket
+        cloudProvider: azure
   - category: ai-ml
     categoryName: AI/ML
     selection: multiple
