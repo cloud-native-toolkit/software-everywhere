@@ -2940,6 +2940,22 @@ categories:
           - v0.0.0
         group: vpn
         displayName: VPC VPN Server
+      - cloudProvider: azure
+        softwareProvider: ""
+        type: terraform
+        id: github.com/cloud-native-toolkit/terraform-azure-vnet
+        name: azure-vnet
+        description: Module to provision vnet on azure
+        tags:
+          - vpc
+          - vnet
+          - azure
+        versions:
+          - v1.0.2
+          - v1.0.1
+          - v1.0.0
+        group: vpc
+        displayName: Azure VNet
       - cloudProvider: aws
         softwareProvider: ""
         type: terraform
@@ -3001,6 +3017,24 @@ categories:
         id: github.com/cloud-native-toolkit/terraform-aws-vpn-server
         group: vpn
         displayName: AWS VPN Server
+      - cloudProvider: azure
+        softwareProvider: ""
+        type: terraform
+        name: azure-vnet-subnets
+        description: Module to provision vnet-subnets on azure
+        tags:
+          - tools
+          - devops
+        versions:
+          - v1.2.1
+          - v1.2.0
+          - v1.1.0
+          - v1.0.2
+          - v1.0.1
+          - v1.0.0
+        id: github.com/cloud-native-toolkit/terraform-azure-subnets
+        group: vpc-subnets
+        displayName: Azure VNet Subnets
       - cloudProvider: aws
         softwareProvider: ""
         type: terraform
@@ -3093,6 +3127,18 @@ categories:
         id: github.com/cloud-native-toolkit/terraform-azure-vm
         group: vsi
         displayName: Azure VM
+      - cloudProvider: azure
+        softwareProvider: ""
+        type: terraform
+        name: azure-ssh-key
+        description: Module to provision azure-ssh-key on azure
+        tags:
+          - tools
+          - devops
+        versions: []
+        id: github.com/cloud-native-toolkit/terraform-azure-ssh-key
+        group: vpc-ssh
+        displayName: Azure SSH Key
   - category: source-control
     categoryName: Source Control
     selection: single
