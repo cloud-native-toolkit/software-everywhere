@@ -167,7 +167,7 @@ categories:
         group: vpn
         cloudProvider: ibm
       - name: Azure VNet
-        id: github.com/cloud-native-toolkit/terraform-azure-vpc
+        id: github.com/cloud-native-toolkit/terraform-azure-vnet
         group: vpc
         cloudProvider: azure
       - name: aws-ec2
@@ -185,8 +185,8 @@ categories:
         displayName: AWS VPN Server
         group: vpn
         cloudProvider: aws
-      - name: azure-vpc-subnets
-        id: github.com/cloud-native-toolkit/terraform-azure-vpc-subnets
+      - name: azure-subnets
+        id: github.com/cloud-native-toolkit/terraform-azure-subnets
         displayName: Azure VNet Subnets
         group: vpc-subnets
         cloudProvider: azure
@@ -218,6 +218,11 @@ categories:
         id: github.com/cloud-native-toolkit/terraform-azure-vm
         displayName: Azure VM
         group: vsi
+        cloudProvider: azure
+      - name: azure-ssh-key
+        id: github.com/cloud-native-toolkit/terraform-azure-ssh-key
+        displayName: Azure SSH Key
+        group: vpc-ssh
         cloudProvider: azure
   - category: infrastructure
     categoryName: Software Infrastructure
