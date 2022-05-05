@@ -3787,6 +3787,20 @@ categories:
         id: github.com/cloud-native-toolkit/terraform-util-storage-class-manager
         group: ""
         displayName: Storage Class Manager
+      - cloudProvider: ""
+        softwareProvider: ""
+        type: gitops
+        name: gitops-service-binding-operator
+        description: Module to populate a gitops repo with the resources to provision service-binding-operator
+        tags:
+          - tools
+          - gitops
+        versions:
+          - v1.0.1
+          - v1.0.0
+        id: github.com/cloud-native-toolkit/terraform-gitops-service-binding-operator
+        group: service-binding-operator
+        displayName: Service Binding Operator
 providers:
   - name: azurerm
     source: hashicorp/azurerm
