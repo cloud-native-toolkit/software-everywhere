@@ -224,6 +224,11 @@ categories:
         displayName: Azure SSH Key
         group: vpc-ssh
         cloudProvider: azure
+      - name: azure-nat-gateway
+        id: github.com/cloud-native-toolkit/terraform-azure-nat-gateway
+        displayName: Azure NAT Gateway
+        group: vpc-gateways
+        cloudProvider: azure
   - category: infrastructure
     categoryName: Software Infrastructure
     selection: indirect
