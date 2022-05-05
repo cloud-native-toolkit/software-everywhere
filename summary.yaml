@@ -3135,11 +3135,13 @@ categories:
         softwareProvider: ""
         type: terraform
         name: azure-ssh-key
-        description: Module to provision azure-ssh-key on azure
+        description: Module to provision an ssh key on azure
         tags:
-          - tools
-          - devops
-        versions: []
+          - azure
+          - ssh
+        versions:
+          - v0.0.1
+          - v0.0.1
         id: github.com/cloud-native-toolkit/terraform-azure-ssh-key
         group: vpc-ssh
         displayName: Azure SSH Key
