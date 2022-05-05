@@ -758,7 +758,7 @@ categories:
       - name: util-storage-class-manager
         displayName: Storage Class Manager
         id: github.com/cloud-native-toolkit/terraform-util-storage-class-manager
-      - name: Service Binding Operator
-        id: >-
-          github.com/cloud-native-toolkit/terraform-gitops-service-binding-operator
+      - name: gitops-service-binding-operator
+        displayName: Service Binding Operator
+        id: github.com/cloud-native-toolkit/terraform-gitops-service-binding-operator
         group: service-binding-operator
