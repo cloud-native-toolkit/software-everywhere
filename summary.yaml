@@ -3143,6 +3143,7 @@ categories:
           - azure
           - ssh
         versions:
+          - v1.0.0
           - v0.0.1
           - v0.0.1
         id: github.com/cloud-native-toolkit/terraform-azure-ssh-key
