@@ -2487,6 +2487,18 @@ categories:
         id: github.com/cloud-native-toolkit/terraform-gitops-cp-aspera-operator
         group: ""
         displayName: Aspera operator
+      - cloudProvider: ""
+        softwareProvider: ""
+        type: gitops
+        name: gitops-terraform-gitops-mas-jdbc
+        description: Module to populate a gitops repo with the resources to provision terraform-gitops-mas-jdbc
+        tags:
+          - tools
+          - gitops
+        versions: []
+        id: github.com/cloud-native-toolkit/terraform-gitops-mas-jdbc
+        group: ""
+        displayName: MAS JDBC Configuration
   - category: network
     categoryName: Network
     selection: multiple
