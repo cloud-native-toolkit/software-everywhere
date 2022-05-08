@@ -507,6 +507,10 @@ categories:
         id: github.com/cloud-native-toolkit/terraform-gitops-cp-aspera-operator
         displayName: Aspera operator
         softwareProvider: ibm-cp
+      - name: gitops-terraform-gitops-mas-jdbc
+        id: >-
+          github.com/cloud-native-toolkit/terraform-gitops-terraform-gitops-mas-jdbc
+        displayName: MAS JDBC Configuration
     catalogFile: catalog.yaml
   - category: databases
     categoryName: Databases
@@ -760,5 +764,6 @@ categories:
         id: github.com/cloud-native-toolkit/terraform-util-storage-class-manager
       - name: gitops-service-binding-operator
         displayName: Service Binding Operator
-        id: github.com/cloud-native-toolkit/terraform-gitops-service-binding-operator
+        id: >-
+          github.com/cloud-native-toolkit/terraform-gitops-service-binding-operator
         group: service-binding-operator
