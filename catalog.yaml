@@ -508,8 +508,7 @@ categories:
         displayName: Aspera operator
         softwareProvider: ibm-cp
       - name: gitops-terraform-gitops-mas-jdbc
-        id: >-
-          github.com/cloud-native-toolkit/terraform-gitops-terraform-gitops-mas-jdbc
+        id: github.com/cloud-native-toolkit/terraform-gitops-mas-jdbc
         displayName: MAS JDBC Configuration
     catalogFile: catalog.yaml
   - category: databases
