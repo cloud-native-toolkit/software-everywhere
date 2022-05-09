@@ -3623,9 +3623,10 @@ categories:
         name: azure-storage-blob
         description: Module to provision storage-blob on azure
         tags:
-          - tools
-          - devops
-        versions: []
+          - azure
+          - storage
+        versions:
+          - v1.0.0
         id: github.com/cloud-native-toolkit/terraform-azure-storage-blob
         group: object-storage-bucket
         displayName: Azure Storage Blob
