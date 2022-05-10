@@ -510,6 +510,9 @@ categories:
       - name: gitops-terraform-gitops-mas-jdbc
         id: github.com/cloud-native-toolkit/terraform-gitops-mas-jdbc
         displayName: MAS JDBC Configuration
+      - name: gitops-cp-datastage
+        id: github.com/cloud-native-toolkit/terraform-gitops-cp-datastage
+        displayName: CP4D DataStage
     catalogFile: catalog.yaml
   - category: databases
     categoryName: Databases
