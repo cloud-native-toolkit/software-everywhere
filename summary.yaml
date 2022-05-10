@@ -1790,18 +1790,6 @@ categories:
       - cloudProvider: ""
         softwareProvider: ibm-cp
         type: gitops
-        name: cp4d-instance
-        description: GitOps module to create a CP4D instance
-        tags:
-          - tools
-          - gitops
-        versions: []
-        id: github.com/cloud-native-toolkit/terraform-gitops-cp4d-instance
-        group: ""
-        displayName: Cloud Pak for Data Instance
-      - cloudProvider: ""
-        softwareProvider: ibm-cp
-        type: gitops
         name: ibm-common-service
         description: GitOps module to install ibm-common-service (Cloud Pak Foundational Services)
         tags:
@@ -3796,6 +3784,7 @@ categories:
           - oc
           - kubectl
         versions:
+          - v1.13.0
           - v1.12.0
           - v1.11.0
           - v1.10.0
