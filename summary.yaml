@@ -2495,11 +2495,12 @@ categories:
         softwareProvider: ""
         type: gitops
         name: gitops-terraform-gitops-mas-jdbc
-        description: Module to populate a gitops repo with the resources to provision terraform-gitops-mas-jdbc
+        description: Module to populate a gitops repo with a MAS JDBC Configuration
         tags:
           - tools
           - gitops
-        versions: []
+        versions:
+          - v1.0.1
         id: github.com/cloud-native-toolkit/terraform-gitops-mas-jdbc
         group: ""
         displayName: MAS JDBC Configuration
