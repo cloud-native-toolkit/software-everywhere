@@ -2502,6 +2502,18 @@ categories:
         id: github.com/cloud-native-toolkit/terraform-gitops-mas-jdbc
         group: ""
         displayName: MAS JDBC Configuration
+      - cloudProvider: ""
+        softwareProvider: ""
+        type: gitops
+        name: gitops-cp-datastage
+        description: Module to populate a gitops repo with the resources to provision cp-datastage
+        tags:
+          - tools
+          - gitops
+        versions: []
+        id: github.com/cloud-native-toolkit/terraform-gitops-cp-datastage
+        group: ""
+        displayName: CP4D DataStage
   - category: network
     categoryName: Network
     selection: multiple
