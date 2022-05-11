@@ -754,6 +754,7 @@ categories:
           - tekton
           - continuous integration
         versions:
+          - v2.5.2
           - v2.5.1
           - v2.5.0
           - v2.4.1
@@ -771,6 +772,8 @@ categories:
           - v2.1.1
           - v2.1.0
           - v2.0.2
+        interfaces:
+          - github.com/cloud-native-toolkit/automation-modules#tekton
         group: tekton
         displayName: Tekton
       - cloudProvider: ""
