@@ -3577,6 +3577,20 @@ categories:
         displayName: storageclass
       - cloudProvider: ibm
         softwareProvider: ""
+        type: gitops
+        name: gitops-ibm-portworx
+        description: Module to populate a gitops repository with the resources required to provision Portworx in an OpenShift cluster
+        tags:
+          - gitops
+          - portworx
+          - ibmcloud
+        versions:
+          - v0.1.0
+        id: github.com/cloud-native-toolkit/terraform-gitops-ibm-portworx
+        group: portworx
+        displayName: Portworx on IBM Cloud (Gitops)
+      - cloudProvider: ibm
+        softwareProvider: ""
         type: terraform
         id: github.com/cloud-native-toolkit/terraform-ibm-portworx
         name: ibm-portworx
@@ -3674,6 +3688,18 @@ categories:
         id: github.com/cloud-native-toolkit/terraform-azure-storage-blob
         group: object-storage-bucket
         displayName: Azure Storage Blob
+      - cloudProvider: ibm
+        softwareProvider: ""
+        type: terraform
+        name: ibm-ibm-odf
+        description: Module to provision ibm-odf on ibm
+        tags:
+          - tools
+          - devops
+        versions: []
+        id: github.com/cloud-native-toolkit/terraform-ibm-odf
+        group: ""
+        displayName: terraform-ibm-odf
   - category: util
     categoryName: Utilities
     selection: multiple
