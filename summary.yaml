@@ -1576,6 +1576,7 @@ categories:
           - tools
           - gitops
         versions:
+          - v1.11.2
           - v1.11.1
           - v1.11.0
           - v1.10.6
