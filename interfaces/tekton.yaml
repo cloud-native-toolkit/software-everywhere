@@ -1,0 +1,6 @@
+id: github.com/cloud-native-toolkit/automation-modules#tekton
+name: tekton
+outputs:
+  - name: tekton_namespace
+    description: The namespace where the tekton resources have been deployed
+    type: string
