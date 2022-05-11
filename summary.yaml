@@ -3232,9 +3232,10 @@ categories:
         name: azure-nat-gateway
         description: Module to provision nat-gateway on azure
         tags:
-          - tools
-          - devops
-        versions: []
+          - azure
+          - nat-gateway
+        versions:
+          - v1.0.0
         id: github.com/cloud-native-toolkit/terraform-azure-nat-gateway
         group: vpc-gateways
         displayName: Azure NAT Gateway
