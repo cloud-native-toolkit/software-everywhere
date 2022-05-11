@@ -621,6 +621,10 @@ categories:
         displayName: Azure Storage Blob
         group: object-storage-bucket
         cloudProvider: azure
+      - name: ibm-ibm-odf
+        id: github.com/cloud-native-toolkit/terraform-ibm-ibm-odf
+        displayName: terraform-ibm-odf
+        cloudProvider: ibm
   - category: ai-ml
     categoryName: AI/ML
     selection: multiple
