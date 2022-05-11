@@ -3160,22 +3160,6 @@ categories:
         id: github.com/cloud-native-toolkit/terraform-aws-vpc-peering
         group: ""
         displayName: AWS VPC Peering
-      - cloudProvider: aws
-        softwareProvider: ""
-        type: terraform
-        name: aws-transit-gateway
-        description: Module to provision vpn service on aws
-        tags:
-          - infrastructure
-          - networking
-          - aws
-        versions:
-          - v1.1.0
-          - v1.0.0
-        id: github.com/cloud-native-toolkit/terraform-aws-transit-gateway
-        alias: transit-gateway
-        group: transit-gateway
-        displayName: AWS Transit Gateway
       - cloudProvider: azure
         softwareProvider: ""
         type: terraform
