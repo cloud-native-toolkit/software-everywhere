@@ -229,6 +229,11 @@ categories:
         displayName: Azure NAT Gateway
         group: vpc-gateways
         cloudProvider: azure
+      - name: azure-vm-bastion
+        id: github.com/cloud-native-toolkit/terraform-azure-vm-bastion
+        displayName: Azure VM Bastion
+        group: bastion
+        cloudProvider: azure
   - category: infrastructure
     categoryName: Software Infrastructure
     selection: indirect
