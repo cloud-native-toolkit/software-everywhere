@@ -3253,6 +3253,18 @@ categories:
         id: github.com/cloud-native-toolkit/terraform-azure-nat-gateway
         group: vpc-gateways
         displayName: Azure NAT Gateway
+      - cloudProvider: azure
+        softwareProvider: ""
+        type: terraform
+        name: azure-vm-bastion
+        description: Module to provision vm-bastion on azure
+        tags:
+          - tools
+          - devops
+        versions: []
+        id: github.com/cloud-native-toolkit/terraform-azure-vm-bastion
+        group: bastion
+        displayName: Azure VM Bastion
   - category: source-control
     categoryName: Source Control
     selection: single
