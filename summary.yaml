@@ -2304,6 +2304,7 @@ categories:
           - tools
           - gitops
         versions:
+          - v2.0.1
           - v2.0.0
           - v1.0.3
           - v1.0.2
