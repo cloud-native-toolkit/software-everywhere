@@ -2616,29 +2616,6 @@ categories:
         registryId: cloud-native-toolkit/vpc/ibm
         group: vpc
         displayName: IBM VPC
-      - cloudProvider: aws
-        softwareProvider: ""
-        type: terraform
-        id: github.com/cloud-native-toolkit/terraform-aws-vpc
-        name: aws-vpc
-        description: Provisions the AWS VPC instance
-        tags:
-          - infrastructure
-          - networking
-          - aws
-        versions:
-          - v1.5.1
-          - v1.5.0
-          - v1.4.0
-          - v1.3.0
-          - v1.2.2
-          - v1.2.1
-          - v1.2.0
-          - v1.1.0
-          - v1.0.1
-          - v1.0.0
-        group: vpc
-        displayName: AWS VPC
       - cloudProvider: ibm
         softwareProvider: ""
         type: terraform
