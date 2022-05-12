@@ -3265,6 +3265,18 @@ categories:
         id: github.com/cloud-native-toolkit/terraform-azure-vm-bastion
         group: bastion
         displayName: Azure VM Bastion
+      - cloudProvider: azure
+        softwareProvider: ""
+        type: terraform
+        name: azure-vpn-gateway
+        description: Module to provision vpn-gateway on azure
+        tags:
+          - tools
+          - devops
+        versions: []
+        id: github.com/cloud-native-toolkit/terraform-azure-vpn-gateway
+        group: vpn
+        displayName: Azure VPN Gateway
   - category: source-control
     categoryName: Source Control
     selection: single
@@ -3381,6 +3393,7 @@ categories:
           - logging
           - kubernetes
         versions:
+          - v1.3.4
           - v1.3.3
           - v1.3.2
           - v1.3.1
