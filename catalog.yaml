@@ -234,6 +234,11 @@ categories:
         displayName: Azure VM Bastion
         group: bastion
         cloudProvider: azure
+      - name: azure-vpn-gateway
+        id: github.com/cloud-native-toolkit/terraform-azure-vpn-gateway
+        displayName: Azure VPN Gateway
+        group: vpn
+        cloudProvider: azure
   - category: infrastructure
     categoryName: Software Infrastructure
     selection: indirect
