@@ -793,6 +793,7 @@ categories:
           - continuous integration
           - tekton
         versions:
+          - v2.3.2
           - v2.3.1
           - v2.3.0
           - v2.2.24
@@ -3304,6 +3305,18 @@ categories:
         id: github.com/cloud-native-toolkit/terraform-azure-vnet-peering
         group: transit-gateway
         displayName: Azure VNet Peering
+      - cloudProvider: azure
+        softwareProvider: ""
+        type: terraform
+        name: azure-acme-certificate
+        description: Module to provision acme-certificate on azure
+        tags:
+          - tools
+          - devops
+        versions: []
+        id: github.com/cloud-native-toolkit/terraform-azure-acme-certificate
+        group: certificate
+        displayName: Azure ACME Certificate
   - category: source-control
     categoryName: Source Control
     selection: single
