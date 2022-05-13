@@ -244,6 +244,11 @@ categories:
         displayName: Azure Web Application Firewall
         group: firewall
         cloudProvider: azure
+      - name: azure-vnet-peering
+        id: github.com/cloud-native-toolkit/terraform-azure-vnet-peering
+        displayName: Azure VNet Peering
+        group: transit-gateway
+        cloudProvider: azure
   - category: infrastructure
     categoryName: Software Infrastructure
     selection: indirect
