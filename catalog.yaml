@@ -249,6 +249,11 @@ categories:
         displayName: Azure VNet Peering
         group: transit-gateway
         cloudProvider: azure
+      - name: azure-acme-certificate
+        id: github.com/cloud-native-toolkit/terraform-azure-acme-certificate
+        displayName: Azure ACME Certificate
+        group: certificate
+        cloudProvider: azure
   - category: infrastructure
     categoryName: Software Infrastructure
     selection: indirect
