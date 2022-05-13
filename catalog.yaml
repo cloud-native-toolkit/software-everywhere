@@ -239,6 +239,11 @@ categories:
         displayName: Azure VPN Gateway
         group: vpn
         cloudProvider: azure
+      - name: azure-waf
+        id: github.com/cloud-native-toolkit/terraform-azure-waf
+        displayName: Azure Web Application Firewall
+        group: firewall
+        cloudProvider: azure
   - category: infrastructure
     categoryName: Software Infrastructure
     selection: indirect
