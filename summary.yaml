@@ -1097,6 +1097,7 @@ categories:
           - gitops
           - bootstrap
         versions:
+          - v1.12.0
           - v1.11.0
           - v1.10.0
           - v1.9.0
@@ -3288,6 +3289,18 @@ categories:
         id: github.com/cloud-native-toolkit/terraform-azure-waf
         group: firewall
         displayName: Azure Web Application Firewall
+      - cloudProvider: azure
+        softwareProvider: ""
+        type: terraform
+        name: azure-vnet-peering
+        description: Module to provision vnet-peering on azure
+        tags:
+          - tools
+          - devops
+        versions: []
+        id: github.com/cloud-native-toolkit/terraform-azure-vnet-peering
+        group: transit-gateway
+        displayName: Azure VNet Peering
   - category: source-control
     categoryName: Source Control
     selection: single
