@@ -1361,6 +1361,7 @@ categories:
           - ibm cloud
           - access groups
         versions:
+          - v3.1.6
           - v3.1.5
           - v3.1.4
           - v3.1.3
