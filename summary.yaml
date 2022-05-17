@@ -2565,6 +2565,18 @@ categories:
         id: github.com/cloud-native-toolkit/terraform-gitops-cp-datastage
         group: ""
         displayName: CP4D DataStage
+      - cloudProvider: ""
+        softwareProvider: gitops
+        type: gitops
+        name: gitops-mas-manage
+        description: Module to populate a gitops repo with the resources to provision mas-manage
+        tags:
+          - tools
+          - gitops
+        versions: []
+        id: github.com/cloud-native-toolkit/terraform-gitops-mas-manage
+        group: maximo
+        displayName: Maximo Manage
   - category: network
     categoryName: Network
     selection: multiple
