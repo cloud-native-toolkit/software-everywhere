@@ -3686,6 +3686,7 @@ categories:
           - portworx
           - ibmcloud
         versions:
+          - v0.1.1
           - v0.1.0
         id: github.com/cloud-native-toolkit/terraform-gitops-ibm-portworx
         group: portworx
