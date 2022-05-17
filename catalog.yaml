@@ -3,19 +3,6 @@ categories:
     categoryName: Cluster
     selection: single
     modules:
-      - name: IBM Container Platform
-        id: github.com/cloud-native-toolkit/terraform-ibm-container-platform
-        metadataUrl: >-
-          https://cloud-native-toolkit.github.io/terraform-ibm-container-platform/index.yaml
-        group: openshift
-        cloudProvider: ibm
-      - name: OpenShift Cluster
-        id: github.com/cloud-native-toolkit/terraform-k8s-ocp-cluster
-        aliases:
-          - github.com/cloud-native-toolkit/terraform-ocp-cluster
-        metadataUrl: >-
-          https://cloud-native-toolkit.github.io/terraform-k8s-ocp-cluster/index.yaml
-        group: openshift
       - name: IBM OpenShift VPC cluster
         id: github.com/cloud-native-toolkit/terraform-ibm-ocp-vpc
         group: openshift
