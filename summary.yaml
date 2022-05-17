@@ -2297,7 +2297,7 @@ categories:
       - cloudProvider: ""
         softwareProvider: ""
         type: gitops
-        name: gitops-cp-event-streams-instance
+        name: gitops-cp-event-streams
         description: Module to populate a gitops repo with the resources to provision cp-event-streams-instance from Cloud pak for integration
         tags:
           - tools
@@ -2305,6 +2305,7 @@ categories:
           - cloudpak
           - eventstreams
         versions:
+          - v1.1.1
           - v1.1.0
           - v1.0.0
           - v0.0.1
