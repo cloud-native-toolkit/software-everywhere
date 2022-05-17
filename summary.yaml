@@ -2331,6 +2331,41 @@ categories:
           - v1.0.0
         group: ldap
         displayName: OpenLDAP
+      - cloudProvider: ""
+        softwareProvider: ""
+        type: terraform
+        name: gitops-cp-eventstreams-operator
+        description: Module to populate a gitops repository with the resources to provision the Event Streams operator from IBM Cloud Pak for Integration.
+        tags:
+          - tools
+          - gitops
+          - ibm
+          - cloud pak
+          - operator
+          - eventstreams
+        versions:
+          - v1.0.1
+          - v1.0.0
+        id: github.com/cloud-native-toolkit/terraform-gitops-cp-event-streams-operator
+        group: kafka
+        displayName: Event Streams Operator
+      - cloudProvider: ""
+        softwareProvider: ""
+        type: gitops
+        name: gitops-cp-event-streams-instance
+        description: Module to populate a gitops repo with the resources to provision cp-event-streams-instance from Cloud pak for integration
+        tags:
+          - tools
+          - gitops
+          - cloudpak
+          - eventstreams
+        versions:
+          - v1.1.0
+          - v1.0.0
+          - v0.0.1
+        id: github.com/cloud-native-toolkit/terraform-gitops-cp-event-streams
+        group: kafka
+        displayName: Event Streams
       - cloudProvider: aws
         softwareProvider: ""
         type: terraform
@@ -3673,6 +3708,7 @@ categories:
           - portworx
           - ibmcloud
         versions:
+          - v0.1.2
           - v0.1.1
           - v0.1.0
         id: github.com/cloud-native-toolkit/terraform-gitops-ibm-portworx
