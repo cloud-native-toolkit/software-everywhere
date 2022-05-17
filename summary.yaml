@@ -2331,23 +2331,6 @@ categories:
           - v1.0.0
         group: ldap
         displayName: OpenLDAP
-      - cloudProvider: ""
-        softwareProvider: ""
-        type: terraform
-        name: gitops-cp-eventstreams
-        description: Module to populate a gitops repository with the resources to provision the Event Streams operator from IBM Cloud Pak for Integration.
-        tags:
-          - tools
-          - gitops
-          - ibm
-          - cloud pak
-          - operator
-          - eventstreams
-        versions:
-          - v1.0.0
-        id: github.com/cloud-native-toolkit/terraform-gitops-cp-event-streams
-        group: kafka
-        displayName: Event Streams
       - cloudProvider: aws
         softwareProvider: ""
         type: terraform
@@ -4009,6 +3992,18 @@ categories:
         id: github.com/cloud-native-toolkit/terraform-gitops-service-binding-operator
         group: service-binding-operator
         displayName: Service Binding Operator
+      - cloudProvider: ""
+        softwareProvider: ""
+        type: gitops
+        name: gitops-module-global-pullsecret
+        description: Module to populate a gitops repo with the resources to provision module-global-pullsecret
+        tags:
+          - tools
+          - gitops
+        versions: []
+        id: github.com/cloud-native-toolkit/terraform-gitops-module-global-pullsecret
+        group: ""
+        displayName: Global Pull Secret
 providers:
   - name: azurerm
     source: hashicorp/azurerm
