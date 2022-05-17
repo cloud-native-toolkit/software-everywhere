@@ -470,6 +470,10 @@ categories:
         type: gitops
         group: ldap
         softwareProvider: opensource
+      - name: gitops-cp-event-streams-operator
+        id: github.com/cloud-native-toolkit/terraform-gitops-cp-event-streams-operator
+        displayName: Event Streams Operator
+        group: kafka
       - name: gitops-cp-event-streams
         id: github.com/cloud-native-toolkit/terraform-gitops-cp-event-streams
         displayName: Event Streams
