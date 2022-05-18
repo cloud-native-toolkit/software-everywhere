@@ -947,6 +947,7 @@ categories:
           - sonarqube
           - gitops
         versions:
+          - v1.2.6
           - v1.2.5
           - v1.2.4
           - v1.2.3
@@ -3987,6 +3988,18 @@ categories:
         id: github.com/cloud-native-toolkit/terraform-gitops-module-global-pullsecret
         group: ""
         displayName: Global Pull Secret
+      - cloudProvider: ""
+        softwareProvider: ""
+        type: terraform
+        name: ocp-ipi-certs
+        description: 'Module to provision ocp-ipi-certs on '
+        tags:
+          - tools
+          - devops
+        versions: []
+        id: github.com/cloud-native-toolkit/terraform-any-ocp-ipi-certs
+        group: certificate
+        displayName: OpenShift Ingress/API Certificates
 providers:
   - name: azurerm
     source: hashicorp/azurerm
