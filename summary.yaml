@@ -919,6 +919,7 @@ categories:
           - pact
           - contract testing
         versions:
+          - v1.1.7
           - v1.1.6
           - v1.1.6
           - v1.1.5
@@ -1811,6 +1812,7 @@ categories:
           - dependency management
           - channel
         versions:
+          - v1.2.2
           - v1.2.0
           - v1.1.4
           - v1.1.3
