@@ -3210,11 +3210,13 @@ categories:
         softwareProvider: ""
         type: terraform
         name: azure-vm
-        description: Module to provision vm on azure
+        description: Module to provision Virtual machine on azure
         tags:
-          - tools
-          - devops
-        versions: []
+          - azure
+          - azure-vm
+          - virtual-machine
+        versions:
+          - v1.0.0
         id: github.com/cloud-native-toolkit/terraform-azure-vm
         group: vsi
         displayName: Azure VM
