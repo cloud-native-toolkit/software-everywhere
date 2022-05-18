@@ -458,7 +458,8 @@ categories:
         group: ldap
         softwareProvider: opensource
       - name: gitops-cp-event-streams-operator
-        id: github.com/cloud-native-toolkit/terraform-gitops-cp-event-streams-operator
+        id: >-
+          github.com/cloud-native-toolkit/terraform-gitops-cp-event-streams-operator
         displayName: Event Streams Operator
         group: kafka
       - name: gitops-cp-event-streams
@@ -798,3 +799,7 @@ categories:
         id: >-
           github.com/cloud-native-toolkit/terraform-gitops-module-global-pullsecret
         displayName: Global Pull Secret
+      - name: ocp-ipi-certs
+        id: github.com/cloud-native-toolkit/terraform-any-ocp-ipi-certs
+        displayName: OpenShift Ingress/API Certificates
+        group: certificate
