@@ -2211,7 +2211,7 @@ categories:
         softwareProvider: ibm-cp
         type: terraform
         id: github.com/cloud-native-toolkit/terraform-gitops-cp-apic-operator
-        name: gitops-cp-apic-opearator
+        name: gitops-cp-apic
         description: Module to populate a gitops repository with the resources to provision the API Connect operator from IBM Cloud Pak for Integration.
         tags:
           - tools
@@ -2221,6 +2221,8 @@ categories:
           - operator
           - ace
         versions:
+          - v1.2.3
+          - v1.2.2
           - v1.2.1
           - v1.2.0
           - v1.1.0
