@@ -79,6 +79,18 @@ categories:
         id: github.com/cloud-native-toolkit/terraform-gitops-cp-waiops-eventmgr
         group: ""
         displayName: Watson AIOps Event Manager
+      - cloudProvider: ""
+        softwareProvider: ibm-cp
+        type: gitops
+        name: gitops-cp-watson-assistant
+        description: Module to populate a gitops repo with the resources to provision cp-watson-assistant
+        tags:
+          - tools
+          - gitops
+        versions: []
+        id: github.com/cloud-native-toolkit/terraform-gitops-cp-watson-assistant
+        group: ""
+        displayName: cp-watson-assistant
   - category: cluster
     categoryName: Cluster
     selection: single
@@ -362,7 +374,7 @@ categories:
         group: db2-warehouse
         displayName: Existing IBM DB2 Warehouse
       - cloudProvider: ""
-        softwareProvider: ""
+        softwareProvider: ibm-cp
         type: terraform
         id: github.com/cloud-native-toolkit/terraform-gitops-cp-db2wh
         name: gitops-cp-db2wh
@@ -376,47 +388,6 @@ categories:
       - cloudProvider: ""
         softwareProvider: ibm-cp
         type: gitops
-        id: github.com/cloud-native-toolkit/terraform-gitops-db2u-operator
-        name: gitops-db2u
-        description: Module to populate a gitops repo with the resources to provision db2
-        tags:
-          - tools
-          - gitops
-        versions:
-          - v1.0.11
-          - v1.0.10
-          - v1.0.9
-          - v1.0.8
-          - v1.0.7
-          - v1.0.6
-          - v1.0.5
-          - v1.0.4
-          - v1.0.3
-          - v1.0.2
-          - v1.0.1
-          - v1.0.0
-        group: db2u-operator
-        displayName: IBM DB2U Operator
-      - cloudProvider: ""
-        softwareProvider: ibm-cp
-        type: gitops
-        name: gitops-db2-oltp
-        description: Module to populate a gitops repo wih the resources to provision IBM DB2
-        tags:
-          - db2
-          - tools
-          - gitops
-        versions:
-          - v1.0.9
-          - v1.0.8
-          - v1.0.7
-          - v1.0.6
-        id: github.com/cloud-native-toolkit/terraform-gitops-cp-db2-oltp
-        group: gitops-cp-db2-oltp
-        displayName: IBM DB2 OLTP Db2oltpService
-      - cloudProvider: ""
-        softwareProvider: ""
-        type: gitops
         name: gitops-cp-db2
         description: Module to populate a gitops repository with the resources to configure a schema on a DB2 instance
         tags:
@@ -428,7 +399,7 @@ categories:
           - v0.0.2
         id: github.com/cloud-native-toolkit/terraform-gitops-cp-db2
         group: db2
-        displayName: IBM DB2 Database Instance
+        displayName: IBM DB2 Database
       - cloudProvider: ""
         softwareProvider: ibm-cp
         type: gitops
@@ -439,7 +410,7 @@ categories:
           - gitops
         versions: []
         id: github.com/cloud-native-toolkit/terraform-gitops-cp-db2-schema
-        group: db2
+        group: db2-schema
         displayName: IBM DB2 Database Schema
   - category: dev-tool
     categoryName: Dev Tools
@@ -1038,6 +1009,21 @@ categories:
         id: github.com/cloud-native-toolkit/terraform-gitops-cp-watson-studio
         group: ""
         displayName: Watson Studio
+      - cloudProvider: ""
+        softwareProvider: ibm-cp
+        type: gitops
+        name: gitops-cp-ace-dashboard
+        description: Module to populate a gitops repo with the resources to provision the ACE Dashboard
+        tags:
+          - ace
+          - cp4i
+          - dashboard
+          - gitops
+        versions:
+          - v1.0.0
+        id: github.com/cloud-native-toolkit/terraform-gitops-cp-ace-dashboard
+        group: cp4i
+        displayName: CP4I Ace Dashboard
   - category: gitops
     categoryName: GitOps
     selection: multiple
@@ -1902,30 +1888,44 @@ categories:
       - cloudProvider: ""
         softwareProvider: ibm-cp
         type: gitops
-        name: gitops-cp-ace-dashboard
-        description: Module to populate a gitops repo with the resources to provision the ACE Dashboard
-        tags:
-          - ace
-          - cp4i
-          - dashboard
-          - gitops
-        versions:
-          - v1.0.0
-        id: github.com/cloud-native-toolkit/terraform-gitops-cp-ace-dashboard
-        group: cp4i
-        displayName: CP4I Ace Dashboard
-      - cloudProvider: ""
-        softwareProvider: ""
-        type: gitops
-        name: gitops-cp-watson-assistant
-        description: Module to populate a gitops repo with the resources to provision cp-watson-assistant
+        id: github.com/cloud-native-toolkit/terraform-gitops-db2u-operator
+        name: gitops-db2u
+        description: Module to populate a gitops repo with the resources to provision db2
         tags:
           - tools
           - gitops
-        versions: []
-        id: github.com/cloud-native-toolkit/terraform-gitops-cp-watson-assistant
-        group: ""
-        displayName: cp-watson-assistant
+        versions:
+          - v1.0.11
+          - v1.0.10
+          - v1.0.9
+          - v1.0.8
+          - v1.0.7
+          - v1.0.6
+          - v1.0.5
+          - v1.0.4
+          - v1.0.3
+          - v1.0.2
+          - v1.0.1
+          - v1.0.0
+        group: db2u-operator
+        displayName: IBM DB2U Operator
+      - cloudProvider: ""
+        softwareProvider: ibm-cp
+        type: gitops
+        name: gitops-db2-oltp
+        description: Module to populate a gitops repo wih the resources to provision IBM DB2
+        tags:
+          - db2
+          - tools
+          - gitops
+        versions:
+          - v1.0.9
+          - v1.0.8
+          - v1.0.7
+          - v1.0.6
+        id: github.com/cloud-native-toolkit/terraform-gitops-cp-db2-oltp
+        group: gitops-cp-db2-oltp
+        displayName: IBM DB2 OLTP Db2oltpService
   - category: middleware
     categoryName: Software
     selection: multiple
