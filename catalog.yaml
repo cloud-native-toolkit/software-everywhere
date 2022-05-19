@@ -318,13 +318,18 @@ categories:
         displayName: CP4BA Business Automation Navigator
         softwareProvider: ibm-cp
         group: cp4ba
-      - name: CP4I Ace Dashboard
-        id: github.com/cloud-native-toolkit/terraform-gitops-cp-ace-dashboard
-        group: cp4i
+      - name: gitops-db2u
+        id: github.com/cloud-native-toolkit/terraform-gitops-db2u-operator
+        displayName: IBM DB2U Operator
+        group: db2u-operator
+        type: gitops
         softwareProvider: ibm-cp
-      - name: gitops-cp-watson-assistant
-        id: github.com/cloud-native-toolkit/terraform-gitops-cp-watson-assistant
-        displayName: cp-watson-assistant
+      - name: gitops-db2-oltp
+        id: github.com/cloud-native-toolkit/terraform-gitops-cp-db2-oltp
+        displayName: IBM DB2 OLTP Db2oltpService
+        group: gitops-cp-db2-oltp
+        type: gitops
+        softwareProvider: ibm-cp
   - category: sre
     categoryName: SRE tools
     selection: multiple
@@ -573,27 +578,17 @@ categories:
         id: github.com/cloud-native-toolkit/terraform-gitops-cp-db2wh
         group: db2-warehouse
         type: gitops
-      - name: gitops-db2u
-        id: github.com/cloud-native-toolkit/terraform-gitops-db2u-operator
-        displayName: IBM DB2U Operator
-        group: db2u-operator
-        type: gitops
-        softwareProvider: ibm-cp
-      - name: gitops-db2-oltp
-        id: github.com/cloud-native-toolkit/terraform-gitops-cp-db2-oltp
-        displayName: IBM DB2 OLTP Db2oltpService
-        group: gitops-cp-db2-oltp
-        type: gitops
         softwareProvider: ibm-cp
       - name: gitops-cp-db2
-        displayName: IBM DB2 Database Instance
+        displayName: IBM DB2 Database
         id: github.com/cloud-native-toolkit/terraform-gitops-cp-db2
         group: db2
         type: gitops
+        softwareProvider: ibm-cp
       - name: gitops-cp-db2-schema
         displayName: IBM DB2 Database Schema
         id: github.com/cloud-native-toolkit/terraform-gitops-cp-db2-schema
-        group: db2
+        group: db2-schema
         type: gitops
   - category: storage
     categoryName: Storage
@@ -681,6 +676,10 @@ categories:
         id: github.com/cloud-native-toolkit/terraform-gitops-cp-waiops-eventmgr
         displayName: Watson AIOps Event Manager
         softwareProvider: ibm-cp
+      - name: gitops-cp-watson-assistant
+        id: github.com/cloud-native-toolkit/terraform-gitops-cp-watson-assistant
+        displayName: cp-watson-assistant
+        softwareProvider: ibm-cp
   - category: dev-tool
     categoryName: Dev Tools
     selection: multiple
@@ -761,6 +760,10 @@ categories:
       - name: gitops-cp-watson-studio
         id: github.com/cloud-native-toolkit/terraform-gitops-cp-watson-studio
         displayName: Watson Studio
+      - name: CP4I Ace Dashboard
+        id: github.com/cloud-native-toolkit/terraform-gitops-cp-ace-dashboard
+        group: cp4i
+        softwareProvider: ibm-cp
   - category: util
     categoryName: Utilities
     selection: multiple
