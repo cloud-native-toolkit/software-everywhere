@@ -590,6 +590,11 @@ categories:
         id: github.com/cloud-native-toolkit/terraform-gitops-cp-db2-schema
         group: db2-schema
         type: gitops
+      - name: ibm-db2-warehouse
+        id: github.com/cloud-native-toolkit/terraform-ibm-db2-warehouse
+        displayName: IBM DB2 Warehouse
+        group: db2-warehouse
+        cloudProvider: ibm
   - category: storage
     categoryName: Storage
     selection: multiple
