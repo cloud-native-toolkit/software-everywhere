@@ -803,9 +803,9 @@ categories:
         id: >-
           github.com/cloud-native-toolkit/terraform-gitops-service-binding-operator
         group: service-binding-operator
-      - name: gitops-module-global-pullsecret
+      - name: gitops-global-pullsecret
         id: >-
-          github.com/cloud-native-toolkit/terraform-gitops-module-global-pullsecret
+          github.com/cloud-native-toolkit/terraform-gitops-global-pullsecret
         displayName: Global Pull Secret
       - name: ocp-ipi-certs
         id: github.com/cloud-native-toolkit/terraform-any-ocp-ipi-certs
