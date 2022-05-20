@@ -804,10 +804,13 @@ categories:
           github.com/cloud-native-toolkit/terraform-gitops-service-binding-operator
         group: service-binding-operator
       - name: gitops-global-pullsecret
-        id: >-
-          github.com/cloud-native-toolkit/terraform-gitops-global-pullsecret
+        id: github.com/cloud-native-toolkit/terraform-gitops-global-pullsecret
         displayName: Global Pull Secret
       - name: ocp-ipi-certs
         id: github.com/cloud-native-toolkit/terraform-any-ocp-ipi-certs
         displayName: OpenShift Ingress/API Certificates
         group: certificate
+      - name: gitops-global-pullsecret-synch
+        id: >-
+          github.com/cloud-native-toolkit/terraform-gitops-global-pullsecret-synch
+        displayName: global-pullsecret-synch
