@@ -4015,7 +4015,7 @@ categories:
           - tools
           - gitops
         versions: []
-        id: github.com/cloud-native-toolkit/terraform-gitops-module-global-pullsecret
+        id: github.com/cloud-native-toolkit/terraform-gitops-global-pullsecret
         group: ""
         displayName: Global Pull Secret
       - cloudProvider: ""
