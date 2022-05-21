@@ -1041,6 +1041,22 @@ categories:
         id: github.com/cloud-native-toolkit/terraform-gitops-cp-ace-dashboard
         group: cp4i
         displayName: CP4I Ace Dashboard
+      - cloudProvider: ""
+        softwareProvider: ""
+        type: terraform
+        id: github.com/cloud-native-toolkit/terraform-tools-gitea
+        name: gitea
+        description: Module to install Gitea into a cluster via an operator
+        tags:
+          - tools
+          - devops
+          - gitops
+          - gitea
+        versions:
+          - v0.2.0
+          - v0.1.0
+        group: git
+        displayName: Gitea
   - category: gitops
     categoryName: GitOps
     selection: multiple
