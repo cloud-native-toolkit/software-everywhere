@@ -769,6 +769,9 @@ categories:
         id: github.com/cloud-native-toolkit/terraform-gitops-cp-ace-dashboard
         group: cp4i
         softwareProvider: ibm-cp
+      - name: Gitea
+        id: github.com/cloud-native-toolkit/terraform-tools-gitea
+        group: git
   - category: util
     categoryName: Utilities
     selection: multiple
