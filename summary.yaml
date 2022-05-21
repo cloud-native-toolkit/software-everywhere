@@ -383,6 +383,7 @@ categories:
           - tools
           - gitops
         versions:
+          - v1.0.0
           - v0.0.1
         group: db2-warehouse
         displayName: IBM DB2 Warehouse
