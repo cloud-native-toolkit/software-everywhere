@@ -421,8 +421,12 @@ categories:
         tags:
           - tools
           - devops
-        versions: []
+        versions:
+          - v1.0.0
         id: github.com/cloud-native-toolkit/terraform-ibm-db2-warehouse
+        interfaces:
+          - github.com/cloud-native-toolkit/automation-modules#db2-warehouse
+          - github.com/cloud-native-toolkit/automation-modules#ibm-service
         group: db2-warehouse
         displayName: IBM DB2 Warehouse
   - category: dev-tool
@@ -4033,6 +4037,18 @@ categories:
         id: github.com/cloud-native-toolkit/terraform-any-ocp-ipi-certs
         group: certificate
         displayName: OpenShift Ingress/API Certificates
+      - cloudProvider: ""
+        softwareProvider: ""
+        type: gitops
+        name: gitops-global-pullsecret-synch
+        description: Module to populate a gitops repo with the resources to provision global-pullsecret-synch
+        tags:
+          - tools
+          - gitops
+        versions: []
+        id: github.com/cloud-native-toolkit/terraform-gitops-global-pullsecret-synch
+        group: ""
+        displayName: global-pullsecret-synch
 providers:
   - name: azurerm
     source: hashicorp/azurerm
