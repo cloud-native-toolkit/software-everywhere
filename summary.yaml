@@ -225,11 +225,12 @@ categories:
         softwareProvider: ""
         type: terraform
         name: azure-ocp-ipi
-        description: Module to provision ocp-ipi on azure
+        description: Module to provision an OpenShift Installer-Provisioned Infrastructure on Azure
         tags:
-          - tools
-          - devops
-        versions: []
+          - azure
+          - openshift
+        versions:
+          - v1.0.0
         id: github.com/cloud-native-toolkit/terraform-azure-ocp-ipi
         group: openshift
         displayName: Azure OpenShift IPI
