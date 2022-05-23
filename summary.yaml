@@ -2185,6 +2185,7 @@ categories:
           - jetstack
           - gitops
         versions:
+          - v1.2.2
           - v1.2.1
           - v1.2.0
           - v1.1.0
@@ -4061,18 +4062,6 @@ categories:
         id: github.com/cloud-native-toolkit/terraform-any-ocp-ipi-certs
         group: certificate
         displayName: OpenShift Ingress/API Certificates
-      - cloudProvider: ""
-        softwareProvider: ""
-        type: gitops
-        name: gitops-global-pullsecret-synch
-        description: Module to populate a gitops repo with the resources to provision global-pullsecret-synch
-        tags:
-          - tools
-          - gitops
-        versions: []
-        id: github.com/cloud-native-toolkit/terraform-gitops-global-pullsecret-synch
-        group: ""
-        displayName: global-pullsecret-synch
 providers:
   - name: azurerm
     source: hashicorp/azurerm
