@@ -3357,11 +3357,13 @@ categories:
         softwareProvider: ""
         type: terraform
         name: azure-acme-certificate
-        description: Module to provision acme-certificate on azure
+        description: Module to provision an ACME certificate for azure
         tags:
-          - tools
-          - devops
-        versions: []
+          - azure
+          - certificate
+          - tls
+        versions:
+          - v1.0.0
         id: github.com/cloud-native-toolkit/terraform-azure-acme-certificate
         group: certificate
         displayName: Azure ACME Certificate
