@@ -540,6 +540,9 @@ categories:
         id: github.com/cloud-native-toolkit/terraform-gitops-mas-manage
         group: maximo
         softwareProvider: gitops
+      - name: gitops-cp-filenet
+        id: github.com/cloud-native-toolkit/terraform-gitops-cp-filenet
+        displayName: FileNet
     catalogFile: catalog.yaml
   - category: databases
     categoryName: Databases
