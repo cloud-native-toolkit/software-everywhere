@@ -490,9 +490,9 @@ categories:
           github.com/cloud-native-toolkit/terraform-gitops-cp-data-virtualization
         displayName: Data Virtualization
         softwareProvider: ibm-cp
-      - name: gitops-cp-datavirtualization-svc
+      - name: gitops-cp-data-virt-svc
         id: >-
-          github.com/cloud-native-toolkit/terraform-gitops-cp-datavirtualization-svc
+          github.com/cloud-native-toolkit/terraform-gitops-cp-data-virt-svc
         displayName: Data Virtualization Service
         softwareProvider: ibm-cp
       - name: gitops-cp-data-fabric
