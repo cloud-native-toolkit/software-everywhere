@@ -2450,7 +2450,7 @@ categories:
           - v1.0.2
           - v1.0.1
           - v1.0.0
-        id: github.com/cloud-native-toolkit/terraform-gitops-cp-data-virtualization-service
+        id: github.com/cloud-native-toolkit/terraform-gitops-cp-datavirtualization-svc
         group: ""
         displayName: Data Virtualization Service
       - cloudProvider: ""
