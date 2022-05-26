@@ -2,6 +2,7 @@ import React from 'react';
 
 import {DataTable, HeaderData} from '../../ui-patterns/data-table/DataTable';
 import {
+  moduleBuildBadgeUrl,
   moduleDisplayName,
   ModuleGroupModel, moduleLatestVersion,
   ModuleModel,
@@ -82,8 +83,10 @@ export class ModuleGroupTable extends React.Component<ModuleTableProps, any> {
   }
 
   moduleBuildBadge(module: ModuleModel) {
+    const imgUrl = moduleBuildBadgeUrl(module)
+
     return (
-      <img src={`${moduleUrl(module)}/actions/workflows/verify.yaml/badge.svg`} />
+      <img src={imgUrl} />
     )
   }
 

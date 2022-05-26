@@ -34,6 +34,16 @@ export const moduleStatus = (module: ModuleModel): string => {
   return 'released'
 }
 
+export const moduleBuildBadgeUrl = (module: ModuleModel) => {
+  const status: string = moduleStatus(module)
+
+  if (status === 'pending') {
+    return 'https://img.shields.io/badge/Verify-in%20progress-lightgrey'
+  }
+
+  return `${moduleUrl(module)}/actions/workflows/verify.yaml/badge.svg`
+}
+
 export const moduleDisplayName = (module: ModuleModel): string => {
   return module.displayName || module.name
 }

@@ -5,7 +5,15 @@ import {connect} from 'react-redux';
 import './Module.scss'
 import {RootState} from '../../app/store';
 import {Mode, selectMode} from '../../features/mode/modeSlice';
-import {moduleDisplayName, moduleLatestVersion, ModuleModel, moduleStatus, moduleType, moduleUrl} from '../../models';
+import {
+  moduleBuildBadgeUrl,
+  moduleDisplayName,
+  moduleLatestVersion,
+  ModuleModel,
+  moduleStatus,
+  moduleType,
+  moduleUrl
+} from '../../models';
 import {ModuleLink} from '../module-link';
 
 interface ModuleValues {
@@ -74,8 +82,10 @@ class ModuleInternal extends React.Component<ModuleProps, any> {
   }
 
   get moduleBuildBadge() {
+    const imgUrl = moduleBuildBadgeUrl(this.props.module)
+
     return (
-      <img src={`${moduleUrl(this.props.module)}/actions/workflows/verify.yaml/badge.svg`} />
+      <img src={imgUrl} />
     )
   }
 }

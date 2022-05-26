@@ -15,7 +15,9 @@ export interface CatalogState {
 
 const initialState: CatalogState = {
   value: undefined,
-  filters: {},
+  filters: {
+    status: 'released'
+  },
   status: Status.idle
 }
 
