@@ -4093,6 +4093,20 @@ categories:
         id: github.com/cloud-native-toolkit/terraform-any-ocp-ipi-certs
         group: certificate
         displayName: OpenShift Ingress/API Certificates
+      - cloudProvider: ""
+        softwareProvider: ""
+        type: gitops
+        name: gitops-global-pullsecret-synch
+        description: Module to populate a gitops repo with the resources to creates a DaemonSet to periodically read changes in the `pull-secret` secret in the `openshift-config` namespace, and automatically apply those to the cluster worker nodes without requiring node reboot/reload.
+        tags:
+          - tools
+          - gitops
+        versions:
+          - v0.1.1
+          - v0.1.0
+        id: github.com/cloud-native-toolkit/terraform-gitops-global-pullsecret-synch
+        group: ""
+        displayName: Global Pull Secret Synch
 providers:
   - name: azurerm
     source: hashicorp/azurerm
