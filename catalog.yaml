@@ -666,9 +666,9 @@ categories:
         id: github.com/cloud-native-toolkit/terraform-gitops-cp-bas
         displayName: CP Behavior Analytics Service
         softwareProvider: ibm-cp
-      - name: gitops-cp-watson-knowledge-catalog
+      - name: gitops-cp-wkc
         id: >-
-          github.com/cloud-native-toolkit/terraform-gitops-cp-watson-knowledge-catalog
+          github.com/cloud-native-toolkit/terraform-gitops-cp-wkc
         displayName: Watson Knowledge Catalog
         softwareProvider: ibm-cp
       - name: gitops-cp-wml
