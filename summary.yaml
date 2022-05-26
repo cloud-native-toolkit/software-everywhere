@@ -40,7 +40,7 @@ categories:
       - cloudProvider: ""
         softwareProvider: ibm-cp
         type: gitops
-        name: gitops-cp-watson-machine-learning
+        name: gitops-cp-wml
         description: Module to populate a gitops repo with the resources to provision Watson Machine Learning on Cloud Pak for Data
         tags:
           - tools
@@ -51,6 +51,7 @@ categories:
           - cpd
           - cp4d
         versions:
+          - v1.1.0
           - v1.0.1
           - v1.0.0
         id: github.com/cloud-native-toolkit/terraform-gitops-cp-wml
