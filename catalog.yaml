@@ -817,6 +817,5 @@ categories:
         displayName: OpenShift Ingress/API Certificates
         group: certificate
       - name: gitops-global-pullsecret-synch
-        id: >-
-          github.com/cloud-native-toolkit/terraform-gitops-global-pullsecret-synch
-        displayName: global-pullsecret-synch
+        id: github.com/cloud-native-toolkit/terraform-gitops-global-pullsecret-synch
+        displayName: Global Pull Secret Synch
