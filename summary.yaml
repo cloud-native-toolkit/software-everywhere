@@ -28,18 +28,6 @@ categories:
       - cloudProvider: ""
         softwareProvider: ibm-cp
         type: gitops
-        name: gitops-cp-watson-knowledge-catalog
-        description: Module to populate a gitops repo with the resources to provision cp-watson-knowledge-catalog
-        tags:
-          - tools
-          - gitops
-        versions: []
-        id: github.com/cloud-native-toolkit/terraform-gitops-cp-watson-knowledge-catalog
-        group: ""
-        displayName: Watson Knowledge Catalog
-      - cloudProvider: ""
-        softwareProvider: ibm-cp
-        type: gitops
         name: gitops-cp-watson-machine-learning
         description: Module to populate a gitops repo with the resources to provision Watson Machine Learning on Cloud Pak for Data
         tags:
