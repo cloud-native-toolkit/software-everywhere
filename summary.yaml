@@ -53,7 +53,7 @@ categories:
         versions:
           - v1.0.1
           - v1.0.0
-        id: github.com/cloud-native-toolkit/terraform-gitops-cp-watson-machine-learning
+        id: github.com/cloud-native-toolkit/terraform-gitops-cp-wml
         group: ""
         displayName: Watson Machine Learning
       - cloudProvider: ""
