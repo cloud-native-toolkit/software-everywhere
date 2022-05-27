@@ -330,10 +330,6 @@ categories:
         group: gitops-cp-db2-oltp
         type: gitops
         softwareProvider: ibm-cp
-      - name: gitops-cp-watson-discovery
-        id: >-
-          github.com/cloud-native-toolkit/terraform-gitops-cp-watson-discovery
-        displayName: cp-watson-discovery
   - category: sre
     categoryName: SRE tools
     selection: multiple
@@ -689,6 +685,10 @@ categories:
         id: github.com/cloud-native-toolkit/terraform-gitops-cp-watson-assistant
         displayName: cp-watson-assistant
         softwareProvider: ibm-cp
+      - name: gitops-cp-watson-discovery
+        id: github.com/cloud-native-toolkit/terraform-gitops-cp-watson-discovery
+        displayName: cp-watson-discovery
+        softwareProvider: ibm-cp 
   - category: dev-tool
     categoryName: Dev Tools
     selection: multiple
