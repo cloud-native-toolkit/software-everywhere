@@ -93,6 +93,18 @@ categories:
         id: github.com/cloud-native-toolkit/terraform-gitops-cp-watson-assistant
         group: ""
         displayName: cp-watson-assistant
+      - cloudProvider: ""
+        softwareProvider: ibm-cp
+        type: gitops
+        name: gitops-terraform-gitops-cp-watson-discovery
+        description: Module to populate a gitops repo with the resources to provision terraform-gitops-cp-watson-discovery
+        tags:
+          - tools
+          - gitops
+        versions: []
+        id: github.com/cloud-native-toolkit/terraform-gitops-cp-watson-discovery
+        group: ""
+        displayName: cp-watson-discovery
   - category: cluster
     categoryName: Cluster
     selection: single
@@ -1979,18 +1991,6 @@ categories:
         id: github.com/cloud-native-toolkit/terraform-gitops-cp-db2-oltp
         group: gitops-cp-db2-oltp
         displayName: IBM DB2 OLTP Db2oltpService
-      - cloudProvider: ""
-        softwareProvider: ""
-        type: gitops
-        name: gitops-terraform-gitops-cp-watson-discovery
-        description: Module to populate a gitops repo with the resources to provision terraform-gitops-cp-watson-discovery
-        tags:
-          - tools
-          - gitops
-        versions: []
-        id: github.com/cloud-native-toolkit/terraform-gitops-cp-watson-discovery
-        group: ""
-        displayName: cp-watson-discovery
   - category: middleware
     categoryName: Software
     selection: multiple
