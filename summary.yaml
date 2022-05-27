@@ -1913,11 +1913,12 @@ categories:
         softwareProvider: ibm-cp
         type: gitops
         name: iaf-operator
-        description: Module to populate a gitops repo with the resources to provision cp4ba-operator
+        description: Module for gitops deployment of the CP4BA IBM Automation Foundation Operator.
         tags:
           - tools
           - gitops
         versions:
+          - v1.1.0
           - v1.0.0
         id: github.com/cloud-native-toolkit/terraform-gitops-cp4ba-iaf-operator
         group: cp4ba
