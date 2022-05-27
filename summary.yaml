@@ -3370,9 +3370,9 @@ categories:
           - tools
           - devops
         versions: []
-        id: github.com/cloud-native-toolkit/terraform-azure-waf
+        id: github.com/cloud-native-toolkit/terraform-azure-app-gw
         group: firewall
-        displayName: Azure Web Application Firewall
+        displayName: Azure Web Application Gateway
       - cloudProvider: azure
         softwareProvider: ""
         type: terraform
