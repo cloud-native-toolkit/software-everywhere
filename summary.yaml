@@ -2450,12 +2450,13 @@ categories:
       - cloudProvider: ""
         softwareProvider: ibm-cp
         type: gitops
-        name: gitops-terraform-gitops-data-virtualization
-        description: Module to populate a gitops repo with the resources to provision terraform-gitops-data-virtualization
+        name: gitops-cp-data-virtualization
+        description: Module to populate a gitops repo with the resources to provision gitops-cp-data-virtualization
         tags:
           - tools
           - gitops
-        versions: []
+        versions:
+          - v0.0.1
         id: github.com/cloud-native-toolkit/terraform-gitops-cp-data-virtualization
         group: ""
         displayName: Data Virtualization
