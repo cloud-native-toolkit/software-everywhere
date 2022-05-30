@@ -29,12 +29,15 @@ categories:
       - cloudProvider: ""
         softwareProvider: ibm-cp
         type: gitops
-        name: gitops-cp-watson-knowledge-catalog
-        description: Module to populate a gitops repo with the resources to provision cp-watson-knowledge-catalog
+        name: gitops-cp-wkc
+        description: Module to populate a gitops repo with the resources to provision Watson Knowledge Catalong on Cloud Pak for Data
         tags:
           - tools
           - gitops
-        versions: []
+          - wkc
+          - cloud pak for data
+        versions:
+          - v1.0.0
         id: github.com/cloud-native-toolkit/terraform-gitops-cp-wkc
         group: ""
         displayName: Watson Knowledge Catalog
