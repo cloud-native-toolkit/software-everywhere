@@ -3869,6 +3869,7 @@ categories:
           - tools
           - devops
         versions:
+          - v0.1.0
           - v0.0.3
           - v0.0.2
           - v0.0.1
@@ -4151,6 +4152,18 @@ categories:
         id: github.com/cloud-native-toolkit/terraform-gitops-global-pullsecret-synch
         group: ""
         displayName: Global Pull Secret Synch
+      - cloudProvider: ""
+        softwareProvider: ""
+        type: terraform
+        name: ocp-htpasswd
+        description: 'Module to provision ocp-htpasswd on '
+        tags:
+          - tools
+          - devops
+        versions: []
+        id: github.com/cloud-native-toolkit/terraform-any-ocp-htpasswd
+        group: cluster
+        displayName: OpenShift HTPasswd OAuth
 providers:
   - name: azurerm
     source: hashicorp/azurerm
