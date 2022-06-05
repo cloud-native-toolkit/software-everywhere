@@ -7,7 +7,7 @@ assignees: seansund
 
 ---
 
-Please read the guides on how to create a module for the catalog:
+(Click Preview to navigate to guides) Please read the guides on how to create a module for the catalog:
 - [Guide for a GitOps Module](https://modules.cloudnativetoolkit.dev/#/how-to/gitops) 
 - [Guide for a Terraform Module](https://modules.cloudnativetoolkit.dev/#/how-to/terraform)
 
