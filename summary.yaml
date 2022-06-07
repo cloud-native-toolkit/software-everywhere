@@ -2670,6 +2670,18 @@ categories:
         id: github.com/cloud-native-toolkit/terraform-gitops-cp-filenet
         group: ""
         displayName: FileNet
+      - cloudProvider: ""
+        softwareProvider: ""
+        type: gitops
+        name: gitops-mas-monitor
+        description: Module to populate a gitops repo with the resources to provision mas-monitor
+        tags:
+          - tools
+          - gitops
+        versions: []
+        id: github.com/cloud-native-toolkit/terraform-gitops-mas-monitor
+        group: ""
+        displayName: MAS Monitor
   - category: network
     categoryName: Network
     selection: multiple
