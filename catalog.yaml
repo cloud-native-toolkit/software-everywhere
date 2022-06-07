@@ -542,6 +542,8 @@ categories:
       - name: gitops-cp-filenet
         id: github.com/cloud-native-toolkit/terraform-gitops-cp-filenet
         displayName: FileNet
+      - name: MAS Monitor
+        id: github.com/cloud-native-toolkit/terraform-gitops-mas-monitor
     catalogFile: catalog.yaml
   - category: databases
     categoryName: Databases
