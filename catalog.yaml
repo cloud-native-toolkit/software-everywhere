@@ -544,6 +544,9 @@ categories:
         displayName: FileNet
       - name: MAS Monitor
         id: github.com/cloud-native-toolkit/terraform-gitops-mas-monitor
+      - name: gitops-mas-iot
+        id: github.com/cloud-native-toolkit/terraform-gitops-mas-iot
+        displayName: MAS IoT
     catalogFile: catalog.yaml
   - category: databases
     categoryName: Databases
