@@ -547,6 +547,9 @@ categories:
       - name: gitops-mas-iot
         id: github.com/cloud-native-toolkit/terraform-gitops-mas-iot
         displayName: MAS IoT
+      - name: gitops-mas-kafka
+        id: github.com/cloud-native-toolkit/terraform-gitops-mas-kafka
+        displayName: MAS Kafka
     catalogFile: catalog.yaml
   - category: databases
     categoryName: Databases
