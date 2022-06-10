@@ -784,6 +784,9 @@ categories:
       - name: Gitea
         id: github.com/cloud-native-toolkit/terraform-tools-gitea
         group: git
+      - name: gitops-swagger-editor
+        id: github.com/cloud-native-toolkit/terraform-gitops-swagger-editor
+        displayName: Swagger Editor
   - category: util
     categoryName: Utilities
     selection: multiple
