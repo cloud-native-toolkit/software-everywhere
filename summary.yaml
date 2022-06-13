@@ -37,6 +37,9 @@ categories:
           - wkc
           - cloud pak for data
         versions:
+          - v1.1.0
+          - v1.1.0
+          - v1.1.0
           - v1.0.0
         id: github.com/cloud-native-toolkit/terraform-gitops-cp-wkc
         group: ""
@@ -255,7 +258,10 @@ categories:
         tags:
           - azure
           - openshift
+          - ocp
+          - cluster
         versions:
+          - v1.2.1
           - v1.2.0
           - v1.1.0
           - v1.0.1
@@ -1098,6 +1104,18 @@ categories:
           - v0.1.0
         group: git
         displayName: Gitea
+      - cloudProvider: ""
+        softwareProvider: ""
+        type: gitops
+        name: gitops-swagger-editor
+        description: Module to populate a gitops repo with the resources to provision swagger-editor
+        tags:
+          - tools
+          - gitops
+        versions: []
+        id: github.com/cloud-native-toolkit/terraform-gitops-swagger-editor
+        group: ""
+        displayName: Swagger Editor
   - category: gitops
     categoryName: GitOps
     selection: multiple
@@ -1346,6 +1364,7 @@ categories:
           - azure
           - resource group
         versions:
+          - v1.0.4
           - v1.0.3
           - v1.0.2
           - v1.0.1
@@ -1982,6 +2001,7 @@ categories:
           - tools
           - gitops
         versions:
+          - v1.1.0
           - v1.0.12
           - v1.0.11
           - v1.0.10
@@ -2007,6 +2027,7 @@ categories:
           - tools
           - gitops
         versions:
+          - v1.0.11
           - v1.0.10
           - v1.0.9
           - v1.0.8
@@ -2632,6 +2653,7 @@ categories:
           - tools
           - gitops
         versions:
+          - v1.1.0
           - v1.0.1
         id: github.com/cloud-native-toolkit/terraform-gitops-mas-jdbc
         group: ""
@@ -2686,6 +2708,30 @@ categories:
         id: github.com/cloud-native-toolkit/terraform-gitops-mas-monitor
         group: ""
         displayName: MAS Monitor
+      - cloudProvider: ""
+        softwareProvider: ""
+        type: gitops
+        name: gitops-mas-iot
+        description: Module to populate a gitops repo with the resources to provision mas-iot
+        tags:
+          - tools
+          - gitops
+        versions: []
+        id: github.com/cloud-native-toolkit/terraform-gitops-mas-iot
+        group: ""
+        displayName: MAS IoT
+      - cloudProvider: ""
+        softwareProvider: ""
+        type: gitops
+        name: gitops-mas-kafka
+        description: Module to populate a gitops repo with the resources to provision mas-kafka
+        tags:
+          - tools
+          - gitops
+        versions: []
+        id: github.com/cloud-native-toolkit/terraform-gitops-mas-kafka
+        group: ""
+        displayName: MAS Kafka
   - category: network
     categoryName: Network
     selection: multiple
@@ -2768,6 +2814,7 @@ categories:
           - networking
           - aws
         versions:
+          - v1.6.0
           - v1.5.4
           - v1.5.3
         group: vpc
