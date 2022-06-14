@@ -243,11 +243,14 @@ categories:
           - cluster
           - vpc
         versions:
+          - v1.3.0
           - v1.2.0
           - v1.1.0
           - v1.0.0
         id: github.com/cloud-native-toolkit/terraform-aws-rosa
         alias: cluster
+        interfaces:
+          - github.com/cloud-native-toolkit/automation-modules#cluster
         group: openshift
         displayName: AWS ROSA
       - cloudProvider: azure
