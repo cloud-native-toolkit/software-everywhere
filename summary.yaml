@@ -2731,11 +2731,11 @@ categories:
         softwareProvider: ""
         type: gitops
         name: gitops-mas-kafka
-        description: Module to populate a gitops repo with the resources to provision mas-kafka
+        description: Module to populate a gitops repo with the resources to configure mas-kafka
         tags:
-          - tools
           - gitops
-        versions: []
+        versions:
+          - v1.0.0
         id: github.com/cloud-native-toolkit/terraform-gitops-mas-kafka
         group: ""
         displayName: MAS Kafka
