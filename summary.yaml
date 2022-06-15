@@ -3491,9 +3491,10 @@ categories:
         name: azure-vnet-peering
         description: Module to provision vnet-peering on azure
         tags:
-          - tools
-          - devops
-        versions: []
+          - azure
+          - vnet-peering
+        versions:
+          - v1.0.0
         id: github.com/cloud-native-toolkit/terraform-azure-vnet-peering
         group: transit-gateway
         displayName: Azure VNet Peering
