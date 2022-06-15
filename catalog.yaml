@@ -550,6 +550,9 @@ categories:
       - name: gitops-mas-kafka
         id: github.com/cloud-native-toolkit/terraform-gitops-mas-kafka
         displayName: MAS Kafka
+      - name: gitops-kafka-strimzi
+        id: github.com/cloud-native-toolkit/terraform-gitops-kafka-strimzi
+        displayName: Kafka Strimzi
     catalogFile: catalog.yaml
   - category: databases
     categoryName: Databases
