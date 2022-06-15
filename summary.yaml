@@ -2739,6 +2739,18 @@ categories:
         id: github.com/cloud-native-toolkit/terraform-gitops-mas-kafka
         group: ""
         displayName: MAS Kafka
+      - cloudProvider: ""
+        softwareProvider: ""
+        type: gitops
+        name: gitops-kafka-strimzi
+        description: Module to populate a gitops repo with the resources to provision kafka-strimzi
+        tags:
+          - tools
+          - gitops
+        versions: []
+        id: github.com/cloud-native-toolkit/terraform-gitops-kafka-strimzi
+        group: ""
+        displayName: Kafka Strimzi
   - category: network
     categoryName: Network
     selection: multiple
