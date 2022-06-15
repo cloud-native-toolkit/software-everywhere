@@ -2747,7 +2747,8 @@ categories:
         tags:
           - tools
           - gitops
-        versions: []
+        versions:
+          - v1.0.0
         id: github.com/cloud-native-toolkit/terraform-gitops-kafka-strimzi
         group: ""
         displayName: Kafka Strimzi
