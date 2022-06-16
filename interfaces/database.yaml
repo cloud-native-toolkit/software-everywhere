@@ -1,0 +1,19 @@
+id: github.com/cloud-native-toolkit/automation-modules#database
+name: database
+outputs:
+  - name: host
+    type: string
+    description: The host name for the database instance
+  - name: port
+    description: The port for the database instance
+    type: number
+  - name: database_name
+    description: The database name for the database instance
+    type: string
+  - name: username
+    description: The username for the database instance
+    type: string
+  - name: password
+    description: The password for the database instance
+    sensitive: true
+    type: string
