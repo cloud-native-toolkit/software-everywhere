@@ -483,10 +483,13 @@ categories:
         name: ibm-etcd
         description: Module to provision etcd on ibm
         tags:
-          - tools
-          - devops
-        versions: []
+          - etcd
+          - ibmcloud
+        versions:
+          - v1.0.0
         id: github.com/cloud-native-toolkit/terraform-ibm-etcd
+        interfaces:
+          - github.com/cloud-native-toolkit/automation-modules#ibm-service
         group: etcd
         displayName: IBM etcd
   - category: dev-tool
