@@ -608,6 +608,11 @@ categories:
         displayName: IBM DB2 Warehouse
         group: db2-warehouse
         cloudProvider: ibm
+      - name: ibm-etcd
+        id: github.com/cloud-native-toolkit/terraform-ibm-etcd
+        displayName: IBM etcd
+        group: etcd
+        cloudProvider: ibm
   - category: storage
     categoryName: Storage
     selection: multiple
