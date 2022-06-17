@@ -264,6 +264,7 @@ categories:
           - ocp
           - cluster
         versions:
+          - v1.2.2
           - v1.2.1
           - v1.2.0
           - v1.1.0
@@ -476,6 +477,18 @@ categories:
           - github.com/cloud-native-toolkit/automation-modules#ibm-service
         group: db2-warehouse
         displayName: IBM DB2 Warehouse
+      - cloudProvider: ibm
+        softwareProvider: ""
+        type: terraform
+        name: ibm-etcd
+        description: Module to provision etcd on ibm
+        tags:
+          - tools
+          - devops
+        versions: []
+        id: github.com/cloud-native-toolkit/terraform-ibm-etcd
+        group: etcd
+        displayName: IBM etcd
   - category: dev-tool
     categoryName: Dev Tools
     selection: multiple
