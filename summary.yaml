@@ -2735,6 +2735,7 @@ categories:
         tags:
           - gitops
         versions:
+          - v1.1.0
           - v1.0.0
         id: github.com/cloud-native-toolkit/terraform-gitops-mas-kafka
         group: ""
