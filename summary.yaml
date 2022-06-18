@@ -2726,9 +2726,9 @@ categories:
         name: gitops-mas-monitor
         description: Module to populate a gitops repo with the resources to provision mas-monitor
         tags:
-          - tools
           - gitops
-        versions: []
+        versions:
+          - v1.0.0
         id: github.com/cloud-native-toolkit/terraform-gitops-mas-monitor
         group: ""
         displayName: MAS Monitor
