@@ -4266,6 +4266,7 @@ categories:
           - tools
           - gitops
         versions:
+          - v0.1.2
           - v0.1.1
           - v0.1.0
         id: github.com/cloud-native-toolkit/terraform-gitops-global-pullsecret-synch
