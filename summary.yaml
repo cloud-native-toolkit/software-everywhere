@@ -419,7 +419,7 @@ categories:
       - cloudProvider: ""
         softwareProvider: ibm-cp
         type: terraform
-        id: github.com/cloud-native-toolkit/terraform-gitops-cp-db2wh
+        id: github.com/cloud-native-toolkit/terraform-gitops-cp-db2wh-service
         name: gitops-cp-db2wh
         description: ""
         tags:
@@ -433,7 +433,7 @@ categories:
           - v1.0.0
           - v0.0.1
         group: db2-warehouse
-        displayName: IBM DB2 Warehouse
+        displayName: IBM DB2 Warehouse Service
       - cloudProvider: ""
         softwareProvider: ibm-cp
         type: gitops
@@ -1927,6 +1927,7 @@ categories:
           - dependency management
           - channel
         versions:
+          - v1.2.4
           - v1.2.3
           - v1.2.2
           - v1.2.0
