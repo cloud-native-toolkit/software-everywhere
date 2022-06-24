@@ -418,9 +418,9 @@ categories:
         displayName: Existing IBM DB2 Warehouse
       - cloudProvider: ""
         softwareProvider: ibm-cp
-        type: terraform
+        type: gitops
         id: github.com/cloud-native-toolkit/terraform-gitops-cp-db2wh-service
-        name: gitops-cp-db2wh
+        name: gitops-cp-db2wh-service
         description: ""
         tags:
           - tools
@@ -432,7 +432,7 @@ categories:
           - v1.1.0
           - v1.0.0
           - v0.0.1
-        group: db2-warehouse
+        group: db2-warehouse-service
         displayName: IBM DB2 Warehouse Service
       - cloudProvider: ""
         softwareProvider: ibm-cp
@@ -494,6 +494,18 @@ categories:
           - github.com/cloud-native-toolkit/automation-modules#ibm-service
         group: etcd
         displayName: IBM etcd
+      - cloudProvider: ""
+        softwareProvider: ""
+        type: gitops
+        name: gitops-cp-db2wh
+        description: Module to populate a gitops repo with the resources to provision cp-db2wh
+        tags:
+          - tools
+          - gitops
+        versions: []
+        id: github.com/cloud-native-toolkit/terraform-gitops-cp-db2wh
+        group: ""
+        displayName: DB2 Warehouse Instance
   - category: dev-tool
     categoryName: Dev Tools
     selection: multiple
