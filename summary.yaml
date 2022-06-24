@@ -1211,6 +1211,7 @@ categories:
           - devops
           - gitops
         versions:
+          - v1.19.1
           - v1.19.0
           - v1.18.1
           - v1.18.0
