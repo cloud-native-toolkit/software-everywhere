@@ -3529,9 +3529,10 @@ categories:
         name: azure-vpn-gateway
         description: Module to provision vpn-gateway on azure
         tags:
-          - tools
-          - devops
-        versions: []
+          - azure
+          - azure-vpn-gateway
+        versions:
+          - v1.0.0
         id: github.com/cloud-native-toolkit/terraform-azure-vpn-gateway
         group: vpn
         displayName: Azure VPN Gateway
