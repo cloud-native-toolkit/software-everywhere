@@ -106,12 +106,13 @@ categories:
       - cloudProvider: ""
         softwareProvider: ibm-cp
         type: gitops
-        name: gitops-terraform-gitops-cp-watson-discovery
-        description: Module to populate a gitops repo with the resources to provision terraform-gitops-cp-watson-discovery
+        name: gitops-cp-watson-discovery
+        description: Module to populate a gitops repo with the resources to provision cp-watson-discovery
         tags:
           - tools
           - gitops
-        versions: []
+        versions:
+          - v1.0.0
         id: github.com/cloud-native-toolkit/terraform-gitops-cp-watson-discovery
         group: ""
         displayName: cp-watson-discovery
