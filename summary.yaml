@@ -3521,9 +3521,10 @@ categories:
         name: azure-vm-bastion
         description: Module to provision vm-bastion on azure
         tags:
-          - tools
-          - devops
-        versions: []
+          - azure
+          - azure-vm-bastion
+        versions:
+          - v1.0.0
         id: github.com/cloud-native-toolkit/terraform-azure-vm-bastion
         group: bastion
         displayName: Azure VM Bastion
