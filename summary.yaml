@@ -3452,6 +3452,20 @@ categories:
       - cloudProvider: azure
         softwareProvider: ""
         type: terraform
+        name: azure-lb
+        description: Module to provision a load balancer on Azure
+        tags:
+          - azure
+          - lb
+        versions:
+          - v1.2.4
+          - v1.2.4
+        id: github.com/cloud-native-toolkit/terraform-azure-lb
+        group: load-balancer
+        displayName: Azure Load Balancer
+      - cloudProvider: azure
+        softwareProvider: ""
+        type: terraform
         name: azure-vm
         description: Module to provision Virtual machine on azure
         tags:
