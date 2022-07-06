@@ -210,6 +210,7 @@ categories:
         tags:
           - openshift
         versions:
+          - v1.4.0
           - v1.3.1
           - v1.3.0
           - v1.2.16
