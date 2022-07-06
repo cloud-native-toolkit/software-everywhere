@@ -1,9 +1,14 @@
 import React from 'react';
 import {Column, Grid, Row} from 'carbon-components-react';
+import ReactGA from 'react-ga4';
 
 import {Catalog, CatalogFilter} from '../../components';
 
 export class CatalogPage extends React.Component<any, any> {
+
+  componentDidMount() {
+    ReactGA.send({ hitType: "pageview", page: window.location.pathname });
+  }
 
   render() {
     return (

@@ -2,6 +2,7 @@ import React from 'react';
 import {connect} from 'react-redux';
 import {Button, Column, Grid, Row, Select, SelectItem, TextInput, Tooltip} from 'carbon-components-react';
 import {Search16} from '@carbon/icons-react';
+import ReactGA from 'react-ga4';
 
 import './CatalogFilter.scss';
 import {RootState} from '../../app/store';
@@ -53,7 +54,10 @@ class CatalogFilterInternal extends React.Component<CatalogFilterProps, any> {
                   className="SearchButton"
                   style={{display: 'inline-block', alignSelf: 'flex-end'}}
                   size={"field"}
-                  onClick={(e) => this.props.filterBySearchText(this.props, this.searchText)}
+                  onClick={(e) => {
+                    ReactGA.event({category: 'User', action: `Module search: ${this.searchText}`});
+                    this.props.filterBySearchText(this.props, this.searchText);
+                  }}
                   iconDescription="Search"
                   renderIcon={Search16}
                   hasIconOnly
