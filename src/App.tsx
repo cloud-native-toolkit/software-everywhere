@@ -1,12 +1,17 @@
 import React from 'react';
 import {HashRouter, Route, Routes} from 'react-router-dom';
 import {Content, Header, HeaderMenu, HeaderMenuItem, HeaderName, HeaderNavigation} from 'carbon-components-react';
+import ReactGA from 'react-ga4';
 
 import './app.scss';
 import {CatalogPage, ContributingPage, BOMPage} from './pages';
 import {HowToGitopsPage, HowToPage, HowToTerraformPage} from './pages/how-to';
 
 class App extends React.Component<any, any> {
+
+  componentDidMount() {
+    ReactGA.initialize('G-6DPN305CX5');
+  }
 
   render() {
     return (

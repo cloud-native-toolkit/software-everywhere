@@ -1,9 +1,14 @@
 import React from 'react';
 import {Column, Grid, Row} from 'carbon-components-react';
+import ReactGA from 'react-ga4';
 
 import {BomCatalog, BomFilter} from '../../components';
 
 export class BOMPage extends React.Component<any, any> {
+
+  componentDidMount() {
+    ReactGA.send({ hitType: "pageview", page: window.location.pathname });
+  }
 
   render() {
     return (

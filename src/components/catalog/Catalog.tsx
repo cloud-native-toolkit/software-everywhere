@@ -1,5 +1,6 @@
 import React from 'react';
 import {connect} from 'react-redux';
+import ReactGA from 'react-ga4';
 
 import './Catalog.scss';
 import {RootState} from '../../app/store';
@@ -41,7 +42,7 @@ class CatalogInternal extends React.Component<CatalogProps, any> {
             <Column>
               <a
                 href="https://github.com/cloud-native-toolkit/automation-modules/issues/new?labels=new_module&template=new-module.md&title=Request+new+module%3A+%7Bname%7D"
-                target="_blank"><Button size="field">Request new module</Button></a>
+                target="_blank"><Button size="field" onClick={() => ReactGA.event({category: 'User', action: 'Requested new module'})}>Request new module</Button></a>
             </Column>
             <Column>
               <CatalogCounts />
