@@ -553,6 +553,9 @@ categories:
       - name: gitops-kafka-strimzi
         id: github.com/cloud-native-toolkit/terraform-gitops-kafka-strimzi
         displayName: Kafka Strimzi
+      - name: gitops-mas-cp4d-config
+        id: github.com/cloud-native-toolkit/terraform-gitops-mas-cp4d-config
+        displayName: Maximo CP4D Config
     catalogFile: catalog.yaml
   - category: databases
     categoryName: Databases
