@@ -1958,6 +1958,7 @@ categories:
           - dependency management
           - channel
         versions:
+          - v1.2.5
           - v1.2.4
           - v1.2.3
           - v1.2.2
@@ -3481,6 +3482,7 @@ categories:
           - azure
           - lb
         versions:
+          - v1.2.7
           - v1.2.6
           - v1.2.5
           - v1.2.4
