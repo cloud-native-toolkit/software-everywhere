@@ -3869,6 +3869,7 @@ categories:
           - object storage
           - saas
         versions:
+          - v4.0.5
           - v4.0.4
           - v4.0.3
           - v4.0.2
