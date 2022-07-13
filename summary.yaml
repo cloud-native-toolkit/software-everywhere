@@ -132,6 +132,7 @@ categories:
           - cluster
           - vpc
         versions:
+          - v1.15.6
           - v1.15.5
           - v1.15.4
           - v1.15.3
