@@ -212,6 +212,7 @@ categories:
         tags:
           - openshift
         versions:
+          - v1.4.2
           - v1.4.1
           - v1.4.0
           - v1.3.1
@@ -1140,6 +1141,7 @@ categories:
           - gitops
           - gitea
         versions:
+          - v0.3.7
           - v0.3.6
           - v0.3.5
           - v0.3.4
