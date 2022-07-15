@@ -2747,14 +2747,19 @@ categories:
         group: ""
         displayName: MAS JDBC Configuration
       - cloudProvider: ""
-        softwareProvider: ""
+        softwareProvider: ibm-cp
         type: gitops
         name: gitops-cp-datastage
         description: Module to populate a gitops repo with the resources to provision cp-datastage
         tags:
           - tools
           - gitops
-        versions: []
+          - datastage
+          - ds
+          - cp4d
+          - cpd
+        versions:
+          - v1.0.0
         id: github.com/cloud-native-toolkit/terraform-gitops-cp-datastage
         group: ""
         displayName: CP4D DataStage
