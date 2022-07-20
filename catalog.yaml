@@ -16,7 +16,7 @@ categories:
         group: openshift
       - name: aws-rosa
         id: github.com/cloud-native-toolkit/terraform-aws-rosa
-        displayName: AWS ROSA
+        displayName: AWS R
         cloudProvider: aws
         group: openshift
       - name: foo
@@ -462,9 +462,9 @@ categories:
         type: gitops
         group: ldap
         softwareProvider: opensource
-      - name: gitops-cp-es-operator
+      - name: gitops-cp-event-streams-operator
         id: >-
-          github.com/cloud-native-toolkit/terraform-gitops-cp-es-operator
+          github.com/cloud-native-toolkit/terraform-gitops-cp-event-streams-operator
         displayName: Event Streams Operator
         group: kafka
       - name: gitops-cp-event-streams
