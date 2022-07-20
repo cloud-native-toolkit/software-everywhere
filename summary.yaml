@@ -2496,7 +2496,7 @@ categories:
         versions:
           - v1.0.1
           - v1.0.0
-        id: github.com/cloud-native-toolkit/terraform-gitops-cp-event-streams-operator
+        id: github.com/cloud-native-toolkit/terraform-gitops-cp-es-operator
         group: kafka
         displayName: Event Streams Operator
       - cloudProvider: ""
