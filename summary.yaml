@@ -2623,7 +2623,9 @@ categories:
         tags:
           - tools
           - gitops
+          - datafabric
         versions:
+          - v1.2.0
           - v1.1.2
           - v1.1.1
           - v1.1.0
