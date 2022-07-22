@@ -3556,6 +3556,7 @@ categories:
           - azure
           - ssh
         versions:
+          - v1.0.4
           - v1.0.3
           - v1.0.3
           - v1.0.2
@@ -4072,6 +4073,7 @@ categories:
           - tools
           - devops
         versions:
+          - v0.1.0
           - v0.0.5
           - v0.0.4
           - v0.0.3
