@@ -4249,6 +4249,7 @@ categories:
           - oc
           - kubectl
         versions:
+          - v1.16.7
           - v1.16.6
           - v1.16.5
           - v1.16.4
