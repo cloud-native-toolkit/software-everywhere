@@ -1242,6 +1242,7 @@ categories:
           - devops
           - gitops
         versions:
+          - v1.21.0
           - v1.20.5
           - v1.20.4
           - v1.20.3
