@@ -2489,7 +2489,7 @@ categories:
       - cloudProvider: ""
         softwareProvider: ""
         type: terraform
-        name: gitops-cp-eventstreams-operator
+        name: gitops-cp-es-operator
         description: Module to populate a gitops repository with the resources to provision the Event Streams operator from IBM Cloud Pak for Integration.
         tags:
           - tools
@@ -2499,6 +2499,7 @@ categories:
           - operator
           - eventstreams
         versions:
+          - v1.1.0
           - v1.0.1
           - v1.0.0
         id: github.com/cloud-native-toolkit/terraform-gitops-cp-es-operator
