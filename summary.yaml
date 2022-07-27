@@ -1375,6 +1375,7 @@ categories:
           - resource group
           - account
         versions:
+          - v3.3.2
           - v3.3.1
           - v3.3.0
           - v3.2.16
