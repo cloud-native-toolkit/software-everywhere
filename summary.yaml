@@ -531,6 +531,7 @@ categories:
           - gitops
           - argocd
         versions:
+          - v2.19.3
           - v2.19.2
           - v2.19.1
           - v2.19.0
@@ -2689,6 +2690,7 @@ categories:
           - tools
           - gitops
         versions:
+          - v0.0.2
           - v0.0.1
         id: github.com/cloud-native-toolkit/terraform-gitops-cp-apic
         group: api-management
