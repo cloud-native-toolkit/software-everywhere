@@ -656,6 +656,7 @@ categories:
           - tekton
           - argocd
         versions:
+          - v1.11.1
           - v1.11.0
           - v1.10.4
           - v1.10.3
