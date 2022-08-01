@@ -430,6 +430,9 @@ categories:
         id: github.com/cloud-native-toolkit/terraform-ocp-certmanager
         group: cert-manager
         softwareProvider: ibm-cp
+      - name: OpenShift Proxy Config
+        id: github.com/cloud-native-toolkit/terraform-ocp-proxyconfig
+        group: proxy-config
       - name: JetStack Cert Manager
         id: github.com/cloud-native-toolkit/terraform-gitops-ocp-cert-manager
         group: cert-manager
