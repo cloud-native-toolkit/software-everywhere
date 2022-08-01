@@ -125,6 +125,10 @@ categories:
         id: github.com/cloud-native-toolkit/terraform-vsi-bastion
         group: bastion
         cloudProvider: ibm
+      - name: VSI Proxy
+        id: github.com/cloud-native-toolkit/terraform-ibm-vsi-proxy
+        group: proxy
+        cloudProvider: ibm
       - name: AWS Bastion
         id: github.com/cloud-native-toolkit/terraform-aws-bastion
         group: bastion
