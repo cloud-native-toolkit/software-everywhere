@@ -2766,6 +2766,7 @@ categories:
           - cp4i
           - aspera
         versions:
+          - v0.1.0
           - v0.0.3
           - v0.0.2
           - v0.0.1
