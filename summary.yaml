@@ -456,9 +456,12 @@ categories:
           - schema
           - gitops
         versions:
+          - v0.0.4
           - v0.0.3
           - v0.0.2
         id: github.com/cloud-native-toolkit/terraform-gitops-cp-db2
+        interfaces:
+          - github.com/cloud-native-toolkit/automation-modules#database-secret
         group: db2
         displayName: IBM DB2 Database
       - cloudProvider: ""
