@@ -27,6 +27,10 @@ categories:
         displayName: Azure OpenShift IPI
         group: openshift
         cloudProvider: azure
+      - name: gitops-terraform-ibm-ocp-proxyconfig
+        id: >-
+          github.com/cloud-native-toolkit/terraform-gitops-terraform-ibm-ocp-proxyconfig
+        displayName: terraform-ibm-ocp-proxyconfig
   - category: iam
     categoryName: IAM
     selection: multiple
@@ -470,8 +474,7 @@ categories:
         group: ldap
         softwareProvider: opensource
       - name: gitops-cp-es-operator
-        id: >-
-          github.com/cloud-native-toolkit/terraform-gitops-cp-es-operator
+        id: github.com/cloud-native-toolkit/terraform-gitops-cp-es-operator
         displayName: Event Streams Operator
         group: kafka
       - name: gitops-cp-event-streams
