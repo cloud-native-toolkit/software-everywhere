@@ -35,7 +35,7 @@ categories:
         id: github.com/cloud-native-toolkit/terraform-ibm-onboard-fs-account
         cloudProvider: ibm
       - name: IBM Resource Group
-        id: github.com/cloud-native-toolkit/terraform-ibm-resource-group
+        id: github.com/terraform-ibm-modules/terraform-ibm-toolkit-resource-group
         group: resource-group
         cloudProvider: ibm
       - name: Azure Resource Group
