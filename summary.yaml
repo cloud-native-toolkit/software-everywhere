@@ -285,6 +285,18 @@ categories:
         id: github.com/cloud-native-toolkit/terraform-azure-ocp-ipi
         group: openshift
         displayName: Azure OpenShift IPI
+      - cloudProvider: ""
+        softwareProvider: ""
+        type: gitops
+        name: gitops-terraform-ibm-ocp-proxyconfig
+        description: Module to populate a gitops repo with the resources to provision terraform-ibm-ocp-proxyconfig
+        tags:
+          - tools
+          - gitops
+        versions: []
+        id: github.com/cloud-native-toolkit/terraform-gitops-terraform-ibm-ocp-proxyconfig
+        group: ""
+        displayName: terraform-ibm-ocp-proxyconfig
   - category: databases
     categoryName: Databases
     selection: multiple
