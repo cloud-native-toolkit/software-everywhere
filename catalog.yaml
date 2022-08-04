@@ -622,9 +622,6 @@ categories:
         displayName: IBM etcd
         group: etcd
         cloudProvider: ibm
-      - name: gitops-cp-db2wh
-        id: github.com/cloud-native-toolkit/terraform-gitops-cp-db2wh
-        displayName: DB2 Warehouse Instance
   - category: storage
     categoryName: Storage
     selection: multiple
