@@ -27,10 +27,6 @@ categories:
         displayName: Azure OpenShift IPI
         group: openshift
         cloudProvider: azure
-      - name: gitops-terraform-ibm-ocp-proxyconfig
-        id: >-
-          github.com/cloud-native-toolkit/terraform-gitops-terraform-ibm-ocp-proxyconfig
-        displayName: terraform-ibm-ocp-proxyconfig
   - category: iam
     categoryName: IAM
     selection: multiple
