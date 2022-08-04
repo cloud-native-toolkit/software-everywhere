@@ -509,18 +509,6 @@ categories:
           - github.com/cloud-native-toolkit/automation-modules#ibm-service
         group: etcd
         displayName: IBM etcd
-      - cloudProvider: ""
-        softwareProvider: ""
-        type: gitops
-        name: gitops-cp-db2wh
-        description: Module to populate a gitops repo with the resources to provision cp-db2wh
-        tags:
-          - tools
-          - gitops
-        versions: []
-        id: github.com/cloud-native-toolkit/terraform-gitops-cp-db2wh
-        group: ""
-        displayName: DB2 Warehouse Instance
   - category: dev-tool
     categoryName: Dev Tools
     selection: multiple
