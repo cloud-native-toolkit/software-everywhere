@@ -2768,6 +2768,23 @@ categories:
         group: ""
         displayName: Aspera operator
       - cloudProvider: ""
+        softwareProvider: ibm-cp
+        type: gitops
+        name: gitops-cp-aspera
+        description: Module to populate a gitops repo with the resources to provision Aspera HSTS instance
+        tags:
+          - tools
+          - gitops
+          - IBM
+          - cloud pak
+          - cp4i
+          - aspera
+        versions:
+          - v0.0.1
+        id: github.com/cloud-native-toolkit/terraform-gitops-cp-aspera
+        group: ""
+        displayName: Aspera
+      - cloudProvider: ""
         softwareProvider: ""
         type: gitops
         name: gitops-terraform-gitops-mas-jdbc
