@@ -534,6 +534,10 @@ categories:
         id: github.com/cloud-native-toolkit/terraform-gitops-cp-aspera-operator
         displayName: Aspera operator
         softwareProvider: ibm-cp
+      - name: gitops-cp-aspera
+        id: github.com/cloud-native-toolkit/terraform-gitops-cp-aspera
+        displayName: Aspera
+        softwareProvider: ibm-cp
       - name: gitops-terraform-gitops-mas-jdbc
         id: github.com/cloud-native-toolkit/terraform-gitops-mas-jdbc
         displayName: MAS JDBC Configuration
