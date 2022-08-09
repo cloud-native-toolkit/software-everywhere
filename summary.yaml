@@ -1166,7 +1166,8 @@ categories:
         tags:
           - tools
           - gitops
-        versions: []
+        versions:
+          - v0.0.1
         id: github.com/cloud-native-toolkit/terraform-gitops-swagger-editor
         group: ""
         displayName: Swagger Editor
