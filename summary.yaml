@@ -2174,6 +2174,7 @@ categories:
           - hpcs
           - key protect
         versions:
+          - v0.3.5
           - v0.3.4
           - v0.3.3
           - v0.3.2
@@ -3351,6 +3352,7 @@ categories:
           - flow log
           - vpc
         versions:
+          - v1.0.2
           - v1.0.1
           - v1.0.0
           - v0.0.0
@@ -4022,6 +4024,7 @@ categories:
           - object storage
           - bucket
         versions:
+          - v0.8.4
           - v0.8.3
           - v0.8.2
           - v0.8.1
