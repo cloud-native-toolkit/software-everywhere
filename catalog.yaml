@@ -470,7 +470,8 @@ categories:
         group: ldap
         softwareProvider: opensource
       - name: gitops-cp-es-operator
-        id: github.com/cloud-native-toolkit/terraform-gitops-cp-es-operator
+        id: >-
+          github.com/cloud-native-toolkit/terraform-gitops-cp-es-operator
         displayName: Event Streams Operator
         group: kafka
       - name: gitops-cp-event-streams
@@ -533,10 +534,6 @@ categories:
       - name: gitops-cp-aspera-operator
         id: github.com/cloud-native-toolkit/terraform-gitops-cp-aspera-operator
         displayName: Aspera operator
-        softwareProvider: ibm-cp
-      - name: gitops-cp-aspera
-        id: github.com/cloud-native-toolkit/terraform-gitops-cp-aspera
-        displayName: Aspera
         softwareProvider: ibm-cp
       - name: gitops-terraform-gitops-mas-jdbc
         id: github.com/cloud-native-toolkit/terraform-gitops-mas-jdbc
@@ -626,6 +623,9 @@ categories:
         displayName: IBM etcd
         group: etcd
         cloudProvider: ibm
+      - name: gitops-cp-db2wh
+        id: github.com/cloud-native-toolkit/terraform-gitops-cp-db2wh
+        displayName: DB2 Warehouse Instance
   - category: storage
     categoryName: Storage
     selection: multiple
@@ -763,6 +763,10 @@ categories:
         group: console-link
       - name: Buildah Unprivileged
         id: github.com/cloud-native-toolkit/terraform-ocp-buildah-unprivileged
+        group: buildah
+      - name: Buildah Unprivileged Gitops
+        id: github.com/cloud-native-toolkit/terraform-gitops-buildah-unprivileged
+        group: buildah
       - name: Console Link Job
         id: github.com/cloud-native-toolkit/terraform-gitops-console-link-job
         group: console-link
