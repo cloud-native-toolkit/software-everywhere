@@ -1039,6 +1039,7 @@ categories:
           - sonarqube
           - gitops
         versions:
+          - v1.2.8
           - v1.2.7
           - v1.2.6
           - v1.2.5
