@@ -1,4 +1,4 @@
-# Software Everywhere
+# TechZone Automation
 
 Software Everywhere aims to make it automate the provisioning of Red Hat OpenShift and deployment and use IBM Software in any environment. The automation is provided as a set of reusable modules that can be put together into different composite solutions.
 
