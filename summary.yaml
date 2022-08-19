@@ -287,6 +287,18 @@ categories:
         id: github.com/cloud-native-toolkit/terraform-azure-ocp-ipi
         group: openshift
         displayName: Azure OpenShift IPI
+      - cloudProvider: aws
+        softwareProvider: ""
+        type: terraform
+        name: aws-ocp-ipi
+        description: Module to provision ocp-ipi on aws
+        tags:
+          - tools
+          - devops
+        versions: []
+        id: github.com/cloud-native-toolkit/terraform-aws-ocp-ipi
+        group: openshift
+        displayName: AWS OpenShift IPI
   - category: databases
     categoryName: Databases
     selection: multiple
