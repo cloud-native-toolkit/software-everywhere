@@ -291,11 +291,14 @@ categories:
         softwareProvider: ""
         type: terraform
         name: aws-ocp-ipi
-        description: Module to provision ocp-ipi on aws
+        description: Module to provision an OpenShift Installer-Provisioned Infrastructure on AWS
         tags:
-          - tools
-          - devops
-        versions: []
+          - aws
+          - openshift
+          - ocp
+          - cluster
+        versions:
+          - v1.0.0
         id: github.com/cloud-native-toolkit/terraform-aws-ocp-ipi
         group: openshift
         displayName: AWS OpenShift IPI
