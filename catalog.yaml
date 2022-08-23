@@ -250,6 +250,11 @@ categories:
         displayName: Azure ACME Certificate
         group: certificate
         cloudProvider: azure
+      - name: aws-acme-certificate
+        id: github.com/cloud-native-toolkit/terraform-aws-acme-certificate
+        displayName: AWS ACME Certificate
+        group: certificate
+        cloudProvider: aws
   - category: infrastructure
     categoryName: Software Infrastructure
     selection: indirect
