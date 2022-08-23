@@ -3743,6 +3743,20 @@ categories:
         id: github.com/cloud-native-toolkit/terraform-azure-acme-certificate
         group: certificate
         displayName: Azure ACME Certificate
+      - cloudProvider: aws
+        softwareProvider: ""
+        type: terraform
+        name: aws-acme-certificate
+        description: Module to provision ACME certificate on AWS
+        tags:
+          - aws
+          - certificate
+          - tls
+        versions:
+          - v1.0.0
+        id: github.com/cloud-native-toolkit/terraform-aws-acme-certificate
+        group: certificate
+        displayName: AWS ACME Certificate
   - category: source-control
     categoryName: Source Control
     selection: single
