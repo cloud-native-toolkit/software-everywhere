@@ -87,10 +87,14 @@ yq e '.categories | .[] | .category' "${BASE_DIR}/catalog.yaml" | while read cat
   done
 done
 
+echo "Extracting the aliases from the catalog"
+yq e '.aliases | {"aliases": .}' "${BASE_DIR}/catalog.yaml" > "${BASE_DIR}/aliases.yaml"
+
 rm -f "${DEST_DIR}/index.yaml"
 
 echo "Touching ${DEST_DIR}/index.yaml"
-echo '{"apiVersion": "cloudnativetoolkit.dev/v1alpha1", "kind": "Catalog", "categories": []}' | \
+echo '{"apiVersion": "cloudnativetoolkit.dev/v1alpha1", "kind": "Catalog", "categories": [], "aliases": []}' | \
+ yq ea 'select(fileIndex == 0) *+ select(fileIndex == 1)' - "${BASE_DIR}/aliases.yaml" |
  yq ea 'select(fileIndex == 0) *+ select(fileIndex == 1)' - "${BASE_DIR}/providers.yaml" > "${DEST_DIR}/index.yaml"
 
 rm -f "${DEST_DIR}/summary.yaml"
