@@ -27,6 +27,13 @@
       "items": {
         "$ref": "#/$defs/provider"
       }
+    },
+    "aliases": {
+      "type": "array",
+      "description": "List of module id mappings, particularly needed when module repositories are relocated",
+      "items": {
+        "$ref": "#/$defs/aliases"
+      }
     }
   },
   "$defs": {
@@ -291,6 +298,23 @@
         "description": {
           "type": "string",
           "description": "The description of the variable"
+        }
+      }
+    },
+    "aliases": {
+      "type": "object",
+      "required": ["id"],
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "The current id for the module, e.g. github.com/terraform-ibm-modules/terraform-ibm-toolkit-resource-group"
+        },
+        "aliases": {
+          "type": "array",
+          "description": "The list of previous ids for the module that should be mapped to the current id, e.g. github.com/cloud-native-toolkit/terraform-ibm-resource-group",
+          "items": {
+            "type": "string"
+          }
         }
       }
     }
