@@ -16,11 +16,11 @@ class App extends React.Component<any, any> {
   render() {
     return (
       <div className="App">
-        <Header aria-label="Software Everywhere">
+        <Header aria-label="TechZone Accelerator Toolkit">
           <HeaderName href="#" prefix="">
-            Software Everywhere
+            TechZone Accelerator Toolkit
           </HeaderName>
-          <HeaderNavigation aria-label="Software Everywhere">
+          <HeaderNavigation aria-label="TechZone Accelerator Toolkit">
             <HeaderMenuItem href="/">Module catalog</HeaderMenuItem>
             <HeaderMenuItem href="#/bom-catalog">BOM catalog</HeaderMenuItem>
             <HeaderMenuItem href="https://github.com/cloud-native-toolkit" target="_blank" rel="noopener noreferrer">Git organization</HeaderMenuItem>
