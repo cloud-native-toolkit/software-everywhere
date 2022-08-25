@@ -3870,40 +3870,6 @@ categories:
       - cloudProvider: ibm
         softwareProvider: ""
         type: terraform
-        id: github.com/cloud-native-toolkit/terraform-ibm-log-analysis
-        name: ibm-log-analysis
-        description: Module to provision a IBM Log Anaysis instance on IBM Cloud
-        tags:
-          - tools
-          - devops
-          - log analysis
-          - ibm
-        versions:
-          - v4.1.2
-          - v4.1.1
-          - v4.1.0
-          - v4.0.0
-          - v3.3.1
-          - v3.3.0
-          - v3.2.1
-          - v3.2.0
-          - v3.1.2
-          - v3.1.1
-          - v3.1.0
-          - v3.0.1
-          - v3.0.0
-          - v2.7.0
-          - v2.6.0
-          - v2.5.0
-          - v2.4.4
-          - v2.4.3
-        alias: logdna
-        registryId: cloud-native-toolkit/log-analysis/ibm
-        group: logging
-        displayName: IBM Log Analysis
-      - cloudProvider: ibm
-        softwareProvider: ""
-        type: terraform
         id: github.com/cloud-native-toolkit/terraform-ibm-log-analysis-bind
         name: ibm-log-analysis-bind
         description: Module to bind the IBM Log Analysis instance to a cluster
