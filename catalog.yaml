@@ -2,6 +2,9 @@ aliases:
   - id: github.com/terraform-ibm-modules/terraform-ibm-toolkit-watson-studio
     aliases:
       - github.com/cloud-native-toolkit/terraform-ibm-watson-studio
+  - id: https://github.com/terraform-ibm-modules/terraform-ibm-toolkit-log-analysis
+    aliases:
+      - github.com/cloud-native-toolkit/terraform-ibm-log-analysis
 categories:
   - category: cluster
     categoryName: Cluster
