@@ -365,7 +365,7 @@ categories:
         group: activity-tracker
         cloudProvider: ibm
       - name: IBM Log Analysis
-        id: github.com/cloud-native-toolkit/terraform-ibm-log-analysis
+        id: github.com/terraform-ibm-modules/terraform-ibm-toolkit-log-analysis
         group: logging
         cloudProvider: ibm
       - name: IBM Log Analysis Bind
