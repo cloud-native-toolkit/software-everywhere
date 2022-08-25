@@ -3723,6 +3723,7 @@ categories:
           - azure
           - network
         versions:
+          - v1.0.0
           - v0.1.0
         id: github.com/cloud-native-toolkit/terraform-azure-nsg
         group: firewall
