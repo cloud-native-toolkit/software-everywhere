@@ -3717,11 +3717,13 @@ categories:
         softwareProvider: ""
         type: terraform
         name: azure-nsg
-        description: Module to provision nsg on azure
+        description: Module to provision a Network Security Group on azure
         tags:
-          - tools
-          - devops
-        versions: []
+          - security
+          - azure
+          - network
+        versions:
+          - v0.1.0
         id: github.com/cloud-native-toolkit/terraform-azure-nsg
         group: firewall
         displayName: Azure Network Security Group
