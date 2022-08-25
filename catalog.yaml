@@ -256,6 +256,11 @@ categories:
         displayName: AWS ACME Certificate
         group: certificate
         cloudProvider: aws
+      - name: azure-nsg
+        id: github.com/cloud-native-toolkit/terraform-azure-nsg
+        displayName: Azure Network Security Group
+        group: firewall
+        cloudProvider: azure
   - category: infrastructure
     categoryName: Software Infrastructure
     selection: indirect
