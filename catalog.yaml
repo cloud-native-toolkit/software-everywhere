@@ -1,4 +1,7 @@
-aliases: []
+aliases:
+  - id: github.com/terraform-ibm-modules/terraform-ibm-toolkit-watson-studio
+    aliases:
+      - github.com/cloud-native-toolkit/terraform-ibm-watson-studio
 categories:
   - category: cluster
     categoryName: Cluster
@@ -41,7 +44,7 @@ categories:
         id: github.com/cloud-native-toolkit/terraform-ibm-onboard-fs-account
         cloudProvider: ibm
       - name: IBM Resource Group
-        id: github.com/cloud-native-toolkit/terraform-ibm-resource-group
+        id: github.com/terraform-ibm-modules/terraform-ibm-toolkit-resource-group
         group: resource-group
         cloudProvider: ibm
       - name: Azure Resource Group
@@ -702,7 +705,7 @@ categories:
         group: watson-assistant
         cloudProvider: ibm
       - name: IBM Watson Studio
-        id: github.com/cloud-native-toolkit/terraform-ibm-watson-studio
+        id: github.com/terraform-ibm-modules/terraform-ibm-toolkit-watson-studio
         group: watson-studio
         cloudProvider: ibm
       - name: gitops-cp-bas
