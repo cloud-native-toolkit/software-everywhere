@@ -3538,6 +3538,7 @@ categories:
           - tools
           - devops
         versions:
+          - v1.3.7
           - v1.3.6
           - v1.3.5
           - v1.3.4
@@ -3765,6 +3766,18 @@ categories:
         id: github.com/cloud-native-toolkit/terraform-aws-acme-certificate
         group: certificate
         displayName: AWS ACME Certificate
+      - cloudProvider: azure
+        softwareProvider: ""
+        type: terraform
+        name: azure-nsg
+        description: Module to provision nsg on azure
+        tags:
+          - tools
+          - devops
+        versions: []
+        id: github.com/cloud-native-toolkit/terraform-azure-nsg
+        group: firewall
+        displayName: Azure Network Security Group
   - category: source-control
     categoryName: Source Control
     selection: single
