@@ -267,6 +267,11 @@ categories:
         displayName: Azure Network Security Group
         group: firewall
         cloudProvider: azure
+      - name: azure-vpn-server
+        id: github.com/cloud-native-toolkit/terraform-azure-vpn-server
+        displayName: Azure VPN Server
+        group: vpn
+        cloudProvider: azure
   - category: infrastructure
     categoryName: Software Infrastructure
     selection: indirect
