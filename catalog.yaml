@@ -11,6 +11,9 @@ aliases:
   - id: github.com/terraform-ibm-modules/terraform-ibm-toolkit-cloud-monitoring
     aliases:
       - github.com/cloud-native-toolkit/terraform-ibm-cloud-monitoring
+  - id: github.com/terraform-ibm-modules/terraform-ibm-toolkit-account-users/
+    aliases:
+      - github.com/cloud-native-toolkit/terraform-ibm-account-users
 categories:
   - category: cluster
     categoryName: Cluster
@@ -69,7 +72,7 @@ categories:
         group: access-group
         cloudProvider: ibm
       - name: IBM Account Users
-        id: github.com/cloud-native-toolkit/terraform-ibm-account-users
+        id: github.com/terraform-ibm-modules/terraform-ibm-toolkit-account-users/actions
         cloudProvider: ibm
       - name: IBM Add Users to Access Group
         id: github.com/cloud-native-toolkit/terraform-ibm-add-access-group-users
