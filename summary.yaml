@@ -2228,31 +2228,6 @@ categories:
       - cloudProvider: ibm
         softwareProvider: ""
         type: terraform
-        id: github.com/cloud-native-toolkit/terraform-ibm-key-protect
-        name: key-protect
-        description: Module to provision Key Protect
-        tags:
-          - tools
-          - vault
-        versions:
-          - v2.3.1
-          - v2.3.0
-          - v2.2.1
-          - v2.2.0
-          - v2.1.1
-          - v2.1.0
-          - v2.0.4
-          - v2.0.3
-          - v2.0.2
-          - v2.0.1
-          - v2.0.0
-          - v1.4.0
-          - v1.3.2
-        group: kms
-        displayName: IBM Key Protect
-      - cloudProvider: ibm
-        softwareProvider: ""
-        type: terraform
         id: github.com/cloud-native-toolkit/terraform-ibm-hpcs
         name: hpcs
         description: Module to provision Hyper Protect Crypto Service in an IBM Cloud account
@@ -3796,6 +3771,18 @@ categories:
         id: github.com/cloud-native-toolkit/terraform-azure-nsg
         group: firewall
         displayName: Azure Network Security Group
+      - cloudProvider: azure
+        softwareProvider: ""
+        type: terraform
+        name: azure-vpn-server
+        description: Module to provision vpn-server on azure
+        tags:
+          - tools
+          - devops
+        versions: []
+        id: github.com/cloud-native-toolkit/terraform-azure-vpn-server
+        group: vpn
+        displayName: Azure VPN Server
   - category: source-control
     categoryName: Source Control
     selection: single
