@@ -5,6 +5,9 @@ aliases:
   - id: github.com/terraform-ibm-modules/terraform-ibm-toolkit-log-analysis
     aliases:
       - github.com/cloud-native-toolkit/terraform-ibm-log-analysis
+  - id: github.com/terraform-ibm-modules/terraform-ibm-toolkit-key-protect
+    aliases:
+      - github.com/cloud-native-toolkit/terraform-ibm-key-protect
 categories:
   - category: cluster
     categoryName: Cluster
@@ -423,7 +426,7 @@ categories:
         group: kms
         cloudProvider: ibm
       - name: IBM Key Protect
-        id: github.com/cloud-native-toolkit/terraform-ibm-key-protect
+        id: github.com/terraform-ibm-modules/terraform-ibm-toolkit-key-protect
         group: kms
         cloudProvider: ibm
       - name: IBM Hyper Protect
