@@ -1540,23 +1540,6 @@ categories:
       - cloudProvider: ibm
         softwareProvider: ""
         type: terraform
-        id: github.com/cloud-native-toolkit/terraform-ibm-account-users
-        name: ibm-account-users
-        description: Module to invite users to the account
-        provider: ibm
-        tags:
-          - tools
-          - devops
-        versions:
-          - v1.1.1
-          - v1.1.0
-          - v1.0.0
-          - v0.0.0
-        group: ""
-        displayName: IBM Account Users
-      - cloudProvider: ibm
-        softwareProvider: ""
-        type: terraform
         id: github.com/cloud-native-toolkit/terraform-ibm-add-access-group-users
         name: ibm-add-access-group-users
         description: Module to add users to provided access groups in an IBM Cloud account
