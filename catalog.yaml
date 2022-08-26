@@ -8,6 +8,9 @@ aliases:
   - id: github.com/terraform-ibm-modules/terraform-ibm-toolkit-key-protect
     aliases:
       - github.com/cloud-native-toolkit/terraform-ibm-key-protect
+  - id: github.com/terraform-ibm-modules/terraform-ibm-toolkit-cloud-monitoring
+    aliases:
+      - github.com/cloud-native-toolkit/terraform-ibm-cloud-monitoring
 categories:
   - category: cluster
     categoryName: Cluster
@@ -380,7 +383,7 @@ categories:
         id: github.com/cloud-native-toolkit/terraform-ibm-log-analysis-bind
         cloudProvider: ibm
       - name: IBM Cloud Monitoring
-        id: github.com/cloud-native-toolkit/terraform-ibm-cloud-monitoring
+        id: github.com/terraform-ibm-modules/terraform-ibm-toolkit-cloud-monitoring
         group: monitoring
         cloudProvider: ibm
       - name: IBM Cloud Monitoring Bind
