@@ -415,6 +415,24 @@ categories:
       - cloudProvider: ibm
         softwareProvider: ""
         type: terraform
+        id: github.com/terraform-ibm-modules/terraform-ibm-toolkit-mongodb
+        name: ibm-mongodb
+        description: Module to provision Databases for MongoDB instance
+        tags:
+          - tools
+          - infrastructure
+          - mongodb
+          - saas
+        versions:
+          - v1.1.3
+          - v1.1.2
+          - v1.1.1
+          - v1.1.0
+        group: mongodb
+        displayName: IBM MongoDB
+      - cloudProvider: ibm
+        softwareProvider: ""
+        type: terraform
         id: github.com/cloud-native-toolkit/terraform-ibm-redis
         name: ibm-redis
         description: Module to provision a managed Redis instance in an IBM Cloud account
@@ -4530,6 +4548,9 @@ aliases:
   - id: github.com/terraform-ibm-modules/terraform-ibm-toolkit-account-users
     aliases:
       - github.com/cloud-native-toolkit/terraform-ibm-account-users
+  - id: github.com/terraform-ibm-modules/terraform-ibm-toolkit-mongodb
+    aliases:
+      - github.com/cloud-native-toolkit/terraform-ibm-mongodb
 providers:
   - name: azurerm
     source: hashicorp/azurerm
