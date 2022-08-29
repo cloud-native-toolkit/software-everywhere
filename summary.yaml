@@ -3906,45 +3906,6 @@ categories:
       - cloudProvider: ibm
         softwareProvider: ""
         type: terraform
-        id: github.com/cloud-native-toolkit/terraform-ibm-log-analysis-bind
-        name: ibm-log-analysis-bind
-        description: Module to bind the IBM Log Analysis instance to a cluster
-        tags:
-          - tools
-          - logging
-          - kubernetes
-        versions:
-          - v1.3.6
-          - v1.3.5
-          - v1.3.4
-          - v1.3.3
-          - v1.3.2
-          - v1.3.1
-          - v1.3.0
-          - v1.2.4
-          - v1.2.3
-          - v1.2.2
-          - v1.1.1
-          - v1.2.1
-          - v1.2.0
-          - v1.1.0
-          - v1.0.7
-          - v1.0.6
-          - v1.0.5
-          - v1.0.4
-          - v1.0.3
-          - v1.0.2
-          - v1.0.1
-          - v1.0.0
-          - v0.0.1
-          - v0.0.0
-        alias: ibm-logdna-bind
-        registryId: cloud-native-toolkit/log-analysis-bind/ibm
-        group: ""
-        displayName: IBM Log Analysis Bind
-      - cloudProvider: ibm
-        softwareProvider: ""
-        type: terraform
         id: github.com/terraform-ibm-modules/terraform-ibm-toolkit-cloud-monitoring
         name: ibm-cloud-monitoring
         description: Module provision an instance of IBM Cloud Monitoring in an IBM Cloud account
