@@ -14,6 +14,9 @@ aliases:
   - id: github.com/terraform-ibm-modules/terraform-ibm-toolkit-account-users
     aliases:
       - github.com/cloud-native-toolkit/terraform-ibm-account-users
+  - id: github.com/terraform-ibm-modules/terraform-ibm-toolkit-mongodb
+    aliases:
+      - github.com/cloud-native-toolkit/terraform-ibm-mongodb
 categories:
   - category: cluster
     categoryName: Cluster
@@ -621,7 +624,7 @@ categories:
         group: mongodb
         cloudProvider: ibm
       - name: IBM MongoDB
-        id: github.com/cloud-native-toolkit/terraform-ibm-mongodb
+        id: github.com/terraform-ibm-modules/terraform-ibm-toolkit-mongodb
         group: mongodb
         cloudProvider: ibm
       - name: IBM Redis
