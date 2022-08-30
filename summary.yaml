@@ -1581,6 +1581,21 @@ categories:
       - cloudProvider: ibm
         softwareProvider: ""
         type: terraform
+        id: github.com/terraform-ibm-modules/terraform-ibm-toolkit-add-access-group-users
+        name: ibm-add-access-group-users
+        description: Module to add users to provided access groups in an IBM Cloud account
+        provider: ibm
+        tags:
+          - tools
+          - devops
+        versions:
+          - v1.0.0
+          - v0.0.0
+        group: ""
+        displayName: IBM Add Users to Access Group
+      - cloudProvider: ibm
+        softwareProvider: ""
+        type: terraform
         id: github.com/terraform-ibm-modules/terraform-ibm-toolkit-iam-service-authorization
         name: ibm-iam-service-authorization
         alias: service-authorization
@@ -3655,6 +3670,7 @@ categories:
           - azure-vm
           - virtual-machine
         versions:
+          - v2.0.2
           - v2.0.1
           - v2.0.0
           - v1.0.0
@@ -3914,6 +3930,45 @@ categories:
         registryId: cloud-native-toolkit/log-analysis/ibm
         group: logging
         displayName: IBM Log Analysis
+      - cloudProvider: ibm
+        softwareProvider: ""
+        type: terraform
+        id: github.com/terraform-ibm-modules/terraform-ibm-toolkit-log-analysis-bind
+        name: ibm-log-analysis-bind
+        description: Module to bind the IBM Log Analysis instance to a cluster
+        tags:
+          - tools
+          - logging
+          - kubernetes
+        versions:
+          - v1.3.6
+          - v1.3.5
+          - v1.3.4
+          - v1.3.3
+          - v1.3.2
+          - v1.3.1
+          - v1.3.0
+          - v1.2.4
+          - v1.2.3
+          - v1.2.2
+          - v1.1.1
+          - v1.2.1
+          - v1.2.0
+          - v1.1.0
+          - v1.0.7
+          - v1.0.6
+          - v1.0.5
+          - v1.0.4
+          - v1.0.3
+          - v1.0.2
+          - v1.0.1
+          - v1.0.0
+          - v0.0.1
+          - v0.0.0
+        alias: ibm-logdna-bind
+        registryId: cloud-native-toolkit/log-analysis-bind/ibm
+        group: ""
+        displayName: IBM Log Analysis Bind
       - cloudProvider: ibm
         softwareProvider: ""
         type: terraform
