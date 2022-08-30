@@ -93,7 +93,7 @@ categories:
         id: github.com/terraform-ibm-modules/terraform-ibm-toolkit-account-users
         cloudProvider: ibm
       - name: IBM Add Users to Access Group
-        id: github.com/cloud-native-toolkit/terraform-ibm-add-access-group-users
+        id: github.com/terraform-ibm-modules/terraform-ibm-toolkit-add-access-group-users
         cloudProvider: ibm
       - name: IBM Service Authorization
         id: >-
@@ -401,7 +401,7 @@ categories:
         group: logging
         cloudProvider: ibm
       - name: IBM Log Analysis Bind
-        id: github.com/cloud-native-toolkit/terraform-ibm-log-analysis-bind
+        id: github.com/terraform-ibm-modules/terraform-ibm-toolkit-log-analysis-bind
         cloudProvider: ibm
       - name: IBM Cloud Monitoring
         id: github.com/terraform-ibm-modules/terraform-ibm-toolkit-cloud-monitoring
