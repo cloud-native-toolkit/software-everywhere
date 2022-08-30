@@ -1399,25 +1399,6 @@ categories:
     categoryName: IAM
     selection: multiple
     modules:
-      - cloudProvider: ibm
-        softwareProvider: ""
-        type: terraform
-        id: github.com/cloud-native-toolkit/terraform-ibm-onboard-fs-account
-        name: ibm-onboard-fs-account
-        description: Module to set account-level values that enable FS computing
-        tags:
-          - fscloud
-          - ibmcloud
-          - account
-        versions:
-          - v1.1.2
-          - v1.1.1
-          - v1.1.0
-          - v1.0.1
-          - v1.0.0
-          - v0.0.0
-        group: ""
-        displayName: IBM Onboard FS Cloud Account
       - cloudProvider: azure
         softwareProvider: ""
         type: terraform
