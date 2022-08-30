@@ -17,6 +17,21 @@ aliases:
   - id: github.com/terraform-ibm-modules/terraform-ibm-toolkit-mongodb
     aliases:
       - github.com/cloud-native-toolkit/terraform-ibm-mongodb
+  - id: github.com/terraform-ibm-modules/terraform-ibm-toolkit-resource-group
+    aliases:
+      - github.com/cloud-native-toolkit/terraform-ibm-resource-group
+  - id: github.com/terraform-ibm-modules/terraform-ibm-toolkit-access-group
+    aliases:
+      - github.com/cloud-native-toolkit/terraform-ibm-access-group
+  - id: github.com/terraform-ibm-modules/terraform-ibm-toolkit-account-access-group
+    aliases:
+      - github.com/cloud-native-toolkit/terraform-ibm-account-access-group
+  - id: github.com/terraform-ibm-modules/terraform-ibm-toolkit-iam-service-authorization
+    aliases:
+      - github.com/cloud-native-toolkit/terraform-ibm-iam-service-authorization
+  - id: github.com/terraform-ibm-modules/terraform-ibm-toolkit-onboard-fs-account
+    aliases:
+      - github.com/cloud-native-toolkit/terraform-ibm-onboard-fs-account
 categories:
   - category: cluster
     categoryName: Cluster
@@ -56,10 +71,10 @@ categories:
     selection: multiple
     modules:
       - name: IBM Onboard FS Cloud Account
-        id: github.com/cloud-native-toolkit/terraform-ibm-onboard-fs-account
+        id: github.com/terraform-ibm-modules/terraform-ibm-toolkit-onboard-fs-account
         cloudProvider: ibm
       - name: IBM Resource Group
-        id: github.com/cloud-native-toolkit/terraform-ibm-resource-group
+        id: github.com/terraform-ibm-modules/terraform-ibm-toolkit-resource-group
         group: resource-group
         cloudProvider: ibm
       - name: Azure Resource Group
@@ -67,11 +82,11 @@ categories:
         group: resource-group
         cloudProvider: azure
       - name: IBM Account Access Group
-        id: github.com/cloud-native-toolkit/terraform-ibm-account-access-group
+        id: github.com/terraform-ibm-modules/terraform-ibm-toolkit-account-access-group
         group: access-group
         cloudProvider: ibm
       - name: IBM Access Group
-        id: github.com/cloud-native-toolkit/terraform-ibm-access-group
+        id: github.com/terraform-ibm-modules/terraform-ibm-toolkit-access-group
         group: access-group
         cloudProvider: ibm
       - name: IBM Account Users
@@ -82,7 +97,7 @@ categories:
         cloudProvider: ibm
       - name: IBM Service Authorization
         id: >-
-          github.com/cloud-native-toolkit/terraform-ibm-iam-service-authorization
+          github.com/terraform-ibm-modules/terraform-ibm-toolkit-iam-service-authorization
         cloudProvider: ibm
       - name: aws-iam-user
         id: github.com/cloud-native-toolkit/terraform-aws-iam-user
