@@ -1440,22 +1440,6 @@ categories:
       - cloudProvider: ibm
         softwareProvider: ""
         type: terraform
-        id: github.com/cloud-native-toolkit/terraform-ibm-account-access-group
-        name: ibm-account-access-group
-        description: Module to provision account-wide access groups for an FS-enabled account
-        tags:
-          - account
-          - access group
-        versions:
-          - v1.1.1
-          - v1.1.0
-          - v1.0.0
-          - v0.0.0
-        group: access-group
-        displayName: IBM Account Access Group
-      - cloudProvider: ibm
-        softwareProvider: ""
-        type: terraform
         id: github.com/terraform-ibm-modules/terraform-ibm-toolkit-account-users
         name: ibm-account-users
         description: Module to invite users to the account
@@ -1471,40 +1455,6 @@ categories:
           - v0.0.0
         group: ""
         displayName: IBM Account Users
-      - cloudProvider: ibm
-        softwareProvider: ""
-        type: terraform
-        id: github.com/cloud-native-toolkit/terraform-ibm-iam-service-authorization
-        name: ibm-iam-service-authorization
-        alias: service-authorization
-        description: Module to create an authorization policy that will allow one service to access another.
-        tags:
-          - iam
-          - service
-          - authorization
-          - policy
-        versions:
-          - v1.2.12
-          - v1.2.11
-          - v1.2.10
-          - v1.2.9
-          - v1.2.8
-          - v1.2.7
-          - v1.2.6
-          - v1.2.5
-          - v1.2.4
-          - v1.2.3
-          - v1.2.2
-          - v1.2.1
-          - v1.2.0
-          - v1.1.2
-          - v1.1.1
-          - v1.1.0
-          - v1.0.1
-          - v1.0.0
-          - v0.0.0
-        group: ""
-        displayName: IBM Service Authorization
       - cloudProvider: aws
         softwareProvider: ""
         type: terraform
