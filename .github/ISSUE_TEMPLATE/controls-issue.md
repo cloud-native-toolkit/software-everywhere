@@ -1,7 +1,7 @@
 ---
 name: Issue/Bug report on Controls tool
 about: Report an issue/bug in the Controls tool to help us improve
-title: 'Issue on Contros: {issue}'
+title: 'Issue on Controls: {issue}'
 labels: controls
 assignees: NoeSamaille
 
