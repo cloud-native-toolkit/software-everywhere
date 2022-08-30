@@ -3783,6 +3783,7 @@ categories:
           - certificate
           - tls
         versions:
+          - v1.0.1
           - v1.0.0
         id: github.com/cloud-native-toolkit/terraform-aws-acme-certificate
         group: certificate
