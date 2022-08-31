@@ -38,11 +38,11 @@ categories:
     selection: single
     modules:
       - name: IBM OpenShift VPC cluster
-        id: github.com/cloud-native-toolkit/terraform-ibm-ocp-vpc
+        id: github.com/terraform-ibm-modules/terraform-ibm-toolkit-ocp-vpc
         group: openshift
         cloudProvider: ibm
       - name: IBM Kubernetes VPC cluster
-        id: github.com/cloud-native-toolkit/terraform-ibm-iks-vpc
+        id: github.com/terraform-ibm-modules/terraform-ibm-toolkit-iks-vpc
         group: kubernetes
         cloudProvider: ibm
       - name: IBM OpenShift login
@@ -133,7 +133,7 @@ categories:
     selection: multiple
     modules:
       - name: IBM VPC
-        id: github.com/cloud-native-toolkit/terraform-ibm-vpc
+        id: github.com/terraform-ibm-modules/terraform-ibm-toolkit-vpc
         group: vpc
         cloudProvider: ibm
       - name: AWS VPC
@@ -141,11 +141,11 @@ categories:
         group: vpc
         cloudProvider: aws
       - name: IBM VPC Gateways
-        id: github.com/cloud-native-toolkit/terraform-ibm-vpc-gateways
+        id: github.com/terraform-ibm-modules/terraform-ibm-toolkit-vpc-gateways
         group: vpc-gateways
         cloudProvider: ibm
       - name: IBM VPC Subnets
-        id: github.com/cloud-native-toolkit/terraform-ibm-vpc-subnets
+        id: github.com/terraform-ibm-modules/terraform-ibm-toolkit-vpc-subnets
         group: vpc-subnets
         cloudProvider: ibm
       - name: AWS VPC Subnets
@@ -153,23 +153,19 @@ categories:
         group: vpc-subnets
         cloudProvider: aws
       - name: IBM VPC SSH
-        id: github.com/cloud-native-toolkit/terraform-ibm-vpc-ssh
+        id: github.com/terraform-ibm-modules/terraform-ibm-toolkit-vpc-ssh
         group: vpc-ssh
         cloudProvider: ibm
-      - name: IBM VPC Load Balancer
-        id: github.com/cloud-native-toolkit/terraform-ibm-vpc-load-balancer
-        group: vpc-lb
-        cloudProvider: ibm
       - name: VPE Gateway
-        id: github.com/cloud-native-toolkit/terraform-ibm-vpe-gateway
+        id: github.com/terraform-ibm-modules/terraform-ibm-toolkit-vpe-gateway
         group: vpc-vpe-gateway
         cloudProvider: ibm
       - name: VSI Bastion
-        id: github.com/cloud-native-toolkit/terraform-vsi-bastion
+        id: github.com/terraform-ibm-modules/terraform-ibm-toolkit-vsi-bastion
         group: bastion
         cloudProvider: ibm
       - name: VSI Proxy
-        id: github.com/cloud-native-toolkit/terraform-ibm-vsi-proxy
+        id: github.com/terraform-ibm-modules/terraform-ibm-toolkit-vsi-proxy
         group: proxy
         cloudProvider: ibm
       - name: AWS Bastion
@@ -181,7 +177,7 @@ categories:
         group: vpn
         cloudProvider: ibm
       - name: VPC VSI
-        id: github.com/cloud-native-toolkit/terraform-ibm-vpc-vsi
+        id: github.com/terraform-ibm-modules/terraform-ibm-toolkit-vpc-vsi
         group: vsi
         cloudProvider: ibm
       - name: Transit Gateway
@@ -189,15 +185,15 @@ categories:
         group: transit-gateway
         cloudProvider: ibm
       - name: VPC Flow Logs
-        id: github.com/cloud-native-toolkit/terraform-ibm-flow-log
+        id: github.com/terraform-ibm-modules/terraform-ibm-toolkit-flow-log
         group: vpc-flow-logs
         cloudProvider: ibm
       - name: VPC VPN Gateway
-        id: github.com/cloud-native-toolkit/terraform-ibm-vpn-gateway
+        id: github.com/terraform-ibm-modules/terraform-ibm-toolkit-vpn-gateway
         group: vpn
         cloudProvider: ibm
       - name: VPC VPN Server
-        id: github.com/cloud-native-toolkit/terraform-ibm-vpn-server
+        id: github.com/terraform-ibm-modules/terraform-ibm-toolkit-vpn-server
         group: vpn
         cloudProvider: ibm
       - name: Azure VNet
