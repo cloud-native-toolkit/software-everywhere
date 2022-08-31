@@ -156,6 +156,10 @@ categories:
         id: github.com/cloud-native-toolkit/terraform-ibm-vpc-ssh
         group: vpc-ssh
         cloudProvider: ibm
+      - name: IBM VPC Load Balancer
+        id: github.com/cloud-native-toolkit/terraform-ibm-vpc-load-balancer
+        group: vpc-lb
+        cloudProvider: ibm
       - name: VPE Gateway
         id: github.com/cloud-native-toolkit/terraform-ibm-vpe-gateway
         group: vpc-vpe-gateway
