@@ -134,6 +134,88 @@ categories:
     categoryName: Cluster
     selection: single
     modules:
+      - cloudProvider: ibm
+        softwareProvider: ""
+        type: terraform
+        id: github.com/terraform-ibm-modules/terraform-ibm-toolkit-ocp-vpc
+        name: ibm-ocp-vpc
+        alias: cluster
+        description: Provisions an IBM Cloud OCP cluster
+        tags:
+          - ocp
+          - cluster
+          - vpc
+        versions:
+          - v1.15.7
+          - v1.15.6
+          - v1.15.5
+          - v1.15.4
+          - v1.15.3
+          - v1.15.2
+          - v1.15.1
+          - v1.15.0
+          - v1.14.0
+          - v1.13.4
+          - v1.13.3
+          - v1.13.2
+          - v1.13.1
+          - v1.13.0
+          - v1.12.2
+          - v1.12.1
+          - v1.12.0
+          - v1.11.0
+          - v1.10.3
+          - v1.10.2
+          - v1.10.1
+          - v1.10.0
+          - v1.9.0
+          - v1.8.0
+          - v1.7.0
+          - v1.6.1
+          - v1.6.0
+          - v1.5.0
+          - v1.4.1
+          - v1.4.0
+          - v1.3.4
+          - v1.3.3
+          - v1.3.2
+          - v1.3.1
+          - v1.3.0
+          - v1.2.5
+          - v1.2.4
+          - v1.2.3
+          - v1.2.2
+          - v1.2.1
+          - v1.2.0
+          - v1.1.1
+          - v1.1.0
+          - v1.0.0
+        interfaces:
+          - github.com/cloud-native-toolkit/automation-modules#cluster
+        registryId: cloud-native-toolkit/ocp-vpc/ibm
+        group: openshift
+        displayName: IBM OpenShift VPC cluster
+      - cloudProvider: ibm
+        softwareProvider: ""
+        type: terraform
+        id: github.com/terraform-ibm-modules/terraform-ibm-toolkit-iks-vpc
+        name: ibm-iks-vpc
+        alias: cluster
+        description: Provisions an IBM Cloud IKS cluster
+        interfaces:
+          - github.com/cloud-native-toolkit/automation-modules#cluster
+          - github.com/cloud-native-toolkit/automation-modules#sync
+        tags:
+          - iks
+          - cluster
+          - vpc
+        versions:
+          - v1.0.2
+          - v1.0.1
+          - v1.0.0
+          - v0.0.0
+        group: kubernetes
+        displayName: IBM Kubernetes VPC cluster
       - cloudProvider: ""
         softwareProvider: ""
         type: terraform
@@ -2880,6 +2962,73 @@ categories:
     categoryName: Network
     selection: multiple
     modules:
+      - cloudProvider: ibm
+        softwareProvider: ""
+        type: terraform
+        id: github.com/terraform-ibm-modules/terraform-ibm-toolkit-vpc
+        name: ibm-vpc
+        description: Provisions the IBM Cloud VPC instance with network acls
+        tags:
+          - infrastructure
+          - networking
+        versions:
+          - v1.16.0
+          - v1.15.8
+          - v1.15.7
+          - v1.15.6
+          - v1.15.5
+          - v1.15.4
+          - v1.15.3
+          - v1.15.2
+          - v1.15.1
+          - v1.15.0
+          - v1.14.0
+          - v1.13.1
+          - v1.13.0
+          - v1.12.0
+          - v1.11.7
+          - v1.11.6
+          - v1.11.5
+          - v1.11.4
+          - v1.11.3
+          - v1.11.2
+          - v1.11.1
+          - v1.11.0
+          - v1.10.3
+          - v1.10.2
+          - v1.10.1
+          - v1.10.0
+          - v1.9.4
+          - v1.9.3
+          - v1.9.2
+          - v1.9.1
+          - v1.9.0
+          - v1.8.3
+          - v1.8.2
+          - v1.8.1
+          - v1.8.0
+          - v1.7.4
+          - v1.7.3
+          - v1.7.2
+          - v1.7.1
+          - v1.7.0
+          - v1.6.0
+          - v1.5.2
+          - v1.5.1
+          - v1.5.0
+          - v1.4.1
+          - v1.4.0
+          - v1.3.2
+          - v1.3.1
+          - v1.3.0
+          - v1.2.0
+          - v1.1.1
+          - v1.1.0
+        interfaces:
+          - github.com/cloud-native-toolkit/automation-modules#ibm-vpc-resource
+        registryId: cloud-native-toolkit/vpc/ibm
+        group: vpc
+        displayName: IBM VPC
       - cloudProvider: aws
         softwareProvider: ""
         type: terraform
@@ -2896,6 +3045,95 @@ categories:
           - v1.5.3
         group: vpc
         displayName: AWS VPC
+      - cloudProvider: ibm
+        softwareProvider: ""
+        type: terraform
+        id: github.com/terraform-ibm-modules/terraform-ibm-toolkit-vpc-gateways
+        name: ibm-vpc-gateways
+        description: Terraform module to provision public gateways for an existing VPC instance
+        tags:
+          - network
+          - vpc
+          - public gateway
+        versions:
+          - v1.9.0
+          - v1.8.2
+          - v1.8.1
+          - v1.8.0
+          - v1.7.0
+          - v1.6.1
+          - v1.6.0
+          - v1.5.1
+          - v1.5.0
+          - v1.4.0
+          - v1.3.0
+          - v1.2.2
+          - v1.2.1
+          - v1.2.0
+          - v1.1.0
+          - v1.0.0
+          - v0.0.0
+        registryId: cloud-native-toolkit/vpc-gateways/ibm
+        group: vpc-gateways
+        displayName: IBM VPC Gateways
+      - cloudProvider: ibm
+        softwareProvider: ""
+        type: terraform
+        id: github.com/terraform-ibm-modules/terraform-ibm-toolkit-vpc-subnets
+        name: ibm-vpc-subnets
+        description: Module to provision a collection of subnets for an existing VPC
+        tags:
+          - network
+          - subnets
+          - vpc
+        versions:
+          - v1.13.2
+          - v1.13.1
+          - v1.13.0
+          - v1.12.2
+          - v1.12.1
+          - v1.12.0
+          - v1.11.0
+          - v1.10.0
+          - v1.9.7
+          - v1.9.6
+          - v1.9.5
+          - v1.9.4
+          - v1.9.3
+          - v1.9.2
+          - v1.9.1
+          - v1.9.0
+          - v1.8.2
+          - v1.8.1
+          - v1.8.0
+          - v1.7.0
+          - v1.6.2
+          - v1.6.1
+          - v1.6.0
+          - v1.5.1
+          - v1.5.0
+          - v1.4.0
+          - v1.3.1
+          - v1.3.0
+          - v1.2.6
+          - v1.2.5
+          - v1.2.4
+          - v1.2.3
+          - v1.2.2
+          - v1.2.1
+          - v1.2.0
+          - v1.1.1
+          - v1.1.0
+          - v1.0.3
+          - v1.0.2
+          - v1.0.1
+          - v1.0.0
+          - v0.0.0
+        interfaces:
+          - github.com/cloud-native-toolkit/automation-modules#ibm-vpc-resource
+        registryId: cloud-native-toolkit/vpc-subnets/ibm
+        group: vpc-subnets
+        displayName: IBM VPC Subnets
       - cloudProvider: aws
         softwareProvider: ""
         type: terraform
@@ -2917,6 +3155,121 @@ categories:
           - v1.0.0
         group: vpc-subnets
         displayName: AWS VPC Subnets
+      - cloudProvider: ibm
+        softwareProvider: ""
+        type: terraform
+        id: github.com/terraform-ibm-modules/terraform-ibm-toolkit-vpc-ssh
+        name: ibm-vpc-ssh
+        alias: ssh
+        description: Module to register an ssh key into the IBM Cloud infrastructure for use in securely accessing VPC resources
+        tags:
+          - vpc
+          - ssh
+          - infrastructure
+          - security
+        versions:
+          - v1.7.1
+          - v1.7.0
+          - v1.6.0
+          - v1.5.1
+          - v1.5.0
+          - v1.4.0
+          - v1.3.0
+          - v1.2.0
+          - v1.1.1
+          - v1.1.0
+          - v1.0.5
+          - v1.0.4
+          - v1.0.3
+          - v1.0.2
+          - v1.0.1
+          - v1.0.0
+          - v0.0.0
+        group: vpc-ssh
+        displayName: IBM VPC SSH
+      - cloudProvider: ibm
+        softwareProvider: ""
+        type: terraform
+        id: github.com/terraform-ibm-modules/terraform-ibm-toolkit-vpe-gateway
+        name: ibm-vpe-gateway
+        alias: vpe
+        description: Provisions a Virtual Private Gateway for a provided resource, connecting that resource to the provided subnet
+        tags:
+          - infrastructure
+          - network
+          - virtual private gateway
+          - fscloud
+        versions:
+          - v1.6.2
+          - v1.6.1
+          - v1.6.0
+          - v1.5.1
+          - v1.5.0
+          - v1.4.0
+          - v1.3.1
+          - v1.3.0
+          - v1.2.3
+          - v1.2.2
+          - v1.2.1
+          - v1.2.0
+          - v1.1.1
+          - v1.1.0
+          - v1.0.0
+          - v0.0.0
+        group: vpc-vpe-gateway
+        displayName: VPE Gateway
+      - cloudProvider: ibm
+        softwareProvider: ""
+        type: terraform
+        id: github.com/terraform-ibm-modules/terraform-ibm-toolkit-vsi-bastion
+        name: vsi-bastion
+        description: Module to provision Basion in a vsi image
+        tags:
+          - network
+          - vpc
+          - bastion
+        versions:
+          - v1.10.0
+          - v1.9.0
+          - v1.8.0
+          - v1.7.1
+          - v1.7.0
+          - v1.6.0
+          - v1.5.1
+          - v1.5.0
+          - v1.4.1
+          - v1.4.0
+          - v1.3.8
+          - v1.3.7
+          - v1.3.6
+          - v1.3.5
+          - v1.3.4
+          - v1.3.3
+          - v1.3.2
+          - v1.3.1
+          - v1.3.0
+          - v1.2.0
+          - v1.1.1
+          - v1.1.0
+          - v1.0.0
+          - v0.0.0
+        group: bastion
+        displayName: VSI Bastion
+      - cloudProvider: ibm
+        softwareProvider: ""
+        type: terraform
+        name: vsi-proxy
+        description: Module to provision Proxy Server in a vsi image
+        tags:
+          - network
+          - vpc
+          - proxy
+        versions:
+          - v0.1.3
+          - v0.1.2
+        id: github.com/terraform-ibm-modules/terraform-ibm-toolkit-vsi-proxy
+        group: proxy
+        displayName: VSI Proxy
       - cloudProvider: aws
         softwareProvider: ""
         type: terraform
@@ -2985,6 +3338,45 @@ categories:
       - cloudProvider: ibm
         softwareProvider: ""
         type: terraform
+        id: github.com/terraform-ibm-modules/terraform-ibm-toolkit-vpc-vsi
+        name: ibm-vpc-vsi
+        description: Module to provision virtual server instance
+        tags:
+          - tools
+          - infrastructure
+          - virtual server
+        versions:
+          - v1.12.2
+          - v1.12.1
+          - v1.12.0
+          - v1.11.0
+          - v1.10.0
+          - v1.9.1
+          - v1.9.0
+          - v1.8.1
+          - v1.8.0
+          - v1.7.1
+          - v1.7.0
+          - v1.6.0
+          - v1.5.2
+          - v1.5.1
+          - v1.5.0
+          - v1.4.1
+          - v1.4.0
+          - v1.3.2
+          - v1.3.1
+          - v1.3.0
+          - v1.2.2
+          - v1.2.1
+          - v1.2.0
+          - v1.1.0
+          - v1.0.0
+          - v0.0.0
+        group: vsi
+        displayName: VPC VSI
+      - cloudProvider: ibm
+        softwareProvider: ""
+        type: terraform
         id: github.com/cloud-native-toolkit/terraform-ibm-transit-gateway
         name: ibm-transit-gateway
         description: Provisions the IBM Cloud Transit Gateway with connections to VPC instances
@@ -2999,6 +3391,77 @@ categories:
           - v0.0.1
         group: transit-gateway
         displayName: Transit Gateway
+      - cloudProvider: ibm
+        softwareProvider: ""
+        type: terraform
+        id: github.com/terraform-ibm-modules/terraform-ibm-toolkit-flow-log
+        name: ibm-flow-logs
+        description: Module to create Flow Logs for a provided resource
+        tags:
+          - audit
+          - flow log
+          - vpc
+        versions:
+          - v1.0.2
+          - v1.0.1
+          - v1.0.0
+          - v0.0.0
+        group: vpc-flow-logs
+        displayName: VPC Flow Logs
+      - cloudProvider: ibm
+        softwareProvider: ""
+        type: terraform
+        id: github.com/terraform-ibm-modules/terraform-ibm-toolkit-vpn-gateway
+        name: ibm-vpc-vpn-gateway
+        description: Module to provision a VPN Gateway within a Virtual Private Cloud instance
+        tags:
+          - infrastructure
+          - networking
+          - vpn
+          - vpc
+        versions:
+          - v1.1.5
+          - v1.1.4
+          - v1.1.3
+          - v1.1.2
+          - v1.1.1
+          - v1.1.0
+          - v1.0.1
+          - v1.0.0
+          - v0.0.0
+        group: vpn
+        displayName: VPC VPN Gateway
+      - cloudProvider: ibm
+        softwareProvider: ""
+        type: terraform
+        id: github.com/terraform-ibm-modules/terraform-ibm-toolkit-vpn-server
+        name: ibm-vpn-server
+        description: Module to provision a client to site VPN server instance in an IBM Cloud account
+        tags:
+          - vpc
+          - vpn server
+          - client to site
+        versions:
+          - v0.1.3
+          - v0.1.2
+          - v0.1.1
+          - v0.1.0
+          - v0.0.11
+          - v0.0.11
+          - v0.0.11
+          - v0.0.10
+          - v0.0.9
+          - v0.0.8
+          - v0.0.7
+          - v0.0.6
+          - v0.0.5
+          - v0.0.4
+          - v0.0.3
+          - v0.0.2
+          - v0.0.1
+          - v0.0.0
+        group: vpn
+        displayName: VPC VPN Server
       - cloudProvider: azure
         softwareProvider: ""
         type: terraform
