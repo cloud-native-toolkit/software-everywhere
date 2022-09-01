@@ -32,6 +32,9 @@ aliases:
   - id: github.com/terraform-ibm-modules/terraform-ibm-toolkit-onboard-fs-account
     aliases:
       - github.com/cloud-native-toolkit/terraform-ibm-onboard-fs-account
+  - id: github.com/terraform-ibm-modules/terraform-ibm-toolkit-vpc
+    aliases:
+      - github.com/cloud-native-toolkit/terraform-ibm-vpc
 categories:
   - category: cluster
     categoryName: Cluster
