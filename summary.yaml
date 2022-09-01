@@ -3090,6 +3090,7 @@ categories:
           - subnets
           - vpc
         versions:
+          - v1.13.3
           - v1.13.2
           - v1.13.1
           - v1.13.0
@@ -3171,6 +3172,7 @@ categories:
           - infrastructure
           - security
         versions:
+          - v1.7.2
           - v1.7.1
           - v1.7.0
           - v1.6.0
@@ -4440,6 +4442,7 @@ categories:
           - oc
           - kubectl
         versions:
+          - v1.16.9
           - v1.16.8
           - v1.16.7
           - v1.16.6
