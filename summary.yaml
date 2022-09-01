@@ -4623,6 +4623,48 @@ aliases:
   - id: github.com/terraform-ibm-modules/terraform-ibm-toolkit-vpc
     aliases:
       - github.com/cloud-native-toolkit/terraform-ibm-vpc
+  - id: github.com/terraform-ibm-modules/terraform-ibm-toolkit-ocp-vpc
+    aliases:
+      - github.com/cloud-native-toolkit/terraform-ibm-ocp-vpc
+  - id: github.com/terraform-ibm-modules/terraform-ibm-toolkit-iks-vpc
+    aliases:
+      - github.com/cloud-native-toolkit/terraform-ibm-iks-vpc
+  - id: github.com/terraform-ibm-modules/terraform-ibm-toolkit-add-access-group-users
+    aliases:
+      - github.com/cloud-native-toolkit/terraform-ibm-add-access-group-users
+  - id: github.com/terraform-ibm-modules/terraform-ibm-toolkit-vpc-gateways
+    aliases:
+      - github.com/cloud-native-toolkit/terraform-ibm-vpc-gateways
+  - id: github.com/terraform-ibm-modules/terraform-ibm-toolkit-vpc-subnets
+    aliases:
+      - github.com/cloud-native-toolkit/terraform-ibm-vpc-subnets
+  - id: github.com/terraform-ibm-modules/terraform-ibm-toolkit-vpc-ssh
+    aliases:
+      - github.com/cloud-native-toolkit/terraform-ibm-vpc-ssh
+  - id: github.com/terraform-ibm-modules/terraform-ibm-toolkit-vpe-gateway
+    aliases:
+      - github.com/cloud-native-toolkit/terraform-ibm-vpe-gateway
+  - id: github.com/terraform-ibm-modules/terraform-ibm-toolkit-vsi-bastion
+    aliases:
+      - github.com/cloud-native-toolkit/terraform-vsi-bastion
+  - id: github.com/terraform-ibm-modules/terraform-ibm-toolkit-vsi-proxy
+    aliases:
+      - github.com/cloud-native-toolkit/terraform-ibm-vsi-proxy
+  - id: github.com/terraform-ibm-modules/terraform-ibm-toolkit-vpc-vsi
+    aliases:
+      - github.com/cloud-native-toolkit/terraform-ibm-vpc-vsi
+  - id: github.com/terraform-ibm-modules/terraform-ibm-toolkit-flow-log
+    aliases:
+      - github.com/cloud-native-toolkit/terraform-ibm-flow-log
+  - id: github.com/terraform-ibm-modules/terraform-ibm-toolkit-vpn-gateway
+    aliases:
+      - github.com/cloud-native-toolkit/terraform-ibm-vpn-gateway
+  - id: github.com/terraform-ibm-modules/terraform-ibm-toolkit-vpn-server
+    aliases:
+      - github.com/cloud-native-toolkit/terraform-ibm-vpn-server
+  - id: github.com/terraform-ibm-modules/terraform-ibm-toolkit-log-analysis-bind
+    aliases:
+      - github.com/cloud-native-toolkit/terraform-ibm-log-analysis-bind
 providers:
   - name: azurerm
     source: hashicorp/azurerm
