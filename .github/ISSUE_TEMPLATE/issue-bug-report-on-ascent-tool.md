@@ -1,6 +1,6 @@
 ---
-name: Issue/Bug report on Ascent tool
-about: Report an issue/bug in the Ascent tool to help us improve
+name: Issue/Bug report on Techzone Accelerator Toolkit Builder Tool
+about: Report an issue/bug in the tool to help us improve
 title: 'Issue on Ascent: {issue}'
 labels: ascent
 assignees: NoeSamaille
