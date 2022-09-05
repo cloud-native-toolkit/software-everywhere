@@ -1016,6 +1016,7 @@ categories:
           - gitops
           - dashboard
         versions:
+          - v1.7.0
           - v1.6.2
           - v1.6.2
           - v1.6.1
