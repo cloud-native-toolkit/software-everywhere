@@ -77,7 +77,6 @@ aliases:
   - id: github.com/terraform-ibm-modules/terraform-ibm-toolkit-log-analysis-bind
     aliases:
       - github.com/cloud-native-toolkit/terraform-ibm-log-analysis-bind
-
   - id: github.com/terraform-ibm-modules/terraform-ibm-toolkit-transit-gateway
     aliases:
       - github.com/cloud-native-toolkit/terraform-ibm-transit-gateway
