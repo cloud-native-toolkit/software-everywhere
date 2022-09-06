@@ -77,9 +77,24 @@ aliases:
   - id: github.com/terraform-ibm-modules/terraform-ibm-toolkit-log-analysis-bind
     aliases:
       - github.com/cloud-native-toolkit/terraform-ibm-log-analysis-bind
+  - id: github.com/terraform-ibm-modules/terraform-ibm-toolkit-transit-gateway
+    aliases:
+      - github.com/cloud-native-toolkit/terraform-ibm-transit-gateway
+  - id: github.com/terraform-ibm-modules/terraform-ibm-toolkit-container-registry
+    aliases:
+      - github.com/cloud-native-toolkit/terraform-ibm-container-registry
   - id: github.com/terraform-ibm-modules/terraform-ibm-toolkit-object-storage
     aliases:
       - github.com/cloud-native-toolkit/terraform-ibm-object-storage
+  - id: github.com/terraform-ibm-modules/terraform-ibm-toolkit-object-storage-bucket
+    aliases:
+      - github.com/cloud-native-toolkit/terraform-ibm-object-storage-bucket
+  - id: github.com/terraform-ibm-modules/terraform-ibm-toolkit-event-streams
+    aliases:
+      - github.com/cloud-native-toolkit/terraform-ibm-event-streams
+  - id: github.com/terraform-ibm-modules/terraform-ibm-toolkit-event-streams-topic
+    aliases:
+      - github.com/cloud-native-toolkit/terraform-ibm-event-streams-topic
 categories:
   - category: cluster
     categoryName: Cluster
@@ -156,7 +171,7 @@ categories:
     selection: single
     modules:
       - name: IBM Container Registry
-        id: github.com/cloud-native-toolkit/terraform-ibm-container-registry
+        id: github.com/terraform-ibm-modules/terraform-ibm-toolkit-container-registry
         group: registry
         cloudProvider: ibm
       - name: IBM Container Registry
@@ -229,7 +244,7 @@ categories:
         group: vsi
         cloudProvider: ibm
       - name: Transit Gateway
-        id: github.com/cloud-native-toolkit/terraform-ibm-transit-gateway
+        id: github.com/terraform-ibm-modules/terraform-ibm-toolkit-transit-gateway
         group: transit-gateway
         cloudProvider: ibm
       - name: VPC Flow Logs
@@ -521,11 +536,11 @@ categories:
         group: app-connect
         softwareProvider: ibm-cp
       - name: Event Streams
-        id: github.com/cloud-native-toolkit/terraform-ibm-event-streams
+        id: github.com/terraform-ibm-modules/terraform-ibm-toolkit-event-streams
         group: kafka
         cloudProvider: ibm
       - name: Event Streams Topic
-        id: github.com/cloud-native-toolkit/terraform-ibm-event-streams-topic
+        id: github.com/terraform-ibm-modules/terraform-ibm-toolkit-event-streams-topic
         group: kafka-topic
         cloudProvider: ibm
       - name: JetStack Cert Manager
@@ -736,7 +751,7 @@ categories:
         group: object-storage
         cloudProvider: ibm
       - name: IBM Object Storage Bucket
-        id: github.com/cloud-native-toolkit/terraform-ibm-object-storage-bucket
+        id: github.com/terraform-ibm-modules/terraform-ibm-toolkit-object-storage-bucket
         group: object-storage-bucket
         cloudProvider: ibm
       - name: storageclass
