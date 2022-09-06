@@ -1657,6 +1657,26 @@ categories:
       - cloudProvider: ibm
         softwareProvider: ""
         type: terraform
+        id: github.com/terraform-ibm-modules/terraform-ibm-toolkit-container-registry
+        name: ibm-container-registry
+        alias: registry
+        description: Module to set up the IBM Container Registry, including creating a namespace and upgrading the plan
+        tags:
+          - tools
+          - devops
+        versions:
+          - v1.1.4
+          - v1.1.3
+          - v1.1.2
+          - v1.1.1
+          - v1.1.0
+          - v1.0.0
+          - v0.0.0
+        group: registry
+        displayName: IBM Container Registry
+      - cloudProvider: ibm
+        softwareProvider: ""
+        type: terraform
         id: github.com/cloud-native-toolkit/terraform-ibm-image-registry
         name: ibm-image-registry
         alias: registry
@@ -2337,6 +2357,48 @@ categories:
           - v0.0.0
         group: app-connect
         displayName: App Connect
+      - cloudProvider: ibm
+        softwareProvider: ""
+        type: terraform
+        id: github.com/terraform-ibm-modules/terraform-ibm-toolkit-event-streams
+        name: ibm-event-streams
+        alias: event-streams
+        description: |
+          Module to work with an IBM Cloud Event Streams instance. If the `provision` flag is true then an new instance
+          of IBM Cloud Event Streams is provisioned. Otherwise, the module will find an existing instance with the
+          provided name and create a credential. The name and id of the Event Streams instance as well as the name and id
+          of the credential instance are exported from the module for use by other modules.
+        tags:
+          - tools
+          - infrastructure
+          - event streams
+          - saas
+        versions:
+          - v1.1.2
+          - v1.1.1
+          - v1.1.0
+          - v1.0.0
+          - v0.0.0
+        group: kafka
+        displayName: Event Streams
+      - cloudProvider: ibm
+        softwareProvider: ""
+        type: terraform
+        id: github.com/terraform-ibm-modules/terraform-ibm-toolkit-event-streams-topic
+        name: ibm-event-streams-topic
+        alias: topic
+        description: Module to provision a topic in an existing managed IBM Cloud Event Streams instance
+        tags:
+          - tools
+          - kafka
+          - event streams
+          - topic
+        versions:
+          - v1.0.1
+          - v1.0.0
+          - v0.0.0
+        group: kafka-topic
+        displayName: Event Streams Topic
       - cloudProvider: ""
         softwareProvider: ibm-cp
         type: terraform
@@ -3334,6 +3396,23 @@ categories:
       - cloudProvider: ibm
         softwareProvider: ""
         type: terraform
+        id: github.com/terraform-ibm-modules/terraform-ibm-toolkit-transit-gateway
+        name: ibm-transit-gateway
+        description: Provisions the IBM Cloud Transit Gateway with connections to VPC instances
+        tags:
+          - infrastructure
+          - networking
+        versions:
+          - v0.2.2
+          - v0.2.1
+          - v0.2.0
+          - v0.1.0
+          - v0.0.1
+        group: transit-gateway
+        displayName: Transit Gateway
+      - cloudProvider: ibm
+        softwareProvider: ""
+        type: terraform
         id: github.com/terraform-ibm-modules/terraform-ibm-toolkit-flow-log
         name: ibm-flow-logs
         description: Module to create Flow Logs for a provided resource
@@ -4061,6 +4140,35 @@ categories:
         registryId: cloud-native-toolkit/object-storage/ibm
         group: object-storage
         displayName: IBM Object Storage
+      - cloudProvider: ibm
+        softwareProvider: ""
+        type: terraform
+        id: github.com/terraform-ibm-modules/terraform-ibm-toolkit-object-storage-bucket
+        name: ibm-object-storage-bucket
+        alias: cos-bucket
+        description: Module to provision a Cloud Object Storage bucket
+        tags:
+          - object storage
+          - bucket
+        versions:
+          - v0.8.4
+          - v0.8.3
+          - v0.8.2
+          - v0.8.1
+          - v0.8.0
+          - v0.7.0
+          - v0.6.0
+          - v0.5.0
+          - v0.4.0
+          - v0.3.0
+          - v0.2.2
+          - v0.2.1
+          - v0.2.0
+          - v0.1.5
+          - v0.1.4
+          - v0.1.3
+        group: object-storage-bucket
+        displayName: IBM Object Storage Bucket
       - cloudProvider: ""
         softwareProvider: ""
         type: gitops
@@ -4577,9 +4685,24 @@ aliases:
   - id: github.com/terraform-ibm-modules/terraform-ibm-toolkit-log-analysis-bind
     aliases:
       - github.com/cloud-native-toolkit/terraform-ibm-log-analysis-bind
+  - id: github.com/terraform-ibm-modules/terraform-ibm-toolkit-transit-gateway
+    aliases:
+      - github.com/cloud-native-toolkit/terraform-ibm-transit-gateway
+  - id: github.com/terraform-ibm-modules/terraform-ibm-toolkit-container-registry
+    aliases:
+      - github.com/cloud-native-toolkit/terraform-ibm-container-registry
   - id: github.com/terraform-ibm-modules/terraform-ibm-toolkit-object-storage
     aliases:
       - github.com/cloud-native-toolkit/terraform-ibm-object-storage
+  - id: github.com/terraform-ibm-modules/terraform-ibm-toolkit-object-storage-bucket
+    aliases:
+      - github.com/cloud-native-toolkit/terraform-ibm-object-storage-bucket
+  - id: github.com/terraform-ibm-modules/terraform-ibm-toolkit-event-streams
+    aliases:
+      - github.com/cloud-native-toolkit/terraform-ibm-event-streams
+  - id: github.com/terraform-ibm-modules/terraform-ibm-toolkit-event-streams-topic
+    aliases:
+      - github.com/cloud-native-toolkit/terraform-ibm-event-streams-topic
 providers:
   - name: azurerm
     source: hashicorp/azurerm
