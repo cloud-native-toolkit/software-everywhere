@@ -2337,24 +2337,6 @@ categories:
           - v0.0.0
         group: app-connect
         displayName: App Connect
-      - cloudProvider: ibm
-        softwareProvider: ""
-        type: terraform
-        id: github.com/cloud-native-toolkit/terraform-ibm-event-streams-topic
-        name: ibm-event-streams-topic
-        alias: topic
-        description: Module to provision a topic in an existing managed IBM Cloud Event Streams instance
-        tags:
-          - tools
-          - kafka
-          - event streams
-          - topic
-        versions:
-          - v1.0.1
-          - v1.0.0
-          - v0.0.0
-        group: kafka-topic
-        displayName: Event Streams Topic
       - cloudProvider: ""
         softwareProvider: ibm-cp
         type: terraform
@@ -4035,6 +4017,50 @@ categories:
     categoryName: Storage
     selection: multiple
     modules:
+      - cloudProvider: ibm
+        softwareProvider: ""
+        type: terraform
+        id: github.com/terraform-ibm-modules/terraform-ibm-toolkit-object-storage
+        name: ibm-object-storage
+        alias: cos
+        description: |
+          Module to work with an IBM Cloud Object Storage instance. If the `provision` flag is true then an new instance
+          of IBM Cloud Object Storage is provisioned. Otherwise, the module will find an existing instance with the
+          provided name and create a credential. The name and id of the Object Storage instance as well as the name and id
+          of the credential instance are exported from the module for use by other modules.
+        tags:
+          - tools
+          - infrastructure
+          - object storage
+          - saas
+        versions:
+          - v4.0.6
+          - v4.0.5
+          - v4.0.4
+          - v4.0.3
+          - v4.0.2
+          - v4.0.1
+          - v4.0.0
+          - v3.4.0
+          - v3.3.3
+          - v3.3.2
+          - v3.3.0
+          - v3.2.0
+          - v3.1.2
+          - v3.1.1
+          - v3.1.0
+          - v3.0.4
+          - v3.0.3
+          - v3.0.2
+          - v3.0.1
+          - v3.0.0
+          - v2.1.0
+          - v2.0.2
+        interfaces:
+          - github.com/cloud-native-toolkit/automation-modules#ibm-service
+        registryId: cloud-native-toolkit/object-storage/ibm
+        group: object-storage
+        displayName: IBM Object Storage
       - cloudProvider: ""
         softwareProvider: ""
         type: gitops
@@ -4551,6 +4577,9 @@ aliases:
   - id: github.com/terraform-ibm-modules/terraform-ibm-toolkit-log-analysis-bind
     aliases:
       - github.com/cloud-native-toolkit/terraform-ibm-log-analysis-bind
+  - id: github.com/terraform-ibm-modules/terraform-ibm-toolkit-object-storage
+    aliases:
+      - github.com/cloud-native-toolkit/terraform-ibm-object-storage
 providers:
   - name: azurerm
     source: hashicorp/azurerm
