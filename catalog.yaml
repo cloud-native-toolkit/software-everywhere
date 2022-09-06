@@ -77,6 +77,9 @@ aliases:
   - id: github.com/terraform-ibm-modules/terraform-ibm-toolkit-log-analysis-bind
     aliases:
       - github.com/cloud-native-toolkit/terraform-ibm-log-analysis-bind
+  - id: github.com/terraform-ibm-modules/terraform-ibm-toolkit-object-storage
+    aliases:
+      - github.com/cloud-native-toolkit/terraform-ibm-object-storage
 categories:
   - category: cluster
     categoryName: Cluster
@@ -729,7 +732,7 @@ categories:
     selection: multiple
     modules:
       - name: IBM Object Storage
-        id: github.com/cloud-native-toolkit/terraform-ibm-object-storage
+        id: github.com/terraform-ibm-modules/terraform-ibm-toolkit-object-storage
         group: object-storage
         cloudProvider: ibm
       - name: IBM Object Storage Bucket
