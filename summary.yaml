@@ -4200,6 +4200,7 @@ categories:
           - portworx
           - ibmcloud
         versions:
+          - v0.4.0
           - v0.3.0
           - v0.2.2
           - v0.2.1
