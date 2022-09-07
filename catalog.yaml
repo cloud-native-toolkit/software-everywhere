@@ -104,6 +104,9 @@ aliases:
   - id: github.com/terraform-ibm-modules/terraform-ibm-toolkit-kms-key
     aliases:
       - github.com/cloud-native-toolkit/terraform-ibm-kms-key
+  - id: github.com/terraform-ibm-modules/terraform-ibm-toolkit-cert-manager
+    aliases:
+      - github.com/cloud-native-toolkit/terraform-ibm-cert-manager
 categories:
   - category: cluster
     categoryName: Cluster
@@ -564,7 +567,7 @@ categories:
         group: cert-manager
         softwareProvider: ibm-cp
       - name: IBM Certificate Manager
-        id: github.com/cloud-native-toolkit/terraform-ibm-cert-manager
+        id: github.com/terraform-ibm-modules/terraform-ibm-toolkit-cert-manager
         group: cert-manager
         cloudProvider: ibm
       - name: IBM Certificate Manager Certificate
