@@ -2473,7 +2473,7 @@ categories:
       - cloudProvider: ibm
         softwareProvider: ""
         type: terraform
-        id: github.com/cloud-native-toolkit/terraform-ibm-cert-manager-cert
+        id: github.com/terraform-ibm-modules/terraform-ibm-toolkit-cert-manager-cert
         name: ibm-cert-manager-cert
         description: Module to upload and/or retrieve a certificate and private key from IBM Certificate Manager
         tags:
@@ -4721,6 +4721,9 @@ aliases:
   - id: github.com/terraform-ibm-modules/terraform-ibm-toolkit-cert-manager
     aliases:
       - github.com/cloud-native-toolkit/terraform-ibm-cert-manager
+  - id: github.com/terraform-ibm-modules/terraform-ibm-toolkit-cert-manager-cert
+    aliases:
+      - github.com/cloud-native-toolkit/terraform-ibm-cert-manager-cert
 providers:
   - name: azurerm
     source: hashicorp/azurerm
