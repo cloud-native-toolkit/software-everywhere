@@ -95,6 +95,12 @@ aliases:
   - id: github.com/terraform-ibm-modules/terraform-ibm-toolkit-event-streams-topic
     aliases:
       - github.com/cloud-native-toolkit/terraform-ibm-event-streams-topic
+  - id: github.com/terraform-ibm-modules/terraform-ibm-toolkit-event-streams-topic
+    aliases:
+      - github.com/cloud-native-toolkit/terraform-ibm-event-streams-topic
+  - id: github.com/terraform-ibm-modules/terraform-ibm-toolkit-kms
+    aliases:
+      - github.com/cloud-native-toolkit/terraform-ibm-kms
 categories:
   - category: cluster
     categoryName: Cluster
@@ -509,7 +515,7 @@ categories:
         id: github.com/cloud-native-toolkit/terraform-k8s-kafka
         group: kafka
       - name: IBM KMS
-        id: github.com/cloud-native-toolkit/terraform-ibm-kms
+        id: github.com/terraform-ibm-modules/terraform-ibm-toolkit-kms
         group: kms
         cloudProvider: ibm
       - name: IBM Key Protect
