@@ -2225,32 +2225,6 @@ categories:
       - cloudProvider: ibm
         softwareProvider: ""
         type: terraform
-        id: github.com/cloud-native-toolkit/terraform-ibm-kms
-        name: ibm-kms
-        description: Module to provision Key Protect
-        tags:
-          - tools
-          - kms
-          - hpcs
-          - key protect
-        versions:
-          - v0.3.5
-          - v0.3.4
-          - v0.3.3
-          - v0.3.2
-          - v0.2.0
-          - v0.1.3
-          - v0.1.2
-          - v0.1.1
-          - v0.1.0
-          - v0.0.0
-        interfaces:
-          - github.com/cloud-native-toolkit/automation-modules#ibm-service
-        group: kms
-        displayName: IBM KMS
-      - cloudProvider: ibm
-        softwareProvider: ""
-        type: terraform
         id: github.com/terraform-ibm-modules/terraform-ibm-toolkit-key-protect
         name: key-protect
         description: Module to provision Key Protect
@@ -2313,33 +2287,6 @@ categories:
           - v1.0.1
         group: kms
         displayName: IBM Hyper Protect Initialization
-      - cloudProvider: ibm
-        softwareProvider: ""
-        type: terraform
-        id: github.com/cloud-native-toolkit/terraform-ibm-kms-key
-        name: ibm-kms-key
-        alias: kms-key
-        description: Module to lookup or create a KMS key
-        tags:
-          - kms
-          - key
-        versions:
-          - v1.5.2
-          - v1.5.1
-          - v1.5.0
-          - v1.4.0
-          - v1.3.0
-          - v1.2.1
-          - v1.2.0
-          - v1.1.0
-          - v1.0.4
-          - v1.0.3
-          - v1.0.2
-          - v1.0.1
-          - v1.0.0
-          - v0.0.0
-        group: kms-key
-        displayName: IBM KMS Key
       - cloudProvider: ""
         softwareProvider: ibm-cp
         type: terraform
