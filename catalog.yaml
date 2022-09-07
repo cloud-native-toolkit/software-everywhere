@@ -107,6 +107,9 @@ aliases:
   - id: github.com/terraform-ibm-modules/terraform-ibm-toolkit-cert-manager
     aliases:
       - github.com/cloud-native-toolkit/terraform-ibm-cert-manager
+  - id: github.com/terraform-ibm-modules/terraform-ibm-toolkit-cert-manager-cert
+    aliases:
+      - github.com/cloud-native-toolkit/terraform-ibm-cert-manager-cert
 categories:
   - category: cluster
     categoryName: Cluster
@@ -571,7 +574,7 @@ categories:
         group: cert-manager
         cloudProvider: ibm
       - name: IBM Certificate Manager Certificate
-        id: github.com/cloud-native-toolkit/terraform-ibm-cert-manager-cert
+        id: github.com/terraform-ibm-modules/terraform-ibm-toolkit-cert-manager-cert
         cloudProvider: ibm
       - name: Cloud Pak MQ Operator
         id: github.com/cloud-native-toolkit/terraform-gitops-cp-mq
