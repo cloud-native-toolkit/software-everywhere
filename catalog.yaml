@@ -101,6 +101,9 @@ aliases:
   - id: github.com/terraform-ibm-modules/terraform-ibm-toolkit-kms
     aliases:
       - github.com/cloud-native-toolkit/terraform-ibm-kms
+  - id: github.com/terraform-ibm-modules/terraform-ibm-toolkit-kms-key
+    aliases:
+      - github.com/cloud-native-toolkit/terraform-ibm-kms-key
 categories:
   - category: cluster
     categoryName: Cluster
@@ -531,7 +534,7 @@ categories:
         group: kms
         cloudProvider: ibm
       - name: IBM KMS Key
-        id: github.com/cloud-native-toolkit/terraform-ibm-kms-key
+        id: github.com/terraform-ibm-modules/terraform-ibm-toolkit-kms-key
         group: kms-key
         cloudProvider: ibm
       - name: Service Mesh
