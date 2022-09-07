@@ -2314,6 +2314,33 @@ categories:
           - v1.0.1
         group: kms
         displayName: IBM Hyper Protect Initialization
+      - cloudProvider: ibm
+        softwareProvider: ""
+        type: terraform
+        id: github.com/terraform-ibm-modules/terraform-ibm-toolkit-kms-key
+        name: ibm-kms-key
+        alias: kms-key
+        description: Module to lookup or create a KMS key
+        tags:
+          - kms
+          - key
+        versions:
+          - v1.5.2
+          - v1.5.1
+          - v1.5.0
+          - v1.4.0
+          - v1.3.0
+          - v1.2.1
+          - v1.2.0
+          - v1.1.0
+          - v1.0.4
+          - v1.0.3
+          - v1.0.2
+          - v1.0.1
+          - v1.0.0
+          - v0.0.0
+        group: kms-key
+        displayName: IBM KMS Key
       - cloudProvider: ""
         softwareProvider: ibm-cp
         type: terraform
@@ -2425,24 +2452,6 @@ categories:
           - v1.0.0
         group: cert-manager
         displayName: JetStack Cert Manager
-      - cloudProvider: ibm
-        softwareProvider: ""
-        type: terraform
-        id: github.com/cloud-native-toolkit/terraform-ibm-cert-manager
-        name: ibm-cert-manager
-        description: Module to provision an IBM Cloud Certificate Manager instance.
-        tags:
-          - ibm cloud
-          - certificate
-          - cert manager
-        versions:
-          - v1.1.0
-          - v1.0.2
-          - v1.0.1
-          - v1.0.0
-          - v0.0.0
-        group: cert-manager
-        displayName: IBM Certificate Manager
       - cloudProvider: ibm
         softwareProvider: ""
         type: terraform
@@ -4688,6 +4697,9 @@ aliases:
   - id: github.com/terraform-ibm-modules/terraform-ibm-toolkit-kms
     aliases:
       - github.com/cloud-native-toolkit/terraform-ibm-kms
+  - id: github.com/terraform-ibm-modules/terraform-ibm-toolkit-kms-key
+    aliases:
+      - github.com/cloud-native-toolkit/terraform-ibm-kms-key
 providers:
   - name: azurerm
     source: hashicorp/azurerm
