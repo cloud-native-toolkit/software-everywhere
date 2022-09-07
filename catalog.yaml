@@ -110,6 +110,15 @@ aliases:
   - id: github.com/terraform-ibm-modules/terraform-ibm-toolkit-cert-manager-cert
     aliases:
       - github.com/cloud-native-toolkit/terraform-ibm-cert-manager-cert
+  - id: github.com/terraform-ibm-modules/terraform-ibm-toolkit-portworx
+    aliases:
+      - github.com/cloud-native-toolkit/terraform-ibm-portworx
+  - id: github.com/terraform-ibm-modules/terraform-ibm-toolkit-db2-warehouse
+    aliases:
+      - github.com/cloud-native-toolkit/terraform-ibm-db2-warehouse
+  - id: github.com/terraform-ibm-modules/terraform-ibm-toolkit-etcd
+    aliases:
+      - github.com/cloud-native-toolkit/terraform-ibm-etcd
 categories:
   - category: cluster
     categoryName: Cluster
@@ -745,12 +754,12 @@ categories:
         group: db2-schema
         type: gitops
       - name: ibm-db2-warehouse
-        id: github.com/cloud-native-toolkit/terraform-ibm-db2-warehouse
+        id: github.com/terraform-ibm-modules/terraform-ibm-toolkit-db2-warehouse
         displayName: IBM DB2 Warehouse
         group: db2-warehouse
         cloudProvider: ibm
       - name: ibm-etcd
-        id: github.com/cloud-native-toolkit/terraform-ibm-etcd
+        id: github.com/terraform-ibm-modules/terraform-ibm-toolkit-etcd
         displayName: IBM etcd
         group: etcd
         cloudProvider: ibm
@@ -778,7 +787,7 @@ categories:
         group: portworx
       - name: ibm-portworx
         displayName: Portworx on IBM Cloud
-        id: github.com/cloud-native-toolkit/terraform-ibm-portworx
+        id: github.com/terraform-ibm-modules/terraform-ibm-toolkit-portworx
         cloudProvider: ibm
         group: portworx
       - name: aws-s3-instance
