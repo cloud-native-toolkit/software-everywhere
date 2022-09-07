@@ -2225,6 +2225,33 @@ categories:
       - cloudProvider: ibm
         softwareProvider: ""
         type: terraform
+        id: github.com/terraform-ibm-modules/terraform-ibm-toolkit-kms
+        name: ibm-kms
+        description: Module to provision Key Protect
+        tags:
+          - tools
+          - kms
+          - hpcs
+          - key protect
+        versions:
+          - v0.3.6
+          - v0.3.5
+          - v0.3.4
+          - v0.3.3
+          - v0.3.2
+          - v0.2.0
+          - v0.1.3
+          - v0.1.2
+          - v0.1.1
+          - v0.1.0
+          - v0.0.0
+        interfaces:
+          - github.com/cloud-native-toolkit/automation-modules#ibm-service
+        group: kms
+        displayName: IBM KMS
+      - cloudProvider: ibm
+        softwareProvider: ""
+        type: terraform
         id: github.com/terraform-ibm-modules/terraform-ibm-toolkit-key-protect
         name: key-protect
         description: Module to provision Key Protect
@@ -4654,6 +4681,12 @@ aliases:
   - id: github.com/terraform-ibm-modules/terraform-ibm-toolkit-event-streams-topic
     aliases:
       - github.com/cloud-native-toolkit/terraform-ibm-event-streams-topic
+  - id: github.com/terraform-ibm-modules/terraform-ibm-toolkit-event-streams-topic
+    aliases:
+      - github.com/cloud-native-toolkit/terraform-ibm-event-streams-topic
+  - id: github.com/terraform-ibm-modules/terraform-ibm-toolkit-kms
+    aliases:
+      - github.com/cloud-native-toolkit/terraform-ibm-kms
 providers:
   - name: azurerm
     source: hashicorp/azurerm
