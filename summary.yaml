@@ -513,6 +513,38 @@ categories:
         id: github.com/cloud-native-toolkit/terraform-gitops-cp-db2-schema
         group: db2-schema
         displayName: IBM DB2 Database Schema
+      - cloudProvider: ibm
+        softwareProvider: ""
+        type: terraform
+        name: ibm-db2-warehouse
+        description: Module to provision db2-warehouse on ibm
+        tags:
+          - tools
+          - devops
+        versions:
+          - v1.0.0
+        id: github.com/terraform-ibm-modules/terraform-ibm-toolkit-db2-warehouse
+        interfaces:
+          - github.com/cloud-native-toolkit/automation-modules#db2-warehouse
+          - github.com/cloud-native-toolkit/automation-modules#ibm-service
+        group: db2-warehouse
+        displayName: IBM DB2 Warehouse
+      - cloudProvider: ibm
+        softwareProvider: ""
+        type: terraform
+        name: ibm-etcd
+        description: Module to provision etcd on ibm
+        tags:
+          - etcd
+          - ibmcloud
+        versions:
+          - v1.1.0
+          - v1.0.0
+        id: github.com/terraform-ibm-modules/terraform-ibm-toolkit-etcd
+        interfaces:
+          - github.com/cloud-native-toolkit/automation-modules#ibm-service
+        group: etcd
+        displayName: IBM etcd
   - category: dev-tool
     categoryName: Dev Tools
     selection: multiple
@@ -4187,6 +4219,24 @@ categories:
         id: github.com/cloud-native-toolkit/terraform-gitops-ibm-portworx
         group: portworx
         displayName: Portworx on IBM Cloud (Gitops)
+      - cloudProvider: ibm
+        softwareProvider: ""
+        type: terraform
+        id: github.com/terraform-ibm-modules/terraform-ibm-toolkit-portworx
+        name: ibm-portworx
+        description: Terraform module to install Portworx storage in an OpenShift cluster.
+        tags:
+          - tools
+          - devops
+        versions:
+          - v1.0.5
+          - v1.0.4
+          - v1.0.3
+          - v1.0.2
+          - v1.0.1
+          - v1.0.0
+        group: portworx
+        displayName: Portworx on IBM Cloud
       - cloudProvider: aws
         softwareProvider: ""
         type: terraform
@@ -4675,6 +4725,15 @@ aliases:
   - id: github.com/terraform-ibm-modules/terraform-ibm-toolkit-cert-manager-cert
     aliases:
       - github.com/cloud-native-toolkit/terraform-ibm-cert-manager-cert
+  - id: github.com/terraform-ibm-modules/terraform-ibm-toolkit-portworx
+    aliases:
+      - github.com/cloud-native-toolkit/terraform-ibm-portworx
+  - id: github.com/terraform-ibm-modules/terraform-ibm-toolkit-db2-warehouse
+    aliases:
+      - github.com/cloud-native-toolkit/terraform-ibm-db2-warehouse
+  - id: github.com/terraform-ibm-modules/terraform-ibm-toolkit-etcd
+    aliases:
+      - github.com/cloud-native-toolkit/terraform-ibm-etcd
 providers:
   - name: azurerm
     source: hashicorp/azurerm
