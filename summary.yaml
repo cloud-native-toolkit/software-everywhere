@@ -3893,6 +3893,7 @@ categories:
           - ibm cloud
           - activity tracker
         versions:
+          - v2.4.17
           - v2.4.16
           - v2.4.15
           - v2.4.14
