@@ -119,7 +119,6 @@ aliases:
   - id: github.com/terraform-ibm-modules/terraform-ibm-toolkit-etcd
     aliases:
       - github.com/cloud-native-toolkit/terraform-ibm-etcd
-
   - id: github.com/terraform-ibm-modules/terraform-ibm-toolkit-appid
     aliases:
       - github.com/cloud-native-toolkit/terraform-ibm-appid
@@ -132,7 +131,6 @@ aliases:
   - id: github.com/terraform-ibm-modules/terraform-ibm-toolkit-image-registry
     aliases:
       - github.com/cloud-native-toolkit/terraform-ibm-image-registry
-
 categories:
   - category: cluster
     categoryName: Cluster
