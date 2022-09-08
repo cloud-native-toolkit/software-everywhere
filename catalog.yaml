@@ -119,6 +119,18 @@ aliases:
   - id: github.com/terraform-ibm-modules/terraform-ibm-toolkit-etcd
     aliases:
       - github.com/cloud-native-toolkit/terraform-ibm-etcd
+  - id: github.com/terraform-ibm-modules/terraform-ibm-toolkit-appid
+    aliases:
+      - github.com/cloud-native-toolkit/terraform-ibm-appid
+  - id: github.com/terraform-ibm-modules/terraform-ibm-toolkit-activity-tracker
+    aliases:
+      - github.com/cloud-native-toolkit/terraform-ibm-activity-tracker
+  - id: github.com/terraform-ibm-modules/terraform-ibm-toolkit-redis
+    aliases:
+      - github.com/cloud-native-toolkit/terraform-ibm-redis
+  - id: github.com/terraform-ibm-modules/terraform-ibm-toolkit-image-registry
+    aliases:
+      - github.com/cloud-native-toolkit/terraform-ibm-image-registry
 categories:
   - category: cluster
     categoryName: Cluster
@@ -198,8 +210,8 @@ categories:
         id: github.com/terraform-ibm-modules/terraform-ibm-toolkit-container-registry
         group: registry
         cloudProvider: ibm
-      - name: IBM Container Registry
-        id: github.com/cloud-native-toolkit/terraform-ibm-image-registry
+      - name: IBM Image Registry
+        id: github.com/terraform-ibm-modules/terraform-ibm-toolkit-image-registry
         group: registry
         cloudProvider: ibm
       - name: OpenShift Container Registry
@@ -480,7 +492,7 @@ categories:
     selection: multiple
     modules:
       - name: IBM Activity Tracker
-        id: github.com/cloud-native-toolkit/terraform-ibm-activity-tracker
+        id: github.com/terraform-ibm-modules/terraform-ibm-toolkit-activity-tracker
         group: activity-tracker
         cloudProvider: ibm
       - name: IBM Log Analysis
@@ -525,7 +537,7 @@ categories:
     selection: multiple
     modules:
       - name: IBM AppId
-        id: github.com/cloud-native-toolkit/terraform-ibm-appid
+        id: github.com/terraform-ibm-modules/terraform-ibm-toolkit-appid
         cloudProvider: ibm
       - name: Jaeger
         id: github.com/cloud-native-toolkit/terraform-tools-jaeger
@@ -730,7 +742,7 @@ categories:
         group: mongodb
         cloudProvider: ibm
       - name: IBM Redis
-        id: github.com/cloud-native-toolkit/terraform-ibm-redis
+        id: github.com/terraform-ibm-modules/terraform-ibm-toolkit-redis
         group: redis
         cloudProvider: ibm
       - name: Existing IBM DB2 Warehouse
