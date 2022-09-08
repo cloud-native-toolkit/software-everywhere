@@ -1800,6 +1800,7 @@ categories:
           - tools
           - gitops
         versions:
+          - v1.12.3
           - v1.12.2
           - v1.12.1
           - v1.12.0
