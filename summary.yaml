@@ -435,7 +435,7 @@ categories:
       - cloudProvider: ibm
         softwareProvider: ""
         type: terraform
-        id: github.com/cloud-native-toolkit/terraform-ibm-redis
+        id: github.com/terraform-ibm-modules/terraform-ibm-toolkit-redis
         name: ibm-redis
         description: Module to provision a managed Redis instance in an IBM Cloud account
         tags:
@@ -1679,7 +1679,7 @@ categories:
       - cloudProvider: ibm
         softwareProvider: ""
         type: terraform
-        id: github.com/cloud-native-toolkit/terraform-ibm-image-registry
+        id: github.com/terraform-ibm-modules/terraform-ibm-toolkit-image-registry
         name: ibm-image-registry
         alias: registry
         description: Module to set up a namespace in the IBM Container Registry and configure the cluster
@@ -1707,7 +1707,7 @@ categories:
           - v1.3.0
           - v1.2.3
         group: registry
-        displayName: IBM Container Registry
+        displayName: IBM Image Registry
       - cloudProvider: ""
         softwareProvider: ""
         type: terraform
@@ -2210,7 +2210,7 @@ categories:
       - cloudProvider: ibm
         softwareProvider: ""
         type: terraform
-        id: github.com/cloud-native-toolkit/terraform-ibm-appid
+        id: github.com/terraform-ibm-modules/terraform-ibm-toolkit-appid
         name: ibm-appid
         description: Provisions the IBM Cloud AppId service
         tags:
@@ -3884,7 +3884,7 @@ categories:
       - cloudProvider: ibm
         softwareProvider: ""
         type: terraform
-        id: github.com/cloud-native-toolkit/terraform-ibm-activity-tracker
+        id: github.com/terraform-ibm-modules/terraform-ibm-toolkit-activity-tracker
         name: ibm-activity-tracker
         description: Provisions the IBM Cloud hosted Activity Tracker service
         tags:
@@ -4735,6 +4735,18 @@ aliases:
   - id: github.com/terraform-ibm-modules/terraform-ibm-toolkit-etcd
     aliases:
       - github.com/cloud-native-toolkit/terraform-ibm-etcd
+  - id: github.com/terraform-ibm-modules/terraform-ibm-toolkit-appid
+    aliases:
+      - github.com/cloud-native-toolkit/terraform-ibm-appid
+  - id: github.com/terraform-ibm-modules/terraform-ibm-toolkit-activity-tracker
+    aliases:
+      - github.com/cloud-native-toolkit/terraform-ibm-activity-tracker
+  - id: github.com/terraform-ibm-modules/terraform-ibm-toolkit-redis
+    aliases:
+      - github.com/cloud-native-toolkit/terraform-ibm-redis
+  - id: github.com/terraform-ibm-modules/terraform-ibm-toolkit-image-registry
+    aliases:
+      - github.com/cloud-native-toolkit/terraform-ibm-image-registry
 providers:
   - name: azurerm
     source: hashicorp/azurerm
