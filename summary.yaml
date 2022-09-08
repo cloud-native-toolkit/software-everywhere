@@ -522,6 +522,7 @@ categories:
           - tools
           - devops
         versions:
+          - v1.0.1
           - v1.0.0
         id: github.com/terraform-ibm-modules/terraform-ibm-toolkit-db2-warehouse
         interfaces:
