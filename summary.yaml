@@ -381,7 +381,7 @@ categories:
       - cloudProvider: ibm
         softwareProvider: ""
         type: terraform
-        id: github.com/cloud-native-toolkit/terraform-ibm-hpdbaas-postgresql
+        id: github.com/terraform-ibm-modules/terraform-ibm-toolkit-hpdbaas-postgresql
         name: ibm-hbdbaas-postgresql
         description: Module to provision Hyper Protect DBaaS for PostgreSQL instance
         tags:
@@ -400,7 +400,7 @@ categories:
       - cloudProvider: ibm
         softwareProvider: ""
         type: terraform
-        id: github.com/cloud-native-toolkit/terraform-ibm-hpdbaas-mongodb
+        id: github.com/terraform-ibm-modules/terraform-ibm-toolkit-hpdbaas-mongodb
         name: ibm-mongodb
         description: Module to provision Hyper Protect DBaaS for MongoDB instance
         tags:
@@ -2281,7 +2281,7 @@ categories:
       - cloudProvider: ibm
         softwareProvider: ""
         type: terraform
-        id: github.com/cloud-native-toolkit/terraform-ibm-hpcs
+        id: github.com/terraform-ibm-modules/terraform-ibm-toolkit-hpcs
         name: hpcs
         description: Module to provision Hyper Protect Crypto Service in an IBM Cloud account
         tags:
@@ -2302,7 +2302,7 @@ categories:
       - cloudProvider: ibm
         softwareProvider: ""
         type: terraform
-        id: github.com/cloud-native-toolkit/terraform-ibm-hpcs-initialization
+        id: github.com/terraform-ibm-modules/terraform-ibm-toolkit-hpcs-initialization
         name: hpcs-initialization
         description: Module to initialize a Hyper Protect Crypto Service instance
         tags:
@@ -4750,6 +4750,18 @@ aliases:
   - id: github.com/terraform-ibm-modules/terraform-ibm-toolkit-image-registry
     aliases:
       - github.com/cloud-native-toolkit/terraform-ibm-image-registry
+  - id: github.com/terraform-ibm-modules/terraform-ibm-toolkit-hpcs
+    aliases:
+      - github.com/cloud-native-toolkit/terraform-ibm-hpcs
+  - id: github.com/terraform-ibm-modules/terraform-ibm-toolkit-hpdbaas-mongodb
+    aliases:
+      - github.com/cloud-native-toolkit/terraform-ibm-hpdbaas-mongodb
+  - id: github.com/terraform-ibm-modules/terraform-ibm-toolkit-hpcs-initialization
+    aliases:
+      - github.com/cloud-native-toolkit/terraform-ibm-hpcs-initialization
+  - id: github.com/terraform-ibm-modules/terraform-ibm-toolkit-hpdbaas-postgresql
+    aliases:
+      - github.com/cloud-native-toolkit/terraform-ibm-hpdbaas-postgresql
 providers:
   - name: azurerm
     source: hashicorp/azurerm
