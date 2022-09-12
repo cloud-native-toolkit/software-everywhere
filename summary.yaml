@@ -4048,7 +4048,7 @@ categories:
       - cloudProvider: ibm
         softwareProvider: ""
         type: terraform
-        id: github.com/cloud-native-toolkit/terraform-ibm-cloud-monitoring-bind
+        id: github.com/terraform-ibm-modules/terraform-ibm-toolkit-cloud-monitoring-bind
         name: ibm-cloud-monitoring-bind
         description: Module to bind an existing IBM Cloud Monitoring instance to a cluster
         tags:
@@ -4753,6 +4753,12 @@ aliases:
   - id: github.com/terraform-ibm-modules/terraform-ibm-toolkit-hpdbaas-postgresql
     aliases:
       - github.com/cloud-native-toolkit/terraform-ibm-hpdbaas-postgresql
+  - id: github.com/terraform-ibm-modules/terraform-ibm-toolkit-cloud-monitoring-bind
+    aliases:
+      - github.com/cloud-native-toolkit/terraform-ibm-cloud-monitoring-bind
+  - id: github.com/terraform-ibm-modules/terraform-ibm-toolkit-cloud-operator
+    aliases:
+      - github.com/cloud-native-toolkit/terraform-ibm-cloud-operator
 providers:
   - name: azurerm
     source: hashicorp/azurerm
