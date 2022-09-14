@@ -1,6 +1,6 @@
 # TechZone Automation
 
-Software Everywhere aims to make it automate the provisioning of Red Hat OpenShift and deployment and use IBM Software in any environment. The automation is provided as a set of reusable modules that can be put together into different composite solutions.
+TechZone Automation aims to make it automate the provisioning of Red Hat OpenShift and deployment and use IBM Software in any environment. The automation is provided as a set of reusable modules that can be put together into different composite solutions.
 
 ## Automation solutions
 
@@ -12,7 +12,7 @@ The full catalog of automation modules is available from https://modules.cloudna
 
 ## Generating automation from a Bill of Materials
 
-The [iascable](https://github.com/cloud-native-toolkit/iascable) cli is used to generate an automation bundle from a Bill of Materials. The Bill of Materials is a yaml file that defines the modules that should go into an automation template.
+The [iascable](https://github.com/cloud-native-toolkit/iascable) cli is used to generate an automation bundle from a Bill of Materials. The Bill of Materials is a YAML file that defines the modules that should go into an automation template.
 
 For example, the following will generate automation to provision Maximo Application Suite Core on an existing cluster:
 
@@ -86,7 +86,7 @@ spec:
 
 ## How to apply a module
 
-In order to use one of these modules, a terraform script should be created that references the desired module(s). For example, to use the `ibmcloud_cluster` module to provision a cluster, the following would be required:
+In order to use one of these modules, a Terraform script should be created that references the desired module(s). For example, to use the `ibmcloud_cluster` module to provision a cluster, the following would be required:
 
 ```
 
@@ -123,21 +123,19 @@ module "cluster" {
 ```
 
 where:
-- `CLUSTER_NAME` is any name you want for your terraform script
+- `CLUSTER_NAME` is any name you want for your Terraform script
 - `source` points to the module folder in this repo
-- `${var.xxx}` refers to a variable in your terraform script. All of the variables defined within the module's `variables.tf` file need to be provided a value, either through the terraform script or through a default value in the variables.tf file itself
+- `${var.xxx}` refers to a variable in your Terraform script. All of the variables defined within the module's `variables.tf` file need to be provided a value, either through the Terraform script or through a default value in the variables.tf file itself
 
 **Note:** If you want to refer to a specific version of a module identified by a branch or tag within the repo, you can add `ref` to the end of the repo url. E.g. github.com/ibm-garage-cloud/garage-terraform-modules/cluster/ibmcloud_cluster?ref=v1.0.0
 
-For more information on Terraform modules see https://www.terraform.io/docs/modules/index.html
+For more information on Terraform modules see https://www.terraform.io/docs/modules/
 
 ## Contribution
 
-We want the broader IBM and Partner  teams to contribute to this work to help scale and grow skills and accelerate projects.
+We want the broader IBM and Partner teams to contribute to this work to help scale and grow skills and accelerate projects.
 
 Read the following contribution guidelines to help support the work.
 
 - [Developer Contribution](https://modules.cloudnativetoolkit.dev/#/contributing)
 - [Governance Process](./governance.md)
-
-
