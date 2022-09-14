@@ -3087,6 +3087,7 @@ categories:
           - vpc
           - public gateway
         versions:
+          - v1.10.0
           - v1.9.1
           - v1.9.0
           - v1.8.2
