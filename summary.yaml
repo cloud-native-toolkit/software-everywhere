@@ -3119,6 +3119,7 @@ categories:
           - subnets
           - vpc
         versions:
+          - v1.14.0
           - v1.13.3
           - v1.13.2
           - v1.13.1
@@ -4131,6 +4132,7 @@ categories:
           - object storage
           - saas
         versions:
+          - v4.1.0
           - v4.0.7
           - v4.0.6
           - v4.0.5
