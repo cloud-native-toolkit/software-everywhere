@@ -3001,6 +3001,7 @@ categories:
           - infrastructure
           - networking
         versions:
+          - v1.17.0
           - v1.16.1
           - v1.16.0
           - v1.15.8
