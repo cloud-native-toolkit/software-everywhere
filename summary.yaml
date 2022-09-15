@@ -3204,6 +3204,7 @@ categories:
           - infrastructure
           - security
         versions:
+          - v1.7.3
           - v1.7.2
           - v1.7.1
           - v1.7.0
@@ -3867,6 +3868,18 @@ categories:
         id: github.com/cloud-native-toolkit/terraform-azure-vpn-server
         group: vpn
         displayName: Azure VPN Server
+      - cloudProvider: azure
+        softwareProvider: ""
+        type: terraform
+        name: azure-rtb
+        description: Module to provision rtb on azure
+        tags:
+          - tools
+          - devops
+        versions: []
+        id: github.com/cloud-native-toolkit/terraform-azure-rtb
+        group: route
+        displayName: Azure Route Table
   - category: source-control
     categoryName: Source Control
     selection: single
