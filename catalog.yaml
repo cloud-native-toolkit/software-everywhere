@@ -1012,6 +1012,9 @@ categories:
       - name: gitops-swagger-editor
         id: github.com/cloud-native-toolkit/terraform-gitops-swagger-editor
         displayName: Swagger Editor
+      - name: gitops-web-terminal
+        id: github.com/cloud-native-toolkit/terraform-gitops-web-terminal
+        displayName: Web Terminal
   - category: util
     categoryName: Utilities
     selection: multiple
