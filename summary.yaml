@@ -319,6 +319,19 @@ categories:
         id: github.com/cloud-native-toolkit/terraform-aws-ocp-ipi
         group: openshift
         displayName: AWS OpenShift IPI
+      - cloudProvider: azure
+        softwareProvider: ""
+        type: terraform
+        name: azure-aro
+        description: Module to provision Azure RedHat OpenShift on azure
+        tags:
+          - azure
+          - cluster
+        versions:
+          - v1.0.0
+        id: github.com/cloud-native-toolkit/terraform-azure-aro
+        group: openshift
+        displayName: Azure OpenShift ARO
   - category: databases
     categoryName: Databases
     selection: multiple
