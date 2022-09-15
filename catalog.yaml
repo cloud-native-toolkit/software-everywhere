@@ -188,6 +188,10 @@ categories:
         displayName: AWS OpenShift IPI
         group: openshift
         cloudProvider: aws
+      - name: Azure OpenShift ARO
+        id: github.com/cloud-native-toolkit/terraform-azure-aro
+        group: openshift
+        cloudProvider: azure
   - category: iam
     categoryName: IAM
     selection: multiple
