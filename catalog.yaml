@@ -23,10 +23,12 @@ aliases:
   - id: github.com/terraform-ibm-modules/terraform-ibm-toolkit-access-group
     aliases:
       - github.com/cloud-native-toolkit/terraform-ibm-access-group
-  - id: github.com/terraform-ibm-modules/terraform-ibm-toolkit-account-access-group
+  - id: >-
+      github.com/terraform-ibm-modules/terraform-ibm-toolkit-account-access-group
     aliases:
       - github.com/cloud-native-toolkit/terraform-ibm-account-access-group
-  - id: github.com/terraform-ibm-modules/terraform-ibm-toolkit-iam-service-authorization
+  - id: >-
+      github.com/terraform-ibm-modules/terraform-ibm-toolkit-iam-service-authorization
     aliases:
       - github.com/cloud-native-toolkit/terraform-ibm-iam-service-authorization
   - id: github.com/terraform-ibm-modules/terraform-ibm-toolkit-onboard-fs-account
@@ -41,7 +43,8 @@ aliases:
   - id: github.com/terraform-ibm-modules/terraform-ibm-toolkit-iks-vpc
     aliases:
       - github.com/cloud-native-toolkit/terraform-ibm-iks-vpc
-  - id: github.com/terraform-ibm-modules/terraform-ibm-toolkit-add-access-group-users
+  - id: >-
+      github.com/terraform-ibm-modules/terraform-ibm-toolkit-add-access-group-users
     aliases:
       - github.com/cloud-native-toolkit/terraform-ibm-add-access-group-users
   - id: github.com/terraform-ibm-modules/terraform-ibm-toolkit-vpc-gateways
@@ -86,7 +89,8 @@ aliases:
   - id: github.com/terraform-ibm-modules/terraform-ibm-toolkit-object-storage
     aliases:
       - github.com/cloud-native-toolkit/terraform-ibm-object-storage
-  - id: github.com/terraform-ibm-modules/terraform-ibm-toolkit-object-storage-bucket
+  - id: >-
+      github.com/terraform-ibm-modules/terraform-ibm-toolkit-object-storage-bucket
     aliases:
       - github.com/cloud-native-toolkit/terraform-ibm-object-storage-bucket
   - id: github.com/terraform-ibm-modules/terraform-ibm-toolkit-event-streams
@@ -131,7 +135,6 @@ aliases:
   - id: github.com/terraform-ibm-modules/terraform-ibm-toolkit-image-registry
     aliases:
       - github.com/cloud-native-toolkit/terraform-ibm-image-registry
-
   - id: github.com/terraform-ibm-modules/terraform-ibm-toolkit-hpcs
     aliases:
       - github.com/cloud-native-toolkit/terraform-ibm-hpcs
@@ -144,7 +147,8 @@ aliases:
   - id: github.com/terraform-ibm-modules/terraform-ibm-toolkit-hpdbaas-postgresql
     aliases:
       - github.com/cloud-native-toolkit/terraform-ibm-hpdbaas-postgresql
-  - id: github.com/terraform-ibm-modules/terraform-ibm-toolkit-cloud-monitoring-bind
+  - id: >-
+      github.com/terraform-ibm-modules/terraform-ibm-toolkit-cloud-monitoring-bind
     aliases:
       - github.com/cloud-native-toolkit/terraform-ibm-cloud-monitoring-bind
   - id: github.com/terraform-ibm-modules/terraform-ibm-toolkit-cloud-operator
@@ -189,7 +193,8 @@ categories:
     selection: multiple
     modules:
       - name: IBM Onboard FS Cloud Account
-        id: github.com/terraform-ibm-modules/terraform-ibm-toolkit-onboard-fs-account
+        id: >-
+          github.com/terraform-ibm-modules/terraform-ibm-toolkit-onboard-fs-account
         cloudProvider: ibm
       - name: IBM Resource Group
         id: github.com/terraform-ibm-modules/terraform-ibm-toolkit-resource-group
@@ -200,7 +205,8 @@ categories:
         group: resource-group
         cloudProvider: azure
       - name: IBM Account Access Group
-        id: github.com/terraform-ibm-modules/terraform-ibm-toolkit-account-access-group
+        id: >-
+          github.com/terraform-ibm-modules/terraform-ibm-toolkit-account-access-group
         group: access-group
         cloudProvider: ibm
       - name: IBM Access Group
@@ -211,7 +217,8 @@ categories:
         id: github.com/terraform-ibm-modules/terraform-ibm-toolkit-account-users
         cloudProvider: ibm
       - name: IBM Add Users to Access Group
-        id: github.com/terraform-ibm-modules/terraform-ibm-toolkit-add-access-group-users
+        id: >-
+          github.com/terraform-ibm-modules/terraform-ibm-toolkit-add-access-group-users
         cloudProvider: ibm
       - name: IBM Service Authorization
         id: >-
@@ -226,7 +233,8 @@ categories:
     selection: single
     modules:
       - name: IBM Container Registry
-        id: github.com/terraform-ibm-modules/terraform-ibm-toolkit-container-registry
+        id: >-
+          github.com/terraform-ibm-modules/terraform-ibm-toolkit-container-registry
         group: registry
         cloudProvider: ibm
       - name: IBM Image Registry
@@ -417,6 +425,11 @@ categories:
         displayName: Azure VPN Server
         group: vpn
         cloudProvider: azure
+      - name: azure-rtb
+        id: github.com/cloud-native-toolkit/terraform-azure-rtb
+        displayName: Azure Route Table
+        group: route
+        cloudProvider: azure
   - category: infrastructure
     categoryName: Software Infrastructure
     selection: indirect
@@ -511,7 +524,8 @@ categories:
     selection: multiple
     modules:
       - name: IBM Activity Tracker
-        id: github.com/terraform-ibm-modules/terraform-ibm-toolkit-activity-tracker
+        id: >-
+          github.com/terraform-ibm-modules/terraform-ibm-toolkit-activity-tracker
         group: activity-tracker
         cloudProvider: ibm
       - name: IBM Log Analysis
@@ -519,14 +533,17 @@ categories:
         group: logging
         cloudProvider: ibm
       - name: IBM Log Analysis Bind
-        id: github.com/terraform-ibm-modules/terraform-ibm-toolkit-log-analysis-bind
+        id: >-
+          github.com/terraform-ibm-modules/terraform-ibm-toolkit-log-analysis-bind
         cloudProvider: ibm
       - name: IBM Cloud Monitoring
-        id: github.com/terraform-ibm-modules/terraform-ibm-toolkit-cloud-monitoring
+        id: >-
+          github.com/terraform-ibm-modules/terraform-ibm-toolkit-cloud-monitoring
         group: monitoring
         cloudProvider: ibm
       - name: IBM Cloud Monitoring Bind
-        id: github.com/terraform-ibm-modules/terraform-ibm-toolkit-cloud-monitoring-bind
+        id: >-
+          github.com/terraform-ibm-modules/terraform-ibm-toolkit-cloud-monitoring-bind
         cloudProvider: ibm
       - name: IBM SCC Collector
         id: github.com/cloud-native-toolkit/terraform-vsi-scc-collector
@@ -579,7 +596,8 @@ categories:
         group: kms
         cloudProvider: ibm
       - name: IBM Hyper Protect Initialization
-        id: github.com/terraform-ibm-modules/terraform-ibm-toolkit-hpcs-initialization
+        id: >-
+          github.com/terraform-ibm-modules/terraform-ibm-toolkit-hpcs-initialization
         group: kms
         cloudProvider: ibm
       - name: IBM KMS Key
@@ -598,7 +616,8 @@ categories:
         group: kafka
         cloudProvider: ibm
       - name: Event Streams Topic
-        id: github.com/terraform-ibm-modules/terraform-ibm-toolkit-event-streams-topic
+        id: >-
+          github.com/terraform-ibm-modules/terraform-ibm-toolkit-event-streams-topic
         group: kafka-topic
         cloudProvider: ibm
       - name: JetStack Cert Manager
@@ -617,7 +636,8 @@ categories:
         group: cert-manager
         cloudProvider: ibm
       - name: IBM Certificate Manager Certificate
-        id: github.com/terraform-ibm-modules/terraform-ibm-toolkit-cert-manager-cert
+        id: >-
+          github.com/terraform-ibm-modules/terraform-ibm-toolkit-cert-manager-cert
         cloudProvider: ibm
       - name: Cloud Pak MQ Operator
         id: github.com/cloud-native-toolkit/terraform-gitops-cp-mq
@@ -752,7 +772,8 @@ categories:
         id: github.com/cloud-native-toolkit/terraform-gitops-mongo-ce
         group: mongodb
       - name: Hyper Protect DBaaS PostgreSQL
-        id: github.com/terraform-ibm-modules/terraform-ibm-toolkit-hpdbaas-postgresql
+        id: >-
+          github.com/terraform-ibm-modules/terraform-ibm-toolkit-hpdbaas-postgresql
         group: postgresql
         cloudProvider: ibm
       - name: Hyper Protect DBaaS MongoDB
@@ -809,7 +830,8 @@ categories:
         group: object-storage
         cloudProvider: ibm
       - name: IBM Object Storage Bucket
-        id: github.com/terraform-ibm-modules/terraform-ibm-toolkit-object-storage-bucket
+        id: >-
+          github.com/terraform-ibm-modules/terraform-ibm-toolkit-object-storage-bucket
         group: object-storage-bucket
         cloudProvider: ibm
       - name: storageclass
