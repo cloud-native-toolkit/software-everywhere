@@ -1255,6 +1255,18 @@ categories:
         id: github.com/cloud-native-toolkit/terraform-gitops-swagger-editor
         group: ""
         displayName: Swagger Editor
+      - cloudProvider: ""
+        softwareProvider: ""
+        type: gitops
+        name: gitops-web-terminal
+        description: Module to populate a gitops repo with the resources to provision web-terminal
+        tags:
+          - tools
+          - gitops
+        versions: []
+        id: github.com/cloud-native-toolkit/terraform-gitops-web-terminal
+        group: ""
+        displayName: Web Terminal
   - category: gitops
     categoryName: GitOps
     selection: multiple
@@ -2307,6 +2319,7 @@ categories:
           - tools
           - vault
         versions:
+          - v1.5.1
           - v1.5.0
           - v1.4.0
           - v1.3.0
