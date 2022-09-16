@@ -83,30 +83,6 @@ categories:
       - cloudProvider: ""
         softwareProvider: ibm-cp
         type: gitops
-        name: gitops-cp-waiops
-        description: Module to populate a gitops repo with the resources to provision cp-waiops
-        tags:
-          - tools
-          - gitops
-        versions: []
-        id: github.com/cloud-native-toolkit/terraform-gitops-cp-waiops
-        group: ""
-        displayName: Watson AI Ops
-      - cloudProvider: ""
-        softwareProvider: ibm-cp
-        type: gitops
-        name: gitops-cp-waiops-eventmgr
-        description: Module to populate a gitops repo with the resources to provision cp-waiops-eventmgr
-        tags:
-          - tools
-          - gitops
-        versions: []
-        id: github.com/cloud-native-toolkit/terraform-gitops-cp-waiops-eventmgr
-        group: ""
-        displayName: Watson AIOps Event Manager
-      - cloudProvider: ""
-        softwareProvider: ibm-cp
-        type: gitops
         name: gitops-cp-watson-assistant
         description: Module to populate a gitops repo with the resources to provision cp-watson-assistant
         tags:
