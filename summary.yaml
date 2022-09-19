@@ -3869,11 +3869,12 @@ categories:
         softwareProvider: ""
         type: terraform
         name: azure-rtb
-        description: Module to provision rtb on azure
+        description: Module to provision a route table on Azure
         tags:
-          - tools
-          - devops
-        versions: []
+          - azure
+          - network
+        versions:
+          - v1.0.0
         id: github.com/cloud-native-toolkit/terraform-azure-rtb
         group: route
         displayName: Azure Route Table
