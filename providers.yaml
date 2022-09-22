@@ -37,3 +37,5 @@ providers:
         moduleRef:
           id: clis
           output: bin_dir
+  - name: clis
+    source: cloud-native-toolkit/clis
