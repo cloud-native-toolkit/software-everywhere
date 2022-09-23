@@ -959,6 +959,7 @@ categories:
           - consolelink
           - cronjob
         versions:
+          - v1.5.1
           - v1.5.0
           - v1.4.6
           - v1.4.5
@@ -1944,6 +1945,7 @@ categories:
           - catalog
           - operators
         versions:
+          - v1.2.5
           - v1.2.4
           - v1.2.3
           - v1.2.2
@@ -1957,6 +1959,16 @@ categories:
           - v1.0.1
           - v1.0.0
           - v0.0.0
+        documentation: |
+          Currently, four catalogs are installed:
+
+          - IBM Common Services Operator Catalog - `opencloud-operators`
+          - IBM Operator Catalog - `ibm-operator-catalog`
+          - IBM Automation Foundation Catalog - `iaf-core-operators`
+          - IBM Process Mining Catalog - `ibm-automation-processminings`
+          - IBM DB2U Catalog - `ibm-db2uoperator-catalog`
+
+          **Note:** One of the required variable for this module is an IBM Entitlement Key which provides access to the container registry. This value can be retrieved from - https://myibm.ibm.com/products-services/containerlibrary
         group: catalog
         displayName: Cloud Pak Catalogs
       - cloudProvider: ""
