@@ -2070,6 +2070,7 @@ categories:
           - tools
           - gitops
         versions:
+          - v1.1.0
           - v1.0.5
           - v1.0.4
         id: github.com/cloud-native-toolkit/terraform-gitops-cp-foundational-services
