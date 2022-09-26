@@ -1987,6 +1987,7 @@ categories:
           - cp4i
           - platform nagigator
         versions:
+          - v2.0.1
           - v2.0.0
           - v1.0.7
           - v1.0.6
