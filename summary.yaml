@@ -4817,6 +4817,7 @@ providers:
         scope: global
       - name: client_secret
         scope: global
+        sensitive: true
       - name: tenant_id
         scope: global
   - name: aws
@@ -4828,11 +4829,13 @@ providers:
         scope: global
       - name: secret_key
         scope: global
+        sensitive: true
   - name: ibm
     source: ibm-cloud/ibm
     variables:
       - name: ibmcloud_api_key
         scope: global
+        sensitive: true
       - name: region
         scope: global
   - name: gitops
