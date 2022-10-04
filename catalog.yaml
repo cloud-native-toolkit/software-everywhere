@@ -761,6 +761,10 @@ categories:
       - name: gitops-mas-cp4d-config
         id: github.com/cloud-native-toolkit/terraform-gitops-mas-cp4d-config
         displayName: Maximo CP4D Config
+      - name: IBM Secrets Manager
+        id: github.com/cloud-native-toolkit/terraform-ibm-secrets-manager
+        group: cert-manager
+        cloudProvider: ibm
     catalogFile: catalog.yaml
   - category: databases
     categoryName: Databases
@@ -902,14 +906,6 @@ categories:
         id: github.com/cloud-native-toolkit/terraform-gitops-cp-wml
         displayName: Watson Machine Learning
         softwareProvider: ibm-cp
-      # - name: gitops-cp-waiops
-      #   id: github.com/cloud-native-toolkit/terraform-gitops-cp-waiops
-      #   displayName: Watson AI Ops
-      #   softwareProvider: ibm-cp
-      # - name: gitops-cp-waiops-eventmgr
-      #   id: github.com/cloud-native-toolkit/terraform-gitops-cp-waiops-eventmgr
-      #   displayName: Watson AIOps Event Manager
-      #   softwareProvider: ibm-cp
       - name: gitops-cp-watson-assistant
         id: github.com/cloud-native-toolkit/terraform-gitops-cp-watson-assistant
         displayName: cp-watson-assistant
