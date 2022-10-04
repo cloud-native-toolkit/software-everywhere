@@ -3008,6 +3008,20 @@ categories:
         id: github.com/cloud-native-toolkit/terraform-gitops-kafka-strimzi
         group: ""
         displayName: Kafka Strimzi
+      - cloudProvider: ibm
+        softwareProvider: ""
+        type: terraform
+        name: ibm-secrets-manager
+        description: Module to provision an IBM Cloud Secrets Manager instance
+        tags:
+          - ibm cloud
+          - certificate
+          - secrets manager
+        versions:
+          - v1.0.0
+        id: github.com/cloud-native-toolkit/terraform-ibm-secrets-manager
+        group: cert-manager
+        displayName: IBM Secrets Manager
   - category: network
     categoryName: Network
     selection: multiple
