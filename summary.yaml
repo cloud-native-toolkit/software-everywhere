@@ -4614,6 +4614,22 @@ categories:
         displayName: OCP CA Issuer
       - cloudProvider: ""
         softwareProvider: ""
+        type: terraform
+        name: util-storage-class-manager
+        description: Module to collect and organize storage classes within a template
+        tags:
+          - storage class
+          - manager
+          - util
+        versions:
+          - v1.0.2
+          - v1.0.1
+          - v1.0.0
+        id: github.com/cloud-native-toolkit/terraform-util-storage-class-manager
+        group: ""
+        displayName: Storage Class Manager
+      - cloudProvider: ""
+        softwareProvider: ""
         type: gitops
         name: gitops-service-binding-operator
         description: Module to populate a gitops repo with the resources to provision service-binding-operator
