@@ -1245,6 +1245,9 @@ categories:
         id: github.com/cloud-native-toolkit/terraform-gitops-web-terminal
         group: ""
         displayName: Web Terminal
+  - category: examples
+    categoryName: Examples
+    selection: multiple
   - category: gitops
     categoryName: GitOps
     selection: multiple
@@ -2832,21 +2835,6 @@ categories:
         id: github.com/cloud-native-toolkit/terraform-gitops-cp-odm
         group: odm
         displayName: IBM ODM
-      - cloudProvider: ""
-        softwareProvider: ibm-cp
-        type: gitops
-        name: gitops-cp-apic
-        description: Module to populate a gitops repo with the resources to provision cp-apic
-        tags:
-          - tools
-          - gitops
-        versions:
-          - v0.0.3
-          - v0.0.2
-          - v0.0.1
-        id: github.com/cloud-native-toolkit/terraform-gitops-cp-apic
-        group: api-management
-        displayName: Api Connect Instance
       - cloudProvider: ""
         softwareProvider: ibm-cp
         type: gitops
@@ -4827,6 +4815,9 @@ aliases:
   - id: github.com/terraform-ibm-modules/terraform-ibm-toolkit-cloud-operator
     aliases:
       - github.com/cloud-native-toolkit/terraform-ibm-cloud-operator
+  - id: github.com/terraform-ibm-modules/terraform-gitops-ubi
+    aliases:
+      - github.com/cloud-native-toolkit/terraform-gitops-ubi
 providers:
   - name: azurerm
     source: hashicorp/azurerm
