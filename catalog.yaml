@@ -154,19 +154,13 @@ aliases:
   - id: github.com/terraform-ibm-modules/terraform-ibm-toolkit-cloud-operator
     aliases:
       - github.com/cloud-native-toolkit/terraform-ibm-cloud-operator
-  - id: github.com/terraform-ibm-modules/terraform-gitops-ubi
-    aliases:
-      - github.com/cloud-native-toolkit/terraform-gitops-ubi
 categories:
   - category: examples
     categoryName: Examples
     selection: multiple
     modules:
-     -  cloudProvider: ""
-        softwareProvider: ""
-        type: gitops
-        id: github.com/terraform-ibm-modules/terraform-gitops-ubi
-        group: ""
+     -  type: gitops
+        id: github.com/cloud-native-toolkit/terraform-gitops-ubi
         displayName: terraform-gitops-ubi
         name: terraform-gitops-ubi
         description: "That module will add a new 'Argo CD config' to deploy an 'ubi' container to a Cluster"
