@@ -184,9 +184,6 @@ categories:
         displayName: AWS R
         cloudProvider: aws
         group: openshift
-      - name: foo
-        id: github.com/cloud-native-toolkit/terraform-any-foo
-        displayName: foo
       - name: azure-ocp-ipi
         id: github.com/cloud-native-toolkit/terraform-azure-ocp-ipi
         displayName: Azure OpenShift IPI
