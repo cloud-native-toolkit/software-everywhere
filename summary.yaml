@@ -314,22 +314,6 @@ categories:
     modules:
       - cloudProvider: ""
         softwareProvider: ""
-        type: terraform
-        id: github.com/cloud-native-toolkit/terraform-ocp-mongodb
-        name: MongoDB
-        description: Module to install MongoDB-CE on OCP Cluster
-        tags:
-          - tools
-        versions:
-          - v1.2.1
-          - v1.2.0
-          - v1.1.1
-          - v1.1.0
-          - v1.0.0
-        group: mongodb
-        displayName: MongoDB on OCP
-      - cloudProvider: ""
-        softwareProvider: ""
         type: gitops
         name: gitops-mongo-ce-operator
         description: Module to populate a gitops repo with the resources to provision mongo-ce operator
@@ -1248,6 +1232,24 @@ categories:
   - category: examples
     categoryName: Examples
     selection: multiple
+    modules:
+      - cloudProvider: ""
+        softwareProvider: ""
+        type: gitops
+        name: terraform-gitops-ubi
+        description: terraform-gitops-ubi
+        tags:
+          - tools
+          - gitops
+        versions:
+          - v0.0.13
+          - v0.0.12
+          - v0.0.11
+          - v0.0.10
+          - v0.0.9
+        id: github.com/cloud-native-toolkit/terraform-gitops-ubi
+        group: ""
+        displayName: terraform-gitops-ubi
   - category: gitops
     categoryName: GitOps
     selection: multiple
