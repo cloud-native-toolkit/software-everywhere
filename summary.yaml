@@ -314,6 +314,22 @@ categories:
     modules:
       - cloudProvider: ""
         softwareProvider: ""
+        type: terraform
+        id: github.com/cloud-native-toolkit/terraform-ocp-mongodb
+        name: MongoDB
+        description: Module to install MongoDB-CE on OCP Cluster
+        tags:
+          - tools
+        versions:
+          - v1.2.1
+          - v1.2.0
+          - v1.1.1
+          - v1.1.0
+          - v1.0.0
+        group: mongodb
+        displayName: MongoDB on OCP
+      - cloudProvider: ""
+        softwareProvider: ""
         type: gitops
         name: gitops-mongo-ce-operator
         description: Module to populate a gitops repo with the resources to provision mongo-ce operator
@@ -1203,20 +1219,6 @@ categories:
           - v0.1.0
         group: git
         displayName: Gitea
-      - cloudProvider: ""
-        softwareProvider: ""
-        type: gitops
-        name: gitops-swagger-editor
-        description: Module to populate a gitops repo with the resources to provision swagger-editor
-        tags:
-          - tools
-          - gitops
-        versions:
-          - v0.1.0
-          - v0.0.1
-        id: github.com/cloud-native-toolkit/terraform-gitops-swagger-editor
-        group: ""
-        displayName: Swagger Editor
       - cloudProvider: ""
         softwareProvider: ""
         type: gitops
