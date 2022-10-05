@@ -1222,6 +1222,20 @@ categories:
       - cloudProvider: ""
         softwareProvider: ""
         type: gitops
+        name: gitops-swagger-editor
+        description: Module to populate a gitops repo with the resources to provision swagger-editor
+        tags:
+          - tools
+          - gitops
+        versions:
+          - v0.1.0
+          - v0.0.1
+        id: github.com/cloud-native-toolkit/terraform-gitops-swagger-editor
+        group: ""
+        displayName: Swagger Editor
+      - cloudProvider: ""
+        softwareProvider: ""
+        type: gitops
         name: gitops-web-terminal
         description: Module to populate a gitops repo with the resources to provision web-terminal
         tags:
@@ -1244,6 +1258,8 @@ categories:
           - tools
           - gitops
         versions:
+          - v0.0.16
+          - v0.0.15
           - v0.0.13
           - v0.0.12
           - v0.0.11
@@ -4596,22 +4612,6 @@ categories:
         id: github.com/cloud-native-toolkit/terraform-gitops-ocp-ca-issuer
         group: ""
         displayName: OCP CA Issuer
-      - cloudProvider: ""
-        softwareProvider: ""
-        type: terraform
-        name: util-storage-class-manager
-        description: Module to collect and organize storage classes within a template
-        tags:
-          - storage class
-          - manager
-          - util
-        versions:
-          - v1.0.2
-          - v1.0.1
-          - v1.0.0
-        id: github.com/cloud-native-toolkit/terraform-util-storage-class-manager
-        group: ""
-        displayName: Storage Class Manager
       - cloudProvider: ""
         softwareProvider: ""
         type: gitops
