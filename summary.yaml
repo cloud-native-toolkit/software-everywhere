@@ -1657,6 +1657,7 @@ categories:
           - authorization
           - policy
         versions:
+          - v1.2.14
           - v1.2.13
           - v1.2.12
           - v1.2.11
