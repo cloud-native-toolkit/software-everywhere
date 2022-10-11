@@ -371,26 +371,6 @@ categories:
       - cloudProvider: ibm
         softwareProvider: ""
         type: terraform
-        id: github.com/terraform-ibm-modules/terraform-ibm-toolkit-hpdbaas-postgresql
-        name: ibm-hbdbaas-postgresql
-        description: Module to provision Hyper Protect DBaaS for PostgreSQL instance
-        tags:
-          - tools
-          - infrastructure
-          - postgresql
-          - hyper protect
-          - saas
-        versions:
-          - v1.1.2
-          - v1.1.1
-          - v1.1.0
-          - v1.0.0
-          - v0.0.0
-        group: postgresql
-        displayName: Hyper Protect DBaaS PostgreSQL
-      - cloudProvider: ibm
-        softwareProvider: ""
-        type: terraform
         id: github.com/terraform-ibm-modules/terraform-ibm-toolkit-hpdbaas-mongodb
         name: ibm-mongodb
         description: Module to provision Hyper Protect DBaaS for MongoDB instance
@@ -1440,6 +1420,7 @@ categories:
           - tools
           - gitops
         versions:
+          - v0.3.1
           - v0.3.0
           - v0.2.1
           - v0.2.0
@@ -2083,21 +2064,6 @@ categories:
           - v0.0.1
         group: ""
         displayName: Cloud Pak for Data Operator
-      - cloudProvider: ""
-        softwareProvider: ibm-cp
-        type: gitops
-        name: cp4d-instance
-        description: GitOps module to create a CP4D instance
-        tags:
-          - tools
-          - gitops
-        versions:
-          - v1.0.6
-          - v1.0.5
-          - v1.0.5
-        id: github.com/cloud-native-toolkit/terraform-gitops-cp4d-instance
-        group: ""
-        displayName: Cloud Pak for Data Instance
       - cloudProvider: ""
         softwareProvider: ibm-cp
         type: gitops
