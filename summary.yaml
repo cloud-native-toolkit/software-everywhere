@@ -4662,6 +4662,19 @@ categories:
         displayName: Service Binding Operator
       - cloudProvider: ""
         softwareProvider: ""
+        type: gitops
+        name: gitops-module-global-pullsecret
+        description: Module to populate a gitops repo with the resources to provision module-global-pullsecret
+        tags:
+          - tools
+          - gitops
+        versions:
+          - v0.0.1
+        id: github.com/cloud-native-toolkit/terraform-gitops-global-pullsecret
+        group: ""
+        displayName: Global Pull Secret
+      - cloudProvider: ""
+        softwareProvider: ""
         type: terraform
         name: ocp-ipi-certs
         description: Module to replace OpenShift default Ingress & API server certificates
