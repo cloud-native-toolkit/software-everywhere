@@ -2489,20 +2489,6 @@ categories:
         group: cert-manager
         displayName: JetStack Cert Manager
       - cloudProvider: ""
-        softwareProvider: ""
-        type: terraform
-        name: ocp-proxyconfig
-        description: Configure OpenShift Cluster to use a HTTP tunnel proxy for outbound traffic
-        tags:
-          - network
-          - proxy
-          - egress
-        versions:
-          - v0.1.0
-        id: github.com/cloud-native-toolkit/terraform-ocp-proxyconfig
-        group: proxy-config
-        displayName: OpenShift Proxy Config
-      - cloudProvider: ""
         softwareProvider: jetstack
         type: gitops
         id: github.com/cloud-native-toolkit/terraform-gitops-ocp-cert-manager
