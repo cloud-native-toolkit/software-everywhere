@@ -170,7 +170,6 @@ categories:
           - v1.0.0
         interfaces:
           - github.com/cloud-native-toolkit/automation-modules#cluster
-        registryId: cloud-native-toolkit/ocp-vpc/ibm
         group: openshift
         displayName: IBM OpenShift VPC cluster
       - cloudProvider: ibm
@@ -1146,6 +1145,7 @@ categories:
           - tools
           - gitops
         versions:
+          - v2.2.1
           - v2.2.0
           - v2.1.5
           - v2.1.4
@@ -1543,7 +1543,6 @@ categories:
           - v0.0.0
         interfaces:
           - github.com/cloud-native-toolkit/automation-modules#sync
-        registryId: cloud-native-toolkit/resource-group/ibm
         group: resource-group
         displayName: IBM Resource Group
       - cloudProvider: azure
@@ -1587,13 +1586,13 @@ categories:
         type: terraform
         id: github.com/terraform-ibm-modules/terraform-ibm-toolkit-access-group
         name: ibm-access-group
-        registryId: cloud-native-toolkit/access-group/ibm
         description: Module to create ADMIN and USER access groups for a set of resource groups
         tags:
           - tools
           - ibm cloud
           - access groups
         versions:
+          - v3.1.8
           - v3.1.7
           - v3.1.6
           - v3.1.5
