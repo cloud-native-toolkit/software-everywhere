@@ -332,25 +332,6 @@ categories:
       - cloudProvider: ""
         softwareProvider: ""
         type: gitops
-        name: gitops-mongo-ce-operator
-        description: Module to populate a gitops repo with the resources to provision mongo-ce operator
-        tags:
-          - tools
-          - gitops
-        versions:
-          - v1.0.6
-          - v1.0.5
-          - v1.0.4
-          - v1.0.3
-          - v1.0.2
-          - v1.0.1
-          - v1.0.0
-        id: github.com/cloud-native-toolkit/terraform-gitops-mongo-ce-operator
-        group: mongodb
-        displayName: MongoDB Operator
-      - cloudProvider: ""
-        softwareProvider: ""
-        type: gitops
         name: gitops-mongo-ce
         description: Module to populate a gitops repo with the resources to provision mongo-ce instance
         tags:
@@ -4569,6 +4550,7 @@ categories:
           - oc
           - kubectl
         versions:
+          - v1.18.1
           - v1.18.0
           - v1.17.2
           - v1.17.1
