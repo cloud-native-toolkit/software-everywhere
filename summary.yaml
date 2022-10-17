@@ -106,6 +106,19 @@ categories:
         id: github.com/cloud-native-toolkit/terraform-gitops-cp-watson-discovery
         group: ""
         displayName: cp-watson-discovery
+      - cloudProvider: ""
+        softwareProvider: ""
+        type: gitops
+        name: terraform-gitops-watson-nlp
+        description: terraform-gitops-watson-nlp
+        tags:
+          - tools
+          - gitops
+        versions:
+          - v0.0.80
+        id: github.com/cloud-native-toolkit/terraform-gitops-watson-nlp
+        group: ""
+        displayName: terraform-gitops-watson-nlp
   - category: cluster
     categoryName: Cluster
     selection: single
