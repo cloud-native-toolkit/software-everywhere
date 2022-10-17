@@ -407,7 +407,7 @@ categories:
         softwareProvider: ""
         type: terraform
         id: github.com/terraform-ibm-modules/terraform-ibm-toolkit-hpdbaas-mongodb
-        name: ibm-mongodb
+        name: ibm-hpdbaas-mongodb
         description: Module to provision Hyper Protect DBaaS for MongoDB instance
         tags:
           - tools
@@ -2046,6 +2046,7 @@ categories:
           - cp4i
           - platform nagigator
         versions:
+          - v2.0.2
           - v2.0.1
           - v2.0.0
           - v1.0.7
