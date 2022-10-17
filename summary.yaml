@@ -1921,6 +1921,7 @@ categories:
         tags:
           - operators
         versions:
+          - v1.3.3
           - v1.3.2
           - v1.3.1
           - v1.3.0
@@ -1929,6 +1930,7 @@ categories:
           - v1.2.4
           - v1.2.3
           - v1.2.2
+        documentation: "If the cluster is OpenShift 4.x and already has OLM installed then the module does not install anything. It can still \nbe used to export the olm namespaces for use by downstream modules.\n"
         group: ""
         displayName: Operator Lifecycle Manager
       - cloudProvider: ""
