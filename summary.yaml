@@ -115,6 +115,7 @@ categories:
           - tools
           - gitops
         versions:
+          - v0.0.81
           - v0.0.80
         id: github.com/cloud-native-toolkit/terraform-gitops-watson-nlp
         group: ""
