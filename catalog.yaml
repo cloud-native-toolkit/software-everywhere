@@ -920,11 +920,13 @@ categories:
         id: github.com/cloud-native-toolkit/terraform-gitops-cp-watson-discovery
         displayName: cp-watson-discovery
         softwareProvider: ibm-cp
-      - name: terraform-gitops-watson-nlp 
+      - name: terraform-gitops-watson-nlp
         id: github.com/cloud-native-toolkit/terraform-gitops-watson-nlp
-        displayName: terraform-gitops-watson-nlp
+        displayName: IBM Watson NLP
         description: "This module will add a new 'Argo CD config' to deploy a 'watson-nlp-runtime' and optional 'model' containers to a cluster"
+        group: watson-embed
         type: gitops
+        softwareProvider: ibm
   - category: dev-tool
     categoryName: Dev Tools
     selection: multiple
