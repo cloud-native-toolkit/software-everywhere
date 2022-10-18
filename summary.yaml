@@ -107,7 +107,7 @@ categories:
         group: ""
         displayName: cp-watson-discovery
       - cloudProvider: ""
-        softwareProvider: ""
+        softwareProvider: ibm
         type: gitops
         name: terraform-gitops-watson-nlp
         description: terraform-gitops-watson-nlp
@@ -118,8 +118,8 @@ categories:
           - v0.0.81
           - v0.0.80
         id: github.com/cloud-native-toolkit/terraform-gitops-watson-nlp
-        group: ""
-        displayName: terraform-gitops-watson-nlp
+        group: watson-embed
+        displayName: IBM Watson NLP
   - category: cluster
     categoryName: Cluster
     selection: single
