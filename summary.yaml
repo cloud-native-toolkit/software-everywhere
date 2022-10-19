@@ -3976,9 +3976,12 @@ categories:
         name: azure-vpn-server
         description: Module to provision vpn-server on azure
         tags:
-          - tools
-          - devops
-        versions: []
+          - azure
+          - azure-vm
+          - virtual-machine
+          - azure-vpn-server
+        versions:
+          - v1.0.0
         id: github.com/cloud-native-toolkit/terraform-azure-vpn-server
         group: vpn
         displayName: Azure VPN Server
