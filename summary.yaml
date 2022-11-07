@@ -3374,6 +3374,7 @@ categories:
           - vpc
           - bastion
         versions:
+          - v1.10.2
           - v1.10.1
           - v1.10.0
           - v1.9.0
