@@ -4954,10 +4954,34 @@ providers:
       - id: clis
         refs:
           - source: github.com/cloud-native-toolkit/terraform-util-clis.git
+      - id: gitea
+        optional: true
+        refs:
+          - source: github.com/cloud-native-toolkit/terraform-tools-gitea.git
     variables:
       - name: bin_dir
         moduleRef:
           id: clis
           output: bin_dir
+      - name: default_host
+        moduleRef:
+          id: gitea
+          output: host
+      - name: default_org
+        moduleRef:
+          id: gitea
+          output: org
+      - name: default_username
+        moduleRef:
+          id: gitea
+          output: username
+      - name: default_token
+        moduleRef:
+          id: gitea
+          output: token
+      - name: default_ca_cert
+        moduleRef:
+          id: gitea
+          output: ca_cert
   - name: clis
     source: cloud-native-toolkit/clis
