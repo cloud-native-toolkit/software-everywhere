@@ -4977,6 +4977,7 @@ providers:
           id: gitea
           output: username
       - name: default_token
+        sensitive: true
         moduleRef:
           id: gitea
           output: token
@@ -4984,5 +4985,36 @@ providers:
         moduleRef:
           id: gitea
           output: ca_cert
+      - name: host
+        description: The host name of the gitops repository (GitHub, Github Enterprise, Gitlab, Bitbucket, Azure DevOps, and Gitea servers are supported).
+        default: ""
+      - name: org
+        description: The organization on the git server where the repsitory will be located. If not provided the org will default to the username.
+        default: ""
+      - name: project
+        description: The Azure DevOps project in the git server. This value is only applied for Azure DevOps servers.
+        default: ""
+      - name: repo
+        description: The name of the repository in the org on the git server.
+        default: ""
+      - name: username
+        description: The username used to access the git server.
+        default: ""
+      - name: token
+        description: The token used to access the git server.
+        default: ""
+        sensitive: true
+      - name: branch
+        description: The name of the branch in the gitops repository where the config will be stored.
+        default: main
+      - name: server_name
+        description: The name of the server the configuration with which the configuration will be associated.
+        default: default
+      - name: ca_cert
+        description: The ca certificate used to sign the self-signed certificate used by the git server, if applicable.
+        default: ""
+      - name: ca_cert_file
+        description: The file containing the ca certificate used to sign the self-signed certificate used by the git server, if applicable.
+        default: ""
   - name: clis
     source: cloud-native-toolkit/clis
