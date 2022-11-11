@@ -2303,6 +2303,18 @@ categories:
         id: github.com/cloud-native-toolkit/terraform-gitops-cp-db2-oltp
         group: gitops-cp-db2-oltp
         displayName: IBM DB2 OLTP Db2oltpService
+      - cloudProvider: ""
+        softwareProvider: ""
+        type: gitops
+        name: gitops-gitops-toolkit-catalog
+        description: Module to populate a gitops repo with the resources to provision gitops-toolkit-catalog
+        tags:
+          - tools
+          - gitops
+        versions: []
+        id: github.com/cloud-native-toolkit/terraform-gitops-toolkit-catalog
+        group: ""
+        displayName: Toolkit Catalog
   - category: middleware
     categoryName: Software
     selection: multiple
