@@ -4733,6 +4733,7 @@ categories:
           - tools
           - gitops
         versions:
+          - v0.0.2
           - v0.0.1
         id: github.com/cloud-native-toolkit/terraform-gitops-global-pullsecret
         group: ""
