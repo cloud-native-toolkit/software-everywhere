@@ -159,11 +159,13 @@ categories:
     categoryName: Examples
     selection: multiple
     modules:
-     -  type: gitops
+      - type: gitops
         id: github.com/cloud-native-toolkit/terraform-gitops-ubi
         displayName: terraform-gitops-ubi
         name: terraform-gitops-ubi
-        description: "That module will add a new 'Argo CD config' to deploy an 'ubi' container to a Cluster"
+        description: >-
+          That module will add a new 'Argo CD config' to deploy an 'ubi'
+          container to a Cluster
   - category: cluster
     categoryName: Cluster
     selection: single
@@ -529,6 +531,10 @@ categories:
         group: gitops-cp-db2-oltp
         type: gitops
         softwareProvider: ibm-cp
+      - name: gitops-gitops-toolkit-catalog
+        id: >-
+          github.com/cloud-native-toolkit/terraform-gitops-gitops-toolkit-catalog
+        displayName: Toolkit Catalog
   - category: sre
     categoryName: SRE tools
     selection: multiple
@@ -923,7 +929,9 @@ categories:
       - name: terraform-gitops-watson-nlp
         id: github.com/cloud-native-toolkit/terraform-gitops-watson-nlp
         displayName: IBM Watson NLP
-        description: "This module will add a new 'Argo CD config' to deploy a 'watson-nlp-runtime' and optional 'model' containers to a cluster"
+        description: >-
+          This module will add a new 'Argo CD config' to deploy a
+          'watson-nlp-runtime' and optional 'model' containers to a cluster
         group: watson-embed
         type: gitops
         softwareProvider: ibm
