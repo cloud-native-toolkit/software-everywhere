@@ -531,9 +531,9 @@ categories:
         group: gitops-cp-db2-oltp
         type: gitops
         softwareProvider: ibm-cp
-      - name: gitops-gitops-toolkit-catalog
+      - name: gitops-toolkit-catalog
         id: >-
-          github.com/cloud-native-toolkit/terraform-gitops-gitops-toolkit-catalog
+          github.com/cloud-native-toolkit/terraform-gitops-toolkit-catalog
         displayName: Toolkit Catalog
   - category: sre
     categoryName: SRE tools
