@@ -269,6 +269,7 @@ categories:
           - cluster
           - vpc
         versions:
+          - v1.6.0
           - v1.5.1
           - v1.5.0
           - v1.4.0
@@ -2307,15 +2308,32 @@ categories:
       - cloudProvider: ""
         softwareProvider: ""
         type: gitops
-        name: gitops-gitops-toolkit-catalog
-        description: Module to populate a gitops repo with the resources to provision gitops-toolkit-catalog
+        name: gitops-toolkit-catalog
+        description: Module to populate a gitops repo with the resources to provision the Toolkit operator catalog in a cluster.
+        tags:
+          - tools
+          - gitops
+          - operator
+          - catalog
+          - toolkit
+        versions:
+          - v1.0.0
+        id: github.com/cloud-native-toolkit/terraform-gitops-toolkit-catalog
+        documentation: The Toolkit Catalog contains operators developed as part of the Cloud-Native Toolkit.
+        group: ""
+        displayName: Toolkit Catalog
+      - cloudProvider: ""
+        softwareProvider: ""
+        type: gitops
+        name: gitops-masauto-operator
+        description: Module to populate a gitops repo with the resources to provision masauto-operator
         tags:
           - tools
           - gitops
         versions: []
-        id: github.com/cloud-native-toolkit/terraform-gitops-toolkit-catalog
+        id: github.com/cloud-native-toolkit/terraform-gitops-masauto-operator
         group: ""
-        displayName: Toolkit Catalog
+        displayName: MAS Auto Operator
   - category: middleware
     categoryName: Software
     selection: multiple
