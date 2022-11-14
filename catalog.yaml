@@ -532,9 +532,11 @@ categories:
         type: gitops
         softwareProvider: ibm-cp
       - name: gitops-toolkit-catalog
-        id: >-
-          github.com/cloud-native-toolkit/terraform-gitops-toolkit-catalog
+        id: github.com/cloud-native-toolkit/terraform-gitops-toolkit-catalog
         displayName: Toolkit Catalog
+      - name: gitops-masauto-operator
+        id: github.com/cloud-native-toolkit/terraform-gitops-masauto-operator
+        displayName: MAS Auto Operator
   - category: sre
     categoryName: SRE tools
     selection: multiple
