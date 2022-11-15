@@ -45,23 +45,28 @@ providers:
           id: clis
           output: bin_dir
       - name: default_host
+        default: ""
         moduleRef:
           id: gitea
           output: host
       - name: default_org
+        default: ""
         moduleRef:
           id: gitea
           output: org
       - name: default_username
+        default: ""
         moduleRef:
           id: gitea
           output: username
       - name: default_token
+        default: ""
         sensitive: true
         moduleRef:
           id: gitea
           output: token
       - name: default_ca_cert
+        default: ""
         moduleRef:
           id: gitea
           output: ca_cert
