@@ -328,6 +328,7 @@ categories:
           - azure
           - cluster
         versions:
+          - v1.0.1
           - v1.0.0
         id: github.com/cloud-native-toolkit/terraform-azure-aro
         group: openshift
@@ -2322,18 +2323,6 @@ categories:
         documentation: The Toolkit Catalog contains operators developed as part of the Cloud-Native Toolkit.
         group: ""
         displayName: Toolkit Catalog
-      - cloudProvider: ""
-        softwareProvider: ""
-        type: gitops
-        name: gitops-masauto-operator
-        description: Module to populate a gitops repo with the resources to provision masauto-operator
-        tags:
-          - tools
-          - gitops
-        versions: []
-        id: github.com/cloud-native-toolkit/terraform-gitops-masauto-operator
-        group: ""
-        displayName: MAS Auto Operator
   - category: middleware
     categoryName: Software
     selection: multiple
