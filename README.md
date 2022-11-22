@@ -1,6 +1,6 @@
-# TechZone Accelerator Toolkit Module Catalog
+# TechZone Builder Module Catalog
 
-The TechZone Accelerator Toolkit aims to make it super easy to automate the provisioning of Red Hat OpenShift and deployment and use IBM Software in any environment. The automation is provided as a set of reusable modules that can be put together into different composite solutions.
+The TechZone Builder aims to make it super easy to automate the provisioning of Red Hat OpenShift and deployment and use IBM Software in any environment. The automation is provided as a set of reusable modules that can be put together into different composite solutions.
 
 ## Automation solutions
 
