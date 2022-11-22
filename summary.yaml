@@ -4290,6 +4290,26 @@ categories:
       - cloudProvider: ibm
         softwareProvider: ""
         type: terraform
+        name: terraform-ibm-cos
+        alias: cos-advanced
+        description: Configures a Cloud Object Storage instance and/or bucket with options
+        tags:
+          - tools
+          - infrastructure
+          - object storage
+          - saas
+        versions:
+          - v3.1.1
+          - ""
+          - ""
+          - ""
+          - ""
+        id: github.com/terraform-ibm-modules/terraform-ibm-cos
+        group: object-storage
+        displayName: IBM Object Storage
+      - cloudProvider: ibm
+        softwareProvider: ""
+        type: terraform
         id: github.com/terraform-ibm-modules/terraform-ibm-toolkit-object-storage
         name: ibm-object-storage
         alias: cos
