@@ -328,6 +328,7 @@ categories:
           - azure
           - cluster
         versions:
+          - v2.0.0
           - v1.0.1
           - v1.0.0
         id: github.com/cloud-native-toolkit/terraform-azure-aro
