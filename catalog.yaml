@@ -848,6 +848,10 @@ categories:
     selection: multiple
     modules:
       - name: IBM Object Storage
+        id: github.com/terraform-ibm-modules/terraform-ibm-cos
+        group: object-storage
+        cloudProvider: ibm
+      - name: IBM Object Storage
         id: github.com/terraform-ibm-modules/terraform-ibm-toolkit-object-storage
         group: object-storage
         cloudProvider: ibm
