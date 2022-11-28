@@ -3120,6 +3120,20 @@ categories:
         id: github.com/cloud-native-toolkit/terraform-ibm-secrets-manager
         group: cert-manager
         displayName: IBM Secrets Manager
+      - cloudProvider: ibm
+        softwareProvider: ""
+        type: terraform
+        name: terraform-ibm-key-protect-all-inclusive
+        description: Creates a Key Protect instance, key rings for different services, and a key for each instance of the service
+        tags:
+          - tools
+          - infrastructure
+          - saas
+        versions:
+          - v1.1.1
+        id: github.com/terraform-ibm-modules/terraform-ibm-key-protect-all-inclusive
+        group: kms
+        displayName: Key Protect all inclusive
   - category: network
     categoryName: Network
     selection: multiple
@@ -4299,6 +4313,7 @@ categories:
           - object storage
           - saas
         versions:
+          - v3.1.2
           - v3.1.1
           - ""
           - ""
