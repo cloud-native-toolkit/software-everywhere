@@ -779,6 +779,11 @@ categories:
         id: github.com/cloud-native-toolkit/terraform-ibm-secrets-manager
         group: cert-manager
         cloudProvider: ibm
+      - name: Key Protect all inclusive
+        id: >-
+          github.com/terraform-ibm-modules/terraform-ibm-key-protect-all-inclusive
+        group: kms
+        cloudProvider: ibm
     catalogFile: catalog.yaml
   - category: databases
     categoryName: Databases
