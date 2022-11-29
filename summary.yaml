@@ -1232,6 +1232,7 @@ categories:
           - gitops
           - gitea
         versions:
+          - v0.5.1
           - v0.5.0
           - v0.4.1
           - v0.4.0
@@ -3134,6 +3135,18 @@ categories:
         id: github.com/terraform-ibm-modules/terraform-ibm-key-protect-all-inclusive
         group: kms
         displayName: Key Protect all inclusive
+      - cloudProvider: azure
+        softwareProvider: ""
+        type: terraform
+        name: azure-key-vault
+        description: Module to provision key-vault on azure
+        tags:
+          - tools
+          - devops
+        versions: []
+        id: github.com/cloud-native-toolkit/terraform-azure-key-vault
+        group: cert-manager
+        displayName: Azure Key Vault
   - category: network
     categoryName: Network
     selection: multiple
