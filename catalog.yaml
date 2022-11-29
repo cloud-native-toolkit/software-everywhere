@@ -784,6 +784,11 @@ categories:
           github.com/terraform-ibm-modules/terraform-ibm-key-protect-all-inclusive
         group: kms
         cloudProvider: ibm
+      - name: azure-key-vault
+        id: github.com/cloud-native-toolkit/terraform-azure-key-vault
+        displayName: Azure Key Vault
+        group: cert-manager
+        cloudProvider: azure
     catalogFile: catalog.yaml
   - category: databases
     categoryName: Databases
