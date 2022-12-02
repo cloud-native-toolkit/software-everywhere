@@ -3122,6 +3122,18 @@ categories:
         id: github.com/cloud-native-toolkit/terraform-ibm-secrets-manager
         group: cert-manager
         displayName: IBM Secrets Manager
+      - cloudProvider: ""
+        softwareProvider: ""
+        type: gitops
+        name: gitops-waiops
+        description: Module to populate a gitops repo with the resources to provision waiops
+        tags:
+          - tools
+          - gitops
+        versions: []
+        id: github.com/cloud-native-toolkit/terraform-gitops-waiops
+        group: ""
+        displayName: Watson AI Ops
       - cloudProvider: ibm
         softwareProvider: ""
         type: terraform
