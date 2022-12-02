@@ -789,6 +789,9 @@ categories:
         displayName: Azure Key Vault
         group: cert-manager
         cloudProvider: azure
+      - name: gitops-waiops
+        id: github.com/cloud-native-toolkit/terraform-gitops-waiops
+        displayName: WAIops
     catalogFile: catalog.yaml
   - category: databases
     categoryName: Databases
