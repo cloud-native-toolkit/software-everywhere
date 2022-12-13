@@ -792,6 +792,9 @@ categories:
         displayName: Azure Key Vault
         group: cert-manager
         cloudProvider: azure
+      - name: gitops-wazi-dev-spaces
+        id: github.com/cloud-native-toolkit/terraform-gitops-wazi-dev-spaces
+        displayName: wazi-dev-spaces
     catalogFile: catalog.yaml
   - category: databases
     categoryName: Databases
