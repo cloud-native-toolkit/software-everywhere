@@ -1380,6 +1380,7 @@ categories:
           - devops
           - gitops
         versions:
+          - v1.23.2
           - v1.23.1
           - v1.23.0
           - v1.22.2
@@ -3145,6 +3146,7 @@ categories:
           - infrastructure
           - saas
         versions:
+          - v1.1.2
           - v1.1.1
         id: github.com/terraform-ibm-modules/terraform-ibm-key-protect-all-inclusive
         group: kms
@@ -3162,6 +3164,18 @@ categories:
         id: github.com/cloud-native-toolkit/terraform-azure-key-vault
         group: cert-manager
         displayName: Azure Key Vault
+      - cloudProvider: ""
+        softwareProvider: ""
+        type: gitops
+        name: gitops-wazi-dev-spaces
+        description: Module to populate a gitops repo with the resources to provision wazi-dev-spaces
+        tags:
+          - tools
+          - gitops
+        versions: []
+        id: github.com/cloud-native-toolkit/terraform-gitops-wazi-dev-spaces
+        group: ""
+        displayName: wazi-dev-spaces
   - category: network
     categoryName: Network
     selection: multiple
