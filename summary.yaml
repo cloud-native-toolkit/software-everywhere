@@ -3175,7 +3175,7 @@ categories:
         versions: []
         id: github.com/cloud-native-toolkit/terraform-gitops-wazi-dev-spaces
         group: ""
-        displayName: wazi-dev-spaces
+        displayName: Wazi Dev Spaces
   - category: network
     categoryName: Network
     selection: multiple
