@@ -3170,13 +3170,14 @@ categories:
       - cloudProvider: ""
         softwareProvider: ""
         type: gitops
-        name: gitops-wazi-dev-spaces
+        name: gitops-wazi-ds
         description: Module to populate a gitops repo with the resources to provision wazi-dev-spaces
         tags:
           - tools
           - gitops
-        versions: []
         id: github.com/cloud-native-toolkit/terraform-gitops-wazi-dev-spaces
+        versions:
+          - v1.0.0
         group: ""
         displayName: Wazi Dev Spaces
       - cloudProvider: ""
