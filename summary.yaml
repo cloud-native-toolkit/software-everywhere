@@ -3182,12 +3182,13 @@ categories:
       - cloudProvider: ""
         softwareProvider: ""
         type: gitops
-        name: gitops-wazi-dev-spaces-operator
+        name: gitops-wazi-ds-op
         description: Module to populate a gitops repo with the resources to provision wazi-dev-spaces-operator
         tags:
           - tools
           - gitops
-        versions: []
+        versions:
+          - v1.0.0
         id: github.com/cloud-native-toolkit/terraform-gitops-wazi-ds-operator
         group: ""
         displayName: Wazi Dev Spaces Operator
