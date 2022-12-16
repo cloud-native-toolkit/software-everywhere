@@ -3194,6 +3194,18 @@ categories:
         id: github.com/cloud-native-toolkit/terraform-gitops-wazi-ds-operator
         group: ""
         displayName: Wazi Dev Spaces Operator
+      - cloudProvider: ""
+        softwareProvider: ""
+        type: gitops
+        name: gitops-cp4d-prototype
+        description: Module to populate a gitops repo with the resources to provision cp4d-prototype
+        tags:
+          - tools
+          - gitops
+        versions: []
+        id: github.com/cloud-native-toolkit/terraform-gitops-cp4d-prototype
+        group: ""
+        displayName: cp4d-prototype
   - category: network
     categoryName: Network
     selection: multiple
