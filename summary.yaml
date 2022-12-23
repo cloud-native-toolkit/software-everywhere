@@ -3135,6 +3135,7 @@ categories:
           - tools
           - gitops
         versions:
+          - v0.1.1
           - v0.1.0
         id: github.com/cloud-native-toolkit/terraform-gitops-waiops
         group: ""
@@ -3149,6 +3150,11 @@ categories:
           - infrastructure
           - saas
         versions:
+          - v3.0.0
+          - v2.0.3
+          - v2.0.2
+          - v2.0.1
+          - v2.0.0
           - v1.1.2
           - v1.1.1
         id: github.com/terraform-ibm-modules/terraform-ibm-key-protect-all-inclusive
@@ -4386,6 +4392,10 @@ categories:
           - object storage
           - saas
         versions:
+          - v3.2.4
+          - v3.2.3
+          - v3.2.2
+          - v3.2.1
           - v3.2.0
           - v3.1.2
           - v3.1.1
