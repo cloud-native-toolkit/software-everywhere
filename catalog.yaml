@@ -798,9 +798,9 @@ categories:
       - name: gitops-wazi-dev-spaces-operator
         id: github.com/cloud-native-toolkit/terraform-gitops-wazi-ds-operator
         displayName: Wazi Dev Spaces Operator
-      - name: gitops-cp4d-prototype
-        id: github.com/cloud-native-toolkit/terraform-gitops-cp4d-prototype
-        displayName: cp4d-prototype
+      - name: gitops-cp4d-deployer
+        id: github.com/cloud-native-toolkit/terraform-gitops-cp4d-deployer
+        displayName: CP4D Deployer
     catalogFile: catalog.yaml
   - category: databases
     categoryName: Databases
