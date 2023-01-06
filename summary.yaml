@@ -3150,6 +3150,8 @@ categories:
           - infrastructure
           - saas
         versions:
+          - v3.0.2
+          - v3.0.1
           - v3.0.0
           - v2.0.3
           - v2.0.2
@@ -3209,9 +3211,9 @@ categories:
           - tools
           - gitops
         versions: []
-        id: github.com/cloud-native-toolkit/terraform-gitops-cp4d-prototype
+        id: github.com/cloud-native-toolkit/terraform-gitops-cp4d-deployer
         group: ""
-        displayName: cp4d-prototype
+        displayName: CP4D Deployer
   - category: network
     categoryName: Network
     selection: multiple
@@ -4392,6 +4394,11 @@ categories:
           - object storage
           - saas
         versions:
+          - v4.0.3
+          - v4.0.2
+          - v4.0.1
+          - v4.0.0
+          - v3.2.5
           - v3.2.4
           - v3.2.3
           - v3.2.2
