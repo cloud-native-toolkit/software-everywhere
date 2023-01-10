@@ -3210,7 +3210,8 @@ categories:
         tags:
           - tools
           - gitops
-        versions: []
+        versions:
+          - v0.0.2
         id: github.com/cloud-native-toolkit/terraform-gitops-cp4d-deployer
         group: ""
         displayName: CP4D Deployer
