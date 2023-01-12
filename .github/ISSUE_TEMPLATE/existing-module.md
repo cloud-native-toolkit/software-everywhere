@@ -1,7 +1,7 @@
 ---
 name: Existing automation module
 about: Request for a Terraform module be added to the Cloud Native Toolkit module catalog
-title: 'Request new module: {name}'
+title: 'Add existing module: {name}'
 labels: new_module
 assignees: seansund
 
