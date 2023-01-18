@@ -4395,6 +4395,8 @@ categories:
           - object storage
           - saas
         versions:
+          - v5.1.0
+          - v5.0.1
           - v5.0.0
           - v4.0.3
           - v4.0.2
