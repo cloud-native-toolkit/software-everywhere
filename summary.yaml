@@ -3214,6 +3214,7 @@ categories:
           - tools
           - gitops
         versions:
+          - v0.0.4
           - v0.0.3
           - v0.0.2
         id: github.com/cloud-native-toolkit/terraform-gitops-cp4d-deployer
