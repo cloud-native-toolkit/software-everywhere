@@ -3121,6 +3121,7 @@ categories:
           - certificate
           - secrets manager
         versions:
+          - v1.1.0
           - v1.0.3
           - v1.0.2
           - v1.0.1
