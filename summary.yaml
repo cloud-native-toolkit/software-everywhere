@@ -2030,6 +2030,7 @@ categories:
           - catalog
           - operators
         versions:
+          - v1.2.7
           - v1.2.6
           - v1.2.5
           - v1.2.4
