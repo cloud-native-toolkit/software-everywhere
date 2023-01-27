@@ -1,0 +1,9 @@
+id: github.com/cloud-native-toolkit/automation-modules#gitops-provider
+name: gitops-provider
+outputs:
+  - name: gitops_namespace
+    description: The namespace where the gitops instance has been installed
+    type: string
+  - name: kubeseal_namespace
+    description: The namespace where the kubeseal instance has been installed
+    type: string
