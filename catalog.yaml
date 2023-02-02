@@ -200,6 +200,11 @@ categories:
         id: github.com/cloud-native-toolkit/terraform-azure-aro
         group: openshift
         cloudProvider: azure
+      - name: aws-ocp-sno
+        id: github.com/cloud-native-toolkit/terraform-aws-ocp-sno
+        displayName: AWS OpenShift SNO
+        group: openshift
+        cloudProvider: aws
   - category: iam
     categoryName: IAM
     selection: multiple
