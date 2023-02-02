@@ -334,6 +334,18 @@ categories:
         id: github.com/cloud-native-toolkit/terraform-azure-aro
         group: openshift
         displayName: Azure OpenShift ARO
+      - cloudProvider: aws
+        softwareProvider: ""
+        type: terraform
+        name: aws-ocp-sno
+        description: Module to provision ocp-sno on aws
+        tags:
+          - tools
+          - devops
+        versions: []
+        id: github.com/cloud-native-toolkit/terraform-aws-ocp-sno
+        group: openshift
+        displayName: AWS OpenShift SNO
   - category: databases
     categoryName: Databases
     selection: multiple
@@ -4538,6 +4550,7 @@ categories:
           - portworx
           - ibmcloud
         versions:
+          - v0.5.0
           - v0.4.0
           - v0.3.0
           - v0.2.2
@@ -4547,6 +4560,8 @@ categories:
           - v0.1.1
           - v0.1.0
         id: github.com/cloud-native-toolkit/terraform-gitops-ibm-portworx
+        interfaces:
+          - github.com/cloud-native-toolkit/automation-modules#cluster-storage
         group: portworx
         displayName: Portworx on IBM Cloud (Gitops)
       - cloudProvider: aws
