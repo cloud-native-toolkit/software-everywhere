@@ -9,6 +9,7 @@ Module interfaces can be used in one of two ways:
 
 - [Cluster](cluster.yaml)
 - [Cluster storage](cluster-storage.yaml)
+- [Storage consumer](storage-consumer.yaml)
 - [Gitops provider](gitops-provider.yaml)
 - [IBM Service](ibm-service.yaml)
 - [Sync](sync.yaml)
