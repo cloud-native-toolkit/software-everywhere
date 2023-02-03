@@ -4881,10 +4881,13 @@ categories:
           - manager
           - util
         versions:
+          - v1.0.3
           - v1.0.2
           - v1.0.1
           - v1.0.0
         id: github.com/cloud-native-toolkit/terraform-util-storage-class-manager
+        interfaces:
+          - github.com/cloud-native-toolkit/automation-modules#storage-consumer
         group: ""
         displayName: Storage Class Manager
       - cloudProvider: ""
