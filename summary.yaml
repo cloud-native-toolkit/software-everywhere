@@ -227,6 +227,7 @@ categories:
         tags:
           - openshift
         versions:
+          - v1.6.2
           - v1.6.1
           - v1.6.0
           - v1.5.2
@@ -4611,6 +4612,7 @@ categories:
           - tools
           - devops
         versions:
+          - v0.2.0
           - v0.1.0
           - v0.0.5
           - v0.0.4
@@ -4618,6 +4620,8 @@ categories:
           - v0.0.2
           - v0.0.1
         id: github.com/cloud-native-toolkit/terraform-aws-portworx
+        interfaces:
+          - github.com/cloud-native-toolkit/automation-modules#cluster-storage
         group: portworx
         displayName: Portworx on AWS
       - cloudProvider: azure
@@ -4629,6 +4633,7 @@ categories:
           - tools
           - devops
         versions:
+          - v1.1.0
           - v1.0.2
           - v1.0.1
           - v1.0.0
@@ -4638,6 +4643,8 @@ categories:
           - v0.0.2
           - v0.0.1
         id: github.com/cloud-native-toolkit/terraform-azure-portworx
+        interfaces:
+          - github.com/cloud-native-toolkit/automation-modules#cluster-storage
         group: portworx
         displayName: Portworx on Azure
       - cloudProvider: azure
