@@ -1,0 +1,15 @@
+id: github.com/cloud-native-toolkit/automation-modules#storage-consumer
+name: storage-consumer
+inputs:
+  - name: rwx_storage_class
+    description: The read-write-many (RWX) storage class on the cluster.
+    type: string
+  - name: rwo_storage_class
+    description: The read-write-once (RWO) storage class on the cluster.
+    type: string
+  - name: file_storage_class
+    description: The file storage class on the cluster.
+    type: string
+  - name: block_storage_class
+    description: The block storage class on the cluster.
+    type: string
