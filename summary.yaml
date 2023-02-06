@@ -340,11 +340,14 @@ categories:
         softwareProvider: ""
         type: terraform
         name: aws-ocp-sno
-        description: Module to provision ocp-sno on aws
+        description: Module to provision an OpenShift IPI Single Node on AWS
         tags:
-          - tools
-          - devops
-        versions: []
+          - aws
+          - openshift
+          - ocp
+          - cluster
+        versions:
+          - v1.0.0
         id: github.com/cloud-native-toolkit/terraform-aws-ocp-sno
         group: openshift
         displayName: AWS OpenShift SNO
