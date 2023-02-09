@@ -780,6 +780,9 @@ categories:
       - name: gitops-mas-cp4d-config
         id: github.com/cloud-native-toolkit/terraform-gitops-mas-cp4d-config
         displayName: Maximo CP4D Config
+      - name: gitops-mas-core
+        id: github.com/cloud-native-toolkit/terraform-gitops-mas-core
+        displayName: Maximo App Suite Core
       - name: IBM Secrets Manager
         id: github.com/cloud-native-toolkit/terraform-ibm-secrets-manager
         group: cert-manager
