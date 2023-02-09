@@ -3133,6 +3133,20 @@ categories:
         id: github.com/cloud-native-toolkit/terraform-gitops-kafka-strimzi
         group: ""
         displayName: Kafka Strimzi
+      - cloudProvider: ""
+        softwareProvider: ""
+        type: gitops
+        name: gitops-mas-core
+        description: Module to populate a gitops repo with the resources to provision Maximo Application Suite Core
+        tags:
+          - gitops
+          - maximo application suite
+          - core
+        versions:
+          - v1.0.0
+        id: github.com/cloud-native-toolkit/terraform-gitops-mas-core
+        group: ""
+        displayName: Maximo App Suite Core
       - cloudProvider: ibm
         softwareProvider: ""
         type: terraform
