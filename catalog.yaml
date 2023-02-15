@@ -809,6 +809,9 @@ categories:
       - name: gitops-cp4d-deployer
         id: github.com/cloud-native-toolkit/terraform-gitops-cp4d-deployer
         displayName: CP4D Deployer
+      - name: Serverless Operator
+        id: github.com/cloud-native-toolkit/terraform-gitops-serverless-operator
+        softwareProvider: openshift
     catalogFile: catalog.yaml
   - category: databases
     categoryName: Databases
