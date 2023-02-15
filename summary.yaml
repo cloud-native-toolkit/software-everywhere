@@ -3278,6 +3278,18 @@ categories:
         id: github.com/cloud-native-toolkit/terraform-gitops-serverless-operator
         group: ""
         displayName: Serverless Operator
+      - cloudProvider: ""
+        softwareProvider: middleware
+        type: gitops
+        name: gitops-knative-serving
+        description: Module to populate a gitops repo with the resources to provision knative-serving
+        tags:
+          - tools
+          - gitops
+        versions: []
+        id: github.com/cloud-native-toolkit/terraform-gitops-knative-serving
+        group: ""
+        displayName: Knative Serving
   - category: network
     categoryName: Network
     selection: multiple
