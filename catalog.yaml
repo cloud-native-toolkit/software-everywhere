@@ -812,6 +812,9 @@ categories:
       - name: Serverless Operator
         id: github.com/cloud-native-toolkit/terraform-gitops-serverless-operator
         softwareProvider: openshift
+      - name: Knative Serving
+        id: github.com/cloud-native-toolkit/terraform-gitops-knative-serving
+        softwareProvider: middleware
     catalogFile: catalog.yaml
   - category: databases
     categoryName: Databases
