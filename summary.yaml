@@ -3266,6 +3266,18 @@ categories:
         id: github.com/cloud-native-toolkit/terraform-gitops-cp4d-deployer
         group: ""
         displayName: CP4D Deployer
+      - cloudProvider: ""
+        softwareProvider: openshift
+        type: gitops
+        name: gitops-serverless-operator
+        description: Module to populate a gitops repo with the resources to provision serverless-operator
+        tags:
+          - tools
+          - gitops
+        versions: []
+        id: github.com/cloud-native-toolkit/terraform-gitops-serverless-operator
+        group: ""
+        displayName: Serverless Operator
   - category: network
     categoryName: Network
     selection: multiple
