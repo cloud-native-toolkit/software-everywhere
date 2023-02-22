@@ -758,7 +758,7 @@ categories:
       - name: gitops-cp-datastage
         id: github.com/cloud-native-toolkit/terraform-gitops-cp-datastage
         displayName: CP4D DataStage
-      - name: gitops-mas-app
+      - name: gitops-mas-manage
         displayName: Maximo Manage
         id: github.com/cloud-native-toolkit/terraform-gitops-mas-manage
         group: maximo
