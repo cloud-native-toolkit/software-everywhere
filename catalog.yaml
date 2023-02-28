@@ -108,12 +108,6 @@ aliases:
   - id: github.com/terraform-ibm-modules/terraform-ibm-toolkit-kms-key
     aliases:
       - github.com/cloud-native-toolkit/terraform-ibm-kms-key
-  - id: github.com/terraform-ibm-modules/terraform-ibm-toolkit-cert-manager
-    aliases:
-      - github.com/cloud-native-toolkit/terraform-ibm-cert-manager
-  - id: github.com/terraform-ibm-modules/terraform-ibm-toolkit-cert-manager-cert
-    aliases:
-      - github.com/cloud-native-toolkit/terraform-ibm-cert-manager-cert
   - id: github.com/terraform-ibm-modules/terraform-ibm-toolkit-portworx
     aliases:
       - github.com/cloud-native-toolkit/terraform-ibm-portworx
@@ -654,14 +648,6 @@ categories:
         id: github.com/cloud-native-toolkit/terraform-gitops-ocp-cert-manager
         group: cert-manager
         softwareProvider: ibm-cp
-      - name: IBM Certificate Manager
-        id: github.com/terraform-ibm-modules/terraform-ibm-toolkit-cert-manager
-        group: cert-manager
-        cloudProvider: ibm
-      - name: IBM Certificate Manager Certificate
-        id: >-
-          github.com/terraform-ibm-modules/terraform-ibm-toolkit-cert-manager-cert
-        cloudProvider: ibm
       - name: Cloud Pak MQ Operator
         id: github.com/cloud-native-toolkit/terraform-gitops-cp-mq
         softwareProvider: ibm-cp
