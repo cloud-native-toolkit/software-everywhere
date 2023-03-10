@@ -1109,3 +1109,7 @@ categories:
         id: github.com/cloud-native-toolkit/terraform-any-ocp-htpasswd
         displayName: OpenShift HTPasswd OAuth
         group: cluster
+      - name: util-mas-core-ready
+        id: github.com/cloud-native-toolkit/terraform-util-mas-core-ready
+        displayName: MAS Core Ready
+        group: mas
