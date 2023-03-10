@@ -5009,6 +5009,20 @@ categories:
         id: github.com/cloud-native-toolkit/terraform-any-ocp-htpasswd
         group: cluster
         displayName: OpenShift HTPasswd OAuth
+      - cloudProvider: ""
+        softwareProvider: ""
+        type: terraform
+        name: util-mas-core-ready
+        description: Module to wait for MAS Core (gitops) instance to be ready in the cluster
+        tags:
+          - tools
+          - devops
+          - cluster
+        versions:
+          - v1.0.0
+        id: github.com/cloud-native-toolkit/terraform-util-mas-core-ready
+        group: mas
+        displayName: MAS Core Ready
 aliases:
   - id: github.com/terraform-ibm-modules/terraform-ibm-toolkit-watson-studio
     aliases:
