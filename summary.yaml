@@ -462,10 +462,13 @@ categories:
           - mongodb
           - saas
         versions:
+          - v1.2.0
           - v1.1.3
           - v1.1.2
           - v1.1.1
           - v1.1.0
+        interfaces:
+          - github.com/cloud-native-toolkit/automation-modules#database
         group: mongodb
         displayName: IBM MongoDB
       - cloudProvider: ibm
