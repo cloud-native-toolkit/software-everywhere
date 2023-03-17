@@ -1,25 +1,25 @@
-id: github.com/cloud-native-toolkit/automation-modules#database
-name: database
-outputs:
-  - name: type
+id: github.com/cloud-native-toolkit/automation-modules#database-consumer
+name: database-consumer
+inputs:
+  - name: database_type
     type: string
     description: The type of database (e.g. mongodb, postgresql, db2)
-  - name: host
+  - name: database_host
     type: string
     description: The host name for the database instance
-  - name: port
+  - name: database_port
     description: The port for the database instance
     type: number
   - name: database_name
     description: The database name for the database instance
     type: string
-  - name: username
+  - name: database_username
     description: The username for the database instance
     type: string
-  - name: password
+  - name: database_password
     description: The password for the database instance
     sensitive: true
     type: string
-  - name: ca_cert
+  - name: database_ca_cert
     type: string
     description: (Optional) The ca_cert used to sign the TLS certificate for the connection
