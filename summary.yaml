@@ -5034,6 +5034,21 @@ categories:
         id: github.com/cloud-native-toolkit/terraform-util-mas-core-ready
         group: mas
         displayName: MAS Core Ready
+      - cloudProvider: ""
+        softwareProvider: ""
+        type: terraform
+        name: util-mas-core-existing
+        alias: mas_core_existing
+        description: Module to represent an existing MAS Core install
+        tags:
+          - tools
+          - devops
+        versions:
+          - v1.0.0
+          - v0.1.0
+        id: github.com/cloud-native-toolkit/terraform-util-mas-core-existing
+        group: mas
+        displayName: MAS Core Existing
 aliases:
   - id: github.com/terraform-ibm-modules/terraform-ibm-toolkit-watson-studio
     aliases:
