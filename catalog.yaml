@@ -1113,3 +1113,7 @@ categories:
         id: github.com/cloud-native-toolkit/terraform-util-mas-core-ready
         displayName: MAS Core Ready
         group: mas
+      - name: util-mas-core-existing
+        id: github.com/cloud-native-toolkit/terraform-util-mas-core-existing
+        displayName: MAS Core Existing
+        group: mas
