@@ -5026,21 +5026,6 @@ categories:
       - cloudProvider: ""
         softwareProvider: ""
         type: terraform
-        name: util-mas-core-ready
-        description: Module to wait for MAS Core (gitops) instance to be ready in the cluster
-        tags:
-          - tools
-          - devops
-          - cluster
-        versions:
-          - v1.1.0
-          - v1.0.0
-        id: github.com/cloud-native-toolkit/terraform-util-mas-core-ready
-        group: mas
-        displayName: MAS Core Ready
-      - cloudProvider: ""
-        softwareProvider: ""
-        type: terraform
         name: util-mas-core-existing
         alias: mas_core_existing
         description: Module to represent an existing MAS Core install
