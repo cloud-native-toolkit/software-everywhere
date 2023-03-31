@@ -1880,6 +1880,7 @@ categories:
           - infrastructure
           - namespace
         versions:
+          - v3.2.5
           - v3.2.4
           - v3.2.3
           - v3.2.2
