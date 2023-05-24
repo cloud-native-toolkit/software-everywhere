@@ -3181,6 +3181,7 @@ categories:
           - infrastructure
           - saas
         versions:
+          - v4.2.0
           - v4.1.0
           - v4.0.0
           - v3.1.2
