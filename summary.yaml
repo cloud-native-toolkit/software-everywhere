@@ -857,6 +857,7 @@ categories:
           - tekton
           - continuous integration
         versions:
+          - v3.0.1
           - v3.0.0
           - v2.5.5
           - v2.5.4
