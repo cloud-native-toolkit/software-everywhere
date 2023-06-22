@@ -1267,6 +1267,7 @@ categories:
           - gitops
           - gitea
         versions:
+          - v0.5.2
           - v1.0.3
           - v1.0.2
           - v1.0.1
