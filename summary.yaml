@@ -1363,6 +1363,7 @@ categories:
           - gitops
           - bootstrap
         versions:
+          - v2.0.1
           - v2.0.0
           - v1.13.1
           - v1.13.0
@@ -4489,6 +4490,7 @@ categories:
           - object storage
           - saas
         versions:
+          - v6.9.0
           - v6.8.0
           - v6.7.0
           - v6.6.2
