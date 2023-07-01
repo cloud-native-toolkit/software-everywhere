@@ -1364,6 +1364,7 @@ categories:
           - gitops
           - bootstrap
         versions:
+          - v2.1.0
           - v2.0.1
           - v2.0.0
           - v1.13.1
@@ -1394,6 +1395,8 @@ categories:
           - v1.4.3
           - v1.4.2
           - v1.4.1
+        interfaces:
+          - github.com/cloud-native-toolkit/automation-modules#argocd-bootstrap
         group: ""
         displayName: ArgoCD Bootstrap
       - cloudProvider: ""
