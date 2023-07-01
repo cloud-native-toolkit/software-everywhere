@@ -14,6 +14,7 @@ Module interfaces can be used in one of two ways:
 - [IBM Service](ibm-service.yaml)
 - [Sync](sync.yaml)
 - [IBM VPC Resource](ibm-vpc-resource.yaml)
+- [Argocd Bootstrap](argocd-bootstrap.yaml)
 
 ## Usage
 
