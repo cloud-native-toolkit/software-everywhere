@@ -1358,6 +1358,42 @@ categories:
       - cloudProvider: ""
         softwareProvider: ""
         type: terraform
+        name: gitops-install
+        description: Module to provision ArgoCD and KubeSeal into an OpenShift cluster together
+        tags:
+          - gitops
+          - kubeseal
+          - sealed secrets
+          - argocd
+        versions:
+          - v0.2.0
+          - v0.1.1
+          - v0.1.0
+        id: github.com/cloud-native-toolkit/terraform-k8s-gitops-install
+        group: ""
+        displayName: Gitops Install
+      - cloudProvider: ""
+        softwareProvider: ""
+        type: terraform
+        name: gitops-starter
+        description: Module to provision ArgoCD and bootstrap an application using the GitOps repo
+        interfaces:
+          - github.com/cloud-native-toolkit/automation-modules#argocd-bootstrap
+        tags:
+          - tools
+          - gitops
+          - bootstrap
+        versions:
+          - v0.2.0
+          - v0.1.2
+          - v0.1.1
+          - v0.1.0
+        id: github.com/cloud-native-toolkit/terraform-k8s-gitops-starter
+        group: ""
+        displayName: Gitops Starter
+      - cloudProvider: ""
+        softwareProvider: ""
+        type: terraform
         id: github.com/cloud-native-toolkit/terraform-tools-argocd-bootstrap
         name: argocd-bootstrap
         alias: argocd-bootstrap
