@@ -1064,6 +1064,9 @@ categories:
       - name: gitops-web-terminal
         id: github.com/cloud-native-toolkit/terraform-gitops-web-terminal
         displayName: Web Terminal
+      - name: gitops-tekton
+        id: github.com/cloud-native-toolkit/terraform-gitops-tekton
+        displayName: Tekton
   - category: util
     categoryName: Utilities
     selection: multiple
