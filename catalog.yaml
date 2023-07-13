@@ -572,6 +572,10 @@ categories:
     categoryName: GitOps
     selection: multiple
     modules:
+      - name: Gitops Install
+        id: github.com/cloud-native-toolkit/terraform-k8s-gitops-install
+      - name: Gitops Starter
+        id: github.com/cloud-native-toolkit/terraform-k8s-gitops-starter
       - name: ArgoCD Bootstrap
         id: github.com/cloud-native-toolkit/terraform-tools-argocd-bootstrap
       - name: VSI ArgoCD Bootstrap
