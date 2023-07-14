@@ -1318,6 +1318,20 @@ categories:
         id: github.com/cloud-native-toolkit/terraform-gitops-web-terminal
         group: ""
         displayName: Web Terminal
+      - cloudProvider: ""
+        softwareProvider: ""
+        type: gitops
+        name: gitops-tekton
+        description: Module to configure gitops repo to deploy tekton
+        tags:
+          - tools
+          - gitops
+          - tekton
+        versions:
+          - v0.1.1
+        id: github.com/cloud-native-toolkit/terraform-gitops-tekton
+        group: ""
+        displayName: Tekton
   - category: examples
     categoryName: Examples
     selection: multiple
